@@ -24,13 +24,13 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 
 ## Key design features
 
-- **Tool-agnostic.** Students use whatever AI they have access to ([GitHub Copilot CLI](https://docs.github.com/en/copilot) recommended via the free [Student Developer Pack](https://education.github.com/pack), but ChatGPT, Claude, and others all work). Assessment is on articulation and evaluation, not tool operation.
-- **Triad defences.** All students present simultaneously in groups of 3. Instructor circulates and scores. No overflow, no idle students.
-- **Weekly speaking practice.** Students talk to AI every week using voice mode, rehearsing the oral skills assessed in micro-defences and the final reflection. Grounded in [Kumar et al. (2026)](https://doi.org/10.1038/s41562-025-02098-1) on AI-assisted communication practice.
-- **Evolving criteria.** Micro-defence scoring starts with 3 criteria (Week 4), expands to 5 (Week 8), then 7 (Week 11). Students aren't blindsided by criteria they haven't practised.
-- **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation where the student points to portfolio evidence and evaluates their own learning. No AI, no script.
+- **Tool-agnostic.** Students use whatever AI they have access to ([GitHub Copilot CLI](https://docs.github.com/en/copilot) recommended via the free [Student Developer Pack](https://education.github.com/pack), but ChatGPT, Claude, and others all work). Assessment is on what students can articulate and evaluate, not which tool they use.
+- **Triad defences.** Oral assessments run as simultaneous groups of 3: every student is speaking or giving feedback at all times. The instructor circulates and samples.
+- **Weekly AI speaking practice.** Students explain their work to AI using voice mode every week, building the oral skills assessed at Weeks 4, 8, 11, and 13. Grounded in [Kumar et al. (2026)](https://doi.org/10.1038/s41562-025-02098-1) on AI-assisted communication practice.
+- **Scaffolded assessment.** Oral assessment criteria grow with the students: 3 criteria at Week 4, 5 at Week 8, 7 at Week 11. Each expansion matches skills students have been practising.
+- **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation: the student points to portfolio evidence and evaluates their own learning.
 - **Faculty preparation as AI conversation.** The instructor prep module is a prompt you paste into any AI tool. The AI walks you through the same challenges students face.
-- **[Git](https://git-scm.com/) for version control.** Students learn Git through AI-assisted commands, not command-line memorisation. Three required [episodes](assessment-framework.md#4-git-episodes-10) across the semester: restore, error recovery, collaboration.
+- **[Git](https://git-scm.com/) for version control.** Students learn Git through AI-assisted natural language, not command-line memorisation. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.
 
 ## Status
 
