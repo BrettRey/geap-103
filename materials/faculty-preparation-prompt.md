@@ -2,9 +2,9 @@
 
 **What this is:** A self-paced preparation experience for instructors teaching GEAP 103. You paste the prompt below into any AI tool (ChatGPT, Claude, Copilot Chat — anything with voice mode), and the AI walks you through five challenges that mirror what your students will do. Takes about 90 minutes, or split it across several sittings.
 
-**What you need:** A computer, a phone with voice mode on any AI app, and an internet connection. You do not need GitHub Copilot, coding experience, or any specific software beyond a web browser and Microsoft Word (or Word Online).
+**What you need:** A computer, an internet connection, and any free AI tool (ChatGPT, Claude, Copilot Chat). You do not need GitHub Copilot, coding experience, or any specific software beyond a web browser and Microsoft Word (or Word Online).
 
-**What you get out of it:** By the end, you'll have a working folder structure, a GitHub repository with commits, a fixed-up document, and the experience of explaining your work aloud to AI. You'll also have practised the instructor moves you'll use in class: what to say when circulating, how to push students for specificity, and what to do when things go wrong.
+**What you get out of it:** By the end, you'll have a working folder structure, a GitHub repository with commits, a fixed-up document, and the experience of explaining your work to AI. You'll also have practised the instructor moves you'll use in class: what to say when circulating, how to push students for specificity, and what to do when things go wrong.
 
 **How to use it:** Copy everything below the line and paste it into your AI tool. Then follow the AI's lead.
 
