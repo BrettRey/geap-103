@@ -4,7 +4,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 
 **Thesis:** "English is the control layer." Students learn to say what they want clearly enough for AI to help them do it. The AI handles the technical complexity. The student's job is to articulate, evaluate, and revise.
 
-**Context:** This course is part of a [ministry-mandated transition](https://www.ontario.ca/page/university-and-college-standards) from an 8-level, semi-semester EAP program to a 2-level, full-semester program launching September 2026. It replaces the legacy computer skills course (EAPC 106) with a design built around AI-assisted learning.
+**Context:** This course is part of a [ministry-mandated transition](https://www.ontario.ca/page/university-and-college-standards) from an 8-level, semi-semester EAP program to a 2-level, full-semester program launching September 2026. GEAP 103 is a new general education course added to meet required contact hours in the redesigned program.
 
 ## What's here
 
