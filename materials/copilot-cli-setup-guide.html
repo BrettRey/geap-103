@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEAP 103 – Set Up GitHub Copilot CLI</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f7f4;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #0969da;
+    --accent-light: #ddf4ff;
+    --terminal-bg: #161b22;
+    --terminal-text: #e6edf3;
+    --terminal-prompt: #7ee787;
+    --terminal-output: #b1bac4;
+    --success: #1a7f37;
+    --success-bg: #dafbe1;
+    --warning: #9a6700;
+    --warning-bg: #fff8c5;
+    --step-size: 3rem;
+    --card-radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 18px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #e0ddd8;
+    padding-bottom: 1.5rem;
+  }
+
+  .time-estimate {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: var(--step-size) 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .step::after {
+    content: '';
+    position: absolute;
+    left: calc(var(--step-size) / 2);
+    top: var(--step-size);
+    bottom: -2rem;
+    width: 2px;
+    background: #e0ddd8;
+  }
+
+  .step:last-of-type::after { display: none; }
+
+  .step-number {
+    width: var(--step-size);
+    height: var(--step-size);
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-content h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-top: 0.3rem;
+  }
+
+  .step-content p {
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+
+  .step-content p.instruction {
+    font-weight: 500;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+  }
+
+  .terminal {
+    background: var(--terminal-bg);
+    border-radius: var(--card-radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+
+  .terminal .prompt {
+    color: var(--terminal-text);
+  }
+
+  .terminal .prompt .type-this {
+    background: rgba(126, 231, 135, 0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+  }
+
+  .terminal .type-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--terminal-prompt);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .terminal .output {
+    color: var(--terminal-output);
+  }
+
+  .terminal .highlight {
+    color: var(--terminal-prompt);
+  }
+
+  .terminal .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.1em;
+    background: var(--terminal-text);
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .browser-frame {
+    border: 2px solid #d0d7de;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+
+  .browser-bar {
+    background: #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .browser-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .browser-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d0d7de;
+  }
+
+  .browser-url {
+    background: white;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 0.25rem 0.75rem;
+    flex: 1;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+  }
+
+  .browser-content {
+    background: white;
+    padding: 1.5rem;
+  }
+
+  .browser-content .gh-button {
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 0.5rem 0;
+  }
+
+  .browser-content .gh-input {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--muted);
+    background: #f6f8fa;
+  }
+
+  .note {
+    background: var(--warning-bg);
+    border-left: 4px solid var(--warning);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--card-radius) var(--card-radius) 0;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .note strong { color: var(--warning); }
+
+  .success-note {
+    background: var(--success-bg);
+    border-left: 4px solid var(--success);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--card-radius) var(--card-radius) 0;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .success-note strong { color: var(--success); }
+
+  .os-tabs {
+    display: flex;
+    gap: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .os-tab {
+    padding: 0.5rem 1.25rem;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .os-tab:first-child { border-radius: 8px 0 0 0; }
+  .os-tab:last-child { border-radius: 0 8px 0 0; }
+  .os-tab.active {
+    background: var(--terminal-bg);
+    color: var(--terminal-text);
+    border-color: var(--terminal-bg);
+  }
+
+  .os-panel {
+    display: none;
+  }
+
+  .os-panel.active {
+    display: block;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .option-card {
+    border: 2px solid #e0ddd8;
+    border-radius: var(--card-radius);
+    padding: 1.25rem;
+  }
+
+  .option-card.recommended {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .option-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .option-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+
+  .conversation {
+    margin: 1rem 0;
+  }
+
+  .conversation .you {
+    background: var(--accent-light);
+    border-radius: var(--card-radius) var(--card-radius) 4px var(--card-radius);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 85%;
+    font-size: 0.95rem;
+  }
+
+  .conversation .ai {
+    background: #f0f0ec;
+    border-radius: var(--card-radius) var(--card-radius) var(--card-radius) 4px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 85%;
+    margin-left: auto;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .conversation .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e0ddd8;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  @media print {
+    body { font-size: 11pt; padding: 0; }
+    .terminal { break-inside: avoid; }
+    .step { break-inside: avoid; }
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem; font-size: 16px; }
+    .step { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+    .step-number { width: 2.5rem; height: 2.5rem; font-size: 1rem; }
+    .options-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Set Up GitHub Copilot CLI</h1>
+<p class="subtitle">GEAP 103: Basic Computer Skills — Your AI assistant in the terminal</p>
+
+<span class="time-estimate">⏱ About 15 minutes</span>
+
+<!-- STEP 1 -->
+<div class="step">
+  <div class="step-number">1</div>
+  <div class="step-content">
+    <h2>Create a GitHub account</h2>
+    <p>GitHub is where your project files and version history will live. It's free.</p>
+
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">github.com/signup</div>
+      </div>
+      <div class="browser-content">
+        <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.75rem;">Create your account</p>
+        <input class="gh-input" value="your.email@humber.ca" readonly>
+        <input class="gh-input" value="Choose a password" readonly>
+        <input class="gh-input" value="Choose a username" readonly>
+        <span class="gh-button">Create account</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Tip:</strong> Use your Humber email. You'll need it for the free Student Developer Pack in the next step.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step">
+  <div class="step-number">2</div>
+  <div class="step-content">
+    <h2>Get the Student Developer Pack <span style="font-size: 0.85rem; font-weight: 400; color: var(--muted);">(free)</span></h2>
+    <p>This gives you GitHub Copilot for free — including the CLI.</p>
+
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">education.github.com/pack</div>
+      </div>
+      <div class="browser-content">
+        <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">GitHub Student Developer Pack</p>
+        <p style="color: var(--muted); margin-bottom: 0.75rem;">The best developer tools, free for students.</p>
+        <span class="gh-button">Get your pack</span>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem;">You'll need to verify you're a student (Humber email or student ID photo).</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> Verification can take a few minutes to a few days. You can continue to Step 3 while you wait — you just can't use Copilot until it's approved. If it takes too long, use <a href="https://copilot.microsoft.com">Copilot Chat</a> or <a href="https://chatgpt.com">ChatGPT</a> in the meantime.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step">
+  <div class="step-number">3</div>
+  <div class="step-content">
+    <h2>Download and install Copilot CLI</h2>
+    <p>Choose your computer type:</p>
+
+    <div class="os-tabs">
+      <div class="os-tab active" onclick="showOS('windows')">Windows</div>
+      <div class="os-tab" onclick="showOS('mac')">Mac</div>
+      <div class="os-tab" onclick="showOS('chromebook')">Chromebook</div>
+    </div>
+
+    <div id="os-windows" class="os-panel active">
+      <div class="terminal">
+        <div class="output">Option A: Download the installer</div>
+        <div style="margin: 0.5rem 0;">
+          <span style="color: var(--terminal-text);">Go to </span>
+          <span style="color: #79c0ff;">github.com/github/copilot-cli/releases</span>
+        </div>
+        <div class="output">Download the Windows .exe file. Run it. Done.</div>
+        <div style="margin-top: 1rem;"><div class="output">Option B: If you have WinGet</div></div>
+        <div class="type-label">Type this:</div>
+        <div class="prompt"><span class="type-this">winget install GitHub.CopilotCLI</span></div>
+      </div>
+    </div>
+
+    <div id="os-mac" class="os-panel">
+      <div class="terminal">
+        <div class="output">Option A: If you have Homebrew</div>
+        <div class="type-label">Type this:</div>
+        <div class="prompt"><span class="type-this">brew install copilot-cli</span></div>
+        <div style="margin-top: 1rem;"><div class="output">Option B: Download the installer</div></div>
+        <div style="margin: 0.5rem 0;">
+          <span style="color: var(--terminal-text);">Go to </span>
+          <span style="color: #79c0ff;">github.com/github/copilot-cli/releases</span>
+        </div>
+        <div class="output">Download the macOS file. Unpack and move to Applications.</div>
+      </div>
+    </div>
+
+    <div id="os-chromebook" class="os-panel">
+      <div class="terminal">
+        <div class="output">Copilot CLI does not run easily on Chromebooks.</div>
+        <div class="output" style="margin-top: 0.5rem;">Use one of these instead:</div>
+        <div style="margin: 0.5rem 0;">
+          <span style="color: #79c0ff;">copilot.microsoft.com</span>
+          <span class="output"> — sign in with your Humber account</span>
+        </div>
+        <div style="margin: 0.5rem 0;">
+          <span style="color: #79c0ff;">chatgpt.com</span>
+          <span class="output"> — free account</span>
+        </div>
+        <div style="margin: 0.5rem 0;">
+          <span style="color: #79c0ff;">claude.ai</span>
+          <span class="output"> — free account</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="step">
+  <div class="step-number">4</div>
+  <div class="step-content">
+    <h2>Log in</h2>
+    <p>Open your terminal (on Windows: search for "Terminal" or "Command Prompt"; on Mac: search for "Terminal") and type:</p>
+
+    <div class="terminal">
+      <div class="type-label">Type this:</div>
+      <div class="prompt"><span class="type-this">copilot</span></div>
+      <div class="output" style="margin-top: 0.5rem;">Welcome to GitHub Copilot CLI!</div>
+      <div class="output">To get started, you need to log in to GitHub.</div>
+      <div class="output">Press Enter to open github.com in your browser...</div>
+    </div>
+
+    <p>It opens your browser. Log in to GitHub. Click <strong>"Authorize."</strong> Come back to the terminal.</p>
+
+    <div class="success-note">
+      <strong>✓ You're connected.</strong> The terminal will say something like "Authentication successful." You only do this once.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div class="step">
+  <div class="step-number">5</div>
+  <div class="step-content">
+    <h2>Go to your project folder</h2>
+    <p>Navigate to your geap-103 folder. This is the folder you set up in Week 1.</p>
+
+    <div class="terminal">
+      <div class="type-label">Type this:</div>
+      <div class="prompt"><span class="type-this">cd OneDrive/geap-103</span></div>
+      <div class="output" style="margin-top: 0.25rem; font-size: 0.8rem;">On Mac, your path might be different. Ask Copilot: "How do I find my OneDrive folder?"</div>
+    </div>
+
+    <div class="note">
+      <strong>Why this matters:</strong> When you run Copilot CLI inside your project folder, it can see your files. It knows what you're working on. That's what makes it more useful than a chatbox.
+    </div>
+  </div>
+</div>
+
+<!-- STEP 6 -->
+<div class="step">
+  <div class="step-number">6</div>
+  <div class="step-content">
+    <h2>Talk to it</h2>
+    <p>Type what you want in English. That's it.</p>
+
+    <div class="terminal">
+      <div class="type-label">Type this:</div>
+      <div class="prompt"><span class="type-this">copilot "I want to make a weekly study schedule. I am learning English at an intermediate level. Use simple words."</span></div>
+      <div style="margin-top: 0.75rem;">
+        <div class="output">I'll create a study schedule for you. Let me make a file called</div>
+        <div class="output"><span class="highlight">study-schedule.md</span> in your current folder...</div>
+        <div style="margin-top: 0.5rem;">
+          <div class="output">Here's what I've created:</div>
+          <div class="output" style="margin-top: 0.25rem;">📄 <span class="highlight">study-schedule.md</span></div>
+          <div class="output" style="font-size: 0.85rem; margin-top: 0.25rem;">- Monday: Reading (1 hour)</div>
+          <div class="output" style="font-size: 0.85rem;">- Tuesday: Writing practice (1 hour)</div>
+          <div class="output" style="font-size: 0.85rem;">- Wednesday: Listening + vocabulary (1 hour)</div>
+          <div class="output" style="font-size: 0.85rem;">- ...</div>
+        </div>
+      </div>
+    </div>
+
+    <p>The file is now in your folder. You can open it, edit it, or ask Copilot to change it:</p>
+
+    <div class="terminal">
+      <div class="type-label">Type this:</div>
+    <div class="prompt"><span class="type-this">copilot "I study best in the morning and I have class on Tuesday and Thursday. Change the schedule."</span></div>
+    </div>
+
+    <p>Each time you tell it more about yourself, you get a more useful result.</p>
+  </div>
+</div>
+
+<div class="success-note" style="margin-top: 2rem; margin-bottom: 2rem; padding: 1.5rem;">
+  <strong>✓ You're ready.</strong> You have an AI assistant that works inside your project folder, sees your files, and responds to English. The more you can say about what you need, the more it can do.
+</div>
+
+<h2 style="margin-bottom: 1rem;">Can't install the CLI?</h2>
+<p style="margin-bottom: 1rem;">No problem. The course works with any AI tool. Use whichever you can access:</p>
+
+<div class="options-grid">
+  <div class="option-card recommended">
+    <h3>Copilot CLI <span class="badge">Recommended</span></h3>
+    <p>Works in your folder. Sees your files. Free for students.</p>
+  </div>
+  <div class="option-card">
+    <h3>Copilot Chat</h3>
+    <p><a href="https://copilot.microsoft.com">copilot.microsoft.com</a><br>Free with Humber account. Browser-based.</p>
+  </div>
+  <div class="option-card">
+    <h3>ChatGPT</h3>
+    <p><a href="https://chatgpt.com">chatgpt.com</a><br>Free tier. No institutional account needed.</p>
+  </div>
+  <div class="option-card">
+    <h3>Claude</h3>
+    <p><a href="https://claude.ai">claude.ai</a><br>Free tier. No institutional account needed.</p>
+  </div>
+</div>
+
+<footer>
+  <p>GEAP 103: Basic Computer Skills — Humber College, Fall 2026</p>
+  <p>Questions? Ask your instructor or ask AI: "How do I install GitHub Copilot CLI on my computer?"</p>
+</footer>
+
+<script>
+function showOS(os) {
+  document.querySelectorAll('.os-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.os-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('os-' + os).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
