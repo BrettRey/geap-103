@@ -5,7 +5,7 @@
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
 **Date prepared:** 2026-03-24
 
-This file contains everything you need to prepare slides and run the class for Week 1. The lesson plan (`GEAP_103_Week_1_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content: what goes on slides, what to say, what to display. In case of conflict, the lesson plan governs.
+This file contains everything you need to prepare slides and run the class for Week 1. The lesson plan (`Week_01_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content: what goes on slides, what to say, what to display. In case of conflict, the lesson plan governs.
 
 **Week 1 design note:** Many students miss Week 1. Nothing here is a hard prerequisite for Week 2. Latecomers can catch up using the instructions at the end of this file. The session has two goals: (1) students leave with a working folder structure and a Goal Document, and (2) students believe this course will be worth their time. The Goal Document gets the most time because it's the only extended writing in the week.
 

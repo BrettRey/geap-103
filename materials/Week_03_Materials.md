@@ -5,7 +5,7 @@
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
 **Date prepared:** 2026-03-24
 
-This file contains everything you need to prepare slides and run the class for Week 3. The lesson plan (`GEAP_103_Week_3_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict, the lesson plan governs.
+This file contains everything you need to prepare slides and run the class for Week 3. The lesson plan (`Week_03_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict, the lesson plan governs.
 
 **Week 3 design note:** Students have been making things for two weeks. They have files scattered across their geap-103 folder. Today they learn to protect them: version control as a timeline of snapshots they control. The tool is Git/GitHub. The skill is writing commit messages — short descriptions of what you did and why. With the CLI, Git is a conversation: "save this version," "show me the previous version," "put this online." Without the CLI, Git is the GitHub web interface, which is clunkier but achieves the same thing. Both paths are supported.
 
