@@ -234,7 +234,7 @@ Display:
 >
 > **Voice mode encouraged.** Use any AI tool (voice on your phone, Copilot, ChatGPT, Claude).
 >
-> **First, paste this as text (then switch to voice):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
 > **Then, your task:** Describe to AI what happened when you tried your prompt today. Be specific about what went well and what didn't. AI will coach you on being more specific.
 >

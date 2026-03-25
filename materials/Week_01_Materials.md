@@ -210,7 +210,7 @@ Display:
 
 > Open any AI tool on your device – Copilot, ChatGPT, Claude, or anything you have. On your phone is fine. **Voice mode is encouraged** – talk to AI like you'd talk to a classmate.
 >
-> **First, paste this as text (then switch to voice):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
 > **Then, your task:** Tell AI what you set up today and what you want to learn in this course. AI will ask you follow-up questions. Try to answer them.
 >

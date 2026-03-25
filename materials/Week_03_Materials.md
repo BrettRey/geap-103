@@ -291,7 +291,7 @@ Display:
 >
 > **Voice mode encouraged.**
 >
-> **First, paste this as text (then switch to voice):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
 > **Then, your task:** Explain to AI what a commit message is and why the one you wrote today was better than what AI originally suggested. AI will play a classmate who doesn't understand Git — answer its questions.
 >
