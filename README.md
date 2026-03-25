@@ -6,16 +6,19 @@ Course materials for GEAP 103 at Humber College (Toronto). A 14-week B1-level EA
 
 ## What's here
 
-| Folder/File | What it is |
-|-------------|-----------|
+| Path | What it is |
+|------|-----------|
 | `CLOs.md` | The 7 Course Learning Outcomes |
-| `Assessment_Framework_Draft_v6_2026-03-25.md` | Assessment design: triads, oral reflections, Decision Logs, evolving criteria |
-| `14_Week_Topic_Sequence_v4_2026-02-12.md` | Week-by-week challenge sequence |
-| `GEAP_103_Instructor_Orientation_2026-02-12.md` | What the course is, what traps to avoid, what good teaching looks like |
-| `GEAP_103_Week_*_Lesson_Plan_*.md` | Lesson plans for all 14 weeks |
+| `assessment-framework.md` | Assessment design: triads, oral reflections, Decision Logs, evolving criteria |
+| `topic-sequence.md` | Week-by-week challenge sequence |
+| `instructor-orientation.md` | What the course is, what traps to avoid, what good teaching looks like |
+| `lesson-plans/` | Lesson plans for all 14 weeks (`week-01.md` through `week-14.md`) |
 | `materials/` | Instructor materials packages, templates, setup guides, faculty preparation |
 | `materials/faculty-preparation.html` | Self-paced AI-guided preparation for instructors (open in browser, copy the prompt, paste into any AI tool) |
 | `materials/geap-103-starter.zip` | Student starter kit (folder structure, templates, copilot-instructions.md) |
+| `design-notes/` | Background research and design rationale |
+| `reviews/` | Simulated expert reviews from the design process |
+| `archive/` | Earlier versions of the assessment framework and topic sequence |
 
 ## Key design features
 

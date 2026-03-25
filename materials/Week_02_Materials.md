@@ -5,7 +5,7 @@
 **Contact time:** 3 × 55 min (150 min instruction + 15 min break)
 **Date prepared:** 2026-03-23 (revised same day)
 
-This file contains everything you need to prepare slides and run the class for Week 2. It is keyed to the lesson plan (`Week_02_Lesson_Plan_2026-02-12.md`). The lesson plan has the pedagogical rationale, timing, and activity design. This file has the concrete content: what goes on slides, what to say, what to display. Use the lesson plan for the "why," this file for the "what." In case of conflict, the lesson plan governs.
+This file contains everything you need to prepare slides and run the class for Week 2. It is keyed to the lesson plan (`lesson-plans/week-02.md`). The lesson plan has the pedagogical rationale, timing, and activity design. This file has the concrete content: what goes on slides, what to say, what to display. Use the lesson plan for the "why," this file for the "what." In case of conflict, the lesson plan governs.
 
 **Week 2 design note:** AI's output improves in direct proportion to how much the student can say about themselves, their purpose, and their perspective. The student experiences this firsthand, with their own wish from Week 1, not by watching the instructor demonstrate it. The instructor's role is to circulate, notice what students are doing, name the vocabulary as it arises, and push students to say more. Both the Decision Log and the Goal Document are assigned this week. They serve different purposes: the DL looks backward at a specific interaction; the GD looks forward at evolving interests.
 

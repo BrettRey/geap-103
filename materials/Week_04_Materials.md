@@ -5,7 +5,7 @@
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
 **Date prepared:** 2026-03-25
 
-This file contains everything you need to prepare slides and run the class for Week 4. The lesson plan (`Week_04_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 4, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
+This file contains everything you need to prepare slides and run the class for Week 4. The lesson plan (`lesson-plans/week-04.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 4, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
 **Week 4 design note:** This is the first assessment week. Two things are graded: the file-system artifact package (7%) and the first oral micro-defence (part of 25%). The rest of the session is review, peer response on Goal Documents, and a project-type menu that is purely informational. The most important thing today is that students experience explaining their work aloud for the first time, and that the experience is low-stakes enough to be useful rather than terrifying. The diagnostic writing (10 min, no AI) gives you an unmediated baseline for each student's independent written English.
 

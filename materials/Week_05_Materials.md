@@ -5,7 +5,7 @@
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
 **Date prepared:** 2026-03-25
 
-This file contains everything you need to prepare slides and run the class for Week 5. The lesson plan (`Week_05_Lesson_Plan_2026-02-12.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 5, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
+This file contains everything you need to prepare slides and run the class for Week 5. The lesson plan (`lesson-plans/week-05.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 5, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
 **Week 5 design note:** This is the first Building phase week. Students shift from discovering tools to using them for a purpose. The purpose this week: making something that works for someone else, not just you. The difference between a document that looks nice and one that actually works (headings vs. bold text, alt text vs. no alt text) is invisible until you check. The Accessibility Checker makes the invisible visible. The language shift is from "I want..." to "The user might need..." — from first-person desire to third-person consideration. This is harder English than anything in Phase 1.
 
