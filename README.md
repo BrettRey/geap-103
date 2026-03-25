@@ -30,7 +30,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 - **Scaffolded assessment.** Oral assessment criteria grow with the students: 3 criteria at Week 4, 5 at Week 8, 7 at Week 11. Each expansion matches skills students have been practising.
 - **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation: the student points to portfolio evidence and evaluates their own learning.
 - **Faculty preparation as AI conversation.** The instructor prep module is a prompt you paste into any AI tool. The AI walks you through the same challenges students face.
-- **[Git](https://git-scm.com/) for version control.** Students learn Git through AI-assisted natural language, not command-line memorisation. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.
+- **Version control.** Students learn to protect and share their work using [Git](https://git-scm.com/)/GitHub (recommended) or cloud version history. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.
 
 ## Status
 
