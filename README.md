@@ -29,7 +29,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 - **Weekly AI speaking practice.** Students explain their work to AI using voice mode every week, building the oral skills assessed at Weeks 4, 8, 11, and 13. Grounded in [Kumar et al. (2026)](https://doi.org/10.1038/s41562-025-02098-1) on AI-assisted communication practice.
 - **Scaffolded assessment.** Oral assessment criteria grow with the students: 3 criteria at Week 4, 5 at Week 8, 7 at Week 11. Each expansion matches skills students have been practising.
 - **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation: the student points to portfolio evidence and evaluates their own learning.
-- **Faculty preparation as AI conversation.** The instructor prep module is a prompt you paste into any AI tool. The AI walks you through the same challenges students face.
+- **Faculty preparation as AI conversation.** The [instructor prep module](materials/faculty-preparation.html) is a prompt you paste into any AI tool. The AI walks you through the same challenges students face.
 - **Version control.** Students learn to protect and share their work using [Git](https://git-scm.com/)/GitHub (recommended) or cloud version history. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.
 
 ## Status
