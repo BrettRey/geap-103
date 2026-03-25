@@ -294,7 +294,7 @@ Display:
 >
 > **Voice mode encouraged.**
 >
-> **First, say or paste this:** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+> **First, paste this as text (then switch to voice):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
 > **Then, your task:** AI is a help desk. Describe an accessibility problem you found today — what the Checker said, what was wrong, and how you fixed it. AI will tell you if your description is clear enough to act on.
 >
