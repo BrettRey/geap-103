@@ -1,6 +1,6 @@
 # GEAP 103: Basic Computer Skills
 
-Course materials for GEAP 103 at Humber College (Toronto). A 14-week B1-level EAP course that teaches English through digital tool use and AI interaction.
+Course materials for GEAP 103 at Humber College (Toronto). A 14-week [B1-level](https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions) EAP course that teaches English through digital tool use and AI interaction.
 
 **Thesis:** "English is the control layer." Students learn to say what they want clearly enough for AI to help them do it. The AI handles the technical complexity. The student's job is to articulate, evaluate, and revise.
 
