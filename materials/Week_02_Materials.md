@@ -3,7 +3,7 @@
 **Title:** Getting AI to Do What I Mean
 **Phase:** Discovery (Week 2 of 14)
 **Contact time:** 3 × 55 min (150 min instruction + 15 min break)
-**Date prepared:** 2026-03-23 (revised same day)
+**Date prepared:** 2026-03-27
 
 This file contains everything you need to prepare slides and run the class for Week 2. It is keyed to the lesson plan (`lesson-plans/week-02.md`). The lesson plan has the pedagogical rationale, timing, and activity design. This file has the concrete content: what goes on slides, what to say, what to display. Use the lesson plan for the "why," this file for the "what." In case of conflict, the lesson plan governs.
 
@@ -126,9 +126,8 @@ New pairs (not the same partner as Week 1 if possible).
 
 Display:
 
-- "Scroll back to your first output. Now show your partner your first output and your most recent output. What changed?"
-- "What did the expert say that surprised you?"
-- "What did you learn that you didn't know before you started?"
+> Partner A goes first: scroll back to your first output. Show your partner your first output and your most recent output. What changed? (3 min.)
+> Partner B: your turn. What did the expert say that surprised you? What did you learn that you didn't know before? (3 min.)
 
 ---
 
@@ -163,7 +162,7 @@ Introduce the Decision Log briefly. Display the template fields:
 
 ---
 
-## Segment C: Decision Log + Goal Document (1:50–2:45)
+## Segment C: Decision Log + Goal Document + Session Review (1:50–2:45)
 
 ### Individual Decision Log Entry (1:50–2:10)
 
@@ -222,47 +221,77 @@ Target length: ~150–200 words of student-authored text (excluding pasted AI ex
 
 ---
 
-### AI Session Review (2:25–2:45)
-
-The session review is a conversation with AI – spoken or typed – that the student saves. It serves three purposes: (a) reflecting on today's learning in English, (b) getting personalised advice for next week, and (c) building a persistent record that makes AI more useful over time because it knows more about the student.
-
-**Student review (2:25–2:38)**
+### Bridging Activity (2:25–2:27)
 
 Display:
 
-> Open a new document in your week-02 folder. Name it `week02-review-yourname.docx`.
+> In two minutes, you'll describe your AI interaction to AI using voice mode – what you expected vs. what you got. Before you start, do this: look at your Decision Log from today. Pick the one moment where the gap between what you wanted and what you got was biggest. Rehearse in your head: what did you expect? What actually happened?
+
+Two minutes of silence. Students look at their work and prepare.
+
+*This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
+
+---
+
+### Session Review -- Speaking Practice (2:27–2:39)
+
+Display:
+
+> **Open your AI tool. Start a new chat.**
 >
-> **Voice mode encouraged.** Use any AI tool (voice on your phone, Copilot, ChatGPT, Claude).
+> **First, say this (or paste it if using text):**
+> "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
-> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
->
-> **Then, your task:** Describe to AI what happened when you tried your prompt today. Be specific about what went well and what didn't. AI will coach you on being more specific.
+> **Then, your task:** Describe what happened when you tried your prompt – what you expected vs. what you got.
 >
 > Start with: "Today I asked AI to help me with _____. It gave me _____. I expected _____, but what I got was _____."
 >
 > When AI asks you to be more specific, try. If you can say exactly what was different from what you wanted, you're practising the skill that makes AI more useful.
 
-Students have a short exchange with AI (8–10 min). Spoken or typed – voice is better if available. If spoken on phone, student saves a screenshot or types a brief summary into the document. The document lives in the course folder and builds a record the student (and AI) can refer back to.
+AI role: Specificity coach.
 
-**What this practises:** The language of evaluation – describing what you expected vs. what you got, and being specific about the gap. This is the same skill assessed in Decision Logs (CLO 4) and in the Week 4 triad defence.
+**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
 
-**Pair share** (5 min): "What was hard to describe? Did AI help you say it more clearly?"
+Students talk to AI for 10–12 minutes, describing their AI interaction from Segment B – what they wanted, what they said, what they got, and where the gap was. The AI pushes back when descriptions are vague: "What exactly did you expect? What specifically was different?"
 
-**Instructor reflection on projector (2:38–2:45)** — this is the first thing to cut if time is short. The student review and pair share are more important.
+Instructor circulates and listens. No intervention unless a student is stuck or silent.
 
-Ask AI on the projector with the class watching:
+**What to listen for:**
 
-> "My B1 English learners just spent an hour asking AI to help with personal goals. They practised adding information about themselves – who they are, what they need, what an expert would say. Some students found it easy and some struggled. What should I watch for next week when we introduce version control?"
+| What you hear | What it means |
+|--------------|---------------|
+| Student describes the gap with specific details | Good production – the evaluation skill is developing |
+| Student says "it was different" and AI pushes back | The system is working – AI is demanding specificity |
+| Student is silent | Approach quietly: "Start with one thing. What did you ask AI to do?" |
+| Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
 
-Read the response together. Brief discussion: "Does this match your experience today?"
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
 
-> Next week: you've started making things with AI. What happens when you lose your work? We'll make sure that never happens.
+---
+
+### Self-Check (2:39–2:40)
+
+> Write one sentence: what did AI ask you to clarify?
+
+*This is a 1-min diagnostic – if you can't write that sentence, the session didn't work.*
+
+---
+
+### Closing (2:40–2:45)
+
+1–2 volunteers share: "What was the biggest gap between what you meant and what you got?" or "What new idea did you discover?"
+
+> Today's real lesson: the skill isn't using AI. The skill is knowing what you want and being able to say it. When you can't say it clearly, you learn something about your own thinking. That skill – saying what you mean – is what this course is about.
+
+> Next week: you've started making things. What happens when you lose work? We'll make sure that never happens.
+
+**Homework for next week:** "Create a GitHub account at github.com/signup. Use your Humber email. If you get stuck, ask AI to help. Having your account ready is required for Week 3."
 
 Reminders (display):
 - Bring your device
 - Your Decision Log entry should be in your geap-103/decision-logs/ folder
 - Your Goal Document should have two entries now
-- Your session review should be in your week-02 folder
+- **Create a GitHub account at github.com/signup before next class (use your Humber email)**
 
 ---
 
@@ -287,6 +316,7 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 - [ ] Decision Log template accessible to students (shared on LMS or OneDrive)
 - [ ] Decision Log sentence frames on a slide
 - [ ] Goal Document prompt + sentence frames on a slide
+- [ ] Session review slide: role-setting prompt + Week 2 scenario ("Describe what happened when you tried your prompt – what you expected vs. what you got")
 - [ ] Confirm students have Goal Documents from Week 1 accessible (email reminder before class)
 - [ ] AI tool available for session review (same tool students used during practice)
 
@@ -300,6 +330,7 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 - CLO 5 begins (communicate about technical work) – the DL entry is the first instance of this genre
 - Goal Document updated (ungraded; instructor reads at Week 4)
 - Instructor collects DL entries 1–2 by ~Week 4; feedback returned by Week 6
+- **Session review** (formative, not graded): Week 2 scenario practises evaluating results and describing gaps – builds toward Micro-Defence 1 (Week 4, 3 criteria)
 
 ---
 
@@ -308,11 +339,10 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 | Skill | Activity |
 |-------|----------|
 | **Vocabulary** | 5 entries covering 7 terms (prompt, generate, revise, accept, modify, reject, verification) displayed as reference, named by instructor as students encounter the concepts during practice |
-| **Speaking** | Warm-up sharing; brief whole-class check-ins during practice; pair debrief (comparing outputs, discussing expert perspective); class discussion; pair Goal Document discussion |
+| **Speaking** | Warm-up sharing; brief whole-class check-ins during practice; pair debrief (comparing outputs, discussing expert perspective); class discussion; pair Goal Document discussion; **session review** (12 min AI voice interaction: evaluating results and being precise about gaps – the AI acts as a specificity coach, pushing back on vague descriptions) |
 | **Reading** | AI-generated output across 4 progressively refined prompts (authentic digital text); Decision Log template fields |
-| **Writing** | Decision Log entry (~150–200 words; documenting how output improved); Goal Document update (2–3 sentences); session review document |
-| **Speaking** (session review) | Conversational AI exchange (spoken or typed) describing learning and asking for advice; pair share of AI's suggestions |
-| **Listening** | Pair partner's discoveries; classmates' sharing; instructor naming vocabulary during circulation; AI-generated session feedback read aloud |
+| **Writing** | Decision Log entry (~150–200 words; documenting how output improved); Goal Document update (2–3 sentences); session review self-check sentence |
+| **Listening** | Pair partner's discoveries; classmates' sharing; instructor naming vocabulary during circulation; AI follow-up questions during session review |
 
 ---
 
@@ -329,8 +359,10 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 | DL entry | 1:50–2:10 | 20 | First entry; 4–5 fields OK |
 | GD update | 2:10–2:20 | 10 | 2–3 sentences |
 | Debrief | 2:20–2:25 | 5 | Key line + volunteers |
-| Session review (student) | 2:25–2:38 | 13 | AI exchange, pair share |
-| Session review (instructor) | 2:38–2:45 | 7 | One prompt, read, react |
+| Bridging activity | 2:25–2:27 | 2 | Pick biggest gap, rehearse |
+| Session review (student) | 2:27–2:39 | 12 | AI voice: describe what you expected vs. got |
+| Self-check | 2:39–2:40 | 1 | One sentence: what did AI ask you to clarify? |
+| Closing | 2:40–2:45 | 5 | Volunteers, key line, homework (GitHub account) |
 | **Total** | | **150 min instruction** | |
 
 ---
@@ -384,3 +416,5 @@ Add 2–3 sentences: what do you think now about your wishes? Did anything chang
 | **modify** | To change part of what AI created |
 | **reject** | To throw away what AI created and try again |
 | **verification** | Checking whether AI's output is correct and matches what you wanted |
+
+**5. Create a GitHub account** at github.com/signup. Use your Humber email. This is required for Week 3.

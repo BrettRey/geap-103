@@ -125,6 +125,7 @@ One volunteer describes their interaction. Class fills in the Decision Log templ
 **Format:** Pair work
 **Language skills:** Speaking (comparing experiences)
 
+(Partner A describes their experience first for 3 min, then Partner B for 3 min.)
 - "What did you try? What was the biggest gap between what you meant and what you got?"
 - "Did anyone discover something new -- an idea you didn't have before you talked to AI?"
 
@@ -134,7 +135,7 @@ One volunteer describes their interaction. Class fills in the Decision Log templ
 
 ---
 
-## Segment C: Application + Goal Document (1:50--2:45)
+## Segment C: Application + Goal Document + Session Review (1:50--2:45)
 
 ### 1:50--2:10 | Individual Decision Log Entry
 **Format:** Individual writing
@@ -146,7 +147,7 @@ Save to GEAP 103/Decision Logs/ folder.
 
 Instructor circulates, helps with language, checks that entries capture the gap between intention and result (not just "the AI made something and I changed it" but: what did I MEAN, what did I SAY, and why were they different?).
 
-### 2:10--2:35 | Goal Document Update
+### 2:10--2:27 | Goal Document Update
 **Format:** Guided writing, then pair discussion
 **Language skills:** Writing (evaluative, exploratory), speaking
 
@@ -160,16 +161,49 @@ Instructor circulates, helps with language, checks that entries capture the gap 
 - "I changed my mind about _____ because _____."
 - "Today I discovered that _____, which I didn't know before."
 
-**Writing** (15 min): Students update their Goal Document. This is entry 2.
+**Writing** (10 min): Students update their Goal Document. This is entry 2.
 
-**Pair discussion** (10 min): "What's the most interesting thing you tried or discovered today? Did your thinking change?"
+**Pair discussion** (7 min): "What's the most interesting thing you tried or discovered today? Did your thinking change?" (Partner A shares first for 3 min, then Partner B for 3 min.)
 
-### 2:35--2:45 | Debrief + Next Week Preview
+### 2:27--2:29 | Bridging Activity
+**Format:** Individual, silent
+
+"In two minutes, you'll describe your AI interaction to AI using voice mode -- what you expected vs. what you got. Before you start, do this: look at your Decision Log from today. Pick the one moment where the gap between what you wanted and what you got was biggest. Rehearse in your head: what did you expect? What actually happened?"
+
+*This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
+
+### 2:29--2:41 | Session Review (Speaking Practice)
+**Format:** Individual, AI voice mode
+**Language skills:** Speaking (evaluating results, being precise about gaps)
+
+"Open your AI tool and start a new chat. Say or paste this prompt."
+
+**Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+
+**This week's scenario** (on slide): "Describe what happened when you tried your prompt -- what you expected vs. what you got."
+
+AI role: Specificity coach.
+
+Students talk to AI for 10-12 minutes, describing their AI interaction from Segment B -- what they wanted, what they said, what they got, and where the gap was. The AI pushes back when descriptions are vague: "What exactly did you expect? What specifically was different?"
+
+Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
+
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+
+### 2:41--2:42 | Self-Check
+**Format:** Individual, written
+
+"Write one sentence: what did AI ask you to clarify?"
+
+*This is a 1-min diagnostic -- if you can't write that sentence, the session didn't work.*
+
+### 2:42--2:45 | Closing
 **Format:** Whole class
 
-- 2-3 volunteers share: "What was the biggest gap between what you meant and what you got?" or "What new idea did you discover?"
+- 1-2 volunteers share: "What was the biggest gap between what you meant and what you got?" or "What new idea did you discover?"
 - "Today's real lesson: the skill isn't using AI. The skill is knowing what you want and being able to say it. When you can't say it clearly, you learn something about your own thinking. That skill -- saying what you mean -- is what this course is about."
 - "Next week: you've started making things. What happens when you lose work? We'll make sure that never happens."
+- **Homework for next week:** "Create a GitHub account at github.com/signup. Use your Humber email. If you get stuck, ask AI to help. Having your account ready is required for Week 3."
 - Remind: bring your device. Your Week 1 folder map and Week 2 Decision Log should both be in your GEAP 103 folder.
 
 ---
@@ -192,15 +226,16 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 - [ ] Vocabulary slides: prompt, generate, revise, accept/reject, verification
 - [ ] Decision Log template accessible to students (shared file on LMS or OneDrive)
 - [ ] Goal Document prompt + sentence frames on slide
+- [ ] Session review slide: role-setting prompt + Week 2 scenario ("Describe what happened when you tried your prompt -- what you expected vs. what you got")
 - [ ] Confirm students have their Goal Documents from Week 1 accessible
 
 ## Language Development Summary
 
 - **Vocabulary:** 5 terms (prompt, generate, revise, accept/reject, verification) pre-trained in Segment A, applied in practice and Decision Log
-- **Speaking:** Warm-up sharing; class Decision Log discussion; pair debrief on gaps and discoveries; pair discussion of evolving interests
+- **Speaking:** Warm-up sharing; class Decision Log discussion; pair debrief on gaps and discoveries; pair discussion of evolving interests; **session review** (12 min AI voice interaction: evaluating results and being precise about gaps -- the AI acts as a specificity coach, pushing back on vague descriptions)
 - **Reading:** AI-generated output (authentic digital text); Decision Log template fields
 - **Writing:** Decision Log entry (~150-200 words; documenting the gap between intention and result); Goal Document update (~75-100 words; evaluative/exploratory)
-- **Listening:** Instructor think-aloud during worked example; volunteer's description of their experience
+- **Listening:** Instructor think-aloud during worked example; volunteer's description of their experience; AI follow-up questions during session review
 
 ## Assessment Alignment
 
@@ -209,3 +244,4 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 - CLO 4 begins (evaluate AI text)
 - Goal Document updated (ungraded; instructor reads at Week 4)
 - Instructor collects DL entries 1-2 by ~Week 4; feedback returned by Week 6
+- **Session review** (formative, not graded): Week 2 scenario practises evaluating results and describing gaps -- builds toward Micro-Defence 1 (Week 4, 3 criteria)

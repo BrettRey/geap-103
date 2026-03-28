@@ -3,7 +3,7 @@
 **Title:** Making Something Others Can Read and Use
 **Phase:** Building (Week 5 of 14)
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
-**Date prepared:** 2026-03-25
+**Date prepared:** 2026-03-27
 
 This file contains everything you need to prepare slides and run the class for Week 5. The lesson plan (`lesson-plans/week-05.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 5, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
@@ -207,9 +207,13 @@ Partners swap documents (the practice document they fixed, not their own work).
 
 Display:
 
-> 1. Run the Accessibility Checker on your partner's fixed document
-> 2. Did your partner catch everything? Are there issues left?
-> 3. Read your partner's alt text. Does it describe what the image actually shows?
+> **Partner A goes first** (5 min): Run the Accessibility Checker on your partner's fixed document. Report findings aloud: "I found _____. This means _____." Partner B listens and takes notes but does not respond yet.
+>
+> **Partner B responds** (5 min): Address what Partner A found. Then run the Checker on Partner A's document and report findings the same way.
+>
+> For both turns:
+> - Did your partner catch everything? Are there issues left?
+> - Read your partner's alt text. Does it describe what the image actually shows?
 >
 > Tell your partner: "One thing you fixed well was _____. One thing that still needs work is _____."
 
@@ -227,15 +231,23 @@ Display:
 
 ---
 
-## Segment C: Application + Goal Document (1:50–2:45)
+## Segment C: Application + Goal Document + Session Review (1:50–2:45)
 
-### Apply to Your Own Work (1:50–2:15)
+### Apply to Your Own Work (1:50–2:10)
 
 > "Now apply what you learned to something of your own. Open a document from your geap-103 folder — something you made in Weeks 2–4, or start something new connected to what interests you. Run the Accessibility Checker. Fix what it finds."
 
+**Git maintenance (first 5 min):** Before students start fixing their document, they commit what they have now.
+
+Display:
+
+> Before you change anything, commit your current document. Use a message like "before accessibility fixes." After you fix the accessibility issues, commit again with a message describing what you fixed. Then check your Git timeline: can you see both versions?
+
+This reinforces the commit-before-changing habit from Week 3 and bridges the gap between the Week 3 Git introduction and the Week 6 Git Episodes launch.
+
 Students work on their own documents. This is the first time accessibility principles meet the student's personal project direction. Some students will have a clear project idea; others are still exploring. Both are fine. The task is the same: make whatever you have accessible.
 
-**Git opportunity:** Students have been using Git since Week 3. While circulating, invite students who haven't done a Git restore yet:
+**Git Restore episode opportunity:** Students have been using Git since Week 3. While circulating, invite students who haven't done a Git restore yet:
 
 > "Have you tried going back to an earlier version of a file? This is a good time to try. Commit what you have now. Then make some changes. If something goes wrong, restore the previous version."
 
@@ -250,10 +262,11 @@ This is one of the three required Git Episodes (Restore). Not a formal activity 
 | Student has no document to work on | "Start something connected to what you wrote about in your Goal Document. Even a single page with a heading and an image is enough to practise." |
 | Student finished quickly | "Commit your changes to Git. Write a commit message that says what you fixed. Then try restoring an earlier version to see the difference." |
 | Student attempting a Git restore | "Good — that's one of your three Git Episodes. Save a screenshot or copy the output as evidence." |
+| Student didn't commit before fixing | "That's OK for now. Commit what you have. Next time, remember: commit before you change, commit after you change. Two snapshots." |
 
 ---
 
-### Goal Document: Who Is This For? (2:15–2:35)
+### Goal Document: Who Is This For? (2:10–2:25)
 
 > "For four weeks you've been writing about what YOU want. Today you practised thinking about someone else — a reader, a user, someone who might have trouble with what you make. Your Goal Document entry this week is about that shift."
 
@@ -261,22 +274,84 @@ This is one of the three required Git Episodes (Restore). Not a formal activity 
 
 > Think about who will use what you build. What would make it hard for them to use? What accessibility issues should you plan for?
 
-**Sentence frames** (display):
+**Sentence frames** (display — labelled "optional -- use if you're stuck"):
 
+> *Optional -- use if you're stuck. From this week forward, sentence frames are available as support, not the default. Try writing without them first.*
+>
 > - "The person using my project might have trouble with _____ because _____."
 > - "I need to check _____ to make sure it's accessible."
 > - "One thing I learned today that applies to my project is _____."
 > - "If I want to make _____, I would need to think about _____."
 
-**Writing** (10 min): Students write entry 5 in their Goal Document. The new language demand is **third-person consideration**: reasoning about someone else's experience. This is harder than "I want..." because it requires imagining a user the student has never met. Conditional language ("If I want to..., I would need to...") appears for the first time.
+**Writing** (8 min): Students write entry 5 in their Goal Document. The new language demand is **third-person consideration**: reasoning about someone else's experience. This is harder than "I want..." because it requires imagining a user the student has never met. Conditional language ("If I want to..., I would need to...") appears for the first time.
 
-**Pair share** (10 min): Partners read each other's Goal Document entry.
+**Pair share** (7 min, structured A/B turns): Partners read each other's Goal Document entries.
+
+**Partner A presents first** (~3 min): Read your entry aloud or summarise it. Partner B listens and asks one question: "Who is the user you're thinking about?" or "What problem are you most worried about?"
+
+**Partner B presents** (~3 min): Same format. Then 1 min for both to note anything their partner mentioned that they hadn't considered.
 
 > "Who is your partner thinking about? What problems did they anticipate? Did they think of something you didn't?"
 
 ---
 
-### Closing (2:35–2:45)
+### Bridging Activity (2:25–2:27)
+
+Display:
+
+> In two minutes, you'll describe your accessibility work to AI. Before you open voice mode, do this: think about one accessibility problem you found today. Rehearse in your head: what was the problem, what did the Checker say, and how did you fix it?
+
+Two minutes of silence. Students look at their work and prepare.
+
+*This bridges the register shift from reflective Goal Document writing to the session review. Students retrieve specific content from today's work and switch from reflective to explanatory mode before the voice interaction begins.*
+
+---
+
+### Session Review -- Speaking Practice (2:27–2:40)
+
+Display:
+
+> **Open your AI tool. Start a new chat.**
+>
+> **First, say this (or paste it if using text):**
+> "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+>
+> **Then, your task:** Describe an accessibility problem you found, what the Checker said, and how you fixed it.
+>
+> Start with: "I found a problem in a document today. The Accessibility Checker said _____. The issue was _____. I fixed it by _____."
+>
+> The AI is playing a help desk. You're calling in to describe a problem you already solved. They need to understand what you did so they can close the ticket. Be specific.
+
+AI role: Help desk.
+
+**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+
+Students talk to AI for 10–12 minutes, narrating the troubleshooting sequence from today's work: what accessibility issue they found, what the Accessibility Checker reported, what they did to fix it, and whether the fix worked. The AI pushes back when the explanation is vague.
+
+Instructor circulates and listens. No intervention unless a student is stuck or silent.
+
+**What to listen for:**
+
+| What you hear | What it means |
+|--------------|---------------|
+| Student narrates the full sequence (problem → Checker output → fix → result) | Good production – the troubleshooting narrative skill is developing |
+| Student says "I fixed the thing" and AI pushes back | The system is working – AI is demanding specificity |
+| Student is silent | Approach quietly: "Start with one problem. What did the Checker say was wrong?" |
+| Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
+
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+
+---
+
+### Self-Check (2:40–2:41)
+
+> Write one sentence: what did AI ask you to clarify?
+
+*This is a 1-min diagnostic – if you can't write that sentence, the session didn't work.*
+
+---
+
+### Closing (2:41–2:45)
 
 > "Today's question was: can someone else use what you make? Not just look at it — actually use it. That's a different standard from 'does it look nice.'"
 >
@@ -286,21 +361,9 @@ This is one of the three required Git Episodes (Restore). Not a formal activity 
 >
 > "Next week: making sense of numbers. We'll read a spreadsheet before we build one."
 
-### AI Session Review (2:40–2:45)
+Remind:
 
-Display:
-
-> Open a new document in your week-05 folder. Name it `week05-review-yourname.docx`.
->
-> **Voice mode encouraged.**
->
-> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
->
-> **Then, your task:** AI is a help desk. Describe an accessibility problem you found today — what the Checker said, what was wrong, and how you fixed it. AI will tell you if your description is clear enough to act on.
->
-> Start with: "I found a problem in a document today. The Accessibility Checker said _____. The issue was _____. I fixed it by _____."
-
-Students have a brief exchange with AI (5 min). Save the conversation. Cut this if time is short.
+> "Check your Git timeline. You should have at least two commits from today — one before your accessibility fixes and one after."
 
 ---
 
@@ -313,8 +376,10 @@ Students have a brief exchange with AI (5 min). Save the conversation. Cut this 
 | Return DL feedback (entries 1–2) | This week (Week 5 or 6 at latest) | One strength + one improvement target per entry |
 | Spot-check verification notes | Before Week 6 | Are students writing in their own words? Are they describing what they checked, not just what AI did? |
 | Note Git restore attempts | Before Week 6 | Track which students attempted a restore during Segment C (for Git Episodes tracking) |
+| Note Git maintenance commits | Before Week 6 | Which students completed two commits (before and after accessibility fixes)? |
 | Follow up on "deferred" triad students from Week 4 | Start of Week 5 or after class | Brief 2-min follow-up for any students the instructor didn't observe during triads |
-| Make-up defence for Week 4 absentees | During guided practice (0:50–1:15) or application (1:50–2:15) | Absent student writes diagnostic during settling in (0:00–0:05) or arrives 10 min early. During a work period, form an ad hoc triad with 2 volunteers. Score as normal — you hear the whole thing. |
+| Make-up defence for Week 4 absentees | During guided practice (0:50–1:15) or application (1:50–2:10) | Absent student writes diagnostic during settling in (0:00–0:05) or arrives 10 min early. During a work period, form an ad hoc triad with 2 volunteers. Score as normal — you hear the whole thing. |
+| Listen for session review patterns | Before Week 6 | Were students able to narrate the troubleshooting sequence (problem, Checker output, fix)? Did the AI push them to be specific? Note any students who were silent or struggled — consider pairing them with a partner next week before going to voice. |
 
 ---
 
@@ -348,6 +413,8 @@ In Week 5, we learned about accessibility — making documents that work for eve
 
 **5. Read your Decision Log feedback** (entries 1–2). Your next entry should show you've thought about the feedback.
 
+**6. Git maintenance:** Commit your current work, then commit again after making changes. Check that both commits appear in your timeline.
+
 ---
 
 ## Instructor Prep Checklist
@@ -358,7 +425,9 @@ In Week 5, we learned about accessibility — making documents that work for eve
 - [ ] Vocabulary reference slide ready (5 terms in table)
 - [ ] Screen reader clip or description prepared (optional but powerful)
 - [ ] Verification note instructions on slide (what AI did, what I changed, what I checked)
-- [ ] Goal Document prompt + sentence frames on slide
+- [ ] Goal Document prompt + sentence frames on slide (sentence frames labelled "optional -- use if you're stuck")
+- [ ] Session review slide: role-setting prompt + Week 5 scenario ("Describe an accessibility problem you found, what the Checker said, and how you fixed it")
+- [ ] Git maintenance instructions on slide (commit before fixing, commit after fixing, check timeline)
 - [ ] Decision Log feedback (entries 1–2) ready to return
 - [ ] List of any "deferred" micro-defence students from Week 4 (for brief follow-up)
 - [ ] List of students absent in Week 4 who need make-up defence (diagnostic paper + ad hoc triad during a work period)
@@ -374,9 +443,11 @@ In Week 5, we learned about accessibility — making documents that work for eve
 | **Decision Log feedback** | Entries 1–2 returned with feedback (one strength, one improvement target) | Part of 30% component | 3, 4 |
 | **Artifact Packages** | Verification note practises process documentation format | Part of 25% component | 4, 6 |
 | **Git Episodes** | Restore episode opportunity during Segment C (individual invitation) | Part of 10% component | 1 |
+| **Git maintenance** | Two commits (before and after accessibility fixes) reinforce commit-as-snapshot mental model | Formative | 1 |
 | **Goal Document** | Entry 5 written (third-person consideration, conditional language) | Ungraded | — |
+| **Session review** | Week 5 scenario: narrate a troubleshooting sequence to a help desk (formative, not graded) | Feeds Micro-Defence 2 (Week 8) | 5 |
 
-**CLO 6 begins** this week (produce digital products to college standards, including accessibility). Students encounter accessibility for the first time and practise fixing it with AI assistance.
+**CLO 6 begins** this week (produce digital products to college standards, including accessibility). Students encounter accessibility for the first time and practise fixing it with AI assistance. **CLO 1 reinforced** (manage files and versions — Git maintenance commits bridge Weeks 3–6).
 
 ---
 
@@ -385,10 +456,10 @@ In Week 5, we learned about accessibility — making documents that work for eve
 | Skill | Activity |
 |-------|----------|
 | **Vocabulary** | 5 new terms (heading style, alt text, screen reader, Accessibility Checker, contrast) taught in context with live demos, applied during practice, reinforced in application |
-| **Speaking** | Pair exchange after worked example; pair accessibility review ("one thing you fixed well, one thing still needs work"); pair Goal Document share (describing user needs) |
+| **Speaking** | Pair exchange after worked example; pair accessibility review with structured A/B turns ("one thing you fixed well, one thing still needs work"); pair Goal Document share with structured A/B turns (describing user needs); **session review** (12 min AI voice interaction: narrating a troubleshooting sequence to a help desk – the first scenario requiring a complete problem-diagnosis-fix narrative) |
 | **Reading** | Accessibility Checker error messages (authentic system feedback); AI-generated alt text (evaluating accuracy); partner's fixed document; partner's Goal Document entry |
-| **Writing** | Verification note (~75–100 words, own words: what AI did, what I changed, what I checked); Goal Document entry 5 (~75–100 words: third-person consideration, conditional language) |
-| **Listening** | Vocabulary demonstrations; worked example think-aloud; partner's accessibility review feedback; partner's Goal Document discussion |
+| **Writing** | Verification note (~75–100 words, own words: what AI did, what I changed, what I checked); Goal Document entry 5 (~75–100 words: third-person consideration, conditional language); Git commit messages (brief descriptive writing); session review self-check sentence |
+| **Listening** | Vocabulary demonstrations; worked example think-aloud; partner's accessibility review feedback; partner's Goal Document discussion; AI follow-up questions during session review |
 
 ---
 
@@ -402,9 +473,12 @@ In Week 5, we learned about accessibility — making documents that work for eve
 | Pre-task planning | 0:45–0:50 | 5 | Who is the reader? What might be hard for them? |
 | Guided practice | 0:50–1:15 | 25 | Fix the practice document; instructor circulates |
 | Verification note | 1:15–1:25 | 10 | Write in own words: what happened, what I checked |
-| Pair accessibility review | 1:25–1:35 | 10 | Swap documents, run Checker, give feedback |
+| Pair accessibility review | 1:25–1:35 | 10 | Swap documents, run Checker, give feedback (structured A/B) |
 | **Break** | **1:35–1:50** | **15** | |
-| Application to own work | 1:50–2:15 | 25 | Fix own documents; Git restore opportunity |
-| Goal Document entry 5 | 2:15–2:35 | 20 | Writing (10 min) + pair share (10 min) |
-| Closing + session review | 2:35–2:45 | 10 | Theme summary, DL reminder, AI review (cut if short) |
+| Application + Git maintenance | 1:50–2:10 | 20 | Commit before fixing, fix own documents, commit after, Git restore opportunity |
+| Goal Document entry 5 | 2:10–2:25 | 15 | Writing (8 min) + pair share (7 min, structured A/B) |
+| Bridging activity | 2:25–2:27 | 2 | Pick one accessibility problem, rehearse sequence |
+| Session review (student) | 2:27–2:40 | 13 | AI voice: describe problem to help desk |
+| Self-check | 2:40–2:41 | 1 | One sentence: what did AI ask you to clarify? |
+| Closing | 2:41–2:45 | 4 | Theme summary, DL reminder, Git reminder, look-ahead |
 | **Total** | | **150 min instruction** | |

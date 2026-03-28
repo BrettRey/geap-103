@@ -3,13 +3,15 @@
 **Title:** Never Losing Work Again
 **Phase:** Discovery (Week 3 of 14)
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
-**Date prepared:** 2026-03-24
+**Date prepared:** 2026-03-27
 
 This file contains everything you need to prepare slides and run the class for Week 3. The lesson plan (`lesson-plans/week-03.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict, the lesson plan governs.
 
 **Week 3 design note:** Students have been making things for two weeks. They have files scattered across their geap-103 folder. Today they learn to protect them: version control as a timeline of snapshots they control. The tool is Git/GitHub. The skill is writing commit messages — short descriptions of what you did and why. With the CLI, Git is a conversation: "save this version," "show me the previous version," "put this online." Without the CLI, Git is the GitHub web interface, which is clunkier but achieves the same thing. Both paths are supported.
 
 **AI tools:** Same tool-agnostic approach as Week 2. Students use whatever they set up last week. CLI users get Git for free (it's built in). Browser-based AI users use the GitHub web interface for Git operations.
+
+**GitHub accounts are a hard prerequisite this week.** Account creation was assigned as homework in the Week 2 closing. Students who arrive without an account will need to create one during Step 1 (budget extra time for 2–3 stragglers). Do not let account creation delay the rest of the class.
 
 ---
 
@@ -19,13 +21,23 @@ This file contains everything you need to prepare slides and run the class for W
 
 > You've been making things for two weeks: a file system, AI conversations, Decision Logs, a Goal Document. Has anyone ever lost something they were working on? Deleted it by accident? Wanted to go back to an earlier version?
 
-Pairs: "Tell your partner about a time you lost work or couldn't find something." Frame: "I was working on _____ and then _____." (2 min each)
+Pairs: "Tell your partner about a time you lost work or couldn't find something." Frame: "I was working on _____ and then _____." Partner A speaks first (1 min), then Partner B (1 min).
 
 1–2 volunteers share with the class.
 
 Then:
 
 > Today we fix that. You're going to learn how to save snapshots of your work so you can always go back. It's called version control.
+
+---
+
+### GitHub Account Verification (start of Step 1)
+
+Before creating repositories, verify accounts:
+
+> "Raise your hand if you can sign in to github.com right now." Wait. Count hands.
+
+Students who cannot sign in: direct them to github.com/signup immediately. They work on account creation while others proceed to Step 1. **Do not hold the class.** These students join Step 1 as soon as their account is active.
 
 ---
 
@@ -65,7 +77,7 @@ copilot "Create a Git repository here and connect it to a new GitHub repository 
 
 Do NOT pre-teach all five terms. Students will encounter them over the next hour. Name each one as it comes up: "What you just did — saving a version — that's called a *commit*."
 
-Circulate. **Budget 10 minutes here.** Most students should have GitHub accounts from Week 1. Those who don't: help them sign up now. Students who finish early start Step 2.
+Circulate. **Budget 10 minutes here.** Students who finish early start Step 2.
 
 **Whole-class fallback:** If more than a third of students can't get a repo created by 0:25, switch to a live walkthrough on the projector: create one repo together as a class, then students replicate what they saw. This is slower but ensures everyone has a working repo before Step 2.
 
@@ -132,7 +144,7 @@ AI proposes a message. Student reads, evaluates, accepts or revises.
 
 Students who finish early: add a second file (Decision Log, file system map) as a new commit. Each time, read AI's proposed message and decide: keep, revise, or replace?
 
-**Pair activity (0:50–0:55):** "Show your partner your two commit messages. Did AI describe your changes accurately? Did you have to change anything? What did you change and why?"
+**Pair activity (0:50–0:55):** "Partner A goes first: show your partner your two commit messages. Did AI describe your changes accurately? Did you have to change anything? What did you change and why? (2 min.) Then Partner B. (2 min.)"
 
 ---
 
@@ -201,7 +213,7 @@ This is a speaking activity disguised as a Git activity. Pairs evaluate AI-gener
 
 Display:
 
-> **Partner A:** Make a change to one of your files. Commit. Don't change AI's message yet.
+> **Partner A goes first:** Make a change to one of your files. Commit. Don't change AI's message yet.
 > **Partner B:** Read the commit message AI proposed. Then ask:
 
 **Sentence frames for the evaluating partner** (display on slide):
@@ -267,7 +279,7 @@ copilot "Push my repository to GitHub"
 
 **Writing** (12 min): Students write entry 3 in their Goal Document. First time practising speculative description. Aim for 4–5 sentences.
 
-**Pair share** (8 min): "Can your partner picture what you described? What would someone see? What would it do?"
+**Pair share** (8 min): "Can your partner picture what you described? What would someone see? What would it do?" Partner A describes first (3 min), then Partner B (3 min).
 
 ---
 
@@ -281,37 +293,77 @@ Quick check: "What's a commit?" "What's a repository?" "What does restore mean?"
 
 ---
 
-### AI Session Review (2:25–2:45)
-
-**Student review (2:25–2:38)**
+### Bridging Activity (2:25–2:27)
 
 Display:
 
-> Open a new document in your week-03 folder (or continue in the CLI). Name it `week03-review-yourname.docx`.
+> In two minutes, you'll explain commit messages to AI – specifically, why your commit message was better than what AI would have suggested. Before you open voice mode, do this: look at one of your commit messages from today. Think about what it says and why you wrote it that way. What would a generic message like "updated file" miss?
+
+Two minutes of silence. Students look at their work and prepare.
+
+*This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
+
+---
+
+### Session Review -- Speaking Practice (2:27–2:39)
+
+Display:
+
+> **Open your AI tool. Start a new chat.**
 >
-> **Voice mode encouraged.**
+> **First, say this (or paste it if using text):**
+> "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
-> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
->
-> **Then, your task:** Explain to AI what a commit message is and why the one you wrote today was better than what AI originally suggested. AI will play a classmate who doesn't understand Git — answer its questions.
+> **Then, your task:** Explain what a commit message is and why yours was better than AI's suggestion.
 >
 > Start with: "Today I learned about version control. A commit message is _____. AI suggested _____ for my commit message, but I changed it to _____ because _____."
 >
 > When AI asks follow-up questions (like "Why does it matter?" or "What would happen if you didn't change it?"), try to answer. You're practising explaining technical decisions — the same skill you'll use next week when you explain your work to two partners.
 
-Students have a short exchange with AI (8–10 min). Spoken or typed – voice is better. Save the conversation.
+AI role: Confused classmate who doesn't understand Git.
+
+**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+
+Students talk to AI for 10–12 minutes, explaining what a commit message is, why it matters, and why a specific, descriptive message is better than a generic one. The AI plays confused: "What do you mean, a snapshot? Why can't I just call it 'my file'? Why does the message matter?"
+
+Instructor circulates and listens. No intervention unless a student is stuck or silent.
+
+**What to listen for:**
+
+| What you hear | What it means |
+|--------------|---------------|
+| Student explains commit messages with specific examples | Good production – the technical explanation skill is developing |
+| Student says "it's important" and AI pushes back | The system is working – AI is demanding specificity |
+| Student is silent | Approach quietly: "Start with one thing. What did you save today?" |
+| Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
+
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
 
 **What this practises:** Explaining a technical decision to someone who doesn't share your context. This is a direct rehearsal for the Week 4 triad defence, where students explain one piece of work to two partners. Students who practise here will be noticeably more comfortable next week.
 
-**Pair share** (5 min): "What question did AI ask that was hardest to answer? How did you handle it?"
+---
 
-**Instructor reflection on projector (2:38–2:45)** — cut this if time is short.
+### Self-Check (2:39–2:40)
 
-Ask AI:
+> Write one sentence: what did AI ask you to clarify?
 
-> "My B1 students just learned Git through AI-assisted commands. Some used the CLI, some used the web interface. They practised commits, restores, and writing commit messages. Next week they present their work for the first time. What should I watch for?"
+*This is a 1-min diagnostic – if you can't write that sentence, the session didn't work.*
 
-Read together. Brief reaction.
+---
+
+### Pair Share (2:40–2:43)
+
+> "What question did AI ask that was hardest to answer? How did you handle it?"
+
+Partner A shares first (1 min), then Partner B (1 min).
+
+---
+
+### Closing (2:43–2:45)
+
+> "Today you learned two things: how to protect your work so you never lose it, and how to describe something that doesn't exist yet. Both are skills you'll use all semester."
+
+**Specific prep for Week 4:** "Your file-system artifact is due next week. Make sure your GEAP 103 folder in OneDrive is organized with clear naming and folders. Your portfolio repository should have at least 2–3 commits."
 
 ---
 
@@ -352,9 +404,10 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 - [ ] GitHub account: confirm you can sign in and create a repository on the projector
 - [ ] Vocabulary reference slide ready (5 terms in table — displayed as silent reference, not pre-taught). Print copies or plan for students to photograph if single-projector room.
 - [ ] Five progression slides ready (Create repo → First commit → Change and commit → Restore → Push). Reveal progressively during practice.
-- [ ] Verify: do most students have GitHub accounts? (Created in Week 1 or via catch-up instructions.) Plan for 2–3 stragglers who don't.
+- [ ] **GitHub accounts verified:** confirm most students created accounts (assigned as homework in Week 2). Plan for 2–3 stragglers who didn't.
 - [ ] Know common Git errors: authentication failures, "not a git repository," empty commit message. For each: what does the error say, and what should the student do?
 - [ ] Goal Document prompt + sentence frames on a slide
+- [ ] Session review slide: role-setting prompt + Week 3 scenario ("Explain what a commit message is and why yours was better than AI's suggestion")
 - [ ] Reminder slide: Week 4 file-system artifact is due (organized folder + 2–3 commits)
 
 ---
@@ -368,6 +421,7 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 - CLO 5 continues (communicate — commit messages are short technical writing)
 - **Git Episode opportunity:** students who restore an earlier version can document this as their Restore episode (1 of 3 required)
 - Goal Document updated (ungraded; instructor reads at Week 4)
+- **Session review** (formative, not graded): Week 3 scenario practises explaining a technical concept to a non-expert – builds toward Micro-Defence 1 (Week 4, 3 criteria: clear description, terminology, explaining a decision)
 
 ---
 
@@ -376,10 +430,10 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 | Skill | Activity |
 |-------|----------|
 | **Vocabulary** | 5 terms (repository, commit, snapshot, restore, push) displayed as reference, named by instructor during practice |
-| **Speaking** | Warm-up lost-work stories; partner evaluation of AI commit messages ("What did you actually change? Does AI's message match?"); pair Goal Document share; pair session review share |
-| **Reading** | AI-proposed commit messages (evaluating accuracy); GitHub interface text; error messages; AI-generated session review |
-| **Writing** | Revising AI commit messages (short evaluative editing); Goal Document entry (~50–100 words; speculative description); session review document |
-| **Listening** | Partner's guidance during commits; partner's imagined project; AI session review response |
+| **Speaking** | Warm-up lost-work stories; partner evaluation of AI commit messages ("What did you actually change? Does AI's message match?"); pair Goal Document share; **session review** (12 min AI voice interaction: explaining a technical decision to a confused non-expert – the first scenario requiring explanation of a concept, not just narration of an experience); pair session review share |
+| **Reading** | AI-proposed commit messages (evaluating accuracy); GitHub interface text; error messages |
+| **Writing** | Revising AI commit messages (short evaluative editing); Goal Document entry (~50–100 words; speculative description); session review self-check sentence |
+| **Listening** | Partner's guidance during commits; partner's imagined project; AI follow-up questions during session review |
 
 ---
 
@@ -388,7 +442,7 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 | Segment | Time | Minutes | Notes |
 |---------|------|---------|-------|
 | Warm-up | 0:00–0:10 | 10 | Lost work stories, framing |
-| Step 1: Create repo | 0:10–0:25 | 15 | Account creation absorbed here; CLI and web paths |
+| Step 1: Create repo | 0:10–0:25 | 15 | Account verification + creation; CLI and web paths |
 | Step 2: First commit | 0:25–0:40 | 15 | Add file, write commit message, circulate |
 | Step 3: Change + commit | 0:40–0:55 | 15 | Second commit, pair check of messages |
 | Folder creation moment | 0:55–1:00 | 5 | AI creates remaining week folders |
@@ -398,6 +452,9 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 | Push to GitHub | 1:55–2:00 | 5 | Put it online |
 | Goal Document | 2:00–2:20 | 20 | Speculative description |
 | Debrief + preview | 2:20–2:25 | 5 | Vocab check, Week 4 prep reminder |
-| Session review (student) | 2:25–2:38 | 13 | AI exchange + pair share |
-| Session review (instructor) | 2:38–2:45 | 7 | Cut if time is short |
+| Bridging activity | 2:25–2:27 | 2 | Pick a commit message, rehearse justification |
+| Session review (student) | 2:27–2:39 | 12 | AI voice: explain commit messages to confused classmate |
+| Self-check | 2:39–2:40 | 1 | One sentence: what did AI ask you to clarify? |
+| Session review (pair share) | 2:40–2:43 | 3 | Hardest question from AI |
+| Closing | 2:43–2:45 | 2 | Week 4 prep reminder |
 | **Total** | | **150 min instruction** | |

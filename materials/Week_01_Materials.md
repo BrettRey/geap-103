@@ -3,7 +3,7 @@
 **Title:** What Can a Computer Do for Me?
 **Phase:** Discovery (Week 1 of 14)
 **Contact time:** 3 × 55 min (165 min total: 150 min instruction + 15 min break)
-**Date prepared:** 2026-03-24
+**Date prepared:** 2026-03-27
 
 This file contains everything you need to prepare slides and run the class for Week 1. The lesson plan (`lesson-plans/week-01.md`) has the pedagogical rationale. This file has the concrete content: what goes on slides, what to say, what to display. In case of conflict, the lesson plan governs.
 
@@ -41,7 +41,7 @@ Two examples of things real people built by describing what they wanted to AI. K
 
 > Both of these were built by people who described what they wanted in English. That's what this course teaches.
 
-"Turn to your partner. Did either of those make you think of something you wish you could do?" Brief pair exchange, 1 min. Move on.
+"Turn to your partner. Partner A goes first: did either of those make you think of something you wish you could do? (1 min.) Then Partner B. (1 min.)" Move on.
 
 **Note for instructors:** You don't need these exact examples. Find two things that show what's possible – something practical and something creative. If you've built something with AI yourself, show that.
 
@@ -92,8 +92,8 @@ Circulate. This is where you name vocabulary:
 
 Display:
 
-- "Show your map to your partner. Where are your files? Can you find them?"
-- "What's different about your partner's system?"
+> Partner A goes first: show your map to your partner. Where are your files? Can you find them? (2 min.)
+> Partner B: your turn. What's different about your partner's system? (2 min.)
 
 2–3 pairs share one difference or surprise with the class.
 
@@ -181,9 +181,9 @@ Students write (20 min). Circulate, encourage, help with language.
 
 ### Pair Share (1:42–1:55)
 
-> Read your list to your partner. Which wishes do you have in common? Which one interests you most right now?
+> Partner A goes first: read your list to your partner. Which wish interests you most right now? (3 min.) Then Partner B: read yours. Which wishes do you have in common? (3 min.)
 
-Each partner explains one wish. Then 2–3 volunteers share one wish with the class.
+Then 2–3 volunteers share one wish with the class.
 
 > You'll come back to this list. Some of these wishes will grow, some will change, some you'll drop completely. That's what learning looks like.
 
@@ -200,33 +200,73 @@ Reminders (display):
 
 ---
 
-## Segment C: AI Session Review (2:00–2:30)
+## Segment C: Session Review (2:00–2:30)
 
-This is the student's first AI interaction. It previews Week 2 and creates a record the student can build on.
+This is the student's first AI interaction and their first session review. It previews Week 2 and establishes the weekly session review practice.
 
-### Setup + Student Review (2:00–2:20)
+### Bridging Activity (2:00–2:02)
 
 Display:
 
-> Open any AI tool on your device – Copilot, ChatGPT, Claude, or anything you have. On your phone is fine. **Voice mode is encouraged** – talk to AI like you'd talk to a classmate.
+> Before you open AI, do this: look at your GEAP 103 folder and your Goal Document. Pick one thing you set up today and one wish from your list. Rehearse in your head: what did you do, and what do you want to learn?
+
+Two minutes of silence. Students look at their work and prepare.
+
+*This bridges the register shift from reflective Goal Document writing to conversational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
+
+---
+
+### Session Review -- Speaking Practice (2:02–2:14)
+
+Display:
+
+> **Open your AI tool. Start a new chat.** Use any AI – Copilot, ChatGPT, Claude, or anything you have. On your phone is fine. **Voice mode is encouraged** – talk to AI like you'd talk to a classmate.
 >
-> **First, say this (or paste it if using text):** "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+> **First, say this (or paste it if using text):**
+> "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
-> **Then, your task:** Tell AI what you set up today and what you want to learn in this course. AI will ask you follow-up questions. Try to answer them.
+> **Then, your task:** Tell AI what you set up today and what you want to learn in this course.
 >
 > Start with: "Today I set up my course folder and wrote about what I want to learn. I'm interested in _____."
 >
 > When AI asks a follow-up, answer it. If you get stuck, say: "I'm not sure how to explain that. Can you ask me a different question?"
 
+AI role: Curious classmate.
+
 **Budget the first 5 minutes for access.** Students will be figuring out how to open AI on their device. Some will need to create accounts. Some will use a phone app. Help them get in; don't worry about which tool. **If a student can't get into any AI tool**, they have two options: watch their partner's screen and tell them what to type, or write their review on paper ("Today I learned _____. Next week I want to try _____."). Either way, they produce language.
 
-Once they're in, they have 10 minutes for a short exchange. Spoken or typed – voice is better if available.
+Once they're in, they have 10–12 minutes for a short exchange. Spoken or typed – voice is better if available.
+
+**What to listen for:**
+
+| What you hear | What it means |
+|--------------|---------------|
+| Student describes folder setup with specific details | Good production – the explaining skill is emerging |
+| Student says "I did the work" and AI pushes back | The system is working – AI is demanding specificity |
+| Student is silent | Approach quietly: "Start with one thing you did today. What folder did you create?" |
+| Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
+
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
 
 > If you can, save your conversation. Copy it into a document in your week-01 folder, or screenshot it on your phone. You'll want to look back at this later.
 
 **Why voice:** This is the first of a weekly speaking practice. Each week, students practise explaining their work to AI, which asks follow-up questions and gives coaching feedback. By Week 4, students will explain their work to real partners in a triad defence. The session review is low-stakes rehearsal for that.
 
-**Pair share** (5 min): "What did AI ask you? Could you answer? What was hard to explain?"
+---
+
+### Self-Check (2:14–2:15)
+
+> Write one sentence: what did AI ask you to clarify?
+
+*This is a 1-min diagnostic – if you can't write that sentence, the session didn't work.*
+
+---
+
+### Pair Share (2:15–2:20)
+
+> "What did AI ask you? Could you answer? What was hard to explain?"
+
+**Partner A shares first** (2 min), then **Partner B** (2 min).
 
 ---
 
@@ -316,6 +356,7 @@ Bring your device with OneDrive accessible. Make sure your geap-103 folder exist
 - [ ] Vocabulary reference slide ready (5 terms in table – displayed during exploration, not pre-taught). Print copies or plan for students to photograph it if single-projector room.
 - [ ] Minimal folder structure template on a slide (5 folders, not 18)
 - [ ] Goal Document prompt + sentence frames on a slide
+- [ ] Session review slide: role-setting prompt + Week 1 scenario ("Tell AI what you set up today and what you want to learn")
 - [ ] Paper or notebooks available for file-system mapping
 - [ ] Pre-class email sent confirming all students have OneDrive access and a device
 - [ ] AI tool available for session review (any tool – GitHub Copilot CLI, Copilot Chat, ChatGPT, Claude, etc.)
@@ -328,6 +369,7 @@ Bring your device with OneDrive accessible. Make sure your geap-103 folder exist
 - Goal Document launched (ungraded; instructor reads at Week 4)
 - CLO 1 begins (manage files + versions)
 - Course folder structure established for all future submissions
+- **Session review** (formative, not graded): Week 1 scenario practises expressing desires and explaining setup – builds toward Micro-Defence 1 (Week 4, 3 criteria)
 
 ---
 
@@ -336,10 +378,10 @@ Bring your device with OneDrive accessible. Make sure your geap-103 folder exist
 | Skill | Activity |
 |-------|----------|
 | **Vocabulary** | 5 terms displayed as reference, named by instructor as students encounter them during file exploration |
-| **Speaking** | Pair reaction to showcase; pair comparison of file systems; pair sharing of wishes; whole-class report-outs; pair discussion of AI session review |
+| **Speaking** | Pair reaction to showcase; pair comparison of file systems; pair sharing of wishes; whole-class report-outs; **session review** (12 min AI voice interaction: expressing desires and answering follow-up questions – the first session review, establishing the weekly practice) |
 | **Reading** | File paths, folder names, file extensions (authentic digital text); AI-generated session review output |
-| **Writing** | Goal Document entry (~50–100 words; expressing desires and interests); informal AI exchange during session review |
-| **Listening** | Showcase narration; partner's file system description; partner's wishes; AI-generated feedback read aloud |
+| **Writing** | Goal Document entry (~50–100 words; expressing desires and interests); session review self-check sentence |
+| **Listening** | Showcase narration; partner's file system description; partner's wishes; AI follow-up questions during session review |
 
 ---
 
@@ -356,7 +398,10 @@ Bring your device with OneDrive accessible. Make sure your geap-103 folder exist
 | GD writing | 1:22–1:42 | 20 | 3–5 wishes with sentence frames |
 | GD pair share | 1:42–1:55 | 13 | Read, discuss, volunteers |
 | Preview | 1:55–2:00 | 5 | Three sentences + reminders |
-| Session review (setup + student) | 2:00–2:20 | 20 | 5 min access setup + 10 min AI exchange + 5 min pair share |
+| Bridging activity | 2:00–2:02 | 2 | Pick one setup + one wish, rehearse |
+| Session review (student) | 2:02–2:14 | 12 | 5 min access setup + 10 min AI exchange |
+| Self-check | 2:14–2:15 | 1 | One sentence: what did AI ask you to clarify? |
+| Session review (pair share) | 2:15–2:20 | 5 | What was hard to explain? |
 | Session review (instructor) | 2:20–2:27 | 7 | One prompt, read, brief reaction |
 | Buffer | 2:27–2:30 | 3 | Overflow or early dismissal |
 | **Total** | | **150 min instruction** | |

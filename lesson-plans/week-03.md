@@ -22,7 +22,7 @@ Students have expressed desires (Week 1) and tested whether their words work (We
 
 "You've been making things for two weeks: a file system, a document with AI, Decision Logs, a Goal Document. Has anyone ever lost something they were working on? Deleted it by accident? Wanted to go back to an earlier version?"
 
-Pairs: "Tell your partner about a time you lost work or couldn't find something." (2 min each)
+Pairs: "Tell your partner about a time you lost work or couldn't find something." (Partner A speaks first for 1 min, then Partner B for 1 min.)
 
 1-2 volunteers share with the class.
 
@@ -83,14 +83,16 @@ All commands through Copilot or an AI chat interface -- not typed into a termina
 **Format:** Instructor-guided, individual
 **Language skills:** Reading (interface text, instructions), writing (commit messages)
 
+**GitHub accounts MUST be created before class** (assigned as homework in Week 2 closing or via Blackboard). Account creation in class consumes 15-20 min of unpredictable friction. Plan extra time ONLY for the 2-3 students who didn't complete the homework.
+
 Step by step, instructor on projector, students on their own devices:
-1. Sign in to GitHub (accounts created in advance if possible; otherwise, create now)
+1. Sign in to GitHub
 2. Create a new repository: name it `GEAP-103-Portfolio`
 3. Add one file: Week 1 file-system map (upload or copy-paste)
 4. Write a commit message: "Added Week 1 file system map"
 5. Commit
 
-Instructor circulates, troubleshoots sign-in issues, helps with upload.
+Instructor circulates, troubleshoots sign-in issues for the few students who need help.
 
 Students who finish early: add the Week 2 Decision Log or Goal Document as a second commit. Each commit gets its own message.
 
@@ -98,7 +100,7 @@ Students who finish early: add the Week 2 Decision Log or Goal Document as a sec
 **Format:** Pair work
 **Language skills:** Speaking (instructional language -- telling your partner what to do), writing (commit messages)
 
-Pairs take turns:
+Pairs take turns: (Partner A goes first, then they switch.)
 - **Student A** changes a file (e.g., adds a sentence to the file-system map)
 - **Student B** guides the commit: "Now save this version. What's your commit message going to say? Describe what you changed."
 - A executes the commit (using Copilot: "Commit this file with the message _____")
@@ -117,7 +119,7 @@ Students:
 2. Commit the change
 3. Restore the previous version (using Copilot: "Show me the previous version" or "Go back to the last commit")
 
-Pairs confirm: "Show your partner the restored version. Is it the old one?"
+Pairs confirm: "Show your partner the restored version. Is it the old one?" (Partner A shows first, then Partner B.)
 
 **Key moment:** "You just went back in time. Your earlier work is still there. You can always get it back."
 
@@ -127,9 +129,9 @@ Pairs confirm: "Show your partner the restored version. Is it the old one?"
 
 ---
 
-## Segment C: Application + Goal Document (1:50--2:45)
+## Segment C: Application + Goal Document + Session Review (1:50--2:45)
 
-### 1:50--2:10 | Continued Practice + Push
+### 1:50--2:05 | Continued Practice + Push
 **Format:** Individual with instructor support
 **Language skills:** Reading (system output, error messages)
 
@@ -139,7 +141,7 @@ Students continue adding to their repository:
 
 Instructor circulates, helps with errors. Common errors to watch for: authentication problems, file-not-found, forgetting to write a commit message. Help students read the error message: "What does this say? What does it want you to do?"
 
-### 2:10--2:35 | Goal Document Update: Imagining
+### 2:05--2:27 | Goal Document Update: Imagining
 **Format:** Guided writing, then pair discussion
 **Language skills:** Writing (speculative, descriptive), speaking
 
@@ -152,11 +154,43 @@ Instructor circulates, helps with errors. Common errors to watch for: authentica
 - "It might look like _____, with _____."
 - "I'm not sure yet, but I imagine something that _____."
 
-**Writing** (15 min): Students write entry 3 in their Goal Document. This is the first time they practise speculative description -- imagining something concrete from a vague interest.
+**Writing** (12 min): Students write entry 3 in their Goal Document. This is the first time they practise speculative description -- imagining something concrete from a vague interest.
 
-**Pair share** (10 min): Partners describe what they imagine. "Can you picture it? What would someone see? What would it do?"
+**Pair share** (7 min): Partners describe what they imagine. (Partner A describes first for 3 min, then Partner B for 3 min.) "Can you picture it? What would someone see? What would it do?" 1 min for partners to identify one overlap or difference.
 
-### 2:35--2:45 | Debrief + Next Week Preview
+### 2:27--2:29 | Bridging Activity
+**Format:** Individual, silent
+
+"In two minutes, you'll explain commit messages to AI -- specifically, why your commit message was better than what AI would have suggested. Before you open voice mode, do this: look at one of your commit messages from today. Think about what it says and why you wrote it that way. What would a generic message like 'updated file' miss?"
+
+*This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
+
+### 2:29--2:41 | Session Review (Speaking Practice)
+**Format:** Individual, AI voice mode
+**Language skills:** Speaking (explaining a technical decision to a non-expert)
+
+"Open your AI tool and start a new chat. Say or paste this prompt."
+
+**Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
+
+**This week's scenario** (on slide): "Explain what a commit message is and why yours was better than AI's suggestion."
+
+AI role: Confused classmate who doesn't understand Git.
+
+Students talk to AI for 10-12 minutes, explaining what a commit message is, why it matters, and why a specific, descriptive message is better than a generic one. The AI plays confused: "What do you mean, a snapshot? Why can't I just call it 'my file'? Why does the message matter?"
+
+Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
+
+**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+
+### 2:41--2:42 | Self-Check
+**Format:** Individual, written
+
+"Write one sentence: what did AI ask you to clarify?"
+
+*This is a 1-min diagnostic -- if you can't write that sentence, the session didn't work.*
+
+### 2:42--2:45 | Closing
 **Format:** Whole class
 
 - "Today you learned two things: how to protect your work so you never lose it, and how to describe something that doesn't exist yet. Both are skills you'll use all semester."
@@ -168,7 +202,7 @@ Instructor circulates, helps with errors. Common errors to watch for: authentica
 
 ## Instructor Prep Checklist
 
-- [ ] GitHub accounts: confirm students can sign in (pre-register if possible; plan extra time for account creation if not)
+- [ ] **GitHub accounts MUST be created before class** (assigned as homework in Week 2 closing or via Blackboard). Account creation in class consumes 15-20 min of unpredictable friction. Have a fallback plan ONLY for the 2-3 students who didn't complete the homework.
 - [ ] Visual model slide or whiteboard plan: timeline with snapshots and vocabulary labels
 - [ ] Vocabulary slides: repository, commit, snapshot, restore, push
 - [ ] Copilot/AI interface tested for Git commands (create repo, commit, restore, push)
@@ -176,14 +210,15 @@ Instructor circulates, helps with errors. Common errors to watch for: authentica
 - [ ] Plan for common errors: GitHub authentication failures, wrong directory, missing commit message
 - [ ] Students' Week 1 and Week 2 files identified (for uploading to repository)
 - [ ] Goal Document prompt + sentence frames on slide
+- [ ] Session review slide: role-setting prompt + Week 3 scenario ("Explain what a commit message is and why yours was better than AI's suggestion")
 
 ## Language Development Summary
 
 - **Vocabulary:** 5 terms (repository, commit, snapshot, restore, push) pre-trained visually in Segment A, then applied with tools in B and C
-- **Speaking:** Pair share about lost work; partner-guided commits (instructional register); pair sharing of imagined possibilities
+- **Speaking:** Pair share about lost work; partner-guided commits (instructional register); pair sharing of imagined possibilities; **session review** (12 min AI voice interaction: explaining a technical decision to a confused non-expert -- the first scenario requiring explanation of a concept, not just narration of an experience)
 - **Reading:** GitHub interface text; commit messages; system feedback and error messages
 - **Writing:** Commit messages (short, descriptive); Goal Document update (~50-100 words; speculative description -- a new language skill this week)
-- **Listening:** Visual pre-training narration; worked example walkthrough; partner's guidance during commits
+- **Listening:** Visual pre-training narration; worked example walkthrough; partner's guidance during commits; AI follow-up questions during session review
 
 ## Assessment Alignment
 
@@ -193,3 +228,4 @@ Instructor circulates, helps with errors. Common errors to watch for: authentica
 - Portfolio repository established (used for all future submissions and Git Episodes assessment)
 - Goal Document updated (ungraded; instructor reads at Week 4)
 - Students should have at least 1 Decision Log entry (from Week 2); additional entries are optional (students choose 8 of 12 eligible weeks). Instructor collects entries 1-2 by ~Week 4
+- **Session review** (formative, not graded): Week 3 scenario practises explaining a technical concept to a non-expert -- builds toward Micro-Defence 1 (Week 4, 3 criteria: clear description, terminology, explaining a decision)
