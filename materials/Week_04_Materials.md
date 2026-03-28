@@ -68,6 +68,10 @@ Display:
 > 5. If you have a GitHub repository, commit your current state now.
 >
 > When you're done, submit your OneDrive share link on Blackboard.
+>
+> **Also write 2–3 sentences:** How did you organize your files? What naming convention did you choose and why? What would you change?
+>
+> This is your first artifact package. The artifact is the folder. The documentation is your description of how and why you organized it. This pattern continues all semester: product + documentation.
 
 Circulate with quick spot-checks. For each student, glance at:
 
@@ -149,6 +153,16 @@ Display one slide with the table. For each type, show one screenshot or 30-secon
 > "These are examples, not limits. You can combine types, go beyond them, or invent something new. For now, just notice which ones are interesting to you."
 
 Brief pair exchange (1 min): "Which type caught your eye? Tell your partner." No reporting out.
+
+### Thread Map: Your Three Recurring Documents (0:38–0:40)
+
+Display a simple visual (keep available on Blackboard for the rest of the semester):
+
+> **Goal Document** — "What do I want? How is my thinking changing?" (exploratory, weekly)
+> **Decision Log** — "What did AI do? What did I decide?" (evaluative, ongoing, graded 30%)
+> **Git Portfolio** — "What have I saved? What can I go back to?" (version history, ongoing, graded 10%)
+
+> "These three documents serve different purposes. Your Goal Document is where you explore ideas. Your Decision Log is where you evaluate what AI did. Your Git portfolio is where your saved work lives. Don't confuse them — they ask for different kinds of writing."
 
 ---
 
@@ -338,7 +352,7 @@ Display:
 > 1. What seems to interest your partner most?
 > 2. What's unclear, or what would you want to know more about?
 >
-> **Step 3 (15 min):** Share your answers with your partner. Discuss:
+> **Step 3 (15 min):** Share your answers with your partner. **Partner A shares first** (7 min), then **Partner B** (7 min). Discuss:
 >
 > - "Here's what I noticed about your thinking..."
 > - "I wasn't sure what you meant when you said _____."
@@ -485,7 +499,9 @@ Use the sentence frames:
 - [ ] Triad rotation plan on slide (3 rounds: A presents → B presents → C presents, with times)
 - [ ] Peer feedback frame on slide: "One thing you explained clearly was _____. One question I have is _____."
 - [ ] Vocabulary review table on slide (15 terms, 3 columns by week)
-- [ ] Project-type menu on slide (8 types with one example each)
+- [ ] Project-type menu on slide (5-6 types with one example each)
+- [ ] Thread map visual on slide (Goal Document / Decision Log / Git Portfolio — purpose and location)
+- [ ] Process documentation prompt on slide ("How did you organize? What naming convention? What would you change?")
 - [ ] Goal Document prompt + sentence frames on slide
 - [ ] Peer response instructions on slide (2 questions about partner's Goal Document)
 - [ ] OneDrive sharing instructions ready (for peer response — students need to share their Goal Document with their partner)
@@ -498,7 +514,7 @@ Use the sentence frames:
 
 | Assessment component | What happens this week | Weight | CLOs |
 |---------------------|----------------------|--------|------|
-| **File-system artifact package** | Due (submit organised folder + repository) | 7% of final grade | 1 |
+| **File-system artifact package** | Due (submit organised folder + repository + 2–3 sentences process documentation) | 7% of final grade | 1 |
 | **Oral Micro-Defence 1** | In-class diagnostic (10%) + triad defence (30% fluency + 50% task, 3 criteria) + peer feedback (10%) | Part of 25% component | 2, 5 |
 | **Decision Log entries 1–2** | Collected for formative feedback (returned by Week 6) | Part of 30% component | 3, 4 |
 | **Goal Document** | Entry 4 written; instructor reads and returns brief comments | Ungraded | — |

@@ -4,37 +4,46 @@
 **Week 4 of 14** | Phase 1: Discovery (consolidation)
 
 **Learning Objectives (Week 4):**
-1. Demonstrate organized file management by submitting the file-system artifact (CLO 1 assessed)
-2. Explain technical work orally in a micro-defence (CLOs 2, 5 diagnostic baseline)
+1. Demonstrate organized file management by submitting the file-system artifact package (CLO 1 assessed)
+2. Explain technical work orally in a simultaneous triad micro-defence (CLOs 2, 5 diagnostic baseline)
 3. Reflect on what you've learned and what interests you (language of evaluation and self-assessment)
 4. Give and receive structured peer feedback on Goal Documents
 
 **No new vocabulary.** Review of all 15 terms from Weeks 1-3.
 
-**Goal Thread — The Language of Reflection:**
-For three weeks students have practised expressing desires (Week 1), evaluating results (Week 2), and describing imagined possibilities (Week 3). This week adds a new language skill: looking back and taking stock. "What have I learned? What interests me now? What changed in my thinking?" This is evaluative and self-assessing language. Some students will have consistent interests; others will have changed direction completely. Both are good. The peer response helps students see whether their thinking is clear to someone else. The project type menu is presented as information about what people build with these tools, not as a decision point.
+**No session review this week.** The diagnostic, triad defence, and peer response are the reflection activities. Session reviews resume in Week 5.
+
+**Goal Thread -- The Language of Reflection:**
+For three weeks students have practised expressing desires (Week 1), evaluating results (Week 2), and describing imagined possibilities (Week 3). This week adds a new language skill: looking back and taking stock. "What have I learned? What interests me now? What changed in my thinking?" This is evaluative and self-assessing language. The peer response helps students see whether their thinking is clear to someone else. The project type menu is presented as information about what people build with these tools, not as a decision point.
 
 ---
 
 ## Segment A: Preparation + Review + Project Menu (0:00--0:40)
 
-### 0:00--0:15 | Artifact Preparation
+### 0:00--0:15 | Artifact Preparation + Process Documentation
 **Format:** Individual with instructor spot-checks
-**Language skills:** Reading (file paths, naming conventions), vocabulary application
+**Language skills:** Reading (file paths, naming conventions), writing (brief process documentation), vocabulary application
 
 Students finalize their file-system artifact for submission:
 - GEAP 103 folder in OneDrive: organized, named consistently, clear structure
-- Commit current state to portfolio repository on GitHub
+- Commit current state to portfolio repository on GitHub (if set up)
+- Submit OneDrive share link via Blackboard
+
+**Process documentation** (new this week): Students write 2-3 sentences alongside their submission:
+
+> "How did you organize your files? What naming convention did you choose and why? What would you change?"
+
+This is the first artifact package in the course. The artifact is the folder; the process documentation is the student's own description of how and why they organized it. This establishes the pattern for all future artifact packages: product + documentation.
 
 Instructor circulates with quick checks: "Can I see your folder structure? What's this file's path? Why did you name it that?"
 
-Students who are already organized: help a neighbour, or review their portfolio repository for completeness.
+Students who are behind: "If your folder isn't ready yet, you have until the end of Week 5 to submit. Focus on today's activities."
 
-### 0:15--0:30 | Vocabulary Review: Weeks 1-3
-**Format:** Whole class, interactive
+### 0:15--0:28 | Vocabulary Review: Weeks 1-3
+**Format:** Whole class, interactive, with structured pair turn-taking
 **Language skills:** Speaking (definitions), listening
 
-Quick-fire review of all 15 terms:
+Review all 15 terms:
 
 | Week 1 | Week 2 | Week 3 |
 |--------|--------|--------|
@@ -44,44 +53,58 @@ Quick-fire review of all 15 terms:
 | cloud sync | accept/reject | restore |
 | version | verification | push |
 
-Format options (pick one or mix):
-- Instructor shows term, students call out definition
-- Instructor gives definition, students call out term
-- Pairs quiz each other (1 min per pair, then switch)
+**Round 1** (5 min): Instructor gives definition, students call out term. Move fast. Linger on terms that get silence.
 
-### 0:30--0:40 | What Do People Build With These Tools?
+**Round 2** (5 min): Pairs quiz each other. **Structured turn-taking:** Partner A quizzes for 2.5 min, then switch. (This ensures both partners produce, not just the confident one.)
+
+### 0:28--0:35 | What Do People Build With These Tools?
 **Format:** Instructor-led presentation
 **Language skills:** Listening, reading (descriptions)
 
 "Over the next few weeks you'll learn more tools and discover more about what you can do. Here are some kinds of things people build. You don't need to choose anything. This is just so you know what's possible."
 
-Instructor presents common project types. For each, show one brief example (screenshot or 30-second demo):
+Present the project types briefly (one slide, 4-6 examples with screenshots):
 
-| Type | What it is | Example |
-|------|-----------|---------|
-| **Document** | Structured, accessible document for a specific audience | A 20-page illustrated handbook for newcomers to Canada, with navigation and professional layout |
-| **Data Tool** | Spreadsheet that organizes, calculates, and visualizes data | An expense tracker that categorizes purchases, flags unusual spending, and generates monthly reports with charts |
-| **Presentation** | Slide deck with speaker notes for a specific purpose | A pitch deck for a small business idea, with data visualizations and a consistent visual identity |
-| **Game** | An interactive game or simulation | An escape-room puzzle game playable in a browser, with clues, a timer, and a scoring system |
-| **Video** | A video or animation for a specific audience | A mini-documentary about your neighbourhood, with narration, captions, and AI-generated transitions |
-| **Art** | Digital art, illustration, or design | A series of AI-generated illustrations for a personal calendar, each in a consistent artistic style |
-| **Novel** | A sustained piece of narrative or creative writing | A complete illustrated short story with chapter headings, character portraits, and a designed cover |
-| **Combination** | A multi-part project using 2+ types | A personal portfolio website with an embedded project gallery, resume, and contact form |
+| Type | Example |
+|------|---------|
+| **Document** | A 20-page illustrated handbook for newcomers to Canada |
+| **Data Tool** | An expense tracker that flags unusual spending |
+| **Presentation** | A pitch deck for a small business idea |
+| **Game** | An escape-room puzzle game playable in a browser |
+| **Combination** | A personal portfolio website with project gallery |
 
-"These are examples, not limits. You can combine types, go beyond them, or invent something new. The college provides Office 365 and Copilot; if you have access to other tools, you're welcome to use them. For now, just notice which ones seem interesting to you."
+"These are examples, not limits. You can combine types, go beyond them, or invent something new."
+
+Brief pair exchange (1 min): "Which type caught your eye? Tell your partner." No reporting out.
+
+### 0:35--0:40 | Thread Map: Your Three Recurring Documents
+**Format:** Whole class
+**Language skills:** Reading (visual), listening
+
+Display a simple diagram showing the three threads students are maintaining:
+
+> **Goal Document** -- "What do I want? How is my thinking changing?" (exploratory, weekly)
+> **Decision Log** -- "What did AI do? What did I decide?" (evaluative, ongoing, graded 30%)
+> **Git Portfolio** -- "What have I saved? What can I go back to?" (version history, ongoing, graded 10%)
+
+"These three documents serve different purposes. Your Goal Document is where you explore ideas. Your Decision Log is where you evaluate what AI did. Your Git portfolio is where your saved work lives. Don't confuse them -- they ask for different kinds of writing."
+
+This is the first time students see all three threads together. The visual stays available (printed or on Blackboard) for the rest of the semester.
 
 ---
 
-## Segment B: Diagnostic + Micro-Defences Begin (0:40--1:35)
+## Segment B: Diagnostic + Triad Defences (0:40--1:35)
 
 ### 0:40--0:50 | Pre-Task Planning for Micro-Defence
 **Format:** Individual reflection
 
 Students review their portfolio and Goal Document. Prepare to explain what they've done and what they've learned:
-- "Choose one piece of work: your file system, a Decision Log entry, your repository, or something you made with Copilot."
-- "Think about: What did you do? What tools did you use? What did you learn? What would you do differently?"
 
-This is preparation to talk, not writing a script. Students organize their thoughts, open the artifact they want to show.
+> "In a few minutes, you'll explain one piece of work to two partners. Pick one: your file system, a Decision Log entry, your repository, or something you made with AI."
+>
+> "Think about: What did you do? What tools did you use? What did you learn? What would you do differently?"
+>
+> "Don't write a script. Just have it open and ready to show."
 
 ### 0:50--1:00 | In-Class Written Diagnostic
 **Format:** Individual, unmediated (whole class, simultaneous)
@@ -92,35 +115,58 @@ This is preparation to talk, not writing a script. Students organize their thoug
 Rules:
 - No AI assistance (Copilot closed, no chat tools)
 - No notes, no partner
-- Handwritten or on a locked-down device (instructor's call based on setup)
-- 10 minutes
+- Handwritten on paper (recommended) or locked-down device
+- 10 minutes, visible timer
 
 Collect when done. This provides unmediated written evidence of the student's independent language use (CLOs 2, 5 diagnostic baseline).
 
-### 1:00--1:35 | Oral Micro-Defences Begin
-**Format:** Individual presentations (instructor + 1 peer), while others work independently
-**Language skills:** Speaking (sustained technical explanation), listening (peer), evaluative language (peer feedback)
+### 1:00--1:07 | Triad Formation + Setup
 
-**~5-6 students** in this segment (at ~6 min each).
+Collect diagnostic papers. Announce pre-assigned triad groups. Students move to sit with their group, open their artifact.
 
-Per student:
-1. Student walks through ONE artifact, explaining what they did, what they learned, and what they'd do differently (3-4 min)
-2. Instructor asks 1-2 follow-up questions (1 min)
-3. One designated peer gives structured feedback: one strength and one question (1 min)
+Explain the format:
 
-**Peer feedback guidance** (on screen for the peer): "Tell your partner one thing they explained clearly. Then ask one question about something you didn't understand or want to know more about."
+> "You're going to explain your work to two partners. Each person gets 4 minutes. Your partners will listen, then give feedback: one thing you explained clearly, one question they have. Then we rotate. I'll come around and listen to each group."
 
-**While waiting:** Other students finalize and submit their file-system artifact. Students who have submitted can begin reading their partner's Goal Document for the peer response in Segment C.
+Display the rotation plan:
 
-Instructor uses the task checklist to score each defence:
+> **Round 1** (1:07-1:16): Student A presents → B and C give feedback
+> **Round 2** (1:16-1:25): Student B presents → A and C give feedback
+> **Round 3** (1:25-1:35): Student C presents → A and B give feedback
+
+### 1:07--1:35 | Simultaneous Triad Defences
+**Format:** All groups run simultaneously. Three rounds of ~9 minutes each.
+**Language skills:** Speaking (sustained technical explanation), listening (active, with feedback responsibility)
+
+**Peer feedback frame** (displayed throughout):
+
+> After the presenter finishes:
+> - Partner 1: "One thing you explained clearly was _____."
+> - Partner 2: "One question I have is _____."
+
+Instructor circulates with scoring sheets. For each group:
+1. Arrive, listen to the current presenter for 2-3 minutes
+2. Ask one follow-up question during or after the presentation
+3. Score the 3-criterion checklist and fluency band
+4. Move to the next group
+
+**Week 4 scoring criteria (diagnostic baseline -- 3 criteria):**
 
 | Criterion | Evidence |
 |-----------|----------|
-| Clear problem statement + context | check / partial / missing |
+| Clear description of what was done + context | check / partial / missing |
 | Correct use of essential terminology | check / partial / missing |
-| Shows what was tried (not just "it doesn't work") | check / partial / missing |
-| Interprets instruction/error accurately | check / partial / missing |
-| Justifies chosen solution | check / partial / missing |
+| Explains a decision or choice (why, not just what) | check / partial / missing |
+
+With ~7 groups and 28 minutes across 3 rounds, the instructor will hear ~15 of ~21 presenters substantively (2-3 min each). The remaining students are scored on briefer observation. The scoring sheet's "evidence basis" field (full / partial / deferred) tracks this.
+
+**Observation tracking:** After this round, record which students received partial or deferred observation. At Week 8, those students' groups are visited first. This guarantees every student receives at least 2 full observations across the 3 micro-defence rounds.
+
+**Make-up for absent students:** Students who miss Week 4 write the diagnostic during settling-in the following week, then do an ad hoc triad (instructor + 2 volunteers) during any independent work period. The instructor hears the full presentation.
+
+At 1:35, brief whole-class check:
+
+> "Who explained their work to both partners? Thumbs up. Good. You just did the hardest thing in this course: talking about your work without a script. It gets easier."
 
 ---
 
@@ -128,34 +174,32 @@ Instructor uses the task checklist to score each defence:
 
 ---
 
-## Segment C: Micro-Defences Continue + Peer Response + Goal Document (1:50--2:45)
+## Segment C: Peer Response + Goal Document (1:50--2:45)
 
-### 1:50--2:15 | Micro-Defences Continue
-**Format:** Same as above
-
-**~4-5 more students.** Others begin the structured peer response (below).
-
-**Logistics note:** With 15-20 students at ~6 min each, most will finish in Week 4. Any remaining students complete their defence in the first 15-20 min of Week 5. Do not rush defences to fit the schedule; quality matters more than completion.
-
-### 2:00--2:25 | Structured Peer Response on Goal Documents
-**Format:** Pair work (students not currently in micro-defence)
+### 1:50--2:20 | Structured Peer Response on Goal Documents
+**Format:** Pair work with structured turn-taking (A reads first, then B)
 **Language skills:** Reading (partner's writing), writing (evaluative feedback), speaking (discussion)
 
-*This activity runs in parallel with the remaining micro-defences. Students who have finished their defence join in.*
+*Instructor is fully available -- no competing micro-defences.*
 
 "You've been writing about what you want and what interests you for three weeks. Now: can someone else follow your thinking?"
 
 Pairs read each other's Goal Document (all entries, Weeks 1-3).
 
-**Response task** (displayed on screen): Write answers to two questions about your partner's Goal Document:
+**Step 1** (5 min): Read your partner's Goal Document silently.
+
+**Step 2** (5 min): Write answers to two questions about your partner's Goal Document:
 1. "What seems to interest your partner most?"
 2. "What's unclear or what would you want to know more about?"
 
-- Writing answers (5 min)
-- Sharing with partner and discussing (10 min): "Here's what I noticed about your thinking..."
-- Exchange written responses so each student has their peer's feedback
+**Step 3** (15 min): **Partner A shares first** (7 min), then **Partner B shares** (7 min). Structured turn-taking prevents the more confident partner from dominating.
 
-### 2:25--2:40 | Goal Document: Taking Stock
+> "Here's what I noticed about your thinking..."
+> "I wasn't sure what you meant when you said _____."
+
+Exchange written responses so each student has their peer's feedback.
+
+### 2:20--2:35 | Goal Document: Taking Stock
 **Format:** Individual writing
 **Language skills:** Writing (evaluative, reflective)
 
@@ -169,55 +213,63 @@ Pairs read each other's Goal Document (all entries, Weeks 1-3).
 - "My thinking changed about _____ because _____."
 - "I can now _____, which I couldn't do before."
 
-Students write entry 4 (~5-10 min). Some students' interests will have been consistent across four weeks; others will have changed direction completely. Both are good. Changing your mind after trying things is what learning looks like.
+Students write entry 4 (~10 min). Some students' interests will have been consistent; others will have changed direction completely. Both are good. Changing your mind after trying things is what learning looks like.
 
-### 2:40--2:45 | Closing
+### 2:35--2:45 | Closing
 **Format:** Whole class
 
-- "You've been practising the most important skill in this course: saying what you want, testing whether your words work, and revising when they don't. Some of you want the same things you wanted in Week 1. Some of you have completely new ideas. Both are fine. The skill is the same."
+- "You've been practising the most important skill in this course: saying what you want, testing whether your words work, and revising when they don't."
 - "Starting next week, Phase 2: Building. You'll try new tools -- documents with accessibility, spreadsheets, presentations -- and discover more about what you can do."
 - "I'll read your Goal Documents this week and give you brief feedback."
+- If anyone recorded their defence: "Listen to yourself explaining your work. Did you say what you meant? What would you say differently?"
 
 ---
 
 ## After Class
 
-- **Instructor reads all Goal Documents** and returns brief comments (1-3 sentences per student). Focus: Is the student's thinking developing? Can you tell what interests them? What's still vague? (Comment on clarity of thinking and language, not on whether they've chosen a project.)
-- **File-system artifacts:** Spot-check submissions for organization, naming, structure
-- **Decision Log entries 1-2:** Collect for feedback (returned by Week 6)
-- **Schedule remaining micro-defences** for the start of Week 5 if needed
+- **Instructor reads all Goal Documents** and returns brief comments (1-3 sentences per student). Focus: Is the student's thinking developing? Can you tell what interests them? What's still vague?
+- **Score micro-defences** using scoring sheets. For "partial observation" students, score what you heard. For "deferred" students, schedule a 2-min follow-up at the start of Week 5.
+- **Score diagnostic writing** holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 11.
+- **Spot-check file-system artifacts** including the 2-3 sentence process documentation.
+- **Collect Decision Log entries 1-2** for formative feedback (returned by Week 6).
 
 ---
 
 ## Instructor Prep Checklist
 
-- [ ] Written diagnostic prompt on slide or printed handout
-- [ ] Locked-down devices or paper arranged for diagnostic (no AI access during the 10 min)
-- [ ] Oral micro-defence task checklist printed (one scoring sheet per student)
-- [ ] Peer feedback guidance on slide: one strength + one question
-- [ ] Project type examples prepared (8 types with one example each; informational, not a decision point)
-- [ ] Vocabulary review ready (15 terms from Weeks 1-3)
+- [ ] File-system artifact submission method decided (OneDrive share link via Blackboard recommended)
+- [ ] Process documentation prompt on slide ("How did you organize? What naming convention? What would you change?")
+- [ ] Triad groups pre-assigned (list of groups of 3, posted or ready to announce)
+- [ ] Scoring sheets printed: one per student (3 criteria + fluency band + evidence basis)
+- [ ] Blank paper for diagnostic (handwritten recommended)
+- [ ] 10-minute timer ready
+- [ ] Diagnostic prompt on slide
+- [ ] Triad rotation plan on slide (3 rounds with times)
+- [ ] Peer feedback frame on slide
+- [ ] Vocabulary review table on slide (15 terms)
+- [ ] Project-type menu on slide (5-6 examples, informational)
+- [ ] Thread map visual on slide (Goal Document / Decision Log / Git Portfolio -- purpose and location)
 - [ ] Goal Document prompt + sentence frames on slide
-- [ ] Peer response instructions on slide (2 questions about partner's Goal Document)
-- [ ] File-system artifact submission process confirmed (where and how students submit)
-- [ ] Order of micro-defences planned (or sign-up sheet ready)
-- [ ] Peer pairings for structured Goal Document response decided (or let students self-pair)
+- [ ] Peer response instructions on slide (2 questions + structured A/B turn-taking)
+- [ ] Optional: phone lanyards for students who want to record their defence
 
 ## Language Development Summary
 
-- **Vocabulary:** Review of all 15 terms from Weeks 1-3 (no new terms introduced)
-- **Speaking:** Oral micro-defence (3-4 min sustained technical explanation); peer feedback delivery; pair discussion of Goal Documents and evolving interests
-- **Reading:** Partner's Goal Document (3 entries); project type descriptions; peer feedback received
-- **Writing:** In-class diagnostic (~50-100 words, unmediated); peer response notes (2 written answers about partner's thinking); Goal Document reflection (~50-75 words, evaluative/reflective -- new language skill this week)
-- **Listening:** Peer's micro-defence; instructor follow-up questions; partner's feedback on Goal Document
+- **Vocabulary:** Review of all 15 terms from Weeks 1-3 (whole-class quiz + structured pair practice with A/B turn-taking)
+- **Speaking:** Triad defence (4 min sustained technical explanation to 2 partners); peer feedback delivery x2 (structured frames); structured peer discussion of Goal Documents (A shares first, then B)
+- **Reading:** Partner's Goal Document (3 entries); project-type descriptions; peer feedback received; thread map visual
+- **Writing:** In-class diagnostic (~50-100 words, unmediated); peer response notes (2 written answers about partner's thinking, collected); Goal Document entry 4 (~50-75 words, evaluative/reflective); file-system process documentation (2-3 sentences)
+- **Listening:** Two partners' triad defences (active listening with feedback responsibility); instructor follow-up questions; partner's feedback on Goal Document
 
 ## Assessment Alignment
 
-- **File-system artifact package due (7% of final grade):** Organized OneDrive folder + portfolio repository (CLO 1)
+- **File-system artifact package due (7% of final grade):** Organized OneDrive folder + portfolio repository + 2-3 sentences of process documentation (CLO 1)
 - **Oral Micro-Defence 1 (part of 25% component):**
   - In-class written diagnostic (10% of micro-defence grade): unmediated writing
-  - Oral walkthrough (30% fluency + 50% task = 80% of micro-defence grade): sustained explanation of work and learning
-  - Peer feedback (10% of micro-defence grade): assessed on the quality of the *peer's* feedback, not the presenter's work
+  - Oral triad defence (30% fluency + 50% task = 80%): sustained explanation to 2 partners, instructor circulates and samples
+  - Peer feedback (10%): assessed on the quality of the *peer's* feedback, not the presenter's work
   - CLOs 2 and 5: **diagnostic baseline only** (first data point; not yet expected to meet target)
+  - **3 criteria** (clear description + terminology + explains a decision). Weeks 8 and 11 expand to 5 and 7 criteria.
 - **Decision Log entries 1-2:** Collected for formative feedback (returned by Week 6)
-- **Goal Document:** Instructor reads after this week; returns 1-3 sentence comments on clarity of thinking and language development
+- **Goal Document:** Instructor reads after this week; returns 1-3 sentence comments
+- **Thread map introduced:** Students see the three recurring documents together for the first time
