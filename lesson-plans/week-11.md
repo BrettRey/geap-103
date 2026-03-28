@@ -1,138 +1,177 @@
-# GEAP 103 Week 11 Lesson Plan: What Do We Want to Build Together?
+# GEAP 103 Week 11 Lesson Plan: Showing What We've Learned
 
 **Context:** 3 x 55 min (150 min instruction + 15-min break), B1 learners, BYOD, Office 365 + Copilot
-**Week 11 of 14** | Phase 3: Creation
+**Week 11 of 14** | Phase 3: Creation (assessment week)
 
 **Learning Objectives (Week 11):**
-1. Negotiate a shared project goal by articulating individual ideas independently before synthesizing as a group (CLO 7)
-2. Assign and explain collaborative roles (Coordinator, Builder, Reviewer) with clear responsibilities (CLO 5)
-3. Create a shared repository and write the first Issues as communication acts (CLOs 1, 7)
-4. Submit at least one PR with a descriptive message and comment on a partner's work (CLOs 1, 5)
+1. Demonstrate oral explanation of technical work in Micro-Defence 3, simultaneous triads (CLOs 2, 3, 4, 5)
+2. Submit 8 curated Decision Log entries with self-assessment (CLOs 3, 4)
+3. Assign collaborative roles (Coordinator, Builder, Reviewer) and begin group project work (CLO 7)
+4. Practise evaluating and comparing language in the Goal Document (Phase 3 complexity)
 
-**No new vocabulary.** Consolidation of all 40 terms from Weeks 1-9. Students apply existing vocabulary in a new context: collaborative work.
+**No new vocabulary.** Consolidation of all 40 terms from Weeks 1-9 applied in collaborative context.
 
-**Goal Thread -- New Shared Goal:**
-Students have spent 10 weeks articulating individual goals. This week the language challenge shifts: "What do *we* want?" This requires all the language from Phase 2 (planning, justifying, conditional reasoning) plus the social dimension of negotiation. Students must explain why they want something, listen to alternatives, and synthesize. The collaborative roles ensure that every student produces distinct language: the Coordinator writes plans, the Builder describes tasks, the Reviewer writes quality criteria. The Goal Document entry this week asks students to articulate their role and responsibilities, connecting individual accountability to the group goal.
+**No session review this week.** The diagnostic, triad defence, and peer feedback are the reflection activities (same as Weeks 4 and 8). Session reviews resume in Week 12.
+
+**This is the heaviest assessment week in the course.** Three things happen: Micro-Defence 3 (triads, 7 criteria), Decision Logs due (8 entries + self-assessment), and DL feedback round 2 returned. The collaborative project work provides the content students present in their defences. The timing is tight but the triad format keeps the defence to ~30 min.
+
+**Goal Thread -- Evaluating and Comparing:**
+Phase 3 language: students are no longer planning or justifying. They are evaluating what they've done and comparing it with what they intended. The Goal Document this week asks: "What has my group accomplished so far? What's working? What isn't?" This requires the subordination and concession language practised in Week 10, now applied to collaborative rather than individual work.
 
 ---
 
-## Segment A: Collaborative Scoping (0:00--0:40)
+## Segment A: DL Feedback + Roles + Collaborative Work (0:00--0:40)
 
-### 0:00--0:10 | Framing: From "I" to "We"
+### 0:00--0:07 | DL Submission Check + Ungrouped Students
+**Format:** Whole class, then individual
+**Language skills:** Reading (own DL entries)
+
+*DL feedback round 2 was distributed digitally before class (via Blackboard or email). Students should have read it already. If not, they read it during the collaborative building in Segment A.*
+
+"Your 8 curated Decision Log entries with self-assessment are due by **11:59 PM tonight**. Not end of class — tonight. Count your entries now. If you're short, you can write one more during the collaborative work time. This is 30% of your grade."
+
+**Ungrouped students:** Any student who missed Week 10's group formation is placed now. Instructor assigns them to an existing group that needs a member, or forms a new pair. This takes 2 minutes maximum. Do not delay the rest of the class.
+
+### 0:07--0:17 | Collaborative Roles Introduction
 **Format:** Whole class
-**Language skills:** Listening
+**Language skills:** Listening, reading (role descriptions)
 
-"For 10 weeks you've been answering the question 'What do I want?' Now the question is 'What do we want?' This is harder. When you were working alone, you only had to explain your ideas to yourself and to AI. Now you have to explain your ideas to a person who has their own ideas. That's negotiation. It's the most important language skill in any workplace."
+"Your groups formed last week. Now you need roles. Three roles, three kinds of language."
 
-Introduce the three collaborative roles:
+Display:
 
 | Role | Responsibility | Language produced |
 |------|---------------|-------------------|
-| **Coordinator** | Maintains the project plan (Issues), tracks what's done and what's next | Planning language: "We need to...", "Next we should..." |
-| **Builder** | Leads artifact production for the current session | Descriptive language: "I'm working on...", "This part does..." |
-| **Reviewer** | Reviews all PRs, checks accessibility, writes verification notes | Evaluative language: "This is clear/unclear because...", "Done means..." |
+| **Coordinator** | Maintains the project plan (Issues), tracks progress | Planning: "We need to...", "Next we should..." |
+| **Builder** | Leads artifact production for the current session | Descriptive: "I'm working on...", "This part does..." |
+| **Reviewer** | Reviews PRs, checks accessibility, writes verification notes | Evaluative: "This is clear/unclear because...", "Done means..." |
 
-"Every role produces different language. The Coordinator writes plans. The Builder describes what they're making. The Reviewer evaluates quality. You all write, you all speak, you all read. Nobody sits back."
+"Every role produces different language. Nobody sits back. Groups of 3: one role each. Groups of 2: combine Builder with one other. You'll rotate roles in Week 12."
 
-Grouping note: groups of 3 are ideal (one role each). In groups of 2, combine Builder with one other role. In groups of 4, double the Builder role. Instructor assigns roles or groups negotiate; either way, roles must be explicit.
+Groups assign roles (2 min). Coordinator writes 1-2 Issues for today's work if they haven't already.
 
-### 0:10--0:25 | Worked Example: Scoping a Project with Roles
-**Format:** Instructor demonstration
-**Language skills:** Listening, reading (Issue, PR description)
+### 0:17--0:40 | Collaborative Building
+**Format:** Small groups, active project work with instructor circulation
+**Language skills:** Writing (PR descriptions, comments, Issue updates), speaking (in-group coordination), reading (AI output, partner's work)
 
-Instructor models the full scoping process using a sample project (e.g., "We want to build a campus survival app for new students: an interactive FAQ web page, a budget calculator, and a short orientation video"):
+Groups build. Each student works within their role:
+- **Coordinator:** Tracks progress, updates Issues, redirects effort
+- **Builder:** Leads artifact production, describes what they're doing
+- **Reviewer:** Reviews work, checks accessibility, writes verification notes
 
-**Step 1 -- Shared goal statement.** Instructor writes on the board: "We are building a campus survival app for new students at Humber. It will include an interactive FAQ web page, a budget calculator, and a 2-minute orientation video."
+**Minimum requirements for this session:**
+- Each student submits at least one PR with a descriptive message
+- Each student comments on at least one partner's PR
+- The Coordinator updates at least one Issue
 
-**Step 2 -- Assign roles.** "I'm the Coordinator this week. [Name] is the Builder. [Name] is the Reviewer."
+**Concrete milestone for this session:** By the end of Segment A (0:40), each group should have: a shared repository with Issues, at least one artifact file started (even a rough draft), and a PR from the Builder. This gives the instructor something to check.
 
-**Step 3 -- Coordinator writes the first Issue.** Instructor demonstrates writing a GitHub Issue on screen:
+**AI reflection pause at 0:30** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and was the result what you expected? This is practice for the two new micro-defence criteria."
 
-> **Title:** Build the interactive FAQ page
-> **Description:** We need a web page that answers the 10 most common questions new students have. The Builder will draft it using AI. The Reviewer will check that the answers are accurate and the page works on a phone.
-> **Assigned to:** Builder
+Instructor circulates:
+- **Role check:** "What's your role? What are you doing right now?"
+- **Language check:** Are PR descriptions substantive? Are comments genuine?
+- **Progress check:** "Show me your repository. Do you have an Issue, a file, and a PR?"
 
-"An Issue is a communication act. It tells someone what to do and why. It's the same skill as writing a help request, but forward-looking: here's what needs to happen."
-
-**Step 4 -- Builder identifies the first task.** "My first task is to build the FAQ page. I need to figure out what questions new students actually ask. I'll ask Copilot to generate a draft, then check that the answers are real and useful."
-
-**Step 5 -- Reviewer describes "done."** "This task is done when the page has 10 questions with clear answers, loads on a phone, and I can find any answer in under 10 seconds."
-
-"Notice: all three people produced language. The Coordinator wrote the Issue. The Builder described the task. The Reviewer defined what 'done' looks like. This is how roles generate language."
-
-### 0:25--0:35 | Information-Gap: What Should We Build?
-**Format:** Individual writing, then group discussion
-**Language skills:** Writing (expressing ideas independently), speaking (negotiation, synthesis), listening (partner's ideas)
-
-"Before you talk to your group, write. Everybody writes. Three minutes, silently."
-
-**Individual writing prompt** (displayed): "What do you think your group should build? What can you contribute? Write at least 3 sentences."
-
-**Sentence frames** (displayed):
-- "I think we should build _____ because _____."
-- "I can contribute _____ because I know how to _____."
-- "One thing I want to learn from this project is _____."
-
-After 3 minutes: groups share. Each person reads what they wrote. No interrupting.
-
-Then: the Coordinator synthesizes. "What do we have in common? Where do we disagree?"
-
-**Negotiation rule** (displayed): "If you can't explain why you want X, you can't just outvote someone who can explain why they want Y."
-
-"Disagreements must be negotiated, not voted. If someone wants to build a game and someone else wants to build a document, you don't vote. You explain. 'I want to build a game because...' If you can explain your reasons and your partner can't, your idea is stronger. If both of you can explain, find a combination or a compromise."
-
-Groups discuss and arrive at a shared project statement (10 min). Not every group will reach full consensus today. That's fine. The Coordinator writes whatever the group has agreed on so far.
-
-### 0:35--0:40 | Create Shared Repository + First Issues
-**Format:** Small groups
-**Language skills:** Writing (Issue descriptions), reading (system feedback)
-
-Each group creates a shared repository on GitHub (AI-assisted). The Coordinator writes 2-3 Issues for the first tasks. The Builder and Reviewer each comment on at least one Issue.
-
-Groups that haven't fully agreed on their project: the Coordinator writes an Issue called "Decide project direction" with the options the group is considering.
+**Git Episodes -- Collaboration episode:** Students completing PR + comment exchanges have evidence for the required episode. Remind: "Save screenshots if you haven't already. Git Episodes are due next week."
 
 ---
 
-## Segment B: Planning + Project Work (0:40--1:35)
+## Segment B: Diagnostic + Micro-Defence 3 (0:40--1:35)
 
-### 0:40--0:45 | Pre-Task Planning
-**Format:** Small groups (by role)
-**Language skills:** Reading (role responsibilities), speaking (role-specific planning)
+### 0:40--0:50 | Pre-Task Planning for Micro-Defence
+**Format:** Individual reflection
 
-"Before you start building, take 5 minutes to review your role."
+Students review their portfolio and recent work (Weeks 8-10, plus today's collaborative work). Prepare to explain one artifact:
 
-Each role prepares differently:
-- **Coordinator:** Re-reads the Issues. Are they clear? Is anything missing? Writes a brief plan for the session: "Today we need to finish _____. The order is _____."
-- **Builder:** Looks at the first Issue assigned to them. Identifies what tools and AI prompts they'll need. "My first step is _____."
-- **Reviewer:** Reads the Issues and asks: "What does 'done' look like for each one? How will I check quality?" Writes a brief checklist.
+> "Choose one piece of work: your mid-semester artifact, a Decision Log entry, a PR from the group project, a spreadsheet, a help request. This is the last micro-defence. Seven criteria. Two are new."
 
-### 0:45--1:30 | Collaborative Building
-**Format:** Small groups, active project work with instructor circulation
-**Language skills:** Writing (PR descriptions, comments, Issue updates), speaking (in-group coordination), reading (AI output, partner's work, system feedback)
+Display the 7 criteria:
 
-Groups build. This is structured work time, not free time. Each student works within their role:
+> | Criterion | What the instructor looks for |
+> |-----------|------------------------------|
+> | Clear description of what was done + context | You explain what and why |
+> | Correct use of essential terminology | You use course vocabulary accurately |
+> | Explains a decision or choice | You justify something |
+> | Shows what was tried | You describe your process |
+> | Interprets instruction/error accurately | You read and explain an error |
+> | **Describes how AI was directed** | **NEW: What you asked AI for and why** |
+> | **Evaluates AI output** | **NEW: What was accepted, modified, or rejected and why** |
 
-- The **Coordinator** tracks progress, updates Issues as tasks are started and finished, and redirects effort if the group gets stuck.
-- The **Builder** leads artifact production, describing what they're doing as they work ("I'm asking Copilot to..." "This part is...").
-- The **Reviewer** reviews all work before it's merged, checks accessibility where applicable, and writes brief verification notes ("I checked _____ and it looks _____").
+"The two new criteria are about AI. Can you explain what you asked AI to do and whether what it gave you was good enough? Let me show you what this sounds like."
 
-**Minimum requirements for this session:**
-- Each student submits at least one PR with a descriptive message (what was changed and why)
-- Each student comments on at least one partner's PR (what they noticed, one question)
-- The Coordinator updates at least one Issue (closed or progress note)
+**Brief modelling of criteria 6 and 7** (3 min):
 
-*This is the Collaboration episode for Git Episodes. Students who complete a PR with description + comment exchange have evidence toward the required collaboration episode.*
+Instructor demonstrates a sample response:
 
-Instructor circulates with three purposes:
-1. **Role check:** "What's your role? What are you working on right now? Show me."
-2. **Language check:** Are PR descriptions substantive? Are comments genuine? "A PR that says 'added file' tells me nothing. Write what you changed and why."
-3. **Group dynamics check:** Is everyone participating? If one student is doing all the work while others watch, intervene: "What is the Reviewer doing right now? Show me your verification notes."
+> "I asked Copilot to create a budget formula that totals the food column. It gave me =SUM(C2:C12), which was correct. But then I asked it to highlight months where spending was over $200, and it changed the formula instead of adding conditional formatting. I rejected that and asked again, more specifically: 'Add conditional formatting to highlight cells in column C that are over 200. Don't change the formula.' That worked."
 
-### 1:30--1:35 | Commit and Sync
-**Format:** Small groups
-**Language skills:** Writing (commit messages)
+"That covers both new criteria. Criterion 6: I described what I asked AI and why. Criterion 7: I evaluated what AI gave me — accepted the first thing, rejected the second, revised my request."
 
-All group members commit their work and ensure the shared repository is up to date. Coordinator confirms all Issues reflect current progress.
+**Scoring anchors for criteria 6 and 7:**
+
+| Criterion | ✓ (check) | Partial | ✗ |
+|-----------|-----------|---------|---|
+| 6: AI direction | States what was asked AND why | States what was asked but not why | Does not mention AI direction |
+| 7: AI evaluation | States what was accepted/modified/rejected AND why | States the decision but not the reasoning | Does not evaluate AI output |
+
+### 0:50--1:00 | In-Class Written Diagnostic
+**Format:** Individual, unmediated (whole class, simultaneous)
+**Language skills:** Writing (unmediated, ~50-100 words)
+
+**Prompt** (displayed): "Describe one time you used AI to help you build something this semester. What did you ask for? What did AI produce? What did you decide to do with it?"
+
+Rules: No AI, no notes, no partner. Handwritten. 10 minutes, visible timer.
+
+Collect when done.
+
+### 1:00--1:02 | Recovery Buffer
+
+Collect papers. Students sit quietly for 2 minutes.
+
+### 1:02--1:09 | Triad Formation + Setup
+
+Announce pre-assigned triad groups. Students move to sit together.
+
+Display rotation plan:
+
+> **Round 1** (1:09--1:18): Student A presents → B and C give feedback
+> **Round 2** (1:18--1:27): Student B presents → A and C give feedback
+> **Round 3** (1:27--1:35): Student C presents → A and B give feedback
+
+**Peer feedback frame** (displayed):
+> - Partner 1: "One thing you explained clearly was _____."
+> - Partner 2: "One question I have is _____."
+
+**Attendance contingency:** If groups break due to absences, form ad hoc triads or add to existing groups.
+
+### 1:09--1:35 | Simultaneous Triad Defences
+**Format:** All groups run simultaneously. Three rounds of ~9 minutes each.
+**Language skills:** Speaking (sustained technical explanation), listening (active, with feedback responsibility)
+
+Instructor circulates with scoring sheets. For each group:
+1. Arrive, listen to the current presenter for 2-3 minutes
+2. Ask one follow-up question targeting the new criteria: "What did you ask AI to do?" or "Why did you accept/reject what AI gave you?"
+3. Score the 7-criterion checklist and fluency band
+4. Move to the next group
+
+**Week 11 scoring (7 criteria):**
+
+| Criterion | Evidence |
+|-----------|----------|
+| Clear description of what was done + context | ✓ / partial / ✗ |
+| Correct use of essential terminology | ✓ / partial / ✗ |
+| Explains a decision or choice (why, not just what) | ✓ / partial / ✗ |
+| Shows what was tried (not just "it doesn't work") | ✓ / partial / ✗ |
+| Interprets instruction/error message accurately | ✓ / partial / ✗ |
+| Describes how AI was directed (what asked, why) | ✓ / partial / ✗ |
+| Evaluates AI output (accepted/modified/rejected, why) | ✓ / partial / ✗ |
+
+**Observation tracking:** Students with partial/deferred from Weeks 4 and 8 are visited first. After this round, every student should have at least 2 full observations across the 3 rounds. Check the F/P/D rotation checklist.
+
+At 1:35:
+
+> "That's the last micro-defence of the semester. Seven criteria. You've come a long way from Week 4's three. The skills you just demonstrated -- explaining your work, interpreting errors, evaluating AI -- are the skills that matter most."
 
 ---
 
@@ -140,92 +179,95 @@ All group members commit their work and ensure the shared repository is up to da
 
 ---
 
-## Segment C: Status Updates + Goal Document (1:50--2:45)
+## Segment C: Collaborative Work + Goal Document + Closing (1:50--2:45)
 
-### 1:50--2:20 | Structured Status Updates
-**Format:** Whole class (groups present)
-**Language skills:** Speaking (structured presentation), listening (other groups), reading (presentation template)
+### 1:50--2:20 | Collaborative Building Continues
+**Format:** Small groups with instructor circulation
+**Language skills:** Writing (PRs, comments, Issues), speaking (coordination), reading (AI output)
 
-Each group delivers a 2-minute status update using a required template. All three roles speak:
+Groups resume building. Same role-based structure as Segment A. Students who haven't yet submitted a PR or commented on a partner's work should do so now.
 
-**Template** (displayed):
-- "We are building _____."
-- **Coordinator** says: "We have finished _____. Next we need to _____."
-- **Reviewer** says: "The quality of _____ is _____. We need to improve _____."
-- "Our biggest challenge is _____."
+**AI reflection pause at 2:05** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and what did you decide about the result?"
 
-Groups present. After each presentation: 1-2 questions from the class or instructor.
+Instructor circulates:
+- **DL collection:** "Have you submitted your 8 Decision Log entries? Deadline is 11:59 PM tonight."
+- **Git Episodes check:** "Git Episodes are due next week. Do you have all three? Restore, Error Recovery, Collaboration. If you're missing one, today's collaborative work is your last chance for the Collaboration episode."
+- **Group progress:** "Show me what you've built since this morning. What's your next step?"
 
-**Instructor feedback** (brief, public): Comment on scope ("Is this achievable in 3 more weeks?"), feasibility ("Do you have the skills for this?"), and clarity ("Can I tell what you're building from your description?").
+### 2:20--2:35 | Goal Document: Group Evaluation
+**Format:** Individual writing, then brief pair share
+**Language skills:** Writing (evaluative, comparing, Phase 3 complexity)
 
-This activity serves two purposes: (1) it gives every student structured speaking practice using evaluative and planning language, and (2) it gives the instructor a snapshot of where all groups are, which informs support in Weeks 12-13.
+"You've been building with your group for two sessions now. Write honestly about how it's going."
 
-### 2:20--2:35 | Goal Document: My Role and Responsibilities
-**Format:** Individual writing
-**Language skills:** Writing (descriptive, explanatory -- connecting individual role to group goal)
+**Prompt** (displayed): "What has your group accomplished so far? What's working well? What isn't? How does the group's progress compare with your original plan?"
 
-"You've been writing about what YOU want for 10 weeks. This entry is about what your group decided and what you're responsible for. This is still a language exercise. Can you clearly describe your role, your responsibilities, and why your group is building what it's building?"
+**Sentence frames** *(optional -- use if you're stuck)*:
+- "Our group has accomplished _____, which matches our plan / which is different from our plan."
+- "The part that's working well is _____ because _____."
+- "The biggest challenge is _____ because _____."
+- "If I compare our plan with what we've actually built, the gap is _____."
 
-**Prompt** (displayed): "What is your role in the group? What are you responsible for this week?"
+**Writing** (12 min): Students write entry 11 in their Goal Document. This is Phase 3 language: evaluating and comparing, not planning and justifying.
 
-**Sentence frames** (displayed):
-- "My role is _____. I am responsible for _____."
-- "Our group decided to build _____ because _____."
-- "My first task is _____ because _____."
+*No pair share this week — students are at capacity after the defence and DL submission. The Goal Document entry is a self-check: can you articulate how the group is doing?*
 
-Students write (~10 min). Some students' groups will have a clear direction; others will still be negotiating. Both are valid Goal Document entries. A student who writes "We haven't decided yet because [person] wants X and I want Y. The difference is..." is doing exactly the right kind of writing.
-
-### 2:35--2:40 | Decision Log Reminder
-**Format:** Whole class (brief)
-
-"You need 8 Decision Log entries by Week 13. Count your entries. If you're behind, the collaborative work is a good source: documenting how you used AI to build something for the group, or how you evaluated AI output during the project. You have Weeks 11, 12, and 13 left."
-
-### 2:40--2:45 | Closing
+### 2:35--2:45 | Closing
 **Format:** Whole class
 
-- "Today you negotiated a shared goal, assigned roles, created a repository, wrote Issues, and submitted PRs. That's a lot. But the important thing isn't the tools. The important thing is: can you explain what your group is building and what you're responsible for? If you can, you're on track."
-- "Next week is an assessment week: Micro-Defence 3. You'll also check your progress against your plan. Roles continue."
-- "Between now and next week: if your group's plan needs more discussion, use your shared repository. Write Issues. Comment on each other's work. The repository is a communication tool."
+- "Today was the heaviest assessment day of the semester. You did a micro-defence, submitted your Decision Logs, and continued building your group project. That's a lot."
+- "Decision Logs: if you haven't submitted 8 entries with self-assessment, do it tonight. This is 30% of your grade. No extensions."
+- "Next week: Git Episodes are due (Restore, Error Recovery, Collaboration). Check your evidence now. If you're missing an episode, plan how to get it this week."
+- "Week 12 is also your last full building week before the oral reflection (Week 13) and the sharing event (Week 14). Use the time well."
+- "Roles rotate next week. Today's Coordinator becomes next week's Builder (or Reviewer). Everyone gets a different perspective."
 
 ---
 
 ## After Class
 
-- **Review shared repositories.** Check that each group has: a shared repository, at least 2-3 Issues, at least one PR per student with comments. Flag groups with minimal activity for a check-in at the start of Week 12.
-- **Check role assignments.** Ensure every student has a clear role. Follow up with groups that seem confused about role distribution.
-- **Note group dynamics.** Identify groups where one student is dominating or where a student is disengaged. Plan to address this in Week 12 through role-specific check-ins.
-- **Mid-semester artifact package feedback:** Should be returned by this week (graded in Week 10). If not yet returned, prioritize this.
+- **Score Micro-Defence 3.** Return scores within one week. This is the summative round — scores carry equal weight with Weeks 4 and 8.
+- **Read Decision Logs (8 entries per student).** Score summatively (entries 6-8) using the DL rubric. Check self-assessment calibration: where do students over- or under-rate? Note patterns for the oral reflection conversations in Week 13.
+- **Observation tracking:** Confirm every student has at least 2 full observations across Weeks 4, 8, and 11. Any student with fewer needs documentation in the grading notes.
+- **Review group repositories.** Check PRs, comments, and Issues for evidence of collaboration and language quality.
+- **Mid-semester artifact package feedback:** Should have been returned by now. If not, prioritize immediately.
 
 ---
 
 ## Instructor Prep Checklist
 
-- [ ] Collaborative roles table on slide or handout (Coordinator, Builder, Reviewer with responsibilities and language produced)
-- [ ] Worked example prepared: sample project scoped with three roles, including a live-written Issue and role-based contributions
-- [ ] Information-gap writing prompt + sentence frames on slide
-- [ ] Negotiation rule on slide: "If you can't explain why you want X, you can't just outvote someone who can explain why they want Y"
-- [ ] Status update template on slide (4-line template with role-specific speaking parts)
-- [ ] Goal Document prompt + sentence frames on slide
-- [ ] GitHub ready for shared repository creation (groups will need to set up repositories in class)
-- [ ] Group assignments confirmed (from Week 10 formation). Plan for absent students or students who missed Week 10.
-- [ ] Role assignment plan: instructor assigns or groups negotiate (either works, but roles must be explicit by end of Segment A)
-- [ ] PR and Issue examples on slide (what a good PR description and Issue look like vs. a bad one)
-- [ ] Decision Log entry count reminder on slide
+- [ ] DL feedback round 2 ready to return with confirmation signal ("target addressed" / "target still developing")
+- [ ] DL submission process confirmed (where and how students submit 8 entries + self-assessment)
+- [ ] Triad groups pre-assigned (mix based on Weeks 4 and 8 data; partial/deferred students' groups visited first)
+- [ ] Scoring sheets printed: one per student (7 criteria + fluency band + evidence basis)
+- [ ] Written diagnostic prompt on slide
+- [ ] Paper or locked-down devices for diagnostic
+- [ ] 7-criterion checklist on slide (2 new criteria highlighted)
+- [ ] Triad rotation plan on slide (3 rounds with times)
+- [ ] Peer feedback frame on slide
+- [ ] Collaborative roles table on slide (Coordinator / Builder / Reviewer)
+- [ ] Goal Document prompt + sentence frames on slide (frames labelled "optional")
+- [ ] Git Episodes reminder slide (3 required, due Week 12)
+- [ ] Group assignments confirmed from Week 10
+- [ ] Recovery buffer built into timing (2 min after diagnostic)
 
 ## Language Development Summary
 
-- **Vocabulary:** No new terms. All 40 terms from Weeks 1-9 applied in collaborative context. Key recycled terms: repository, commit, push, pull request, issue, comment, review, verification, accessibility.
-- **Speaking:** Negotiation during information-gap synthesis; role-based coordination during building; structured 2-minute status update (all three roles speak); pair/group discussion throughout
-- **Reading:** Partner's independent writing (information-gap); Issue descriptions; PR descriptions and comments; AI output during building; status update template; partner's PR for review
-- **Writing:** Independent idea statement (3+ sentences, information-gap); Issue descriptions (Coordinator); PR descriptions and comments (all students); verification notes (Reviewer); session plan (Coordinator); Goal Document entry (role description and group justification)
-- **Listening:** Worked example of project scoping with roles; partner's ideas during negotiation; other groups' status updates; instructor feedback on scope and feasibility
+- **Vocabulary:** No new terms. All 40 terms from Weeks 1-9 applied in collaborative context. Key recycled terms: repository, commit, push, pull request, issue, comment, review, process, evaluate, resolve.
+- **Speaking:** Triad defence (4 min, 7 criteria — the most demanding oral assessment); peer feedback delivery x2; in-group coordination during collaborative building; brief pair share of Goal Document
+- **Reading:** DL feedback round 2 with confirmation signal; 7-criterion checklist; partner's PR descriptions and comments; AI output during building; partner's Goal Document
+- **Writing:** In-class diagnostic (~50-100 words, unmediated); PR descriptions and comments; Issue updates; Goal Document entry 11 (evaluative, comparing — Phase 3 language); DL entries submitted (8 curated + self-assessment)
+- **Listening:** Role introduction; two partners' triad defences; instructor follow-up questions; partner's Goal Document evaluation
 
 ## Assessment Alignment
 
-- **No graded submission this week** (all ongoing work contributes to final artifact package, Week 14)
-- **CLO 7** (Collaborate): Primary focus. Shared repository, Issues, PRs, comments, role-based coordination.
-- **CLO 5** (Communicate): Issue descriptions, PR descriptions, status update presentations, verification notes (Reviewer)
-- **CLO 1** (Manage files+versions): Shared repository creation, PR submission, Issue tracking. **Git Episodes -- Collaboration episode:** Students who submit a PR with description + comment exchange have evidence toward this required episode.
-- **Decision Logs:** Collaborative AI interactions are eligible for DL entries. Remind students of the 8-entry requirement (due Week 13).
-- **Goal Document:** Entry 11 (role and responsibilities). Not graded. Instructor does not read Goal Documents this week (next reading point is Week 13).
-- **Collaborative roles:** Roles persist through Weeks 11-13. Week 12 will check whether roles are generating the expected language output.
+- **Oral Micro-Defence 3 (part of 25% component):**
+  - In-class written diagnostic (10%): unmediated writing about AI direction and evaluation
+  - Oral triad defence (30% fluency + 50% task = 80%): sustained explanation, 7 criteria
+  - Peer feedback (10%): quality of the peer's feedback
+  - **CLOs 2, 3, 4, 5 assessed** (first time CLOs 3-4 are formally assessed in the oral defence)
+  - **7 criteria** (5 from Week 8 + 2 new: "describes how AI was directed," "evaluates AI output")
+- **Decision Logs due (30% of final grade):** 8 curated entries with self-assessment. Entries 6-8 assessed summatively. Self-assessment calibration noted for oral reflection (Week 13).
+- **DL feedback round 2 returned:** Entries 3-5 with confirmation signal. This is the last DL feedback before summative scoring.
+- **Git Episodes -- Collaboration episode:** Students completing PR + comment exchanges today have evidence. Git Episodes due next week.
+- **Goal Document:** Entry 11 (ungraded; instructor reads at Week 13)
+- **Observation tracking:** Every student should now have at least 2 full observations across 3 rounds. Confirm and document.
