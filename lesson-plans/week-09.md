@@ -188,6 +188,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - "You started building. Look at your task list. What did you finish? What didn't you get to? That gap is useful information for next week."
 - "Next week: you finish and submit your mid-semester artifact package. That means: the artifact itself, your process documentation (in your own words), and evidence of sharing. The peer check-in today counts as sharing."
 - "Your artifact package includes three things: what you built, documentation of how you built it, and evidence that you explained it to someone."
+- **Week 10 prep check** (3 min): "Open your process documentation table now. Count your rows. If you have fewer than 5, that's your homework: reconstruct what you remember before next class. You'll need this for the artifact package."
 - Remind: "If you haven't committed your work, do it now. Descriptive message."
 
 ---
