@@ -206,7 +206,7 @@ Display:
 
 ## After Class
 
-- **Grade Git Episodes (10%).** Checklist-based: 3 required episodes. Short oral confirmation for any suspiciously "perfect" evidence.
+- **Grade Git Episodes (10%).** Checklist-based: 3 required episodes. Short oral confirmation for evidence that contains no errors, no personal voice markers, and looks templated (e.g., generic screenshot descriptions that don't match the student's oral level). A 2-minute conversation: "Can you tell me what happened in this episode in your own words?"
 - **Review evidence maps** (spot-check). Are students finding appropriate evidence for CLOs? Flag students whose maps are empty or generic for a brief check-in before Week 13.
 - **Review collaborative project progress.** Groups should be close to completion. Flag groups that need extra time.
 - **Prepare Week 13 oral reflections.** Read each student's DL entries (submitted Week 11) and Goal Document. Identify 2 CLOs to ask about per student (one the student is likely strong on, one potentially weaker). Prepare follow-up questions.

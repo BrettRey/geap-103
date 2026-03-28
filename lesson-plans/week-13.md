@@ -93,6 +93,10 @@ If a student freezes: "Look at your Decision Logs. Which entry are you most prou
 
 This checklist is a deliverable: students submit it (checked off, with notes) by end of session. It is ungraded but provides structure and accountability.
 
+**Extension for early finishers:** "Review your Goal Document entries 1-4. Annotate where your language changed — circle a sentence from Week 1 and a sentence from Week 4 that show the difference. This is preparation for your final Goal Document entry."
+
+**Week 14 deliverables slide** should be visible throughout the session (not just in the closing), so students know what they're working toward while they wait.
+
 ---
 
 ## Segment B: Reflections Continue + Collaborative Artifact Finalization (0:40--1:35)
@@ -135,6 +139,8 @@ Groups commit and submit. Each member submits their individual contribution stat
 For students not currently in a reflection:
 
 "This is your last Goal Document entry. Go back to the beginning. Read your Week 1 entry. Read every entry after that. Notice how your language changed. Notice how your thinking changed. Then write about what you see."
+
+*Note: Students called for their reflection late in the session (after minute 90) should start reading their Goal Document during the structured work time, so they transition from active reading/writing to their reflection rather than from idle checklist work.*
 
 **Step 1 -- Read** (10 min): Students read their entire Goal Document from Week 1 to Week 12. No writing yet.
 

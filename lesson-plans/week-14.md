@@ -31,6 +31,8 @@ Display submission checklist:
 |-----------|----------------|
 | **Final Artifact Package** | The artifact itself + process documentation (own words) + verification note + evidence of sharing |
 
+**Evidence of sharing — concrete examples:** A peer check-in screenshot (Week 9), a session review transcript where you explained the artifact, a PR comment exchange where a partner reviewed your work, a photo of your group presentation. At least one documented instance required.
+
 "If your artifact isn't perfect, that's fine. The documentation matters as much as the product. If your verification note honestly names what you didn't finish, that's better than pretending everything is done."
 
 **Deadline:** Submit by end of Segment A (0:40). Late submissions by 11:59 PM tonight.
@@ -101,7 +103,7 @@ Students share informally. No slides required. Show the artifact on screen, say 
 
 Instructor and classmates ask one brief follow-up question.
 
-**Pacing:** With 15-20 students at 2-3 min each, this takes 30-60 min. If the class is large, split into two groups presenting simultaneously. Or: do half in Segment B, half after the break.
+**Pacing — firm limits:** 2 min per student (hard stop). With 20 students: 40 min. For classes over 18: ask for volunteers first (aim for 12-15 presenters), with remaining students sharing in small groups simultaneously during Segment C overflow. For simultaneous sharing: split into two groups in different parts of the room, each with a designated timekeeper student. The instructor moves between groups.
 
 **Tone:** Celebratory. Do not grade. Listen, react, ask genuine questions. "I didn't finish what I planned, but I learned a lot" is a perfect answer.
 
@@ -120,7 +122,7 @@ Each group presents. Roles are visible:
 3. Reviewer evaluation (1 min)
 4. One question from the class (1 min)
 
-With 6-8 groups at 3-5 min each: 20-40 min. Adjust pace to fit.
+**Firm limit:** 3 min per group (hard stop). With 7 groups: 21 min.
 
 ---
 
@@ -147,19 +149,34 @@ Complete any remaining individual or group presentations.
 **Instructor note:** Students are producing evaluative, comparative language ("I can now..., which I couldn't...") orally, without sentence frames, in a low-stakes setting. If the course worked, they can do this.
 
 ### 2:15--2:25 | Transfer to Degree Programs
-**Format:** Instructor-led
-**Language skills:** Listening
+**Format:** Pair task, then whole class
+**Language skills:** Speaking (matching, explaining), listening
 
 "You're moving into your degree programs. The tools might change. The skills don't."
 
-| What you learned here | Where it shows up next |
-|----------------------|----------------------|
-| Telling AI what you want | Every course that allows AI tools |
-| Evaluating whether output is right | Research, assignments, professional work |
-| Writing help requests and documentation | Group projects, IT support, workplace |
-| Working on shared projects with version control | Collaborative assignments, co-op |
-| Explaining your work to others | Presentations, interviews, meetings |
-| Organising files and versions | Every course, every job |
+Display the left column only:
+
+| What you learned here |
+|----------------------|
+| Telling AI what you want |
+| Evaluating whether output is right |
+| Writing help requests and documentation |
+| Working on shared projects with version control |
+| Explaining your work to others |
+| Organising files and versions |
+
+**Pair task with A/B turns** (5 min): "With your partner, match each skill to a situation in your degree program or future job. Where will you use this? Be specific — not 'everywhere' but 'in my business course when...'"
+
+**Whole class** (5 min): Volunteers share matches. Instructor reveals the right column for any that weren't mentioned:
+
+| Where it shows up next |
+|----------------------|
+| Every course that allows AI tools |
+| Research, assignments, professional work |
+| Group projects, IT support, workplace |
+| Collaborative assignments, co-op |
+| Presentations, interviews, meetings |
+| Every course, every job |
 
 "The one thing I hope you take from this course is that English is the control layer. If you can say what you mean clearly, you can get a computer to help you do almost anything."
 
