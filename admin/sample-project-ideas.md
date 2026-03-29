@@ -1,102 +1,107 @@
 # GEAP 103: Sample Project Ideas
 
-**Purpose:** Inspiration for instructors and students. Presented informally in Week 4 and referenced throughout. Students are not limited to this list.
+**For instructors and students.** These ideas are shown in Week 4 and used throughout the course. You do not have to choose from this list. You can build anything.
 
-**The ceiling is high.** The language level is B1. The artifact ambition should be genuinely surprising. "Make a budget spreadsheet" is trivial for AI. "Build an app that tracks my spending, flags unusual purchases, and texts me a weekly summary" requires real articulation. Every project on this list would have required hiring a developer six months ago. Now it requires being able to say what you want clearly enough.
+**The ceiling is high.** Your English is B1. Your project can be as ambitious as you want. "Make a budget spreadsheet" is too easy for AI. "Build an app that tracks my spending, warns me when I spend too much, and sends me a weekly report" — that takes real skill with words. Every project here would have needed a professional developer last year. Now it needs you to say clearly what you want.
 
-**Design principles:**
-- The student brings knowledge AI doesn't have (their life, culture, community, domain expertise)
-- AI handles all technical execution (code, formatting, data processing, design)
-- The articulation gap is where the learning happens: vague descriptions produce generic junk; precise descriptions produce genuinely useful things
-- Every project produces a working artifact with a URL that the student would show their family
+**How these work:**
+- You bring knowledge AI does not have (your life, your culture, your community, your job)
+- AI writes the code, designs the layout, processes the data
+- You describe what you want, check what AI gives you, and fix what is wrong
+- You end up with something real — a working app, a playable game, a tool people can use
 
 ---
 
-## Working Apps and Interactive Tools
+## Working Apps and Tools
 
-### 1. Neighbourhood Safety + Transit Score App
-A web app where you enter any Toronto address and it shows: walk score, nearest TTC stop with real-time arrivals, distance to the nearest grocery store, and a safety rating based on Toronto Police open data. The student defines what "safe" means to them (weighting criteria differently than the default) and writes the explanatory text. **Articulation challenge:** Defining weighted scoring criteria in plain English; specifying what data sources to use and how to combine them; writing user-facing explanations of what the scores mean.
+### 1. Neighbourhood Score App
+You type in a Toronto address. The app shows you: how far is the nearest bus stop, how far is the nearest grocery store, and a safety score based on open police data. You decide what "safe" means to you — maybe distance to a hospital matters more than crime numbers. You write the text that explains each score to the user. **What makes this hard to describe:** You have to tell AI exactly how to calculate the scores. "Show me if the neighbourhood is good" is too vague. "Give a safety score from 1 to 10 where distance to a hospital is worth 30% and reported crime is worth 70%" — that works.
 
-### 2. Apartment Hunter with Automated Alerts
-A tool that scrapes Kijiji or Facebook Marketplace rental listings, filters them by the student's criteria (price, transit time to Humber, number of bedrooms, allows cooking), scores each listing against weighted preferences, and emails a daily digest of the best new matches. **Articulation challenge:** Specifying filter criteria precisely enough that the tool doesn't miss good listings or surface bad ones; defining what "best" means across multiple dimensions; writing the scoring logic in plain English.
+### 2. Apartment Finder with Daily Alerts
+A tool that checks rental websites every day, finds apartments that match your needs (price, number of bedrooms, distance to Humber by TTC, allows cooking), and emails you the best new ones each morning. You set the rules. You decide what "best" means. **What makes this hard to describe:** You have to explain your preferences precisely. "Cheap and close to school" gives you bad results. "Under $1,400, within 40 minutes of Humber by TTC, at least one bedroom, pet-friendly" gives you exactly what you need.
 
-### 3. Personal Finance App with Spending Predictions
-Not a spreadsheet. A web app where you photograph receipts (OCR), it categorizes spending automatically, tracks against a monthly budget, and predicts whether you'll run out of money before the end of the month based on your spending pattern so far. Alerts when a category is trending over budget. **Articulation challenge:** Defining spending categories that match your actual life (not generic ones); specifying the prediction logic ("If I'm spending $15/day on food and there are 12 days left, but I have $120 in my food budget..."); writing alert messages that are actually helpful.
+### 3. Spending Tracker with Predictions
+A web app where you take photos of your receipts. The app reads the receipt, sorts your spending into categories, and tracks your budget. The important part: it predicts if you will run out of money before the end of the month and warns you early. **What makes this hard to describe:** You have to define your own spending categories (not the ones a bank uses) and explain the warning rules. "Warn me when I spend too much" is useless. "Warn me when my food spending so far this month divided by the number of days suggests I will go over $400 by the 30th" — that is a real instruction.
 
-### 4. Custom Study Scheduler with Spaced Repetition
-A web app that takes your course schedule, assignment due dates, and exam dates, then generates a personalized study plan using spaced repetition. It tells you what to study today, tracks what you've reviewed, and reschedules topics you're struggling with. Syncs with your phone calendar. **Articulation challenge:** Describing your courses, their difficulty levels, and your study preferences; specifying what "struggling" means (how the app knows to reschedule); defining the balance between courses.
+### 4. Study Planner That Learns What You Forget
+A web app that knows your course schedule, your assignments, and your exams. It makes a daily study plan. If you forget something on a quiz, it schedules that topic again sooner. If you remember something easily, it waits longer before showing it again. It syncs with your phone calendar. **What makes this hard to describe:** You have to explain how to tell the difference between "I know this" and "I need to review this." You have to describe five different courses and how hard each one is. You have to say what "struggling" looks like so the app knows when to change the plan.
 
-### 5. Multilingual Phrasebook App with Audio
-A mobile-friendly web app that teaches someone your first language, with phrases organized by situation (restaurant, transit, emergency, small talk), audio recordings of you pronouncing each phrase, cultural usage notes, and a quiz mode. Not a translation tool — a teaching tool, designed by someone who knows both the language and the cultural context. **Articulation challenge:** Explaining pronunciation and grammar in English; writing usage notes that capture pragmatic nuance ("You only say this to people older than you"); specifying quiz logic and feedback messages.
+### 5. Teach Someone Your Language (App)
+A phone-friendly web app that teaches someone your first language. Phrases organized by situation (at a restaurant, on the bus, in an emergency, making small talk). You record yourself saying each phrase. You write notes explaining when and how to use each phrase ("You only say this to someone older than you"). A quiz mode tests the learner. **What makes this hard to describe:** You have to explain pronunciation in English. You have to write cultural rules that are usually invisible ("In my language, there are two words for 'you' depending on..."). You have to tell AI how the quiz should give feedback.
 
-### 6. Recipe Scaling + Substitution Engine
-Not a recipe website. An app where you paste any recipe URL, it extracts the ingredients and steps, scales to any number of servings (handling non-linear scaling: you can't just double the baking powder), suggests substitutions for unavailable ingredients based on what's in your pantry (which you maintain as a list), and generates a shopping list organized by aisle at your specific grocery store. **Articulation challenge:** Specifying substitution rules that account for texture, flavour, and dietary restrictions; describing your pantry and your grocery store's layout; defining what "equivalent" means for different ingredient types.
+### 6. Recipe App That Scales and Substitutes
+You paste a recipe link. The app pulls out the ingredients and steps. You say "I am cooking for 7 people" and it scales everything — but it knows that you cannot just double the baking powder. You tell it what is in your kitchen, and it suggests substitutions. It makes a shopping list organized by the sections of your specific grocery store. **What makes this hard to describe:** You have to explain substitution rules that depend on what you are making. "Use butter instead of oil" is not always right. You have to describe your grocery store's layout so the shopping list follows the aisles.
 
 ---
 
 ## Games and Interactive Experiences
 
-### 7. Escape Room Game Set in Your Home City
-A browser-based escape room with 5+ puzzles, set in a real location from your home country or culture. Players solve puzzles using cultural knowledge, language clues, and logic. Timer, hint system, scoring, and a leaderboard. The setting and puzzles teach the player something about your culture. **Articulation challenge:** Designing puzzle logic with multiple states and conditions; writing atmospheric descriptions; specifying hint progressions that help without giving away the answer; describing win/lose conditions and branching paths.
+### 7. Escape Room Set in Your Home City
+A browser game with 5 or more puzzles. The setting is a real place from your home country or culture. Players solve puzzles using cultural knowledge, language clues, and logic. There is a timer, a hint system, scoring, and a leaderboard. People who play your game learn something about your culture. **What makes this hard to describe:** You have to design puzzles with clear rules. Each puzzle has conditions: "If the player finds the key but has not talked to the shopkeeper, the door stays locked." You have to write hints that help without giving away the answer.
 
-### 8. "Survive Your First Winter" Simulation Game
-An interactive simulation where the player is a newcomer to Canada in October. They have a budget and must make decisions: buy a winter coat or save money? Take the bus or walk? Each decision affects health, money, and comfort scores over 5 months. Based on real prices and real weather data. Educational and funny. **Articulation challenge:** Designing a decision tree with consequences that cascade; specifying how variables interact ("If health drops below 30 and it's January, trigger a hospital visit that costs $X"); writing dialogue and flavour text that is both informative and entertaining.
+### 8. "Survive Your First Winter" Game
+A simulation game where the player is a newcomer arriving in Canada in October. They have a budget. They make choices: buy a winter coat now or save the money? Take the bus or walk? Each choice changes their health, money, and comfort over five months. Based on real Toronto prices and real weather. Educational and funny. **What makes this hard to describe:** You have to design a decision tree where choices have consequences. "If health drops below 30 and it is January, the player gets sick and has to pay for medicine." You have to write text that is informative and entertaining at the same time.
 
-### 9. Interactive Fiction: A Day in Two Countries
-A branching narrative where the reader makes choices that play out a single day simultaneously in two places: the student's home country and Toronto. Same character, parallel timelines, diverging based on choices. Explores what's different and what's the same. Playable in a browser with illustrated scenes. **Articulation challenge:** Writing branching dialogue that sounds natural in both cultural contexts; specifying how choices in one timeline affect the other; describing scenes vividly enough for AI to generate consistent illustrations.
+### 9. A Day in Two Countries
+A story where the reader makes choices. The same character lives one day in two places at the same time: your home country and Toronto. The reader's choices change what happens in both places. The story shows what is different and what is the same. Playable in a browser with pictures. **What makes this hard to describe:** You have to write dialogue that sounds natural in two cultural contexts. You have to explain how a choice in one place changes what happens in the other. You have to describe scenes clearly enough for AI to draw them.
 
-### 10. Multiplayer Quiz Tournament Platform
-Not just a quiz. A platform where you create quiz tournaments that multiple people can join via a code (like Kahoot, but yours). You write the questions on any topic, set difficulty tiers, configure tournament brackets, and see live leaderboards. Share the code with friends and family in different countries and play together. **Articulation challenge:** Designing tournament logic (brackets, elimination, tiebreakers); writing questions at calibrated difficulty levels; specifying real-time synchronization requirements; describing the user experience for both the host and the players.
+### 10. Quiz Tournament Platform (Multiplayer)
+Not just a quiz. A platform where you create tournaments that friends and family can join with a code — like Kahoot, but built by you. You write the questions, set difficulty levels, and configure how the tournament works (who plays who, what happens if there is a tie). Share the code with people in different countries and play together in real time. **What makes this hard to describe:** You have to design the tournament rules (brackets, elimination, tiebreakers). You have to write questions at different difficulty levels. You have to describe the experience for the person hosting and the person playing.
 
 ---
 
 ## Data Systems and Automations
 
-### 11. Immigration Document Tracker and Deadline Alert System
-A web app that tracks all your immigration documents (study permit, work permit, PGWP eligibility, PR application stages), their expiry dates, renewal windows, and required supporting documents. Sends email alerts 90/60/30 days before deadlines. Includes a checklist for each document type based on IRCC requirements. **Articulation challenge:** Specifying the relationship between document types (work permit depends on study permit status); defining alert timing and escalation; writing checklist items that are accurate and actionable; describing conditional logic ("If study permit expires before PGWP application is processed...").
+### 11. Immigration Document Tracker with Alerts
+A web app that tracks all your immigration documents: study permit, work permit, PGWP eligibility, PR application steps. It knows the expiry dates and sends you email alerts 90, 60, and 30 days before each deadline. It includes a checklist for each document type based on IRCC requirements. **What makes this hard to describe:** Different documents depend on each other. "If my study permit expires before my PGWP application is processed, what happens?" You have to explain these relationships clearly enough for the app to give correct warnings.
 
-### 12. Course Grade Simulator with "What If" Scenarios
-A tool where you enter your course structure (assignments, weights, due dates), your grades so far, and then ask "what if" questions: "What grade do I need on the final to get a B+?" "What happens if I skip Assignment 4?" "If I get 75% on everything remaining, what's my final grade?" Visual dashboard showing scenarios side by side. **Articulation challenge:** Specifying grade calculation rules (weighted averages, dropped lowest scores, participation components); describing scenarios precisely; writing the interpretive text that explains what each scenario means.
+### 12. Grade Calculator with "What If" Questions
+You enter your courses, assignments, and weights. You enter your grades so far. Then you ask: "What do I need on the final exam to get a B+?" or "What happens to my grade if I skip Assignment 4?" The app shows you different scenarios side by side. **What makes this hard to describe:** You have to explain how your grades are calculated (weighted averages, dropped lowest marks, participation marks). Every course is different. You have to describe the rules for each one.
 
-### 13. Job Application Tracker with Follow-Up Automation
-A system that tracks every job you apply to: company, position, date applied, contact person, status (applied/interviewed/rejected/offered), and next action. Generates follow-up email drafts at configurable intervals (1 week after application, 2 days after interview). Dashboard shows your pipeline. **Articulation challenge:** Defining status transitions and follow-up rules; writing email templates for different situations (follow-up after no response vs. thank-you after interview vs. negotiation after offer); specifying what the dashboard should prioritize.
+### 13. Job Application Tracker with Automatic Follow-Ups
+A system that tracks every job you apply for: company name, position, date, contact person, and status (applied, interviewed, rejected, offered). It writes follow-up emails for you at the right time (one week after applying, two days after an interview). You see a dashboard of all your applications. **What makes this hard to describe:** You have to define the rules for follow-up timing. You have to write email templates for different situations: following up when you have not heard back is different from saying thank you after an interview.
 
-### 14. Neighbourhood Price Comparison Scraper
-A tool that monitors prices for specific items you buy regularly (milk, rice, phone plans, transit passes) across multiple stores and services near you. Updates weekly. Shows you where to buy each item cheapest, with a map. Calculates how much you'd save per month by switching. **Articulation challenge:** Defining which items to track and at which stores; specifying how to handle different sizes and brands ("Compare the per-100g price, not the package price"); writing the summary logic that turns raw data into actionable advice.
+### 14. Price Comparison Tool for Your Neighbourhood
+A tool that tracks the prices of things you buy regularly (milk, rice, phone plans, transit passes) at different stores near you. It shows you where to buy each item for the cheapest price, on a map. It calculates how much you would save each month by shopping at different stores. **What makes this hard to describe:** You have to define what to compare. "Compare milk prices" is not enough. "Compare the price per litre of 2% milk at No Frills, FreshCo, and Walmart within 3 km of my address" — that is a real instruction.
+
+### 15. City Infrastructure Reporter
+A web app for reporting problems in your city — broken catch basins, potholes, damaged streetlights, blocked storm drains, graffiti. You select the location on a map, describe the problem, and attach a photo. The app formats your report to match what the city actually needs (for example, Mississauga's 311 service requires a location, a category, a description, and a photo). It saves your reports so you can track whether they were fixed. **What makes this hard to describe:** You have to learn what your city's reporting system requires. You have to write clear descriptions of physical problems ("The catch basin on the south side of Dundas Street West, 20 metres east of Hurontario, is blocked with leaves and the water is not draining"). You have to describe the app's interface so it guides the user through each step. This project teaches civic engagement: the student learns how municipal services work and builds a tool that helps their neighbours participate too.
 
 ---
 
 ## Creative and Cultural Projects
 
-### 15. Animated Explainer: A Concept from Your Culture That Doesn't Exist in English
-A 2-3 minute animated explainer video (AI-generated visuals + your voiceover) that teaches English speakers a concept from your culture that has no direct English translation. Examples: the Korean concept of 눈치 (nunchi), the Arabic concept of كيف (keif), the Japanese concept of 木漏れ日 (komorebi). The animation shows the concept in action through scenarios. **Articulation challenge:** Explaining an untranslatable concept through examples and scenarios rather than definitions; scripting visual scenes precisely enough for AI animation; speaking clearly for voiceover at a controlled pace.
+### 16. Animated Explainer: A Concept That Does Not Exist in English
+A 2-3 minute animated video (AI makes the visuals, you record the voiceover) that teaches English speakers a concept from your culture that has no English translation. The Korean concept of 눈치 (nunchi), the Arabic concept of كيف (keif), the Japanese concept of 木漏れ日 (komorebi). The animation shows the concept in real situations, not just a definition. **What makes this hard to describe:** You have to explain something that English has no word for. You cannot use a definition — you have to show it through examples and stories. You have to describe scenes clearly enough for AI to animate them.
 
-### 16. Interactive Cultural Calendar with Event Planner
-Not a static calendar. A web app that maps your community's cultural events, holidays, and festivals onto the academic year, with: countdown timers, preparation checklists ("for Nowruz you need: ..."), links to local vendors, estimated costs, and a "plan this event" mode that generates shopping lists and task timelines. **Articulation challenge:** Explaining cultural practices to an unfamiliar audience without oversimplifying; specifying the planning logic for each event; writing preparation checklists that are accurate and complete.
+### 17. Cultural Event Planner App
+Not a calendar. A web app that maps your community's holidays and festivals onto the school year, with countdown timers, preparation checklists ("for Nowruz you need..."), links to local shops, estimated costs, and a "plan this event" mode that makes shopping lists and schedules. **What makes this hard to describe:** You have to explain cultural practices clearly to someone who has never heard of them. You have to build the planning logic for each event. You have to write checklists that are complete and correct.
 
-### 17. Oral History Archive with Search and Themes
-Record 3-5 interviews with elders in your community (in any language). AI transcribes, translates, and indexes them. Build a searchable web archive where visitors can browse by theme (immigration, work, family, food, war, education), listen to audio clips, read translations, and see connections between stories. **Articulation challenge:** Designing the thematic taxonomy; writing interview questions that elicit rich narratives; specifying how the search and theme-linking should work; writing the framing text that contextualizes the archive for visitors.
+### 18. Oral History Archive
+Record 3-5 interviews with elders in your community (in any language). AI transcribes and translates them. Build a searchable website where visitors can browse by theme (immigration, work, family, food, education), listen to audio clips, read translations, and see connections between stories. **What makes this hard to describe:** You have to organize the stories into themes. You have to write interview questions that help people tell rich stories. You have to explain how the search should work and how stories connect to each other.
 
-### 18. "Port" a Classic Game to the Browser
-Take a game you grew up playing (a card game, a board game, a schoolyard game that's specific to your culture) and build a playable browser version. AI writes the code; you specify the rules, the UI, and the experience. Include a "How to Play" section that teaches the cultural context. **Articulation challenge:** Translating implicit game rules into explicit, unambiguous specifications; describing spatial layouts and turn sequences; handling edge cases and special rules; writing cultural context that makes a foreign game interesting to a Canadian player.
+### 19. Port a Game from Your Culture to the Browser
+Take a game you grew up playing — a card game, a board game, a game from school — and build a version that works in a web browser. AI writes the code. You explain the rules, design the look, and write a "How to Play" section that teaches someone from Canada how to play. **What makes this hard to describe:** Game rules that you learned as a child are often not written down. You have to make every rule clear and exact. "The next player goes clockwise unless someone plays a red card" — you have to think of every case.
 
 ---
 
 ## Professional and Community Impact
 
-### 19. Small Business Operations Dashboard
-For a real family business or side hustle: a dashboard that tracks customers/clients, appointments, income, expenses, inventory (if applicable), and generates invoices. Not a website about the business — an actual operational tool the business uses. **Articulation challenge:** Mapping the real workflow of the business into system requirements; specifying invoice formats, tax calculations, and reporting periods; defining what the business owner needs to see first when they open the dashboard.
+### 20. Small Business Dashboard
+For a real family business or side job: a tool that tracks customers, appointments, money in, money out, and stock (if you sell products). It creates invoices. This is not a website about the business — it is a tool the business actually uses every day. **What makes this hard to describe:** You have to explain how the business really works, step by step. "Track the money" is too vague. "When a customer pays, add the amount to income, reduce the inventory count for that product, and if inventory goes below 5, show a warning" — that is a real description.
 
-### 20. Community Needs Survey Platform + Report Generator
-Build a survey tool (not Google Forms — a custom one with your questions, your logic, your design), distribute it to your community, and have the system automatically generate a report with charts, findings, and recommendations as responses come in. Real-time dashboard. **Articulation challenge:** Writing survey questions that avoid bias; specifying skip logic and branching; defining how to aggregate and visualize responses; writing the auto-generated report template that turns data into narrative.
+### 21. Community Survey Platform with Automatic Reports
+Build a survey tool with your own questions, your own design, and your own logic (for example: "If the person answers 'No' to Question 3, skip to Question 7"). Share it with your community. The tool automatically makes a report with charts and findings as answers come in. **What makes this hard to describe:** You have to write survey questions that do not push people toward one answer. You have to explain the skip logic. You have to describe how to turn numbers into a story ("If 70% of respondents say X, the report should say...").
 
-### 21. Newcomer Onboarding System for Your Workplace
-A training tool for new employees at a workplace you know (restaurant, warehouse, retail, care facility). Interactive modules: "Here's how the cash register works" (with clickable simulation), "Here's what to do if a customer complains" (with branching scenarios), "Here's the safety equipment and when to use it" (with visual guide). Built from your real experience. **Articulation challenge:** Turning tacit workplace knowledge into explicit, teachable steps; writing branching scenarios with realistic dialogue; specifying simulation logic; describing safety procedures with precision.
+### 22. Workplace Training Tool
+An interactive training system for new employees at a job you know (restaurant, warehouse, store, care home). Modules like "How the cash register works" (with a clickable practice version), "What to do if a customer complains" (with choices and consequences), "Safety equipment and when to use it" (with pictures). Built from your real experience working there. **What makes this hard to describe:** You know how to do the job, but you have never written it down. You have to turn what you do automatically into clear steps. You have to write realistic conversations for the practice scenarios. You have to describe safety rules exactly — no mistakes allowed.
 
 ---
 
-## Assessment Note
+## How Assessment Works
 
-These ideas are presented as inspiration, not requirements. Assessment is on the communicative package (articulation + evaluation + documentation + sharing), not on technical sophistication. But the AF v6 explicitly says: "A student who attempts something that genuinely challenged their ability to articulate what they wanted is demonstrating more than a student who describes a trivial goal perfectly. The language is B1; the ambition can be high."
+These ideas show what is possible, not what is required. Your grade is based on how well you describe what you want, how honestly you document what happened, and how clearly you explain your work to someone else — not on how impressive the technology is.
 
-A student who tries to build #11 (immigration document tracker) and only gets the deadline alerts working — with excellent process documentation about why the conditional logic was hard to specify — scores higher than a student who builds a generic portfolio website with no documentation.
+A student who tries to build #11 (immigration document tracker) and only gets the deadline alerts working — but writes excellent documentation about why the rest was hard to describe — gets a better grade than a student who builds a simple website with no documentation.
+
+The language level is B1. The project ambition has no limit.
