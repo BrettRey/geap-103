@@ -9,4 +9,21 @@
 - GitHub repo created (BrettRey/geap-103), reorganised, pushed. Pages enabled.
 - Advisory board saved with 6 reviewers.
 
-**Next:** Weeks 6–14 materials. Assessment rubrics. Sample student projects. Week 5 review board (deferred).
+### 2026-03-27/28 Session Notes (afternoon through evening)
+- WCAG 2.0 AA contrast fixes on faculty-preparation.html and copilot-cli-setup-guide.html.
+- Week 6 lesson plan + materials: full rewrite, review-boarded (4 Accept, 2 R&R), revised, shipped.
+- Week 7 lesson plan + materials: full rewrite, review-boarded (6 R&R), revised, shipped.
+- Week 4 lesson plan rewritten to match AF v6 (triads, 3 criteria). Materials package patched.
+- Weeks 1-3 and 5: session reviews added, structured turn-taking, cross-cutting fixes (GitHub prerequisite, Git maintenance Wk5, sentence frames optional Wk5+).
+- Whole-sequence review (Weeks 1-7): 5 R&R, 1 Accept. Cross-cutting fixes adopted/adapted/set aside.
+- Week 8 lesson plan + materials: full rewrite (triads, 7→5 criteria per AF v6, AWL vocab), review-boarded (4 Accept, 2 R&R), revised, shipped.
+- Week 9 lesson plan + materials: rewrite, review-boarded (4 Accept, 2 R&R), revised, second-pass review (5 Accept, 1 R&R), final fix shipped.
+- Week 10 lesson plan + materials: rewrite (session review before written reflection, DL feedback moved to Wk11), review-boarded (3 Accept, 3 R&R), revised, shipped.
+- Week 11 lesson plan + materials: complete rewrite (old plan omitted Micro-Defence 3 entirely), review-boarded (6 R&R), revised (criteria modelled, scoring anchors, DL feedback digital distribution, ungrouped student contingency), shipped.
+- Weeks 12-14 lesson plans + materials: written, review-boarded (Wk12: 5A/1R&R, Wk13: 3A/3R&R, Wk14: 2A/4R&R), all fixes applied, shipped.
+- 5 assessment rubrics created (DL, micro-defences, artifact packages, Git episodes, oral reflection). Review-boarded (6 R&R), all fixes applied, shipped.
+- Sample project ideas (21 curated from Mollick/Cummins/Willison) shipped.
+
+**All 14 weeks complete. Assessment rubrics complete. Project ideas complete.**
+
+**Next:** Sample student project exemplars (2-3 worked examples at different rubric levels, due Apr 4). Instructor guide + polish (due Apr 18).
