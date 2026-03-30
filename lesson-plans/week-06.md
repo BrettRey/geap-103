@@ -71,6 +71,8 @@ Interactive reading:
 - Point to a chart (bar chart of favourite foods). "What does this chart show? Which food is most popular? Does the chart match the data in the table?" Students check by scanning the column.
 - Point to a suspicious number: the commute time average says 847 minutes. "Is this number right? That's 14 hours of commuting. Something is wrong." Students look at the data, find the outlier (one person typed 800 instead of 80). "One outlier changes the average. The formula is correct. The data is wrong. The chart looks fine. But the answer is wrong. How would you know if you didn't check?"
 
+"The spreadsheet said the answer was correct. But what was actually there? When you check the number yourself -- on paper, on your phone calculator -- you find out what's actually there. The spreadsheet doesn't care if the answer looks wrong."
+
 "Reading a spreadsheet means checking three things: Is the formula doing what you think? Is the data correct? Does the chart match the data?"
 
 **Part 2 -- Building with Copilot (8 min):**
@@ -148,13 +150,31 @@ Instructor circulates:
 - "Did you check the answer? How?"
 - "What does your chart show? Does it match the numbers?"
 
-### 1:25--1:35 | Decision Log Entry
+### 1:25--1:30 | Naming the Error
+**Format:** Whole class, then individual
+
+"Before you write your Decision Log entry, let's name what went wrong. Errors come in types."
+
+Display:
+
+| Error type | Example from today |
+|-----------|-------------------|
+| **Calculation error** | Formula divides by 30 instead of 28 |
+| **Vague description** | Chart title says "Data" instead of "Monthly Spending by Category" |
+| **Wrong format** | AI made a pie chart when a bar chart would be clearer |
+| **Missing information** | No axis labels, no units on the numbers |
+
+"Look at your spreadsheet work. What kind of error did AI make? Name it. When you write your Decision Log entry, include the error type."
+
+This is the first time students classify AI failures by type, not just by outcome. Over the semester, they build a mental model of how AI breaks.
+
+### 1:30--1:35 | Decision Log Entry
 **Format:** Individual writing
 **Language skills:** Writing (structured documentation, evaluative)
 
 Students write a Decision Log entry about their spreadsheet work. Template on screen.
 
-Focus: What did I ask Copilot to do? What did it produce? How did I check it? Was the result correct?
+Focus: What did I ask Copilot to do? What did it produce? How did I check it? Was the result correct? What type of error did AI make?
 
 "This is your first Decision Log entry since getting feedback. You re-read your improvement target at the start of Segment B. Address it in this entry. I'll be looking for it."
 

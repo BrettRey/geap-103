@@ -62,6 +62,9 @@ Instructor demonstrates, narrating each step:
 3. **Change the file** (add a paragraph, delete a sentence). **Commit** again: "Revised introduction, added summary."
 4. **Show the two snapshots** side by side. "See? Both versions exist. The old one isn't gone."
 5. **Restore** the first version. "I changed my mind. Show me what I had before." The original reappears.
+
+**Aside (conversation hygiene):** "One thing about AI conversations: they have a shelf life. If you've been chatting with AI for 20 minutes and the conversation is long, AI starts losing track of what you said earlier. When a conversation gets confusing or AI starts repeating itself, start a new chat. It's like a clean desk -- AI thinks more clearly without 50 messages of history. You'll notice this as you use AI more. When it happens, just start fresh."
+
 6. **Push** to GitHub. "Now it's online. Safe. Someone else could see it too."
 
 All commands through Copilot or an AI chat interface -- not typed into a terminal.
@@ -194,6 +197,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 **Format:** Whole class
 
 - "Today you learned two things: how to protect your work so you never lose it, and how to describe something that doesn't exist yet. Both are skills you'll use all semester."
+- "You also saw what's actually there in your work history -- not what you remember doing, but what Git recorded. Version control doesn't lie. That's its power."
 - Quick vocabulary check: "What's a commit?" "What's a repository?" "What does restore mean?" (volunteers answer)
 - "Next week is a check-in. You'll show what you've done, explain your work to someone, and reflect on what you've learned so far."
 - **Specific prep for Week 4:** "Your file-system artifact is due next week. Make sure your GEAP 103 folder in OneDrive is organized with clear naming and folders. Your portfolio repository should have at least 2-3 commits."

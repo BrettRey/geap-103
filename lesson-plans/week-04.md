@@ -39,7 +39,7 @@ Instructor circulates with quick checks: "Can I see your folder structure? What'
 
 Students who are behind: "If your folder isn't ready yet, you have until the end of Week 5 to submit. Focus on today's activities."
 
-### 0:15--0:28 | Vocabulary Review: Weeks 1-3
+### 0:15--0:30 | Vocabulary Review: Weeks 1-3
 **Format:** Whole class, interactive, with structured pair turn-taking
 **Language skills:** Speaking (definitions), listening
 
@@ -57,7 +57,9 @@ Review all 15 terms:
 
 **Round 2** (5 min): Pairs quiz each other. **Structured turn-taking:** Partner A quizzes for 2.5 min, then switch. (This ensures both partners produce, not just the confident one.)
 
-### 0:28--0:35 | What Do People Build With These Tools?
+**Round 3** (2 min): Quick tool survey. "In the last three weeks, who used Copilot? Who used ChatGPT? Who used Claude? Who used something else? What did you use it for?" Brief show of hands and 2-3 student responses. "You're already using different tools. As the course goes on, you'll learn which ones are better for what."
+
+### 0:30--0:37 | What Do People Build With These Tools?
 **Format:** Instructor-led presentation
 **Language skills:** Listening, reading (descriptions)
 
@@ -77,7 +79,7 @@ Present the project types briefly (one slide, 4-6 examples with screenshots):
 
 Brief pair exchange (1 min): "Which type caught your eye? Tell your partner." No reporting out.
 
-### 0:35--0:40 | Thread Map: Your Three Recurring Documents
+### 0:37--0:40 | Thread Map: Your Three Recurring Documents
 **Format:** Whole class
 **Language skills:** Reading (visual), listening
 
@@ -111,6 +113,8 @@ Students review their portfolio and Goal Document. Prepare to explain what they'
 **Language skills:** Writing (unmediated, ~50-100 words)
 
 **Prompt** (displayed): "Describe something you tried to do with AI this semester. What happened? What would you do differently?"
+
+Writing without AI is a skill, not a punishment. There are times when thinking alone is better -- when you need to find out what YOU actually know, not what AI can fill in for you. This is one of those times. The question we keep asking -- what's actually there? -- today we ask it about your own understanding.
 
 Rules:
 - No AI assistance (Copilot closed, no chat tools)

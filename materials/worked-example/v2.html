@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Agent Office — Autonomous Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0f0e17;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: monospace;
+    padding: 24px 12px;
+    color: #fffffe;
+  }
+
+  .page-wrap {
+    display: flex;
+    gap: 16px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .office-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #ff8906;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: bold;
+  }
+
+  canvas {
+    border: 4px solid #2e2e3a;
+    border-radius: 6px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background: #1a1a2e;
+  }
+
+  .status-bar {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 11px;
+    font-family: monospace;
+  }
+
+  .status-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #a7a9be;
+  }
+
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #555;
+    transition: background 0.3s;
+  }
+  .dot.idle     { background: #666; }
+  .dot.working  { background: #f9ca24; animation: pulse 0.8s infinite alternate; }
+  .dot.waiting  { background: #48dbfb; }
+
+  @keyframes pulse {
+    from { opacity: 1; }
+    to   { opacity: 0.4; }
+  }
+
+  .log-panel {
+    background: #1a1a2e;
+    border: 3px solid #2e2e3a;
+    border-radius: 6px;
+    width: 340px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .log-header {
+    background: #2e2e3a;
+    padding: 10px 14px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #ff8906;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3a3a4a;
+    font-family: monospace;
+    font-weight: bold;
+  }
+
+  .log-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 10px;
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .log-body::-webkit-scrollbar { width: 6px; }
+  .log-body::-webkit-scrollbar-track { background: #1a1a2e; }
+  .log-body::-webkit-scrollbar-thumb { background: #3a3a4a; border-radius: 3px; }
+
+  .log-entry {
+    padding: 2px 0;
+    border-bottom: 1px solid #1f1f30;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .log-time { color: #555; font-size: 10px; margin-right: 6px; }
+  .log-research { color: #78e08f; }
+  .log-code     { color: #48dbfb; }
+  .log-review   { color: #f8a5c2; }
+  .log-system   { color: #f9ca24; }
+
+  .task-counter {
+    font-size: 10px;
+    color: #777;
+    text-align: center;
+    padding: 8px;
+    border-top: 2px solid #2e2e3a;
+    background: #16162a;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+  <div class="office-panel">
+    <h1>Pixel Agent Office</h1>
+    <canvas id="office" width="760" height="500"></canvas>
+    <div class="status-bar">
+      <div class="status-item"><span class="dot" id="dot-research"></span> Research Agent</div>
+      <div class="status-item"><span class="dot" id="dot-code"></span> Code Agent</div>
+      <div class="status-item"><span class="dot" id="dot-review"></span> Review Agent</div>
+    </div>
+  </div>
+
+  <div class="log-panel">
+    <div class="log-header">Activity Log</div>
+    <div class="log-body" id="log-body"></div>
+    <div class="task-counter" id="task-counter">Tasks completed: 0 &middot; Revisions: 0</div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+//  CANVAS SETUP
+// ============================================================
+const canvas = document.getElementById('office');
+const ctx    = canvas.getContext('2d');
+const CW     = canvas.width;   // 760
+const CH     = canvas.height;  // 500
+const PX     = 2;              // pixel scale: 1 logical px = 2 canvas px
+const LW     = CW / PX;        // logical width  380
+const LH     = CH / PX;        // logical height 250
+
+// helpers
+function px(x, y, c, s) { s = s || 1; ctx.fillStyle = c; ctx.fillRect(x*PX, y*PX, s*PX, s*PX); }
+function rect(x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(x*PX, y*PX, w*PX, h*PX); }
+
+// ============================================================
+//  PALETTE
+// ============================================================
+const P = {
+  ceil:  '#1e2a48', wallHi: '#2d3a5c', wallLo: '#253050', base: '#1a2030',
+  fl1: '#5c4033', fl2: '#6b4c3b', flLine: '#4a3328',
+  dkTop: '#a07818', dkFr: '#7a5c12', dkLeg: '#5a420d',
+  mon: '#222', mScr: '#0a3a0a', mLit: '#1aff1a',
+  chrBack: '#3a3a5a', chrSeat: '#4a4a6a',
+  skinA: '#e8b88a', skinB: '#fdd', skinC: '#d4a87a',
+  hairA: '#4a2800', hairB: '#d4a030', hairC: '#8b1a1a',
+  shirtA: '#78e08f', shirtB: '#48dbfb', shirtC: '#f8a5c2',
+  pants: '#2d3a5a',
+  coffee: '#6b3a1a', cofTop: '#d4a060',
+  phone: '#333', phScr: '#4488ff',
+  plant: '#2d8a4e', pot: '#c4783a',
+  clk: '#ddd', clkH: '#333',
+  winFr: '#5a6a8a', sky: '#1a2a4a', star: '#fff', moon: '#f0e68c',
+  wb: '#e8e8e0', wbBorder: '#888',
+};
+
+// ============================================================
+//  ROOM
+// ============================================================
+function drawRoom() {
+  rect(0, 0, LW, 55, P.ceil);
+  rect(0, 55, LW, 55, P.wallHi);
+  rect(0, 110, LW, 48, P.wallLo);
+  rect(0, 156, LW, 3, P.base);
+  for (let y = 159; y < LH; y += 6)
+    for (let x = 0; x < LW; x += 8)
+      rect(x, y, 8, 6, ((x/8 + y/6|0) & 1) ? P.fl2 : P.fl1);
+  for (let i = 0; i < 6; i++) rect(0, 159 + i*18, LW, 1, P.flLine);
+}
+
+// ============================================================
+//  DECORATIONS
+// ============================================================
+function drawWindow() {
+  rect(165, 60, 50, 48, P.winFr);
+  rect(167, 62, 46, 44, P.sky);
+  // moon
+  ctx.fillStyle = P.moon;
+  ctx.beginPath(); ctx.arc(180*PX, 74*PX, 5*PX, 0, Math.PI*2); ctx.fill();
+  // stars
+  var sp = [[170,65],[188,67],[200,64],[173,82],[193,76],[204,70],[178,88],[208,82]];
+  var now = Date.now();
+  sp.forEach(function(s,i){
+    ctx.globalAlpha = Math.sin(now/300+i*1.7)*0.35+0.65;
+    px(s[0], s[1], P.star);
+    ctx.globalAlpha = 1;
+  });
+  rect(189, 62, 1, 44, P.winFr);
+  rect(167, 83, 46, 1, P.winFr);
+}
+
+function drawClock(t) {
+  var cx=145, cy=68;
+  ctx.fillStyle = P.clk;
+  ctx.beginPath(); ctx.arc(cx*PX,cy*PX,7*PX,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle='#555'; ctx.lineWidth=PX;
+  ctx.beginPath(); ctx.arc(cx*PX,cy*PX,7*PX,0,Math.PI*2); ctx.stroke();
+  var ma = (t/4000)%(Math.PI*2);
+  ctx.strokeStyle=P.clkH; ctx.lineWidth=PX;
+  ctx.beginPath(); ctx.moveTo(cx*PX,cy*PX);
+  ctx.lineTo(cx*PX+Math.sin(ma)*5*PX, cy*PX-Math.cos(ma)*5*PX); ctx.stroke();
+  var ha = (t/48000)%(Math.PI*2);
+  ctx.lineWidth=PX*1.5;
+  ctx.beginPath(); ctx.moveTo(cx*PX,cy*PX);
+  ctx.lineTo(cx*PX+Math.sin(ha)*3.5*PX, cy*PX-Math.cos(ha)*3.5*PX); ctx.stroke();
+}
+
+function drawBookshelf() {
+  rect(16, 62, 42, 52, '#3a2a1a');
+  [78,94,110].forEach(function(sy){ rect(16,sy,42,2,'#5a3a1a'); });
+  var bk = [
+    [18,64,4,14,'#c0392b'],[23,66,3,12,'#2980b9'],[27,63,5,15,'#27ae60'],
+    [33,65,3,13,'#8e44ad'],[37,64,4,14,'#e67e22'],[42,66,3,12,'#1abc9c'],
+    [48,64,4,14,'#d35400'],[53,66,3,12,'#16a085'],
+    [18,80,5,14,'#e74c3c'],[24,82,3,12,'#3498db'],[28,81,4,13,'#f39c12'],
+    [33,83,5,11,'#9b59b6'],[39,80,4,14,'#2ecc71'],[44,82,3,12,'#e67e22'],
+    [48,80,5,14,'#c0392b'],[54,82,3,12,'#2980b9'],
+    [18,96,4,14,'#27ae60'],[23,98,3,12,'#8e44ad'],[27,97,5,13,'#d35400'],
+    [33,99,4,11,'#16a085'],[38,96,3,14,'#e74c3c'],[42,98,5,12,'#3498db'],
+    [48,96,4,14,'#f39c12'],[53,98,3,12,'#9b59b6'],
+  ];
+  bk.forEach(function(b){ rect(b[0],b[1],b[2],b[3],b[4]); });
+}
+
+function drawPlant(x, y) {
+  rect(x, y+7, 10, 7, P.pot);
+  rect(x-1, y+6, 12, 2, '#a0623a');
+  var sw = Math.sin(Date.now()/1200)*0.6;
+  ctx.strokeStyle='#1a6a3a'; ctx.lineWidth=PX;
+  ctx.beginPath(); ctx.moveTo((x+5)*PX,(y+6)*PX); ctx.lineTo((x+5)*PX,(y-2)*PX); ctx.stroke();
+  [[x+5,y,-3,-6],[x+5,y,3,-7],[x+3,y+2,-5,-4],[x+7,y+2,5,-5],[x+5,y+1,0,-8]].forEach(function(l){
+    ctx.fillStyle = P.plant;
+    ctx.beginPath();
+    ctx.ellipse((l[0]+l[2]+sw)*PX,(l[1]+l[3])*PX, 3*PX, 1.5*PX, Math.atan2(l[3],l[2]+sw), 0, Math.PI*2);
+    ctx.fill();
+  });
+}
+
+function drawWhiteboard() {
+  rect(278, 62, 60, 44, P.wb);
+  rect(276, 60, 64, 2, P.wbBorder);
+  rect(276, 106, 64, 2, P.wbBorder);
+  rect(276, 60, 2, 48, P.wbBorder);
+  rect(338, 60, 2, 48, P.wbBorder);
+  // "TASKS" header
+  rect(282, 66, 22, 2, '#c0392b');
+  // lines of "writing"
+  for (var i=0; i<5; i++) {
+    var lw = 30 + Math.sin(i*2.3)*12;
+    rect(282, 72+i*6, Math.max(10,lw), 1, '#666');
+  }
+  // task number
+  ctx.fillStyle = '#c0392b';
+  ctx.font = (5*PX)+'px monospace';
+  ctx.fillText('#'+globalTaskNum, 316*PX, 68*PX);
+}
+
+function drawCoffeeMachine() {
+  rect(340, 120, 18, 24, '#555');
+  rect(341, 121, 16, 8, '#333');
+  rect(343, 133, 10, 8, 'rgba(107,58,26,0.5)');
+  rect(343, 132, 10, 2, '#888');
+  px(345, 123, '#f00');
+  px(348, 123, '#0f0');
+  if ((Date.now()/600|0)%3===0) px(348, 131, '#4a2010');
+}
+
+function drawCeilingLights() {
+  [80, 190, 300].forEach(function(lx){
+    rect(lx-3, 0, 6, 3, '#666');
+    rect(lx-1, 3, 2, 3, '#888');
+    rect(lx-5, 5, 10, 2, '#aa8');
+    ctx.fillStyle='rgba(255,255,200,0.025)';
+    ctx.beginPath();
+    ctx.moveTo((lx-5)*PX,7*PX);
+    ctx.lineTo((lx-28)*PX,55*PX);
+    ctx.lineTo((lx+28)*PX,55*PX);
+    ctx.closePath(); ctx.fill();
+  });
+}
+
+function drawPoster(x, y) {
+  rect(x, y, 22, 28, '#f5e6d0');
+  rect(x+1, y+1, 20, 26, '#222');
+  rect(x+6, y+5, 10, 10, '#48dbfb');
+  px(x+8, y+8, '#fff', 2);
+  px(x+13, y+8, '#fff', 2);
+  rect(x+8, y+12, 6, 2, '#fff');
+  rect(x+4, y+18, 14, 1, '#666');
+  rect(x+6, y+21, 10, 1, '#666');
+}
+
+function drawRug() {
+  ctx.fillStyle='#3a1a2a';
+  ctx.beginPath(); ctx.ellipse(190*PX,210*PX,150*PX,18*PX,0,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#4a2a3a';
+  ctx.beginPath(); ctx.ellipse(190*PX,210*PX,120*PX,13*PX,0,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#5a3a4a';
+  ctx.beginPath(); ctx.ellipse(190*PX,210*PX,80*PX,8*PX,0,0,Math.PI*2); ctx.fill();
+}
+
+// ============================================================
+//  FURNITURE
+// ============================================================
+function drawDesk(x, y, w) {
+  rect(x+2, y+22, w, 3, '#1a1520');
+  rect(x, y, w, 4, P.dkTop);
+  rect(x, y+4, w, 18, P.dkFr);
+  rect(x+3, y+7, w-6, 1, '#5a4210');
+  rect(x+3, y+14, w-6, 1, '#5a4210');
+  px(x+(w/2|0), y+10, '#b89a4a');
+  px(x+(w/2|0), y+17, '#b89a4a');
+  rect(x+2, y+22, 3, 10, P.dkLeg);
+  rect(x+w-5, y+22, 3, 10, P.dkLeg);
+}
+
+function drawMonitor(x, y, isActive, type) {
+  rect(x, y-22, 20, 16, P.mon);
+  rect(x+1, y-21, 18, 14, isActive ? P.mScr : '#111');
+  if (isActive) {
+    var t = Date.now();
+    if (type==='code') {
+      for (var i=0;i<5;i++){
+        var lw = 4+((t/200+i*3)%10);
+        rect(x+3, y-19+i*3, Math.min(lw|0,14), 1, P.mLit);
+      }
+      if ((t/500|0)%2===0) px(x+16, y-19+((t/400|0)%5)*3, '#33ff33');
+    } else if (type==='research') {
+      rect(x+3, y-20, 10, 2, '#1a5a1a');
+      for (var i=0;i<4;i++){
+        var lw = 6+Math.sin(t/600+i)*4;
+        rect(x+3, y-17+i*3, Math.max(3,lw|0), 1, '#0d8a0d');
+      }
+    } else {
+      for (var i=0;i<4;i++){
+        var ok = (t/800+i|0)%3!==0;
+        rect(x+3, y-19+i*3, 2, 2, ok?'#33ff33':'#882222');
+        rect(x+7, y-19+i*3, 8, 1, '#0d6a0d');
+      }
+    }
+    ctx.fillStyle='rgba(51,255,51,0.06)';
+    ctx.fillRect((x-1)*PX,(y-24)*PX,22*PX,20*PX);
+  }
+  rect(x+8, y-6, 4, 4, '#444');
+  rect(x+5, y-2, 10, 2, '#555');
+}
+
+function drawChair(x, y) {
+  rect(x, y, 14, 4, P.chrSeat);
+  rect(x+1, y-12, 12, 12, P.chrBack);
+  rect(x+2, y-11, 10, 10, '#52527a');
+  rect(x+3, y+4, 2, 8, '#2a2a3a');
+  rect(x+9, y+4, 2, 8, '#2a2a3a');
+  ctx.fillStyle='#222';
+  ctx.beginPath(); ctx.arc((x+2)*PX,(y+13)*PX,1.5*PX,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.arc((x+12)*PX,(y+13)*PX,1.5*PX,0,Math.PI*2); ctx.fill();
+}
+
+function drawLamp(x, y, on) {
+  rect(x, y, 6, 2, '#666');
+  ctx.strokeStyle='#888'; ctx.lineWidth=PX;
+  ctx.beginPath(); ctx.moveTo((x+3)*PX,y*PX); ctx.lineTo((x+1)*PX,(y-10)*PX); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo((x+1)*PX,(y-10)*PX); ctx.lineTo((x+6)*PX,(y-12)*PX); ctx.stroke();
+  rect(x+2, y-14, 8, 3, on?'#ffd700':'#555');
+  if (on) {
+    ctx.fillStyle='rgba(255,215,0,0.035)';
+    ctx.beginPath();
+    ctx.moveTo((x+3)*PX,(y-11)*PX);
+    ctx.lineTo((x-5)*PX,y*PX);
+    ctx.lineTo((x+15)*PX,y*PX);
+    ctx.closePath(); ctx.fill();
+  }
+}
+
+// ============================================================
+//  CHARACTERS
+// ============================================================
+function drawCharacter(x, y, skin, hair, shirt, anim) {
+  var t = Date.now();
+
+  if (anim === 'working') {
+    // Hair
+    rect(x+1, y-15, 7, 4, hair);
+    // Head
+    rect(x+2, y-11, 6, 6, skin);
+    // Eyes (open, focused)
+    var blink = (t/3000|0)%15===0;
+    if (!blink) { px(x+3,y-9,'#222'); px(x+6,y-9,'#222'); }
+    // Body
+    rect(x+1, y-5, 8, 8, shirt);
+    // Arms typing (alternating bob)
+    var ab = (t/150|0)%2;
+    rect(x-2, y-2+ab, 3, 2, skin);
+    rect(x+9, y-1-ab, 3, 2, skin);
+    // Pants + legs
+    rect(x+1, y+3, 8, 4, P.pants);
+    rect(x+2, y+7, 3, 3, P.pants);
+    rect(x+6, y+7, 3, 3, P.pants);
+    rect(x+1, y+10, 4, 2, '#222');
+    rect(x+6, y+10, 4, 2, '#222');
+
+  } else if (anim === 'coffee') {
+    // Hair
+    rect(x+1, y-15, 7, 4, hair);
+    // Head
+    rect(x+2, y-11, 6, 6, skin);
+    // Relaxed half-closed eyes
+    px(x+3,y-9,'#222'); px(x+6,y-9,'#222');
+    px(x+3,y-8,skin); px(x+6,y-8,skin);
+    // Smile
+    px(x+4,y-7,'#cc8877'); px(x+5,y-7,'#cc8877');
+    // Body
+    rect(x+1, y-5, 8, 8, shirt);
+    // Left arm resting
+    rect(x-2, y-2, 3, 2, skin);
+    // Right arm up holding cup
+    rect(x+9, y-4, 3, 2, skin);
+    // Coffee mug
+    rect(x+10, y-7, 4, 3, P.coffee);
+    rect(x+10, y-8, 4, 1, P.cofTop);
+    // Steam curls
+    var sp = (t/400|0)%3;
+    ctx.globalAlpha=0.3;
+    if (sp===0){ px(x+11,y-10,'#fff'); px(x+12,y-11,'#fff'); }
+    if (sp===1){ px(x+12,y-10,'#fff'); px(x+11,y-11,'#fff'); }
+    if (sp===2){ px(x+11,y-11,'#fff'); px(x+13,y-10,'#fff'); }
+    ctx.globalAlpha=1;
+    // Pants + legs
+    rect(x+1, y+3, 8, 4, P.pants);
+    rect(x+2, y+7, 3, 3, P.pants);
+    rect(x+6, y+7, 3, 3, P.pants);
+    rect(x+1, y+10, 4, 2, '#222');
+    rect(x+6, y+10, 4, 2, '#222');
+
+  } else if (anim === 'phone') {
+    // Hair
+    rect(x+1, y-14, 7, 4, hair);
+    // Head tilted down
+    rect(x+2, y-10, 6, 6, skin);
+    // Eyes looking down
+    px(x+3,y-6,'#222'); px(x+6,y-6,'#222');
+    // Body
+    rect(x+1, y-4, 8, 8, shirt);
+    // Arms holding phone in lap area
+    rect(x+2, y+1, 3, 2, skin);
+    rect(x+6, y+1, 3, 2, skin);
+    // Phone
+    rect(x+4, y+2, 3, 5, P.phone);
+    rect(x+4, y+3, 3, 3, P.phScr);
+    // Scrolling dot
+    var sd = (t/300|0)%3;
+    px(x+5, y+3+sd, '#aaccff');
+    // Pants + legs
+    rect(x+1, y+4, 8, 3, P.pants);
+    rect(x+2, y+7, 3, 3, P.pants);
+    rect(x+6, y+7, 3, 3, P.pants);
+    rect(x+1, y+10, 4, 2, '#222');
+    rect(x+6, y+10, 4, 2, '#222');
+  }
+}
+
+// ============================================================
+//  THOUGHT / STATUS BUBBLES
+// ============================================================
+function drawBubble(cx, y, text) {
+  ctx.font = (3.5*PX)+'px monospace';
+  var tw = ctx.measureText(text).width;
+  var bw = tw + 10;
+  var bx = cx*PX - bw/2;
+  var by = y*PX;
+
+  // bubble
+  ctx.fillStyle='rgba(255,255,255,0.12)';
+  ctx.beginPath();
+  ctx.moveTo(bx+3,by); ctx.lineTo(bx+bw-3,by);
+  ctx.quadraticCurveTo(bx+bw,by, bx+bw,by+3);
+  ctx.lineTo(bx+bw,by+11);
+  ctx.quadraticCurveTo(bx+bw,by+14, bx+bw-3,by+14);
+  ctx.lineTo(bx+3,by+14);
+  ctx.quadraticCurveTo(bx,by+14, bx,by+11);
+  ctx.lineTo(bx,by+3);
+  ctx.quadraticCurveTo(bx,by, bx+3,by);
+  ctx.fill();
+
+  // tail dots
+  ctx.fillStyle='rgba(255,255,255,0.08)';
+  ctx.beginPath(); ctx.arc(cx*PX, (y+16)*PX, 2, 0, Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.arc(cx*PX-2, (y+18)*PX, 1.2, 0, Math.PI*2); ctx.fill();
+
+  // text
+  ctx.fillStyle='rgba(255,255,255,0.7)';
+  ctx.textAlign='center';
+  ctx.fillText(text, cx*PX, by+11);
+  ctx.textAlign='left';
+}
+
+// ============================================================
+//  PROGRESS BARS
+// ============================================================
+function drawProgress(x, y, pct, color) {
+  rect(x, y, 30, 2, '#111');
+  rect(x, y, (30*pct)|0, 2, color);
+  ctx.strokeStyle='#444'; ctx.lineWidth=1;
+  ctx.strokeRect(x*PX,y*PX,30*PX,2*PX);
+}
+
+// ============================================================
+//  PIPELINE ARROWS
+// ============================================================
+function drawArrow(x, y, active) {
+  var c = active?'#f9ca24':'#2a2a3a';
+  rect(x,y,12,2,c);
+  px(x+12,y-1,c); px(x+12,y+2,c); px(x+13,y,c); px(x+13,y+1,c);
+  if (active) {
+    var ph = (Date.now()/200|0)%4;
+    for (var i=0;i<3;i++) {
+      var dx = (i*4+ph)%12;
+      ctx.globalAlpha=0.5; px(x+dx,y+4,c); ctx.globalAlpha=1;
+    }
+  }
+}
+
+// ============================================================
+//  AGENT STATE MACHINE
+// ============================================================
+var agents = {
+  research: { state:'idle', progress:0, duration:0, taskNum:0, start:0, idleAnim:'coffee', _next:false },
+  code:     { state:'idle', progress:0, duration:0, taskNum:0, start:0, idleAnim:'phone', isRevision:false, _next:false },
+  review:   { state:'idle', progress:0, duration:0, taskNum:0, start:0, idleAnim:'coffee', _next:false },
+};
+
+var globalTaskNum = 0;
+var tasksCompleted = 0;
+var revisionCount = 0;
+
+function rand(a,b) { return a + Math.random()*(b-a); }
+function pickIdle() { return Math.random()<0.5 ? 'coffee' : 'phone'; }
+
+// timing (ms)
+var T = {
+  researchMin: 4000, researchMax: 7000,
+  codeMin: 6000, codeMax: 10000,
+  reviewMin: 2500, reviewMax: 4500,
+  gapMin: 2000, gapMax: 4000,
+  handoff: 800,
+};
+
+// ============================================================
+//  ACTIVITY LOG
+// ============================================================
+var logBody = document.getElementById('log-body');
+var counterEl = document.getElementById('task-counter');
+var logCount = 0;
+
+function addLog(msg, cls) {
+  cls = cls || 'system';
+  var d = document.createElement('div');
+  d.className = 'log-entry';
+  var now = new Date();
+  var ts = [now.getHours(), now.getMinutes(), now.getSeconds()].map(function(n){ return n<10?'0'+n:''+n; }).join(':');
+  d.innerHTML = '<span class="log-time">'+ts+'</span><span class="log-'+cls+'">'+msg+'</span>';
+  logBody.appendChild(d);
+  logCount++;
+  if (logCount>80) { logBody.removeChild(logBody.firstChild); logCount--; }
+  logBody.scrollTop = logBody.scrollHeight;
+}
+
+function updateCounter() {
+  counterEl.textContent = 'Tasks completed: '+tasksCompleted+' \u00b7 Revisions: '+revisionCount;
+}
+
+// ============================================================
+//  STATUS DOTS
+// ============================================================
+var dotR = document.getElementById('dot-research');
+var dotC = document.getElementById('dot-code');
+var dotV = document.getElementById('dot-review');
+
+function updateDots() {
+  dotR.className = 'dot '+(agents.research.state==='working'?'working':'idle');
+  dotC.className = 'dot '+(agents.code.state==='working'?'working':'idle');
+  dotV.className = 'dot '+(agents.review.state==='working'?'working':'idle');
+}
+
+// ============================================================
+//  PIPELINE LOGIC
+// ============================================================
+function startResearch() {
+  var a = agents.research;
+  a.state = 'working';
+  a.taskNum = globalTaskNum;
+  a.duration = rand(T.researchMin, T.researchMax);
+  a.start = Date.now();
+  a.progress = 0;
+  agents.code.idleAnim = pickIdle();
+  agents.review.idleAnim = pickIdle();
+  updateDots();
+}
+
+function startCode(revision) {
+  var a = agents.code;
+  a.state = 'working';
+  a.taskNum = revision ? a.taskNum : agents.research.taskNum;
+  a.duration = rand(T.codeMin, T.codeMax);
+  a.start = Date.now();
+  a.progress = 0;
+  a.isRevision = revision;
+  addLog(revision
+    ? 'Code Agent is revising Task #'+a.taskNum
+    : 'Code Agent started coding Task #'+a.taskNum, 'code');
+  agents.review.idleAnim = pickIdle();
+  updateDots();
+}
+
+function startReview() {
+  var a = agents.review;
+  a.state = 'working';
+  a.taskNum = agents.code.taskNum;
+  a.duration = rand(T.reviewMin, T.reviewMax);
+  a.start = Date.now();
+  a.progress = 0;
+  addLog('Review Agent is checking Task #'+a.taskNum, 'review');
+  updateDots();
+}
+
+function tick() {
+  var now = Date.now();
+
+  // --- RESEARCH ---
+  var r = agents.research;
+  if (r.state==='working') {
+    var e = now - r.start;
+    r.progress = Math.min(1, e/r.duration);
+    if (e >= r.duration) {
+      r.state = 'done';
+      addLog('Research Agent finished Task #'+r.taskNum, 'research');
+      setTimeout(function(){
+        startCode(false);
+        r.state = 'idle';
+        updateDots();
+      }, T.handoff);
+      updateDots();
+    }
+  }
+  // schedule next research task once idle
+  if (r.state==='idle' && !r._next) {
+    r._next = true;
+    r.idleAnim = pickIdle();
+    var gap = rand(T.gapMin, T.gapMax);
+    setTimeout(function(){
+      globalTaskNum++;
+      addLog('Research Agent received Task #'+globalTaskNum, 'research');
+      startResearch();
+      r._next = false;
+    }, gap);
+  }
+
+  // --- CODE ---
+  var c = agents.code;
+  if (c.state==='working') {
+    var e = now - c.start;
+    c.progress = Math.min(1, e/c.duration);
+    if (e >= c.duration) {
+      c.state = 'done';
+      addLog('Code Agent finished '+(c.isRevision?'revising':'coding')+' Task #'+c.taskNum, 'code');
+      setTimeout(function(){
+        startReview();
+        c.state = 'idle';
+        c.idleAnim = pickIdle();
+        updateDots();
+      }, T.handoff);
+      updateDots();
+    }
+  }
+
+  // --- REVIEW ---
+  var v = agents.review;
+  if (v.state==='working') {
+    var e = now - v.start;
+    v.progress = Math.min(1, e/v.duration);
+    if (e >= v.duration) {
+      v.state = 'done';
+      var sendBack = Math.random() < 0.3;
+      if (sendBack) {
+        revisionCount++;
+        addLog('Review Agent found issues in Task #'+v.taskNum+' -- sending back!', 'review');
+        updateCounter();
+        setTimeout(function(){
+          v.state = 'idle';
+          v.idleAnim = pickIdle();
+          startCode(true);
+          updateDots();
+        }, T.handoff);
+      } else {
+        tasksCompleted++;
+        addLog('Review Agent approved Task #'+v.taskNum+' OK', 'review');
+        updateCounter();
+        setTimeout(function(){
+          v.state = 'idle';
+          v.idleAnim = pickIdle();
+          updateDots();
+        }, T.handoff);
+      }
+      updateDots();
+    }
+  }
+}
+
+// ============================================================
+//  WORKSTATION LAYOUT
+// ============================================================
+var S = {
+  research: { dX:30,  dY:148, cX:44,  cY:138, mX:42,  mY:148, lX:64,  lY:146, chX:40,  chY:156 },
+  code:     { dX:145, dY:148, cX:159, cY:138, mX:157, mY:148, lX:179, lY:146, chX:155, chY:156 },
+  review:   { dX:260, dY:148, cX:274, cY:138, mX:272, mY:148, lX:294, lY:146, chX:270, chY:156 },
+};
+
+var LOOK = {
+  research: { skin:P.skinA, hair:P.hairA, shirt:P.shirtA },
+  code:     { skin:P.skinB, hair:P.hairB, shirt:P.shirtB },
+  review:   { skin:P.skinC, hair:P.hairC, shirt:P.shirtC },
+};
+
+// ============================================================
+//  LABEL
+// ============================================================
+function drawLabel(cx, y, text, color) {
+  ctx.fillStyle = color;
+  ctx.font = (3*PX)+'px monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText(text, cx*PX, y*PX);
+  ctx.textAlign = 'left';
+}
+
+// ============================================================
+//  MAIN RENDER LOOP
+// ============================================================
+function render() {
+  var t = Date.now();
+  ctx.clearRect(0, 0, CW, CH);
+
+  drawRoom();
+  drawRug();
+  drawWindow();
+  drawClock(t);
+  drawBookshelf();
+  drawPlant(72, 120);
+  drawPlant(240, 120);
+  drawCoffeeMachine();
+  drawCeilingLights();
+  drawPoster(112, 66);
+  drawWhiteboard();
+
+  // workstations
+  ['research','code','review'].forEach(function(name){
+    var s = S[name];
+    var a = agents[name];
+    var lk = LOOK[name];
+
+    drawChair(s.chX, s.chY);
+    drawDesk(s.dX, s.dY, 45);
+    drawLamp(s.lX, s.lY, a.state==='working');
+
+    var scrType = name==='research'?'research' : name==='code'?'code' : 'review';
+    drawMonitor(s.mX, s.mY, a.state==='working', scrType);
+
+    var anim = a.state==='working' ? 'working' :
+               a.state==='done'    ? 'working' :
+               a.idleAnim;
+    drawCharacter(s.cX, s.cY, lk.skin, lk.hair, lk.shirt, anim);
+
+    // progress bar while working
+    if (a.state==='working') {
+      var barC = name==='research'?'#78e08f' : name==='code'?'#48dbfb' : '#f8a5c2';
+      drawProgress(s.dX+7, s.dY-5, a.progress, barC);
+    }
+
+    // thought bubble
+    var bubX = s.cX + 4;
+    var bubY = s.cY - 24;
+    if (a.state==='working') {
+      var verb = name==='research'?'Researching' : name==='code'?(a.isRevision?'Revising':'Coding') : 'Reviewing';
+      drawBubble(bubX, bubY, verb+' #'+a.taskNum);
+    } else if (a.state==='idle') {
+      var idleTexts = {
+        coffee: ['*sip*','mmm...','nice','ahh'],
+        phone:  ['*scroll*','...','heh','oh?'],
+      };
+      var pool = idleTexts[a.idleAnim] || idleTexts.coffee;
+      drawBubble(bubX, bubY, pool[(t/2500|0) % pool.length]);
+    }
+
+    // name label
+    var lc = name==='research'?'#78e08f' : name==='code'?'#48dbfb' : '#f8a5c2';
+    drawLabel(s.cX+4, s.dY+38, name.toUpperCase(), lc);
+  });
+
+  // arrows between desks
+  drawArrow(78, 164, agents.research.state==='done');
+  drawArrow(208, 164, agents.code.state==='done');
+
+  tick();
+  updateDots();
+  requestAnimationFrame(render);
+}
+
+// ============================================================
+//  BOOT
+// ============================================================
+addLog('Office is opening...', 'system');
+setTimeout(function(){
+  globalTaskNum = 1;
+  addLog('Research Agent received Task #1', 'research');
+  startResearch();
+  render();
+}, 600);
+
+</script>
+</body>
+</html>

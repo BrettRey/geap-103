@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Agent Dashboard — v3</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #12121e;
+    font-family: 'Courier New', monospace;
+    color: #e0d8c8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 20px;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #f0c060;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  h1 .sub {
+    display: block;
+    font-size: 10px;
+    color: #6a7a8a;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    text-transform: none;
+  }
+
+  .page-wrap {
+    display: flex;
+    gap: 12px;
+    max-width: 1320px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .office-panel {
+    flex: 1 1 760px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  canvas {
+    border: 3px solid #282840;
+    border-radius: 6px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    cursor: pointer;
+    width: 100%;
+    max-width: 760px;
+    background: #12121e;
+  }
+
+  .side-panel {
+    flex: 0 1 330px;
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 92vh;
+  }
+
+  .panel-box {
+    background: #161e30;
+    border: 2px solid #263040;
+    border-radius: 6px;
+    padding: 10px;
+  }
+  .panel-box h2 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #f0c060;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #263040;
+    padding-bottom: 4px;
+  }
+
+  .add-agent-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  .add-agent-row input, .task-controls input {
+    flex: 1;
+    background: #0c1222;
+    border: 2px solid #263040;
+    border-radius: 4px;
+    color: #d0c8b8;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 5px 8px;
+    outline: none;
+  }
+  .add-agent-row input:focus, .task-controls input:focus { border-color: #f0c060; }
+  .add-agent-row input::placeholder, .task-controls input::placeholder { color: #445; }
+
+  button {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    padding: 5px 11px;
+    border: 2px solid #344058;
+    border-radius: 4px;
+    background: #1a2840;
+    color: #b0c0d0;
+    cursor: pointer;
+    transition: all 0.12s;
+    white-space: nowrap;
+  }
+  button:hover { background: #243450; border-color: #f0c060; color: #f0c060; }
+  button.danger { border-color: #5a2222; color: #d88; }
+  button.danger:hover { background: #321818; border-color: #e55; color: #faa; }
+  button.primary { background: #1e3830; border-color: #3a7a5a; color: #7ad0a0; }
+  button.primary:hover { background: #284838; border-color: #5ac87a; color: #a0f0c0; }
+
+  .agent-list { display: flex; flex-direction: column; gap: 5px; max-height: 220px; overflow-y: auto; }
+  .agent-card {
+    background: #0c1222;
+    border: 2px solid #263040;
+    border-radius: 5px;
+    padding: 7px 8px;
+    cursor: pointer;
+    transition: border-color 0.12s;
+  }
+  .agent-card:hover { border-color: #4a6a8a; }
+  .agent-card.selected { border-color: #f0c060; background: #141e32; }
+  .agent-card .agent-name { font-size: 12px; font-weight: bold; color: #c0d0e0; }
+  .agent-card .agent-status { font-size: 10px; color: #5a6a7a; margin-top: 2px; }
+  .agent-card .agent-status.working { color: #70c090; }
+  .agent-card .agent-task-text { font-size: 10px; color: #8a98a8; margin-top: 2px; font-style: italic; }
+
+  .task-controls { margin-top: 4px; }
+  .task-row { display: flex; gap: 6px; margin-bottom: 5px; }
+  .task-btn-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .timer-display { font-size: 12px; color: #f0c060; margin-top: 4px; }
+
+  .completed-list { max-height: 150px; overflow-y: auto; display: flex; flex-direction: column; gap: 3px; }
+  .completed-item {
+    font-size: 10px; color: #6a9080; padding: 4px 6px;
+    background: #0c1222; border-radius: 3px; border-left: 3px solid #3a7a5a;
+    line-height: 1.4;
+  }
+  .completed-item .c-agent { color: #7ab0c8; font-weight: bold; }
+  .completed-item .c-time { color: #e0b050; float: right; }
+
+  .log-panel { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+  .log-entries { flex: 1; max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+  .log-entry {
+    font-size: 10px; color: #5a6a7a; padding: 3px 6px;
+    border-radius: 2px; background: #0a0e1a; line-height: 1.4;
+  }
+  .log-entry .log-time { color: #d0a840; margin-right: 6px; }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0c1222; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: #263040; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #344050; }
+
+  .canvas-tooltip {
+    position: fixed; background: #161e30; border: 2px solid #f0c060;
+    border-radius: 4px; padding: 4px 8px; font-size: 11px; color: #d0c8b8;
+    pointer-events: none; z-index: 100; display: none;
+    font-family: 'Courier New', monospace; max-width: 260px;
+  }
+
+  .empty-msg { font-size: 11px; color: #3a4450; text-align: center; padding: 10px; font-style: italic; }
+
+  @media (max-width: 820px) {
+    .page-wrap { flex-direction: column; align-items: center; }
+    .side-panel { max-height: none; width: 100%; max-width: 760px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>My Agent Dashboard<span class="sub">v3 &mdash; a real workflow tool</span></h1>
+
+<div class="page-wrap">
+  <div class="office-panel">
+    <canvas id="office" width="760" height="440"></canvas>
+  </div>
+
+  <div class="side-panel">
+    <div class="panel-box">
+      <h2>Agents</h2>
+      <div class="add-agent-row">
+        <input type="text" id="agentNameInput" placeholder="e.g. Research Agent" maxlength="24">
+        <button onclick="addAgent()" class="primary">+ Add</button>
+      </div>
+      <div class="agent-list" id="agentList"></div>
+    </div>
+
+    <div class="panel-box" id="taskPanel" style="display:none;">
+      <h2 id="taskPanelTitle">Task</h2>
+      <div class="task-controls">
+        <div class="task-row">
+          <input type="text" id="taskInput" placeholder="What should this agent work on?" maxlength="80">
+          <button onclick="assignTask()" class="primary">Go</button>
+        </div>
+        <div class="task-btn-row">
+          <button onclick="markDone()" id="doneBtn" style="display:none;" class="primary">Mark Done</button>
+          <button onclick="removeAgent()" class="danger">Remove Agent</button>
+        </div>
+        <div class="timer-display" id="timerDisplay"></div>
+      </div>
+    </div>
+
+    <div class="panel-box">
+      <h2>Completed Tasks</h2>
+      <div class="completed-list" id="completedList">
+        <div class="empty-msg">No completed tasks yet.</div>
+      </div>
+      <button onclick="clearCompleted()" style="margin-top:5px;font-size:10px;">Clear</button>
+    </div>
+
+    <div class="panel-box log-panel">
+      <h2>Activity Log</h2>
+      <div class="log-entries" id="logEntries">
+        <div class="empty-msg">No activity yet.</div>
+      </div>
+      <button onclick="clearLog()" style="margin-top:5px;font-size:10px;">Clear</button>
+    </div>
+  </div>
+</div>
+
+<div class="canvas-tooltip" id="tooltip"></div>
+
+<script>
+// ===================================================================
+//  DATA
+// ===================================================================
+const STORE = 'agent-dash-v3';
+const MAX_AGENTS = 5;
+let S = { agents:[], completed:[], log:[], nextId:1 };
+
+function save(){ localStorage.setItem(STORE, JSON.stringify(S)); }
+function load(){
+  try{
+    const r = localStorage.getItem(STORE);
+    if(r){ const d=JSON.parse(r); S.agents=d.agents||[]; S.completed=d.completed||[]; S.log=d.log||[]; S.nextId=d.nextId||1;
+      S.agents.forEach(a=>{ if(a.state==='waving'){a.state='idle';a.task=null;a.taskStart=null;} });
+    }
+  }catch(e){}
+}
+
+function log(text){
+  const t=new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true});
+  S.log.push({time:t,text:text}); save(); renderLog();
+}
+function fmtDur(ms){
+  const s=Math.floor(ms/1000); if(s<60)return s+'s';
+  const m=Math.floor(s/60),r=s%60; if(m<60)return m+'m '+r+'s';
+  return Math.floor(m/60)+'h '+(m%60)+'m';
+}
+
+// ===================================================================
+//  PALETTE & POSITIONS
+// ===================================================================
+const PAL = [
+  { hair:'#4a2810', shirt:'#3878b8', skin:'#e8c090', pants:'#2a3a5a', accent:'#5090d0' },
+  { hair:'#bb3333', shirt:'#38a868', skin:'#f0d0a0', pants:'#2a4a38', accent:'#50c880' },
+  { hair:'#1a1a3a', shirt:'#c86030', skin:'#d8b080', pants:'#3a2a1a', accent:'#e08050' },
+  { hair:'#ddb830', shirt:'#7838a8', skin:'#f0d8b0', pants:'#3a2a48', accent:'#a058d0' },
+  { hair:'#6a3018', shirt:'#c03878', skin:'#e0c098', pants:'#482a38', accent:'#e060a0' },
+];
+
+// Desk centre positions (character sits behind desk, monitor on desk)
+const DESKS = [
+  {x:100, y:295}, {x:250, y:295}, {x:410, y:295}, {x:560, y:295}, {x:330, y:385}
+];
+const HITBOXES = [];
+
+// ===================================================================
+//  CANVAS
+// ===================================================================
+const C = document.getElementById('office');
+const X = C.getContext('2d');
+let frame = 0;
+let selectedId = null;
+let waveTimers = {};
+
+// Seeded random for deterministic decorations
+function seeded(seed){ return function(){ seed=(seed*16807)%2147483647; return(seed-1)/2147483646; }; }
+const srand = seeded(42);
+
+function px(x,y,w,h,c){ X.fillStyle=c; X.fillRect(Math.round(x),Math.round(y),w||1,h||1); }
+function rct(x,y,w,h,c){ X.fillStyle=c; X.fillRect(Math.round(x),Math.round(y),w,h); }
+
+// ===================================================================
+//  OFFICE BACKGROUND (drawn once to offscreen, then stamped)
+// ===================================================================
+let bgCanvas = null;
+
+function buildBackground(){
+  bgCanvas = document.createElement('canvas');
+  bgCanvas.width = 760; bgCanvas.height = 440;
+  const B = bgCanvas.getContext('2d');
+  const p = (x,y,w,h,c)=>{ B.fillStyle=c; B.fillRect(Math.round(x),Math.round(y),w,h); };
+
+  // === BACK WALL ===
+  p(0,0,760,195,'#36364e');
+  // subtle wallpaper pattern
+  for(let wx=0;wx<760;wx+=16){
+    for(let wy=0;wy<195;wy+=16){
+      if((wx/16+wy/16)%2===0) p(wx,wy,16,16,'#34344c');
+    }
+  }
+  // wainscoting (lower wall panel)
+  p(0,150,760,45,'#2e2e44');
+  p(0,148,760,3,'#484868'); // chair rail
+  // Baseboard
+  p(0,193,760,4,'#3a3a52');
+
+  // === FLOOR ===
+  // Warm wood floor
+  for(let fx=0;fx<760;fx+=48){
+    for(let fy=197;fy<440;fy+=12){
+      const shade = ((fx/48)%2===0) ? 0 : 8;
+      const r = 42+shade, g = 36+shade, b = 28+shade;
+      p(fx,fy,48,12,`rgb(${r},${g},${b})`);
+      p(fx,fy,48,1,`rgb(${r+8},${g+8},${b+8})`); // plank highlight
+      p(fx,fy+11,48,1,`rgb(${r-6},${g-6},${b-6})`); // plank shadow
+    }
+  }
+  // Floor shadow at wall base
+  B.fillStyle = 'rgba(0,0,0,0.12)';
+  B.fillRect(0,197,760,8);
+
+  // === WINDOWS ===
+  drawBgWindow(B, 55, 15, 130, 130);
+  drawBgWindow(B, 575, 15, 130, 130);
+
+  // === BOOKSHELF ===
+  drawBgBookshelf(B, 280, 18, 130, 128);
+
+  // === CLOCK ===
+  drawBgClock(B, 700, 22);
+
+  // === PLANTS ===
+  drawBgPlant(B, 15, 180, 1.2);
+  drawBgPlant(B, 730, 180, 1.0);
+  drawBgPlant(B, 215, 170, 0.7);
+
+  // === WHITEBOARD ===
+  drawBgWhiteboard(B, 445, 35, 60, 42);
+
+  // === FRAMED POSTER ===
+  drawBgPoster(B, 230, 40, 35, 45);
+
+  // === CEILING LIGHTS ===
+  drawBgLight(B, 190);
+  drawBgLight(B, 380);
+  drawBgLight(B, 570);
+
+  // === COFFEE MACHINE on a small table ===
+  drawBgCoffee(B, 720, 250);
+
+  // === RUG under the front desk ===
+  drawBgRug(B, 280, 370, 100, 40);
+}
+
+function drawBgWindow(B, x, y, w, h){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Outer frame
+  p(x-4,y-4,w+8,h+8,'#50506a');
+  p(x-3,y-3,w+6,h+6,'#464662');
+  // Curtains
+  p(x-3,y-3,10,h+6,'#7a3a3a');
+  p(x+w-7,y-3,10,h+6,'#7a3a3a');
+  // Curtain folds
+  p(x-1,y,3,h,'#8a4a4a');
+  p(x+w-4,y,3,h,'#8a4a4a');
+  // Sky
+  p(x,y,w,h*0.35,'#5a90c0');
+  p(x,y+h*0.35,w,h*0.25,'#4a80b0');
+  p(x,y+h*0.6,w,h*0.4,'#3a70a0');
+  // Sun glow (top left window)
+  if(x < 200){
+    B.fillStyle='rgba(255,240,180,0.15)';
+    B.beginPath(); B.arc(x+w*0.8, y+h*0.2, 20, 0, Math.PI*2); B.fill();
+    p(x+w*0.8-3,y+h*0.2-3,6,6,'#ffe8a0');
+  }
+  // Clouds
+  const sr=seeded(x);
+  for(let i=0;i<3;i++){
+    const cx=x+sr()*w*0.7+10, cy=y+8+sr()*h*0.3;
+    const cw=12+sr()*18;
+    p(cx,cy,cw,4,'rgba(180,210,240,0.5)');
+    p(cx-3,cy+2,cw+6,3,'rgba(180,210,240,0.4)');
+  }
+  // City skyline
+  const bsr=seeded(x+1);
+  let bx=x+5;
+  while(bx<x+w-10){
+    const bw=6+Math.floor(bsr()*10);
+    const bh=10+Math.floor(bsr()*35);
+    const by=y+h-bh;
+    const shade=Math.floor(bsr()*30)+20;
+    p(bx,by,bw,bh,`rgb(${shade+10},${shade+20},${shade+40})`);
+    // Windows on buildings
+    for(let wy=by+3;wy<y+h-4;wy+=5){
+      for(let wx=bx+2;wx<bx+bw-2;wx+=3){
+        if(bsr()>0.4) p(wx,wy,1,2,`rgba(255,230,150,${0.3+bsr()*0.5})`);
+      }
+    }
+    bx+=bw+2+Math.floor(bsr()*4);
+  }
+  // Window dividers
+  p(x+w/2-1,y,2,h,'#50506a');
+  p(x,y+h/2-1,w,2,'#50506a');
+  // Sill
+  p(x-5,y+h,w+10,5,'#50506a');
+  p(x-5,y+h,w+10,2,'#5a5a72');
+}
+
+function drawBgBookshelf(B, x, y, w, h){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Frame
+  p(x-2,y-2,w+4,h+4,'#5a3820');
+  p(x,y,w,h,'#3a2210');
+  // Side panels
+  p(x,y,3,h,'#4a3018');
+  p(x+w-3,y,3,h,'#4a3018');
+  // Top/bottom
+  p(x,y,w,3,'#4a3018');
+  p(x,y+h-3,w,3,'#4a3018');
+  // 4 shelves
+  const cols=['#c04040','#4080c0','#40a060','#c0a040','#8040a0','#c06040',
+              '#408080','#a04080','#60a040','#4060c0','#c08040','#804040',
+              '#5070b0','#b05050','#50b070','#b0a050','#7050b0','#b07050'];
+  const sr=seeded(77);
+  const rows=4, rowH=Math.floor((h-6)/rows);
+  for(let r=0;r<rows;r++){
+    const sy=y+3+r*rowH;
+    // Shelf plank
+    p(x+3,sy+rowH-4,w-6,4,'#5a3820');
+    p(x+3,sy+rowH-4,w-6,1,'#6a4828');
+    // Books
+    let bx=x+5;
+    while(bx<x+w-8){
+      const bw=3+Math.floor(sr()*3);
+      const bh=rowH-7-Math.floor(sr()*6);
+      const ci=Math.floor(sr()*cols.length);
+      const by=sy+rowH-4-bh;
+      p(bx,by,bw,bh,cols[ci]);
+      p(bx,by,1,bh,'rgba(255,255,255,0.1)'); // spine highlight
+      p(bx+bw-1,by,1,bh,'rgba(0,0,0,0.15)'); // spine shadow
+      // Occasional title line
+      if(sr()>0.6) p(bx+1,by+Math.floor(bh*0.3),bw-2,1,'rgba(255,255,255,0.15)');
+      bx+=bw+1;
+    }
+  }
+}
+
+function drawBgClock(B, x, y){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Frame
+  p(x-12,y-2,24,24,'#50506a');
+  p(x-10,y,20,20,'#d8d0c0');
+  // Hour markers
+  p(x-1,y+2,2,2,'#333'); p(x-1,y+16,2,2,'#333');
+  p(x-9,y+9,2,2,'#333'); p(x+7,y+9,2,2,'#333');
+  // Hands
+  const now=new Date(), hr=now.getHours()%12, mn=now.getMinutes();
+  const ha=(hr+mn/60)/12*Math.PI*2-Math.PI/2;
+  const ma=mn/60*Math.PI*2-Math.PI/2;
+  B.strokeStyle='#333'; B.lineWidth=2;
+  B.beginPath(); B.moveTo(x,y+10); B.lineTo(x+Math.cos(ha)*5,y+10+Math.sin(ha)*5); B.stroke();
+  B.lineWidth=1;
+  B.beginPath(); B.moveTo(x,y+10); B.lineTo(x+Math.cos(ma)*7,y+10+Math.sin(ma)*7); B.stroke();
+  p(x-1,y+9,2,2,'#c04040');
+}
+
+function drawBgPlant(B, x, y, scale){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  const s=scale;
+  // Pot
+  p(x-7*s,y-5*s,14*s,6*s,'#8a5a38');
+  p(x-9*s,y-7*s,18*s,3*s,'#9a6a48');
+  p(x-5*s,y+1*s,10*s,3*s,'#7a4a28');
+  // Soil
+  p(x-6*s,y-5*s,12*s,2*s,'#4a3018');
+  // Leaves — fuller plant
+  const leaves = [
+    [-2,-14,3,8], [1,-16,3,10], [-5,-11,3,7], [4,-12,3,8],
+    [-1,-18,3,5], [-4,-15,2,5], [3,-17,2,6], [0,-20,2,4],
+  ];
+  leaves.forEach(l=>{
+    const g = 60+Math.floor(srand()*40);
+    p(x+l[0]*s, y+l[1]*s, l[2]*s, l[3]*s, `rgb(${g-20},${g+40},${g-20})`);
+  });
+  // Stem
+  p(x-0.5*s,y-12*s,1*s,8*s,'#3a6a2a');
+}
+
+function drawBgWhiteboard(B, x, y, w, h){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  p(x-2,y-2,w+4,h+4,'#50506a');
+  p(x,y,w,h,'#e8e8e0');
+  // Scribbles
+  p(x+5,y+7,25,2,'#4080c0');
+  p(x+5,y+13,32,2,'#c04040');
+  p(x+5,y+19,18,2,'#40a060');
+  p(x+5,y+25,28,2,'#4080c0');
+  p(x+5,y+31,14,2,'#c0a040');
+  // Check boxes
+  p(x+40,y+7,6,6,'#ccc'); p(x+41,y+8,4,4,'#e8e8e0');
+  p(x+40,y+15,6,6,'#ccc'); p(x+41,y+16,4,4,'#e8e8e0');
+  p(x+42,y+17,2,2,'#40a060'); // checked
+  // Marker tray
+  p(x-1,y+h+1,w+2,4,'#50506a');
+  p(x+6,y+h,4,2,'#c04040');
+  p(x+14,y+h,4,2,'#4080c0');
+  p(x+22,y+h,4,2,'#40a060');
+}
+
+function drawBgPoster(B, x, y, w, h){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Frame
+  p(x-2,y-2,w+4,h+4,'#5a5040');
+  p(x,y,w,h,'#d0a050');
+  p(x+2,y+2,w-4,h-4,'#e0b868');
+  // Pixel art cat face
+  const cx=x+w/2, cy=y+h/2-2;
+  // Ears
+  p(cx-8,cy-8,4,4,'#806030'); p(cx+4,cy-8,4,4,'#806030');
+  p(cx-7,cy-7,2,2,'#e0b868'); p(cx+5,cy-7,2,2,'#e0b868');
+  // Head
+  p(cx-6,cy-4,12,10,'#806030');
+  // Eyes
+  p(cx-4,cy-1,2,2,'#222'); p(cx+2,cy-1,2,2,'#222');
+  p(cx-4,cy-1,1,1,'#fff'); p(cx+2,cy-1,1,1,'#fff');
+  // Nose
+  p(cx-1,cy+2,2,1,'#c08040');
+  // Mouth
+  p(cx-2,cy+3,1,1,'#604020'); p(cx+1,cy+3,1,1,'#604020');
+  // Whiskers
+  p(cx-8,cy+1,3,1,'#604020'); p(cx+5,cy+1,3,1,'#604020');
+  // Caption
+  B.font='6px monospace'; B.fillStyle='#604020'; B.textAlign='center';
+  B.fillText('MEOW',cx,cy+14);
+}
+
+function drawBgLight(B, x){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Mount
+  p(x-4,0,8,6,'#50506a');
+  // Rod
+  p(x-1,6,2,10,'#464662');
+  // Shade
+  p(x-10,16,20,5,'#58587a');
+  p(x-8,21,16,2,'#50506a');
+  // Bulb
+  p(x-2,21,4,3,'#ffe8a0');
+  // Warm glow cone
+  B.fillStyle='rgba(255,240,180,0.03)';
+  B.beginPath(); B.moveTo(x-10,24); B.lineTo(x-50,195); B.lineTo(x+50,195); B.lineTo(x+10,24); B.closePath(); B.fill();
+}
+
+function drawBgCoffee(B, x, y){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  // Small table
+  p(x-14,y,28,4,'#5a4a38');
+  p(x-10,y+4,4,16,'#4a3a28');
+  p(x+6,y+4,4,16,'#4a3a28');
+  // Coffee machine
+  p(x-8,y-18,16,18,'#3a3a4a');
+  p(x-6,y-16,12,14,'#2a2a3a');
+  // Red light
+  p(x+5,y-16,2,2,'#e04040');
+  // Mug
+  p(x-3,y-3,8,5,'#d0d0c0');
+  p(x+5,y-2,2,3,'#d0d0c0');
+  // Coffee in mug
+  p(x-2,y-2,6,2,'#4a2810');
+  // Steam (will be animated on main canvas)
+}
+
+function drawBgRug(B, x, y, w, h){
+  const p=(ax,ay,aw,ah,c)=>{B.fillStyle=c;B.fillRect(Math.round(ax),Math.round(ay),aw,ah);};
+  p(x,y,w,h,'#5a3030');
+  p(x+2,y+2,w-4,h-4,'#6a3838');
+  p(x+4,y+4,w-8,h-8,'#7a4040');
+  // Pattern
+  p(x+8,y+6,w-16,2,'#8a5050');
+  p(x+8,y+h-8,w-16,2,'#8a5050');
+  p(x+8,y+6,2,h-12,'#8a5050');
+  p(x+w-10,y+6,2,h-12,'#8a5050');
+  // Fringe
+  for(let fx=x;fx<x+w;fx+=4){
+    p(fx,y-2,2,3,'#5a3030');
+    p(fx,y+h,2,3,'#5a3030');
+  }
+}
+
+// ===================================================================
+//  DESK + CHARACTER (drawn each frame)
+// ===================================================================
+function drawDesk(x, y, agent, idx){
+  // === DESK ===
+  // Desktop surface (isometric-ish perspective)
+  rct(x-38,y-6,76,12,'#6a5a40');
+  rct(x-36,y-5,72,3,'#7a6a50'); // top shine
+  rct(x-36,y+3,72,2,'#5a4a32'); // front edge shadow
+  // Legs
+  rct(x-34,y+6,5,22,'#5a4a32');
+  rct(x+29,y+6,5,22,'#5a4a32');
+  // Cross bar
+  rct(x-30,y+20,60,3,'#5a4a32');
+  // Keyboard on desk
+  rct(x-14,y-3,28,5,'#3a3a4a');
+  rct(x-13,y-2,26,3,'#4a4a5a');
+  // Key dots
+  for(let kx=x-12;kx<x+12;kx+=3) rct(kx,y-1,2,1,'#5a5a6a');
+
+  // === MONITOR ===
+  const mx=x-14, my=y-34;
+  // Stand
+  rct(x-3,y-8,6,4,'#4a4a5a');
+  rct(x-8,y-6,16,2,'#3a3a4a');
+  // Monitor body
+  rct(mx-2,my-2,32,28,'#3a3a4a');
+  rct(mx-1,my-1,30,26,'#333348');
+  // Screen
+  rct(mx+1,my+1,26,22,'#0a1a2a');
+
+  // Hitbox
+  HITBOXES[idx] = { x:x-38, y:my-2, w:76, h:y+28-my+2, agentId: agent?agent.id:null };
+
+  if(!agent){
+    // Empty desk — plus sign on screen
+    rct(mx+12,my+5,3,12,'#2a3a4a');
+    rct(mx+6,my+9,15,3,'#2a3a4a');
+    // Label
+    X.font='8px monospace'; X.fillStyle='#3a4a5a'; X.textAlign='center';
+    X.fillText('empty',x,y+38);
+    return;
+  }
+
+  // === MONITOR SCREEN CONTENT ===
+  if(agent.state==='working'){
+    rct(mx+1,my+1,26,22,'#081810');
+    // Scrolling code / text lines
+    for(let i=0;i<4;i++){
+      const lw=5+((frame+i*11)%16);
+      const bright = 40+((frame+i*5)%40);
+      rct(mx+3,my+3+i*5,Math.min(lw,22),3,`rgb(${bright},${bright+80},${bright+20})`);
+    }
+    // Blinking cursor
+    if(frame%24<12){
+      const lastW=5+((frame+3*11)%16);
+      rct(mx+3+Math.min(lastW,22)+1,my+18,2,3,'#40e060');
+    }
+  } else if(agent.state==='waving'){
+    rct(mx+1,my+1,26,22,'#101828');
+    // Big checkmark
+    rct(mx+7,my+14,3,4,'#40d060');
+    rct(mx+10,my+16,3,2,'#40d060');
+    rct(mx+13,my+10,3,8,'#40d060');
+    rct(mx+16,my+7,3,6,'#40d060');
+    rct(mx+19,my+5,3,4,'#40d060');
+    // "DONE" text
+    X.font='7px monospace'; X.fillStyle='#40d060'; X.textAlign='center';
+    X.fillText('DONE',mx+14,my+8);
+  } else {
+    // Idle — soft blue screen with floating logo
+    rct(mx+1,my+1,26,22,'#0a1428');
+    const bx=mx+8+Math.floor(Math.sin(frame*0.03)*6);
+    const by=my+8+Math.floor(Math.cos(frame*0.04)*4);
+    rct(bx,by,4,4,'#1a3050');
+    rct(bx+1,by+1,2,2,'#2a4a70');
+    // Subtle screensaver line
+    const sx=mx+3+((frame*0.5)%20);
+    rct(sx,my+18,4,2,'#1a2840');
+  }
+
+  // === COFFEE MUG on desk ===
+  if(agent.colorIdx%2===0){
+    rct(x+18,y-4,6,5,'#d0d0c0');
+    rct(x+24,y-3,2,3,'#d0d0c0');
+    rct(x+19,y-3,4,2,'#6a3818');
+    // Steam
+    if(agent.state==='idle'){
+      const soff=frame%20<10?-1:0;
+      rct(x+20,y-7+soff,1,2,'rgba(200,200,200,0.3)');
+      rct(x+22,y-8+soff,1,2,'rgba(200,200,200,0.2)');
+    }
+  } else {
+    // Notebook
+    rct(x+17,y-4,8,6,'#c8c080');
+    rct(x+18,y-3,6,4,'#e0d8a0');
+    rct(x+19,y-2,4,1,'#8a8060');
+  }
+
+  // === CHARACTER (sitting at desk) ===
+  drawChar(x, y, agent);
+
+  // Name label
+  X.font='8px monospace'; X.fillStyle='#a0b0c0'; X.textAlign='center';
+  const dn = agent.name.length>13 ? agent.name.substring(0,12)+'..' : agent.name;
+  X.fillText(dn, x, y+38);
+
+  // Selection arrow
+  if(selectedId===agent.id){
+    const bob = Math.sin(frame*0.12)*2;
+    rct(x-3,my-12+bob,6,4,'#f0c060');
+    rct(x-2,my-8+bob,4,2,'#f0c060');
+    rct(x-1,my-6+bob,2,2,'#f0c060');
+  }
+}
+
+function drawChar(x, y, agent){
+  const P = PAL[agent.colorIdx % PAL.length];
+  // Character sits behind/at the desk, so body is partially behind desk
+
+  const cx=x, cy=y-16; // torso center
+
+  // === CHAIR ===
+  rct(cx-9,cy-8,18,5,'#484862');
+  rct(cx-8,cy-3,16,14,'#3a3a52');
+  // Chair back
+  rct(cx-9,cy-22,18,16,'#484862');
+  rct(cx-7,cy-20,14,12,'#3a3a52');
+  // Chair wheels
+  rct(cx-9,cy+11,4,3,'#2a2a3a');
+  rct(cx+5,cy+11,4,3,'#2a2a3a');
+  rct(cx-2,cy+12,4,2,'#2a2a3a');
+
+  // === BODY (torso) ===
+  rct(cx-6,cy-2,12,12,P.shirt);
+  // Shirt shading
+  rct(cx-6,cy-2,2,12,P.accent); // sleeve edge
+
+  // === COLLAR ===
+  rct(cx-2,cy-2,4,2,P.skin);
+
+  // === HEAD ===
+  const hy=cy-14;
+  rct(cx-5,hy,10,12,P.skin);
+  // Ears
+  rct(cx-6,hy+3,2,4,P.skin);
+  rct(cx+4,hy+3,2,4,P.skin);
+
+  // === HAIR ===
+  // Different hairstyles based on colorIdx
+  const hi = agent.colorIdx % 5;
+  if(hi===0){
+    // Short tidy
+    rct(cx-6,hy-3,12,5,P.hair);
+    rct(cx-6,hy,2,5,P.hair);
+    rct(cx+4,hy,2,5,P.hair);
+  } else if(hi===1){
+    // Longer, swept
+    rct(cx-6,hy-4,13,6,P.hair);
+    rct(cx-6,hy,2,6,P.hair);
+    rct(cx+5,hy,3,7,P.hair);
+    rct(cx+5,hy-4,3,3,P.hair);
+  } else if(hi===2){
+    // Buzz cut
+    rct(cx-5,hy-2,10,4,P.hair);
+    rct(cx-5,hy,1,3,P.hair);
+    rct(cx+4,hy,1,3,P.hair);
+  } else if(hi===3){
+    // Curly / voluminous
+    rct(cx-7,hy-4,14,6,P.hair);
+    rct(cx-7,hy,2,7,P.hair);
+    rct(cx+5,hy,2,7,P.hair);
+    rct(cx-6,hy-3,2,3,P.hair);
+    rct(cx+5,hy-3,2,3,P.hair);
+  } else {
+    // Ponytail
+    rct(cx-5,hy-3,11,5,P.hair);
+    rct(cx-5,hy,2,4,P.hair);
+    rct(cx+4,hy,2,4,P.hair);
+    // Tail
+    rct(cx+5,hy+2,3,2,P.hair);
+    rct(cx+7,hy+3,3,4,P.hair);
+    rct(cx+8,hy+6,2,4,P.hair);
+  }
+
+  // === EYES ===
+  const blink = (frame%150<3);
+  if(!blink){
+    // Eyes look toward screen when working
+    const eyeOff = agent.state==='working'? -1 : 0;
+    rct(cx-3,hy+5,2,2,'#1a1a2a');
+    rct(cx+1,hy+5,2,2,'#1a1a2a');
+    // Highlights
+    rct(cx-3+eyeOff,hy+5,1,1,'#fff');
+    rct(cx+1+eyeOff,hy+5,1,1,'#fff');
+  } else {
+    rct(cx-3,hy+6,2,1,'#1a1a2a');
+    rct(cx+1,hy+6,2,1,'#1a1a2a');
+  }
+
+  // === MOUTH ===
+  if(agent.state==='waving'){
+    // Big smile
+    rct(cx-2,hy+8,4,1,'#a06038');
+    rct(cx-1,hy+9,2,1,'#a06038');
+  } else if(agent.state==='working'){
+    // Focused / slight line
+    rct(cx-1,hy+8,2,1,'#a06038');
+  } else {
+    // Neutral
+    rct(cx-1,hy+8,3,1,'#a06038');
+  }
+
+  // === GLASSES (for agent idx 2 and 4) ===
+  if(agent.colorIdx%5===2 || agent.colorIdx%5===4){
+    rct(cx-4,hy+4,3,3,'rgba(100,140,180,0.0)');
+    X.strokeStyle='#6a6a8a'; X.lineWidth=1;
+    X.strokeRect(cx-4.5,hy+3.5,4,4);
+    X.strokeRect(cx+0.5,hy+3.5,4,4);
+    rct(cx-1,hy+5,1,1,'#6a6a8a'); // bridge
+  }
+
+  // === ARMS ===
+  if(agent.state==='working'){
+    // Typing animation — arms forward, hands on keyboard area
+    const bob = (frame%10<5)?0:-1;
+    // Left arm
+    rct(cx-9,cy,3,8,P.shirt);
+    rct(cx-9,cy+8+bob,3,3,P.skin);
+    // Right arm
+    rct(cx+6,cy,3,8,P.shirt);
+    rct(cx+6,cy+8-bob,3,3,P.skin);
+  } else if(agent.state==='waving'){
+    // Left arm down
+    rct(cx-9,cy+1,3,9,P.shirt);
+    rct(cx-9,cy+10,3,3,P.skin);
+    // Right arm UP waving
+    const wave = (frame%14<7)?-3:0;
+    rct(cx+6,cy-10+wave,3,8,P.shirt);
+    rct(cx+6,cy-12+wave,3,3,P.skin);
+    // Sparkles around waving hand
+    if(frame%8<4){
+      rct(cx+11,cy-14+wave,2,2,'#f0c060');
+      rct(cx+3,cy-15+wave,2,2,'#f0c060');
+    }
+    if(frame%8>=4){
+      rct(cx+12,cy-10+wave,2,2,'#f0c060');
+      rct(cx+2,cy-12+wave,2,2,'#f0c060');
+    }
+  } else {
+    // Idle — subtle fidget
+    const fidget = Math.sin(frame*0.06)*1.5;
+    rct(cx-9,cy+1+fidget,3,9,P.shirt);
+    rct(cx-9,cy+10+fidget,3,3,P.skin);
+    rct(cx+6,cy+1,3,9,P.shirt);
+    rct(cx+6,cy+10,3,3,P.skin);
+    // Occasional head tilt when idle
+    if(frame%200>180 && frame%200<190){
+      // slight head move already handled by arm fidget visual
+    }
+  }
+
+  // === LEGS (seated, mostly hidden by desk) ===
+  rct(cx-5,cy+10,5,6,P.pants);
+  rct(cx+0,cy+10,5,6,P.pants);
+  // Shoes
+  rct(cx-6,cy+16,5,2,'#222');
+  rct(cx+1,cy+16,5,2,'#222');
+}
+
+// ===================================================================
+//  ANIMATED OVERLAY ELEMENTS (drawn each frame on top of bg)
+// ===================================================================
+function drawAnimatedOverlay(){
+  // Coffee machine steam
+  const sx=720, sy=250;
+  const s1 = Math.sin(frame*0.08)*2;
+  const s2 = Math.cos(frame*0.1)*2;
+  X.fillStyle='rgba(180,180,200,0.15)';
+  rct(sx+1,sy-10+s1,1,3,'rgba(180,180,200,0.12)');
+  rct(sx+3,sy-12+s2,1,3,'rgba(180,180,200,0.10)');
+
+  // Subtle light flicker on ceiling lights
+  if(frame%300>295){
+    X.fillStyle='rgba(255,240,180,0.02)';
+    X.fillRect(175,16,30,180);
+  }
+}
+
+// ===================================================================
+//  MAIN RENDER LOOP
+// ===================================================================
+function render(){
+  X.clearRect(0,0,760,440);
+  // Stamp pre-rendered background
+  if(bgCanvas) X.drawImage(bgCanvas,0,0);
+
+  drawAnimatedOverlay();
+
+  // Draw all desks
+  HITBOXES.length=0;
+  for(let i=0;i<MAX_AGENTS;i++){
+    const pos=DESKS[i];
+    const agent=S.agents.find(a=>a.deskIdx===i)||null;
+    drawDesk(pos.x,pos.y,agent,i);
+  }
+
+  frame++;
+  requestAnimationFrame(render);
+}
+
+// ===================================================================
+//  UI ACTIONS
+// ===================================================================
+function addAgent(){
+  const inp=document.getElementById('agentNameInput');
+  const name=inp.value.trim();
+  if(!name) return;
+  if(S.agents.length>=MAX_AGENTS){ alert('Maximum '+MAX_AGENTS+' agents. Remove one first.'); return; }
+  const used=new Set(S.agents.map(a=>a.deskIdx));
+  let di=-1; for(let i=0;i<MAX_AGENTS;i++){ if(!used.has(i)){di=i;break;} }
+  if(di<0) return;
+  const agent={ id:S.nextId++, name, colorIdx:(S.nextId-1)%PAL.length, task:null, taskStart:null, state:'idle', deskIdx:di };
+  S.agents.push(agent);
+  inp.value='';
+  log(agent.name+' joined the office');
+  save(); renderAgentList(); selectAgent(agent.id);
+}
+
+function selectAgent(id){
+  selectedId=id;
+  renderAgentList(); renderTaskPanel();
+}
+
+function assignTask(){
+  const a=S.agents.find(a=>a.id===selectedId);
+  if(!a) return;
+  const inp=document.getElementById('taskInput');
+  const task=inp.value.trim();
+  if(!task) return;
+  a.task=task; a.taskStart=Date.now(); a.state='working';
+  inp.value='';
+  log(a.name+' started: '+task);
+  save(); renderAgentList(); renderTaskPanel();
+}
+
+function markDone(){
+  const a=S.agents.find(a=>a.id===selectedId);
+  if(!a||a.state!=='working') return;
+  const dur=Date.now()-a.taskStart;
+  S.completed.unshift({ agent:a.name, task:a.task, duration:dur,
+    completedAt:new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}) });
+  log(a.name+' completed: '+a.task+' ('+fmtDur(dur)+')');
+  a.state='waving';
+  const aid=a.id;
+  if(waveTimers[aid]) clearTimeout(waveTimers[aid]);
+  waveTimers[aid]=setTimeout(()=>{
+    const ag=S.agents.find(a2=>a2.id===aid);
+    if(ag&&ag.state==='waving'){ ag.state='idle'; ag.task=null; ag.taskStart=null; save(); renderAgentList(); if(selectedId===aid) renderTaskPanel(); }
+  },3000);
+  save(); renderAgentList(); renderTaskPanel(); renderCompleted();
+}
+
+function removeAgent(){
+  const a=S.agents.find(a=>a.id===selectedId);
+  if(!a) return;
+  if(!confirm('Remove '+a.name+'?')) return;
+  log(a.name+' left the office');
+  S.agents=S.agents.filter(a2=>a2.id!==a.id);
+  selectedId=null;
+  save(); renderAgentList(); renderTaskPanel();
+}
+
+function clearCompleted(){ S.completed=[]; save(); renderCompleted(); }
+function clearLog(){ S.log=[]; save(); renderLog(); }
+
+// ===================================================================
+//  UI RENDERING
+// ===================================================================
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+function renderAgentList(){
+  const el=document.getElementById('agentList');
+  if(!S.agents.length){ el.innerHTML='<div class="empty-msg">No agents yet. Type a name and click + Add.</div>'; return; }
+  el.innerHTML=S.agents.map(a=>{
+    const sel=a.id===selectedId?' selected':'';
+    let sc='', st='Idle', tt='';
+    if(a.state==='working'){ sc=' working'; st='Working'; tt=a.task||''; }
+    else if(a.state==='waving'){ sc=' working'; st='Done!'; }
+    return `<div class="agent-card${sel}" onclick="selectAgent(${a.id})">
+      <div class="agent-name">${esc(a.name)}</div>
+      <div class="agent-status${sc}">${st}${a.state==='working'&&a.taskStart?' &middot; '+fmtDur(Date.now()-a.taskStart):''}</div>
+      ${tt?`<div class="agent-task-text">${esc(tt)}</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+function renderTaskPanel(){
+  const panel=document.getElementById('taskPanel');
+  const a=S.agents.find(a=>a.id===selectedId);
+  if(!a){ panel.style.display='none'; return; }
+  panel.style.display='block';
+  document.getElementById('taskPanelTitle').textContent=a.name;
+  const db=document.getElementById('doneBtn');
+  const ti=document.getElementById('taskInput');
+  if(a.state==='working'){
+    ti.placeholder='Change task...'; ti.value=''; db.style.display='inline-block';
+  } else if(a.state==='waving'){
+    ti.placeholder='Celebrating...'; ti.value=''; db.style.display='none';
+  } else {
+    ti.placeholder='What should this agent work on?'; ti.value=''; db.style.display='none';
+  }
+}
+
+function updateTimer(){
+  const a=S.agents.find(a=>a.id===selectedId);
+  const td=document.getElementById('timerDisplay');
+  if(a&&a.state==='working'&&a.taskStart){
+    td.textContent='Elapsed: '+fmtDur(Date.now()-a.taskStart);
+  } else { td.textContent=''; }
+  // Also refresh agent list times
+  S.agents.forEach(ag=>{
+    if(ag.state==='working'&&ag.taskStart){
+      // Just re-render the list periodically
+    }
+  });
+}
+
+function renderCompleted(){
+  const el=document.getElementById('completedList');
+  if(!S.completed.length){ el.innerHTML='<div class="empty-msg">No completed tasks yet.</div>'; return; }
+  el.innerHTML=S.completed.slice(0,40).map(c=>
+    `<div class="completed-item"><span class="c-time">${fmtDur(c.duration)}</span><span class="c-agent">${esc(c.agent)}</span>: ${esc(c.task)}<br><small style="color:#3a4a5a">${c.completedAt}</small></div>`
+  ).join('');
+}
+
+function renderLog(){
+  const el=document.getElementById('logEntries');
+  if(!S.log.length){ el.innerHTML='<div class="empty-msg">No activity yet.</div>'; return; }
+  el.innerHTML=S.log.slice().reverse().slice(0,60).map(l=>
+    `<div class="log-entry"><span class="log-time">${esc(l.time)}</span>${esc(l.text)}</div>`
+  ).join('');
+}
+
+// ===================================================================
+//  CANVAS INTERACTION
+// ===================================================================
+C.addEventListener('click', function(e){
+  const r=C.getBoundingClientRect();
+  const mx=(e.clientX-r.left)*(760/r.width);
+  const my=(e.clientY-r.top)*(440/r.height);
+  for(const hb of HITBOXES){
+    if(mx>=hb.x && mx<=hb.x+hb.w && my>=hb.y && my<=hb.y+hb.h){
+      if(hb.agentId) selectAgent(hb.agentId);
+      else document.getElementById('agentNameInput').focus();
+      return;
+    }
+  }
+  selectedId=null; renderAgentList(); renderTaskPanel();
+});
+
+C.addEventListener('mousemove', function(e){
+  const r=C.getBoundingClientRect();
+  const mx=(e.clientX-r.left)*(760/r.width);
+  const my=(e.clientY-r.top)*(440/r.height);
+  const tip=document.getElementById('tooltip');
+  let found=false;
+  for(const hb of HITBOXES){
+    if(mx>=hb.x && mx<=hb.x+hb.w && my>=hb.y && my<=hb.y+hb.h){
+      if(hb.agentId){
+        const a=S.agents.find(a=>a.id===hb.agentId);
+        if(a){
+          let t=a.name;
+          if(a.state==='working') t+=': '+a.task;
+          else if(a.state==='idle') t+=' (idle)';
+          else t+=' (done!)';
+          tip.textContent=t;
+          tip.style.display='block';
+          tip.style.left=(e.clientX+14)+'px';
+          tip.style.top=(e.clientY-10)+'px';
+          found=true;
+        }
+      } else {
+        tip.textContent='Click to add an agent';
+        tip.style.display='block';
+        tip.style.left=(e.clientX+14)+'px';
+        tip.style.top=(e.clientY-10)+'px';
+        found=true;
+      }
+      break;
+    }
+  }
+  if(!found) tip.style.display='none';
+  C.style.cursor=found?'pointer':'default';
+});
+
+C.addEventListener('mouseleave', ()=>{ document.getElementById('tooltip').style.display='none'; });
+
+document.getElementById('agentNameInput').addEventListener('keydown', e=>{ if(e.key==='Enter') addAgent(); });
+document.getElementById('taskInput').addEventListener('keydown', e=>{ if(e.key==='Enter') assignTask(); });
+
+// ===================================================================
+//  INIT
+// ===================================================================
+load();
+buildBackground();
+renderAgentList();
+renderTaskPanel();
+renderCompleted();
+renderLog();
+render();
+setInterval(updateTimer, 1000);
+// Refresh agent list every 10s to update elapsed times
+setInterval(renderAgentList, 10000);
+
+</script>
+</body>
+</html>

@@ -30,7 +30,7 @@ This is a major language moment. Students compare what they planned with what th
 
 Instructor demonstrates the full final review process using their own (or a sample) artifact:
 
-**Step 1 -- Re-read the Goal Document.** Display a Goal Document entry (the project plan) and the finished artifact side by side. "Here's what I said I would build. Here's what I actually built. Let's compare."
+**Step 1 -- Re-read the Goal Document.** Display a Goal Document entry (the project plan) and the finished artifact side by side. "Here's what I said I would build. Here's what I actually built. Let's compare. This is the question the course has been asking since Week 1: what's actually there? Not what you planned. Not what you hoped. What did you actually build? Naming that gap honestly is the skill."
 
 **Step 2 -- Name the gap honestly.** Think aloud: "I planned to include three charts, but I only finished two. The third was too complicated -- I couldn't get Copilot to generate the right format, and I ran out of time. That's not a failure. That's useful information. The honest thing to write is: 'I planned three charts but completed two because the third required a chart type I couldn't figure out in the time available.'"
 

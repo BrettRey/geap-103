@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Agent Dashboard v4</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a1a2e;
+  --panel: #16213e;
+  --panel-border: #0f3460;
+  --accent: #e94560;
+  --accent2: #533483;
+  --text: #eee;
+  --text-dim: #8899aa;
+  --green: #53d769;
+  --yellow: #ffd60a;
+  --orange: #ff9f43;
+  --red: #ff4757;
+  --blue: #45aaf2;
+  --mono: 'Courier New', monospace;
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 6px 16px;
+  background: var(--panel);
+  border-bottom: 2px solid var(--panel-border);
+  flex-shrink: 0;
+  height: 42px;
+}
+.topbar h1 {
+  font-size: 15px; font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--yellow));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+.topbar .spacer { flex: 1; }
+.connection-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--red);
+  transition: background 0.3s;
+}
+.connection-dot.connected { background: var(--green); }
+.topbar .status-text { font-size: 11px; color: var(--text-dim); }
+.topbar button {
+  background: var(--accent2); color: var(--text); border: none;
+  padding: 4px 12px; border-radius: 4px; cursor: pointer;
+  font-size: 12px; font-weight: 600;
+}
+.topbar button:hover { filter: brightness(1.2); }
+
+/* ===== MAIN LAYOUT ===== */
+.main-layout {
+  display: flex; flex: 1; overflow: hidden;
+}
+
+/* ===== CANVAS AREA ===== */
+.canvas-area {
+  flex: 1; position: relative; overflow: hidden;
+  background: #0d1117;
+  min-width: 400px;
+}
+.canvas-area canvas {
+  display: block; width: 100%; height: 100%;
+  image-rendering: pixelated;
+  cursor: default;
+}
+
+/* ===== SIDE PANEL ===== */
+.side-panel {
+  width: 380px; flex-shrink: 0;
+  background: var(--panel);
+  border-left: 2px solid var(--panel-border);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tab bar */
+.tab-bar {
+  display: flex; flex-shrink: 0;
+  border-bottom: 2px solid var(--panel-border);
+}
+.tab-bar button {
+  flex: 1; padding: 8px 4px; border: none;
+  background: transparent; color: var(--text-dim);
+  font-size: 11px; font-weight: 600; cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-bar button:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.tab-bar button.active {
+  color: var(--accent); border-bottom-color: var(--accent);
+}
+
+/* Tab panels */
+.tab-panels { flex: 1; overflow: hidden; position: relative; }
+.tab-panel {
+  position: absolute; inset: 0;
+  display: none; flex-direction: column;
+  overflow-y: auto; padding: 12px;
+}
+.tab-panel.active { display: flex; }
+
+/* Panel elements */
+.panel-section { margin-bottom: 16px; }
+.panel-section h3 {
+  font-size: 12px; text-transform: uppercase;
+  color: var(--text-dim); letter-spacing: 1px;
+  margin-bottom: 8px; padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.panel-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px; padding: 10px;
+  margin-bottom: 8px; cursor: pointer;
+  transition: all 0.15s;
+}
+.panel-card:hover { border-color: var(--accent); }
+.panel-card.selected { border-color: var(--accent); background: rgba(233,69,96,0.08); }
+
+/* Agent card */
+.agent-card-header {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+}
+.agent-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.agent-dot.idle { background: var(--text-dim); }
+.agent-dot.working { background: var(--green); animation: pulse 1s infinite; }
+.agent-dot.done { background: var(--blue); }
+.agent-dot.error { background: var(--red); }
+.agent-dot.stopped { background: var(--orange); }
+@keyframes pulse {
+  0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+}
+.agent-card-name { font-weight: 600; font-size: 13px; }
+.agent-card-cmd { font-size: 11px; color: var(--text-dim); font-family: var(--mono); }
+.agent-card-task { font-size: 11px; color: var(--yellow); margin-top: 4px; }
+.agent-card-actions {
+  display: flex; gap: 6px; margin-top: 8px;
+}
+.agent-card-actions button {
+  padding: 3px 10px; border: 1px solid rgba(255,255,255,0.15);
+  background: transparent; color: var(--text); border-radius: 3px;
+  font-size: 11px; cursor: pointer;
+}
+.agent-card-actions button:hover { border-color: var(--accent); color: var(--accent); }
+.agent-card-actions button.danger:hover { border-color: var(--red); color: var(--red); }
+
+/* Forms */
+.form-group { margin-bottom: 10px; }
+.form-group label {
+  display: block; font-size: 11px; color: var(--text-dim);
+  margin-bottom: 3px; font-weight: 600;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 6px 10px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px; color: var(--text);
+  font-size: 13px; font-family: inherit;
+}
+.form-group textarea { resize: vertical; min-height: 60px; font-family: var(--mono); font-size: 12px; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--accent);
+}
+.btn {
+  padding: 6px 16px; border: none; border-radius: 4px;
+  font-size: 12px; font-weight: 600; cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { filter: brightness(1.2); }
+.btn-secondary { background: var(--accent2); color: white; }
+.btn-secondary:hover { filter: brightness(1.2); }
+.btn-danger { background: var(--red); color: white; }
+.btn-danger:hover { filter: brightness(1.2); }
+.btn-sm { padding: 3px 10px; font-size: 11px; }
+
+/* Output viewer */
+.output-viewer {
+  background: #0d1117;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; padding: 8px;
+  font-family: var(--mono); font-size: 11px;
+  line-height: 1.5;
+  overflow-y: auto; max-height: 400px;
+  white-space: pre-wrap; word-break: break-all;
+  color: #c9d1d9;
+  flex: 1; min-height: 120px;
+}
+.output-viewer .line-error { color: var(--red); }
+.output-viewer .line-info { color: var(--blue); }
+
+/* Task board */
+.task-board { display: flex; gap: 8px; }
+.task-column { flex: 1; min-width: 0; }
+.task-column h4 {
+  font-size: 11px; text-align: center;
+  padding: 4px; border-radius: 4px;
+  margin-bottom: 6px; font-weight: 700;
+}
+.task-column.todo h4 { background: rgba(255,214,10,0.15); color: var(--yellow); }
+.task-column.inprog h4 { background: rgba(83,215,105,0.15); color: var(--green); }
+.task-column.done h4 { background: rgba(69,170,242,0.15); color: var(--blue); }
+.task-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px; padding: 6px;
+  margin-bottom: 4px; font-size: 11px;
+  cursor: grab;
+}
+.task-card .tc-agent { color: var(--accent); font-weight: 600; }
+.task-card .tc-task { color: var(--text); margin-top: 2px; }
+.task-card .tc-time { color: var(--text-dim); font-size: 10px; margin-top: 2px; }
+
+/* Activity log */
+.log-entry {
+  font-size: 11px; padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  font-family: var(--mono);
+  line-height: 1.4;
+}
+.log-entry .log-time { color: var(--text-dim); margin-right: 6px; }
+.log-entry .log-msg { color: var(--text); }
+
+/* Output modal */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7); z-index: 1000;
+  align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  width: 80%; max-width: 900px; max-height: 80vh;
+  background: var(--panel); border: 2px solid var(--panel-border);
+  border-radius: 8px; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.modal-header {
+  display: flex; align-items: center; padding: 10px 16px;
+  border-bottom: 1px solid var(--panel-border);
+}
+.modal-header h2 { font-size: 14px; flex: 1; }
+.modal-header .close-btn {
+  background: none; border: none; color: var(--text-dim);
+  font-size: 20px; cursor: pointer; padding: 0 4px;
+}
+.modal-header .close-btn:hover { color: var(--text); }
+.modal-body {
+  flex: 1; overflow-y: auto; padding: 12px 16px;
+  font-family: var(--mono); font-size: 12px;
+  line-height: 1.6; white-space: pre-wrap; word-break: break-all;
+  color: #c9d1d9; background: #0d1117;
+}
+.modal-footer {
+  padding: 8px 16px; border-top: 1px solid var(--panel-border);
+  display: flex; gap: 8px; align-items: center;
+}
+.modal-footer input {
+  flex: 1; padding: 6px 10px; background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;
+  color: var(--text); font-family: var(--mono); font-size: 12px;
+}
+.modal-footer input:focus { outline: none; border-color: var(--accent); }
+
+/* Empty state */
+.empty-state {
+  text-align: center; padding: 24px; color: var(--text-dim);
+  font-size: 12px;
+}
+
+/* Tooltip for canvas */
+.canvas-tooltip {
+  position: absolute; pointer-events: none;
+  background: rgba(0,0,0,0.85); color: var(--text);
+  padding: 4px 8px; border-radius: 4px;
+  font-size: 11px; white-space: nowrap;
+  display: none; z-index: 10;
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <h1>PIXEL AGENT DASHBOARD</h1>
+  <span style="font-size:11px;color:var(--text-dim)">v4</span>
+  <div class="spacer"></div>
+  <div class="connection-dot" id="connDot"></div>
+  <span class="status-text" id="connText">Disconnected</span>
+  <button onclick="addAgentDialog()">+ Add Agent</button>
+</div>
+
+<!-- MAIN -->
+<div class="main-layout">
+  <!-- Canvas -->
+  <div class="canvas-area">
+    <canvas id="officeCanvas"></canvas>
+    <div class="canvas-tooltip" id="tooltip"></div>
+  </div>
+
+  <!-- Side Panel -->
+  <div class="side-panel">
+    <div class="tab-bar">
+      <button class="active" data-tab="agents">Agents</button>
+      <button data-tab="tasks">Tasks</button>
+      <button data-tab="output">Output</button>
+      <button data-tab="log">Log</button>
+    </div>
+    <div class="tab-panels">
+
+      <!-- AGENTS TAB -->
+      <div class="tab-panel active" id="tab-agents">
+        <div class="panel-section">
+          <h3>Your Team</h3>
+          <div id="agentsList"></div>
+          <div class="empty-state" id="agentsEmpty">
+            No agents yet. Click "+ Add Agent" to hire your first worker.
+          </div>
+        </div>
+        <div class="panel-section">
+          <h3>Assign Task</h3>
+          <div class="form-group">
+            <label>Agent</label>
+            <select id="taskAgentSelect"><option value="">-- select --</option></select>
+          </div>
+          <div class="form-group">
+            <label>Task / Prompt</label>
+            <textarea id="taskInput" placeholder="Describe what you want this agent to do..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="assignTask()">Assign Task</button>
+        </div>
+      </div>
+
+      <!-- TASKS TAB -->
+      <div class="tab-panel" id="tab-tasks">
+        <div class="panel-section">
+          <h3>Task Board</h3>
+          <div class="task-board">
+            <div class="task-column todo">
+              <h4>To Do</h4>
+              <div id="tasksTodo"></div>
+            </div>
+            <div class="task-column inprog">
+              <h4>In Progress</h4>
+              <div id="tasksInProgress"></div>
+            </div>
+            <div class="task-column done">
+              <h4>Done</h4>
+              <div id="tasksDone"></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-section">
+          <h3>Completed Tasks</h3>
+          <div id="completedTasks"></div>
+          <div class="empty-state" id="completedEmpty">No completed tasks yet.</div>
+        </div>
+      </div>
+
+      <!-- OUTPUT TAB -->
+      <div class="tab-panel" id="tab-output">
+        <div class="panel-section" style="display:flex;flex-direction:column;flex:1;min-height:0;">
+          <h3 id="outputTitle">Select an agent to view output</h3>
+          <div class="output-viewer" id="outputViewer">Click on an agent in the office or agents list to see their terminal output here.</div>
+          <div style="margin-top:8px;display:flex;gap:6px;">
+            <input id="inlineInput" placeholder="Send input to agent..." style="flex:1;padding:5px 8px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:4px;color:var(--text);font-family:var(--mono);font-size:12px;">
+            <button class="btn btn-sm btn-secondary" onclick="sendInlineInput()">Send</button>
+            <button class="btn btn-sm btn-primary" onclick="openFullOutput()">Full View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOG TAB -->
+      <div class="tab-panel" id="tab-log">
+        <div class="panel-section">
+          <h3>Activity Log</h3>
+          <div id="logEntries"></div>
+          <div class="empty-state" id="logEmpty">No activity yet.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FULL OUTPUT MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Agent Output</h2>
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <input id="modalInput" placeholder="Type input for agent...">
+      <button class="btn btn-sm btn-primary" onclick="sendModalInput()">Send</button>
+      <button class="btn btn-sm btn-danger" onclick="stopSelectedAgent()">Stop</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// =====================================================================
+// STATE
+// =====================================================================
+
+const STATE = {
+  agents: {},                // agent_id -> { ...server data, deskIndex, color, ... }
+  selectedAgent: null,
+  outputBuffers: {},         // agent_id -> [lines]
+  tasks: {                   // { todo: [], inProgress: [], done: [] }
+    todo: [],
+    inProgress: [],
+    done: []
+  },
+  activityLog: [],
+  pm: { x: 340, y: 260, targetX: 340, targetY: 260, frame: 0, dir: 0 },
+  connected: false,
+  deskAssignments: [null, null, null, null, null, null],
+  dragAgent: null,
+  dragOffsetX: 0,
+  dragOffsetY: 0,
+  time: 0,
+};
+
+// Load persisted state
+try {
+  const saved = JSON.parse(localStorage.getItem('pad_v4_state'));
+  if (saved) {
+    if (saved.agents) STATE.agents = saved.agents;
+    if (saved.tasks) STATE.tasks = saved.tasks;
+    if (saved.activityLog) STATE.activityLog = saved.activityLog;
+    if (saved.deskAssignments) STATE.deskAssignments = saved.deskAssignments;
+    // Rebuild output buffers as empty
+    for (const id in STATE.agents) STATE.outputBuffers[id] = [];
+  }
+} catch(e) {}
+
+function saveState() {
+  try {
+    localStorage.setItem('pad_v4_state', JSON.stringify({
+      agents: STATE.agents,
+      tasks: STATE.tasks,
+      activityLog: STATE.activityLog,
+      deskAssignments: STATE.deskAssignments,
+    }));
+  } catch(e) {}
+}
+
+// =====================================================================
+// SERVER COMMUNICATION
+// =====================================================================
+
+let evtSource = null;
+
+function connectSSE() {
+  if (evtSource) { try { evtSource.close(); } catch(e){} }
+  evtSource = new EventSource('/events');
+
+  evtSource.onopen = () => {
+    STATE.connected = true;
+    document.getElementById('connDot').classList.add('connected');
+    document.getElementById('connText').textContent = 'Connected';
+    // Re-create agents on server that we have locally
+    syncAgentsToServer();
+  };
+
+  evtSource.onerror = () => {
+    STATE.connected = false;
+    document.getElementById('connDot').classList.remove('connected');
+    document.getElementById('connText').textContent = 'Reconnecting...';
+    setTimeout(() => { try { evtSource.close(); } catch(e){} connectSSE(); }, 3000);
+  };
+
+  evtSource.addEventListener('agent_status', (e) => {
+    const data = JSON.parse(e.data);
+    updateAgentFromServer(data);
+  });
+
+  evtSource.addEventListener('agent_output', (e) => {
+    const data = JSON.parse(e.data);
+    if (!STATE.outputBuffers[data.agent_id]) STATE.outputBuffers[data.agent_id] = [];
+    STATE.outputBuffers[data.agent_id].push(data.line);
+    if (STATE.selectedAgent === data.agent_id) {
+      appendOutputLine(data.line);
+    }
+  });
+
+  evtSource.addEventListener('agent_removed', (e) => {
+    const data = JSON.parse(e.data);
+    // Already handled locally
+  });
+
+  evtSource.addEventListener('activity', (e) => {
+    const data = JSON.parse(e.data);
+    STATE.activityLog.push(data);
+    if (STATE.activityLog.length > 500) STATE.activityLog.shift();
+    renderLog();
+    saveState();
+  });
+}
+
+async function syncAgentsToServer() {
+  // Re-register saved agents with the server so the server knows about them
+  for (const id in STATE.agents) {
+    const a = STATE.agents[id];
+    try {
+      await apiPost('/api/agent/create', { name: a.name, command: a.command });
+    } catch(e) {}
+  }
+  // Also fetch server's current agents
+  try {
+    const res = await fetch('/api/agents');
+    const list = await res.json();
+    for (const a of list) {
+      updateAgentFromServer(a);
+    }
+  } catch(e) {}
+}
+
+function updateAgentFromServer(data) {
+  const id = data.agent_id;
+  if (!STATE.agents[id]) {
+    // New agent from server, assign desk
+    const deskIndex = STATE.deskAssignments.indexOf(null);
+    STATE.agents[id] = {
+      ...data,
+      deskIndex: deskIndex >= 0 ? deskIndex : -1,
+      color: randomAgentColor(),
+    };
+    if (deskIndex >= 0) STATE.deskAssignments[deskIndex] = id;
+    STATE.outputBuffers[id] = [];
+  } else {
+    // Update existing
+    const prev = STATE.agents[id];
+    const prevStatus = prev.status;
+    STATE.agents[id] = { ...prev, ...data };
+    // Track task transitions
+    if (prevStatus === 'working' && (data.status === 'done' || data.status === 'error' || data.status === 'stopped')) {
+      moveTaskToDone(id, data.current_task, data.status);
+    }
+  }
+  renderAgentsList();
+  renderTaskBoard();
+  saveState();
+}
+
+async function apiPost(url, body) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  return res.json();
+}
+
+// =====================================================================
+// AGENT MANAGEMENT
+// =====================================================================
+
+const AGENT_COLORS = [
+  '#e94560', '#45aaf2', '#53d769', '#ffd60a', '#ff9f43', '#a55eea',
+  '#fd79a8', '#00cec9', '#fab1a0', '#81ecec',
+];
+let colorIndex = 0;
+function randomAgentColor() {
+  return AGENT_COLORS[colorIndex++ % AGENT_COLORS.length];
+}
+
+function addAgentDialog() {
+  const name = prompt('Agent name (e.g., "Claude", "Copilot"):');
+  if (!name) return;
+  const command = prompt('CLI command to run (e.g., "claude", "gh copilot"):');
+  if (!command) return;
+  createAgent(name.trim(), command.trim());
+}
+
+async function createAgent(name, command) {
+  if (!STATE.connected) {
+    alert('Not connected to server. Please start server.py first.');
+    return;
+  }
+  try {
+    const data = await apiPost('/api/agent/create', { name, command });
+    if (data.error) { alert(data.error); return; }
+    const deskIndex = STATE.deskAssignments.indexOf(null);
+    STATE.agents[data.agent_id] = {
+      ...data,
+      deskIndex: deskIndex >= 0 ? deskIndex : -1,
+      color: randomAgentColor(),
+    };
+    if (deskIndex >= 0) STATE.deskAssignments[deskIndex] = data.agent_id;
+    STATE.outputBuffers[data.agent_id] = [];
+    renderAgentsList();
+    saveState();
+  } catch(e) {
+    alert('Failed to create agent. Is the server running?');
+  }
+}
+
+async function assignTask() {
+  const agentId = document.getElementById('taskAgentSelect').value;
+  const task = document.getElementById('taskInput').value.trim();
+  if (!agentId) { alert('Select an agent first.'); return; }
+  if (!task) { alert('Enter a task description.'); return; }
+
+  try {
+    const data = await apiPost('/api/agent/launch', { agent_id: agentId, task });
+    if (data.error) { alert(data.error); return; }
+    // Add to in-progress
+    STATE.tasks.inProgress.push({
+      agent_id: agentId,
+      agent_name: STATE.agents[agentId]?.name || 'Unknown',
+      task: task,
+      started: Date.now(),
+    });
+    document.getElementById('taskInput').value = '';
+    renderTaskBoard();
+    saveState();
+    // Switch to output tab and select this agent
+    selectAgent(agentId);
+    switchTab('output');
+  } catch(e) {
+    alert('Failed to assign task. Is the server running?');
+  }
+}
+
+async function stopAgent(agentId) {
+  try {
+    await apiPost('/api/agent/stop', { agent_id: agentId });
+  } catch(e) {}
+}
+
+async function removeAgent(agentId) {
+  if (!confirm('Remove this agent?')) return;
+  try {
+    await apiPost('/api/agent/remove', { agent_id: agentId });
+  } catch(e) {}
+  const di = STATE.agents[agentId]?.deskIndex;
+  if (di >= 0 && di < STATE.deskAssignments.length) STATE.deskAssignments[di] = null;
+  delete STATE.agents[agentId];
+  delete STATE.outputBuffers[agentId];
+  if (STATE.selectedAgent === agentId) STATE.selectedAgent = null;
+  renderAgentsList();
+  renderTaskBoard();
+  saveState();
+}
+
+function selectAgent(agentId) {
+  STATE.selectedAgent = agentId;
+  renderAgentsList();
+  renderOutput();
+  // Move PM toward selected agent desk
+  const agent = STATE.agents[agentId];
+  if (agent && agent.deskIndex >= 0) {
+    const desk = DESK_POSITIONS[agent.deskIndex];
+    STATE.pm.targetX = desk.x - 30;
+    STATE.pm.targetY = desk.y + 10;
+  }
+}
+
+function moveTaskToDone(agentId, task, status) {
+  // Remove from inProgress
+  const idx = STATE.tasks.inProgress.findIndex(t => t.agent_id === agentId);
+  let elapsed = 0;
+  if (idx >= 0) {
+    const t = STATE.tasks.inProgress.splice(idx, 1)[0];
+    elapsed = Date.now() - t.started;
+  }
+  STATE.tasks.done.push({
+    agent_id: agentId,
+    agent_name: STATE.agents[agentId]?.name || 'Unknown',
+    task: task || '(unknown)',
+    status: status,
+    elapsed: elapsed,
+    finished: Date.now(),
+  });
+  renderTaskBoard();
+  saveState();
+}
+
+// =====================================================================
+// UI RENDERING
+// =====================================================================
+
+// Tab switching
+document.querySelectorAll('.tab-bar button').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-bar button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === `tab-${tab}`));
+}
+
+function renderAgentsList() {
+  const container = document.getElementById('agentsList');
+  const empty = document.getElementById('agentsEmpty');
+  const select = document.getElementById('taskAgentSelect');
+  const ids = Object.keys(STATE.agents);
+  empty.style.display = ids.length ? 'none' : 'block';
+
+  container.innerHTML = ids.map(id => {
+    const a = STATE.agents[id];
+    const sel = STATE.selectedAgent === id ? 'selected' : '';
+    return `
+      <div class="panel-card ${sel}" onclick="selectAgent('${id}')">
+        <div class="agent-card-header">
+          <div class="agent-dot ${a.status || 'idle'}"></div>
+          <span class="agent-card-name" style="color:${a.color}">${esc(a.name)}</span>
+          <span style="flex:1"></span>
+          <span style="font-size:10px;color:var(--text-dim)">${a.status || 'idle'}</span>
+        </div>
+        <div class="agent-card-cmd">${esc(a.command)}</div>
+        ${a.current_task ? `<div class="agent-card-task">Task: ${esc(a.current_task.substring(0, 60))}</div>` : ''}
+        <div class="agent-card-actions">
+          <button onclick="event.stopPropagation();selectAgent('${id}');switchTab('output')">Output</button>
+          <button onclick="event.stopPropagation();stopAgent('${id}')">Stop</button>
+          <button class="danger" onclick="event.stopPropagation();removeAgent('${id}')">Remove</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Update task assignment select
+  select.innerHTML = '<option value="">-- select agent --</option>' +
+    ids.map(id => `<option value="${id}">${esc(STATE.agents[id].name)}</option>`).join('');
+}
+
+function renderOutput() {
+  const viewer = document.getElementById('outputViewer');
+  const title = document.getElementById('outputTitle');
+  const id = STATE.selectedAgent;
+  if (!id || !STATE.agents[id]) {
+    title.textContent = 'Select an agent to view output';
+    viewer.textContent = 'Click on an agent in the office or agents list to see their terminal output here.';
+    return;
+  }
+  const a = STATE.agents[id];
+  title.textContent = `${a.name} - ${a.status || 'idle'}`;
+  const lines = STATE.outputBuffers[id] || [];
+  viewer.innerHTML = lines.map(l => `<div>${escHTML(l)}</div>`).join('') || '<div style="color:var(--text-dim)">(no output yet)</div>';
+  viewer.scrollTop = viewer.scrollHeight;
+}
+
+function appendOutputLine(line) {
+  const viewer = document.getElementById('outputViewer');
+  if (!STATE.selectedAgent) return;
+  const div = document.createElement('div');
+  div.textContent = line;
+  // Only clear placeholder if this is first real line
+  if (viewer.children.length === 1 && viewer.children[0].style.color) {
+    viewer.innerHTML = '';
+  }
+  viewer.appendChild(div);
+  viewer.scrollTop = viewer.scrollHeight;
+}
+
+function renderTaskBoard() {
+  // In Progress - from state
+  const ipDiv = document.getElementById('tasksInProgress');
+  ipDiv.innerHTML = STATE.tasks.inProgress.map(t => `
+    <div class="task-card">
+      <div class="tc-agent">${esc(t.agent_name)}</div>
+      <div class="tc-task">${esc(t.task.substring(0, 50))}</div>
+      <div class="tc-time">${formatElapsed(Date.now() - t.started)}</div>
+    </div>
+  `).join('') || '<div style="font-size:10px;color:var(--text-dim);text-align:center;padding:8px">None</div>';
+
+  // Done
+  const doneDiv = document.getElementById('tasksDone');
+  const recent = STATE.tasks.done.slice(-10).reverse();
+  doneDiv.innerHTML = recent.map(t => `
+    <div class="task-card">
+      <div class="tc-agent">${esc(t.agent_name)}</div>
+      <div class="tc-task">${esc(t.task.substring(0, 50))}</div>
+      <div class="tc-time">${t.status} - ${formatElapsed(t.elapsed)}</div>
+    </div>
+  `).join('') || '<div style="font-size:10px;color:var(--text-dim);text-align:center;padding:8px">None</div>';
+
+  // Todo
+  const todoDiv = document.getElementById('tasksTodo');
+  todoDiv.innerHTML = STATE.tasks.todo.map(t => `
+    <div class="task-card">
+      <div class="tc-task">${esc(t.task.substring(0, 50))}</div>
+    </div>
+  `).join('') || '<div style="font-size:10px;color:var(--text-dim);text-align:center;padding:8px">None</div>';
+
+  // Completed tasks list
+  const compDiv = document.getElementById('completedTasks');
+  const compEmpty = document.getElementById('completedEmpty');
+  if (STATE.tasks.done.length === 0) {
+    compEmpty.style.display = 'block';
+    compDiv.innerHTML = '';
+  } else {
+    compEmpty.style.display = 'none';
+    compDiv.innerHTML = STATE.tasks.done.slice().reverse().map(t => `
+      <div class="panel-card" style="cursor:default">
+        <div style="display:flex;justify-content:space-between">
+          <span style="font-weight:600;color:${STATE.agents[t.agent_id]?.color || 'var(--text)'}">${esc(t.agent_name)}</span>
+          <span style="font-size:10px;color:var(--text-dim)">${new Date(t.finished).toLocaleTimeString()}</span>
+        </div>
+        <div style="font-size:12px;margin-top:2px">${esc(t.task.substring(0, 80))}</div>
+        <div style="font-size:10px;color:var(--text-dim);margin-top:2px">Status: ${t.status} | Duration: ${formatElapsed(t.elapsed)}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function renderLog() {
+  const container = document.getElementById('logEntries');
+  const empty = document.getElementById('logEmpty');
+  if (STATE.activityLog.length === 0) {
+    empty.style.display = 'block';
+    container.innerHTML = '';
+    return;
+  }
+  empty.style.display = 'none';
+  container.innerHTML = STATE.activityLog.slice().reverse().map(e => `
+    <div class="log-entry">
+      <span class="log-time">${new Date(e.time * 1000).toLocaleTimeString()}</span>
+      <span class="log-msg">${esc(e.message)}</span>
+    </div>
+  `).join('');
+}
+
+function sendInlineInput() {
+  const inp = document.getElementById('inlineInput');
+  if (!STATE.selectedAgent || !inp.value.trim()) return;
+  apiPost('/api/agent/input', { agent_id: STATE.selectedAgent, text: inp.value });
+  inp.value = '';
+}
+
+document.getElementById('inlineInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') sendInlineInput();
+});
+
+function openFullOutput() {
+  if (!STATE.selectedAgent) return;
+  const a = STATE.agents[STATE.selectedAgent];
+  if (!a) return;
+  document.getElementById('modalTitle').textContent = `${a.name} - Full Output`;
+  const body = document.getElementById('modalBody');
+  const lines = STATE.outputBuffers[STATE.selectedAgent] || [];
+  body.textContent = lines.join('\n') || '(no output)';
+  body.scrollTop = body.scrollHeight;
+  document.getElementById('modalOverlay').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+}
+
+function sendModalInput() {
+  const inp = document.getElementById('modalInput');
+  if (!STATE.selectedAgent || !inp.value.trim()) return;
+  apiPost('/api/agent/input', { agent_id: STATE.selectedAgent, text: inp.value });
+  inp.value = '';
+}
+
+document.getElementById('modalInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') sendModalInput();
+});
+
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+});
+
+function stopSelectedAgent() {
+  if (STATE.selectedAgent) stopAgent(STATE.selectedAgent);
+}
+
+function formatElapsed(ms) {
+  if (ms < 1000) return '<1s';
+  const s = Math.floor(ms / 1000);
+  if (s < 60) return `${s}s`;
+  const m = Math.floor(s / 60);
+  return `${m}m ${s % 60}s`;
+}
+
+function esc(s) { return s ? String(s).replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
+function escHTML(s) { return esc(s); }
+
+
+// =====================================================================
+// PIXEL ART OFFICE RENDERING (Canvas)
+// =====================================================================
+
+const canvas = document.getElementById('officeCanvas');
+const ctx = canvas.getContext('2d');
+
+// Virtual resolution for the pixel art scene
+const VW = 640;
+const VH = 420;
+
+// Desk positions in virtual coordinates (6 desks in 2 rows of 3)
+const DESK_POSITIONS = [
+  { x: 100, y: 170, label: 'Desk 1' },
+  { x: 260, y: 170, label: 'Desk 2' },
+  { x: 420, y: 170, label: 'Desk 3' },
+  { x: 100, y: 290, label: 'Desk 4' },
+  { x: 260, y: 290, label: 'Desk 5' },
+  { x: 420, y: 290, label: 'Desk 6' },
+];
+
+const BREAK_ROOM = { x: 545, y: 290, w: 80, h: 90, label: 'Break Room' };
+
+// ---- Drawing primitives ----
+
+function drawRect(x, y, w, h, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(Math.floor(x), Math.floor(y), w, h);
+}
+
+function drawPixelText(text, x, y, color, size) {
+  ctx.fillStyle = color;
+  ctx.font = `bold ${size || 7}px monospace`;
+  ctx.fillText(text, Math.floor(x), Math.floor(y));
+}
+
+// ---- Scene drawing ----
+
+function drawFloor() {
+  // Warm wood floor
+  for (let fy = 0; fy < VH; fy += 16) {
+    for (let fx = 0; fx < VW; fx += 32) {
+      const shade = ((fx + fy) % 64 < 32) ? '#3d2b1f' : '#4a3428';
+      drawRect(fx, fy, 32, 16, shade);
+    }
+  }
+}
+
+function drawWalls() {
+  // Back wall
+  drawRect(0, 0, VW, 100, '#4a5568');
+  drawRect(0, 95, VW, 5, '#6b7280');  // baseboard
+  // Wall texture: bricks
+  for (let wy = 4; wy < 94; wy += 12) {
+    for (let wx = ((wy/12|0) % 2) * 16; wx < VW; wx += 32) {
+      drawRect(wx, wy, 30, 10, '#505d6f');
+      drawRect(wx + 1, wy + 1, 28, 8, '#4e5a6b');
+    }
+  }
+}
+
+function drawWindow(x, y) {
+  // Frame
+  drawRect(x, y, 56, 48, '#6b4e37');
+  drawRect(x + 2, y + 2, 52, 44, '#5d93c4');
+  drawRect(x + 26, y + 2, 2, 44, '#6b4e37');
+  drawRect(x + 2, y + 22, 52, 2, '#6b4e37');
+  // Curtains
+  drawRect(x - 4, y - 2, 8, 52, '#b83280');
+  drawRect(x + 52, y - 2, 8, 52, '#b83280');
+  // Sunlight
+  const now = new Date();
+  const hour = now.getHours();
+  // Daytime: warm light; night: blue
+  if (hour >= 7 && hour < 19) {
+    ctx.fillStyle = 'rgba(255,230,150,0.15)';
+    ctx.fillRect(x - 8, y + 50, 72, 60);
+  } else {
+    ctx.fillStyle = 'rgba(100,130,200,0.1)';
+    ctx.fillRect(x - 8, y + 50, 72, 60);
+  }
+}
+
+function drawClock(x, y) {
+  // Clock face
+  drawRect(x, y, 24, 24, '#f5f0e6');
+  drawRect(x - 1, y - 1, 26, 26, '#6b4e37');
+  drawRect(x, y, 24, 24, '#f5f0e6');
+  // Numbers
+  drawPixelText('12', x + 7, y + 8, '#333', 6);
+  drawPixelText('6', x + 10, y + 22, '#333', 6);
+  drawPixelText('3', x + 18, y + 15, '#333', 6);
+  drawPixelText('9', x + 2, y + 15, '#333', 6);
+  // Hands
+  const now = new Date();
+  const cx = x + 12, cy = y + 12;
+  const minAngle = (now.getMinutes() / 60) * Math.PI * 2 - Math.PI / 2;
+  const hourAngle = ((now.getHours() % 12) / 12) * Math.PI * 2 - Math.PI / 2;
+  // Hour hand
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(hourAngle) * 6, cy + Math.sin(hourAngle) * 6);
+  ctx.stroke();
+  // Minute hand
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(minAngle) * 9, cy + Math.sin(minAngle) * 9);
+  ctx.stroke();
+}
+
+function drawBookshelf(x, y) {
+  drawRect(x, y, 40, 50, '#6b4e37');
+  drawRect(x + 2, y + 2, 36, 14, '#4a3428');
+  drawRect(x + 2, y + 18, 36, 14, '#4a3428');
+  drawRect(x + 2, y + 34, 36, 14, '#4a3428');
+  // Books
+  const bookColors = ['#e94560','#45aaf2','#53d769','#ffd60a','#a55eea','#ff9f43','#fd79a8','#00cec9'];
+  for (let shelf = 0; shelf < 3; shelf++) {
+    let bx = x + 4;
+    for (let b = 0; b < 5; b++) {
+      const bw = 4 + (b * 7 + shelf * 3) % 4;
+      drawRect(bx, y + 3 + shelf * 16, bw, 12, bookColors[(b + shelf * 3) % bookColors.length]);
+      bx += bw + 1;
+    }
+  }
+}
+
+function drawPlant(x, y) {
+  // Pot
+  drawRect(x, y + 10, 14, 10, '#c0795d');
+  drawRect(x + 2, y + 8, 10, 4, '#d4896c');
+  // Leaves
+  drawRect(x + 4, y - 4, 6, 14, '#2d8a4e');
+  drawRect(x - 2, y - 2, 6, 10, '#34a853');
+  drawRect(x + 10, y - 1, 5, 8, '#27763f');
+  drawRect(x + 2, y - 8, 4, 8, '#3cb371');
+  drawRect(x + 8, y - 6, 4, 6, '#2ecc71');
+}
+
+function drawCoffeeMachine(x, y) {
+  drawRect(x, y, 22, 28, '#555');
+  drawRect(x + 2, y + 2, 18, 12, '#333');
+  drawRect(x + 6, y + 16, 10, 10, '#222');
+  // Cup
+  drawRect(x + 7, y + 18, 8, 7, '#fff');
+  drawRect(x + 9, y + 19, 4, 3, '#6b4e37');
+  // Steam
+  if (STATE.time % 60 < 30) {
+    ctx.fillStyle = 'rgba(255,255,255,0.3)';
+    ctx.fillRect(x + 9, y + 13 - (STATE.time % 8), 2, 4);
+    ctx.fillRect(x + 12, y + 11 - (STATE.time % 6), 2, 3);
+  }
+  drawPixelText('COFFEE', x + 1, y + 36, '#888', 5);
+}
+
+function drawWhiteboard(x, y) {
+  // Board frame
+  drawRect(x - 2, y - 2, 104, 62, '#6b4e37');
+  drawRect(x, y, 100, 58, '#f0f0e8');
+  // Header
+  drawPixelText('TASK BOARD', x + 22, y + 10, '#333', 7);
+  // Columns
+  drawRect(x + 33, y + 12, 1, 44, '#ccc');
+  drawRect(x + 66, y + 12, 1, 44, '#ccc');
+  drawPixelText('TODO', x + 5, y + 20, '#b8860b', 6);
+  drawPixelText('DOING', x + 37, y + 20, '#2d8a4e', 6);
+  drawPixelText('DONE', x + 72, y + 20, '#45aaf2', 6);
+  // Mini cards
+  const maxCards = 3;
+  STATE.tasks.todo.slice(0, maxCards).forEach((t, i) => {
+    drawRect(x + 4, y + 24 + i * 10, 26, 8, '#ffeaa7');
+  });
+  STATE.tasks.inProgress.slice(0, maxCards).forEach((t, i) => {
+    drawRect(x + 37, y + 24 + i * 10, 26, 8, '#a8e6cf');
+  });
+  STATE.tasks.done.slice(-maxCards).forEach((t, i) => {
+    drawRect(x + 70, y + 24 + i * 10, 26, 8, '#a8d8ea');
+  });
+}
+
+function drawBreakRoom() {
+  const br = BREAK_ROOM;
+  // Floor area
+  ctx.fillStyle = 'rgba(100, 80, 60, 0.15)';
+  ctx.fillRect(br.x, br.y, br.w, br.h);
+  // Border
+  ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+  ctx.setLineDash([4, 4]);
+  ctx.strokeRect(br.x, br.y, br.w, br.h);
+  ctx.setLineDash([]);
+  drawPixelText('BREAK ROOM', br.x + 6, br.y + br.h - 4, 'rgba(255,255,255,0.3)', 6);
+  // Couch
+  drawRect(br.x + 8, br.y + 20, 30, 14, '#5c4033');
+  drawRect(br.x + 8, br.y + 14, 6, 6, '#6b4e37');
+  drawRect(br.x + 32, br.y + 14, 6, 6, '#6b4e37');
+  // Table
+  drawRect(br.x + 44, br.y + 30, 20, 12, '#4a3428');
+}
+
+function drawDesk(x, y, agentId) {
+  const agent = agentId ? STATE.agents[agentId] : null;
+  const hasAgent = !!agent;
+
+  // Desk surface
+  drawRect(x - 24, y, 80, 30, '#8b7355');
+  drawRect(x - 22, y + 2, 76, 26, '#a08060');
+  // Desk legs
+  drawRect(x - 22, y + 28, 4, 12, '#6b4e37');
+  drawRect(x + 50, y + 28, 4, 12, '#6b4e37');
+
+  // Monitor
+  drawRect(x + 6, y - 28, 42, 30, '#333');
+  drawRect(x + 8, y - 26, 38, 24, agent && agent.status === 'working' ? '#0d1117' : '#1a1a2e');
+  // Monitor stand
+  drawRect(x + 22, y + 2, 10, 4, '#444');
+
+  // Monitor content
+  if (agent) {
+    if (agent.status === 'working') {
+      // Show scrolling text
+      const buf = STATE.outputBuffers[agentId] || [];
+      const lastLines = buf.slice(-3);
+      lastLines.forEach((line, i) => {
+        drawPixelText(line.substring(0, 14), x + 10, y - 20 + i * 7, '#53d769', 5);
+      });
+      if (buf.length === 0) {
+        drawPixelText('Running...', x + 12, y - 14, '#53d769', 5);
+      }
+    } else if (agent.status === 'done') {
+      drawPixelText('DONE', x + 18, y - 14, '#45aaf2', 7);
+    } else if (agent.status === 'error') {
+      drawPixelText('ERROR', x + 16, y - 14, '#ff4757', 7);
+    } else if (agent.status === 'stopped') {
+      drawPixelText('STOPPED', x + 12, y - 14, '#ff9f43', 6);
+    } else {
+      drawPixelText('Ready', x + 16, y - 14, '#666', 6);
+    }
+    // Agent name label
+    drawPixelText(agent.name, x + 8, y + 44, agent.color || '#eee', 7);
+  } else {
+    drawPixelText('EMPTY', x + 16, y - 14, '#333', 6);
+  }
+}
+
+function drawCharacter(x, y, color, hairColor, isTyping, isWaving, isDone, frame) {
+  const bounce = isTyping ? Math.sin(frame * 0.3) * 1 : 0;
+  const iy = y + bounce;
+
+  // Shadow
+  ctx.fillStyle = 'rgba(0,0,0,0.15)';
+  ctx.fillRect(x - 2, y + 18, 16, 4);
+
+  // Body
+  drawRect(x, iy, 12, 12, color);
+  // Head
+  drawRect(x + 1, iy - 8, 10, 9, '#f4c59e');
+  // Hair
+  drawRect(x + 1, iy - 10, 10, 4, hairColor);
+  // Eyes
+  const blink = frame % 80 < 3;
+  if (!blink) {
+    drawRect(x + 3, iy - 5, 2, 2, '#333');
+    drawRect(x + 7, iy - 5, 2, 2, '#333');
+  } else {
+    drawRect(x + 3, iy - 5, 2, 1, '#333');
+    drawRect(x + 7, iy - 5, 2, 1, '#333');
+  }
+  // Mouth
+  drawRect(x + 4, iy - 2, 4, 1, '#c77');
+
+  // Arms
+  if (isTyping) {
+    // Typing animation
+    const armOff = Math.sin(frame * 0.5) * 2;
+    drawRect(x - 4, iy + 4 + armOff, 4, 3, '#f4c59e');
+    drawRect(x + 12, iy + 4 - armOff, 4, 3, '#f4c59e');
+  } else if (isWaving || isDone) {
+    // Waving
+    const waveOff = Math.sin(frame * 0.2) * 3;
+    drawRect(x + 12, iy - 4 + waveOff, 4, 3, '#f4c59e');
+    drawRect(x - 4, iy + 4, 4, 3, '#f4c59e');
+  } else {
+    // Idle arms at sides
+    drawRect(x - 3, iy + 2, 3, 6, '#f4c59e');
+    drawRect(x + 12, iy + 2, 3, 6, '#f4c59e');
+  }
+
+  // Legs
+  drawRect(x + 1, iy + 12, 4, 6, '#3d3d5c');
+  drawRect(x + 7, iy + 12, 4, 6, '#3d3d5c');
+  // Shoes
+  drawRect(x, iy + 17, 5, 2, '#222');
+  drawRect(x + 7, iy + 17, 5, 2, '#222');
+}
+
+function drawPM(x, y, frame) {
+  const bounce = Math.sin(frame * 0.05) * 0.5;
+  const iy = y + bounce;
+
+  // Shadow
+  ctx.fillStyle = 'rgba(0,0,0,0.2)';
+  ctx.fillRect(x - 2, y + 18, 16, 4);
+
+  // Body - red vest
+  drawRect(x, iy, 12, 12, '#c0392b');
+  // White shirt collar
+  drawRect(x + 3, iy, 6, 3, '#fff');
+
+  // Head
+  drawRect(x + 1, iy - 8, 10, 9, '#f4c59e');
+  // Hair - dark brown bun
+  drawRect(x + 1, iy - 10, 10, 4, '#3d2314');
+  drawRect(x + 2, iy - 12, 8, 4, '#3d2314');
+
+  // Eyes
+  const blink = frame % 90 < 3;
+  if (!blink) {
+    drawRect(x + 3, iy - 5, 2, 2, '#333');
+    drawRect(x + 7, iy - 5, 2, 2, '#333');
+  } else {
+    drawRect(x + 3, iy - 5, 2, 1, '#333');
+    drawRect(x + 7, iy - 5, 2, 1, '#333');
+  }
+  // Smile
+  drawRect(x + 4, iy - 2, 4, 1, '#c77');
+
+  // Clipboard in hand
+  drawRect(x + 13, iy + 1, 7, 9, '#d4a574');
+  drawRect(x + 14, iy + 2, 5, 7, '#fff');
+  drawRect(x + 15, iy + 3, 3, 1, '#999');
+  drawRect(x + 15, iy + 5, 3, 1, '#999');
+
+  // Other arm
+  drawRect(x - 3, iy + 2, 3, 6, '#f4c59e');
+
+  // Legs
+  drawRect(x + 1, iy + 12, 4, 6, '#2c3e50');
+  drawRect(x + 7, iy + 12, 4, 6, '#2c3e50');
+  // Shoes
+  drawRect(x, iy + 17, 5, 2, '#8e3d22');
+  drawRect(x + 7, iy + 17, 5, 2, '#8e3d22');
+
+  // Name label
+  drawPixelText('Elif (PM)', x - 6, y + 26, '#ffd60a', 6);
+}
+
+// Agent character colors
+const CHAR_COLORS = [
+  { body: '#45aaf2', hair: '#2d3436' },
+  { body: '#a55eea', hair: '#fdcb6e' },
+  { body: '#53d769', hair: '#e17055' },
+  { body: '#ffd60a', hair: '#2d3436' },
+  { body: '#ff9f43', hair: '#6c5ce7' },
+  { body: '#fd79a8', hair: '#2d3436' },
+];
+
+function getCharColors(index) {
+  return CHAR_COLORS[index % CHAR_COLORS.length];
+}
+
+// ---- Hit testing for clicks ----
+
+function getHitDesk(mx, my) {
+  for (let i = 0; i < DESK_POSITIONS.length; i++) {
+    const d = DESK_POSITIONS[i];
+    if (mx >= d.x - 30 && mx <= d.x + 60 && my >= d.y - 30 && my <= d.y + 50) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// ---- Main render loop ----
+
+function render() {
+  STATE.time++;
+
+  // Resize canvas to container
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const dpr = 1; // We render at virtual res and scale via CSS
+  canvas.width = VW;
+  canvas.height = VH;
+
+  ctx.imageSmoothingEnabled = false;
+
+  // Clear
+  ctx.clearRect(0, 0, VW, VH);
+
+  // Draw scene layers
+  drawFloor();
+  drawWalls();
+
+  // Windows
+  drawWindow(80, 20);
+  drawWindow(260, 20);
+  drawWindow(440, 20);
+
+  // Clock
+  drawClock(190, 25);
+
+  // Whiteboard on wall
+  drawWhiteboard(310, 28);
+
+  // Bookshelf
+  drawBookshelf(16, 30);
+
+  // Plants
+  drawPlant(550, 100);
+  drawPlant(18, 120);
+
+  // Coffee machine
+  drawCoffeeMachine(560, 130);
+
+  // Break room
+  drawBreakRoom();
+
+  // Desks and workers
+  for (let i = 0; i < DESK_POSITIONS.length; i++) {
+    const d = DESK_POSITIONS[i];
+    const agentId = STATE.deskAssignments[i];
+    drawDesk(d.x, d.y, agentId);
+
+    // Draw worker character behind desk
+    if (agentId && STATE.agents[agentId]) {
+      const agent = STATE.agents[agentId];
+      const colors = getCharColors(i);
+      const isTyping = agent.status === 'working';
+      const isWaving = agent.status === 'done';
+      const isDone = agent.status === 'done';
+      drawCharacter(
+        d.x + 12, d.y - 42,
+        colors.body, colors.hair,
+        isTyping, isWaving, isDone,
+        STATE.time
+      );
+
+      // Selection highlight
+      if (STATE.selectedAgent === agentId) {
+        ctx.strokeStyle = '#ffd60a';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([2, 2]);
+        ctx.strokeRect(d.x - 28, d.y - 46, 88, 90);
+        ctx.setLineDash([]);
+      }
+    }
+  }
+
+  // PM character - smooth movement
+  const pm = STATE.pm;
+  const dx = pm.targetX - pm.x;
+  const dy = pm.targetY - pm.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  if (dist > 2) {
+    pm.x += dx * 0.04;
+    pm.y += dy * 0.04;
+  }
+  drawPM(pm.x, pm.y, STATE.time);
+
+  // Ambient particles (dust motes in sunlight)
+  for (let p = 0; p < 8; p++) {
+    const px = (STATE.time * 0.3 + p * 83) % VW;
+    const py = (Math.sin(STATE.time * 0.02 + p * 1.7) * 30 + 120 + p * 20) % VH;
+    ctx.fillStyle = 'rgba(255,230,180,0.12)';
+    ctx.fillRect(px, py, 2, 2);
+  }
+
+  requestAnimationFrame(render);
+}
+
+// ---- Canvas interaction ----
+
+canvas.addEventListener('click', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = VW / rect.width;
+  const scaleY = VH / rect.height;
+  const mx = (e.clientX - rect.left) * scaleX;
+  const my = (e.clientY - rect.top) * scaleY;
+
+  const deskIdx = getHitDesk(mx, my);
+  if (deskIdx >= 0) {
+    const agentId = STATE.deskAssignments[deskIdx];
+    if (agentId) {
+      selectAgent(agentId);
+      switchTab('output');
+    }
+  }
+
+  // Click anywhere to move PM
+  STATE.pm.targetX = mx - 6;
+  STATE.pm.targetY = my - 10;
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = VW / rect.width;
+  const scaleY = VH / rect.height;
+  const mx = (e.clientX - rect.left) * scaleX;
+  const my = (e.clientY - rect.top) * scaleY;
+  const tooltip = document.getElementById('tooltip');
+
+  const deskIdx = getHitDesk(mx, my);
+  if (deskIdx >= 0) {
+    const agentId = STATE.deskAssignments[deskIdx];
+    if (agentId && STATE.agents[agentId]) {
+      const a = STATE.agents[agentId];
+      tooltip.textContent = `${a.name} [${a.status}]${a.current_task ? ': ' + a.current_task.substring(0, 40) : ''}`;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX - canvas.parentElement.getBoundingClientRect().left + 12) + 'px';
+      tooltip.style.top = (e.clientY - canvas.parentElement.getBoundingClientRect().top - 28) + 'px';
+      canvas.style.cursor = 'pointer';
+    } else {
+      tooltip.textContent = `Empty desk ${deskIdx + 1}`;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX - canvas.parentElement.getBoundingClientRect().left + 12) + 'px';
+      tooltip.style.top = (e.clientY - canvas.parentElement.getBoundingClientRect().top - 28) + 'px';
+      canvas.style.cursor = 'default';
+    }
+  } else {
+    tooltip.style.display = 'none';
+    canvas.style.cursor = 'default';
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  document.getElementById('tooltip').style.display = 'none';
+});
+
+// Drag and drop agents between desks
+let dragState = null;
+
+canvas.addEventListener('mousedown', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = VW / rect.width;
+  const scaleY = VH / rect.height;
+  const mx = (e.clientX - rect.left) * scaleX;
+  const my = (e.clientY - rect.top) * scaleY;
+
+  const deskIdx = getHitDesk(mx, my);
+  if (deskIdx >= 0 && STATE.deskAssignments[deskIdx]) {
+    dragState = {
+      fromDesk: deskIdx,
+      agentId: STATE.deskAssignments[deskIdx],
+      startX: e.clientX,
+      startY: e.clientY,
+      dragging: false,
+    };
+  }
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  if (dragState) {
+    const dx = e.clientX - dragState.startX;
+    const dy = e.clientY - dragState.startY;
+    if (Math.sqrt(dx*dx + dy*dy) > 10) {
+      dragState.dragging = true;
+      canvas.style.cursor = 'grabbing';
+    }
+  }
+});
+
+window.addEventListener('mouseup', (e) => {
+  if (dragState && dragState.dragging) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = VW / rect.width;
+    const scaleY = VH / rect.height;
+    const mx = (e.clientX - rect.left) * scaleX;
+    const my = (e.clientY - rect.top) * scaleY;
+
+    const toDesk = getHitDesk(mx, my);
+    if (toDesk >= 0 && toDesk !== dragState.fromDesk) {
+      // Swap agents between desks
+      const aid1 = STATE.deskAssignments[dragState.fromDesk];
+      const aid2 = STATE.deskAssignments[toDesk];
+      STATE.deskAssignments[toDesk] = aid1;
+      STATE.deskAssignments[dragState.fromDesk] = aid2;
+      if (aid1 && STATE.agents[aid1]) STATE.agents[aid1].deskIndex = toDesk;
+      if (aid2 && STATE.agents[aid2]) STATE.agents[aid2].deskIndex = dragState.fromDesk;
+      saveState();
+    }
+    canvas.style.cursor = 'default';
+  }
+  dragState = null;
+});
+
+// =====================================================================
+// INIT
+// =====================================================================
+
+renderAgentsList();
+renderTaskBoard();
+renderLog();
+render();
+connectSSE();
+
+// Periodic task board time update
+setInterval(() => {
+  renderTaskBoard();
+}, 5000);
+
+</script>
+</body>
+</html>

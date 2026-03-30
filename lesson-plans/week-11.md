@@ -112,7 +112,7 @@ Instructor demonstrates a sample response:
 
 | Criterion | ✓ (check) | Partial | ✗ |
 |-----------|-----------|---------|---|
-| 6: AI direction | States what was asked AND why | States what was asked but not why | Does not mention AI direction |
+| 6: AI direction | States what was asked, why, and which tool was chosen | States what was asked but not why or which tool | Does not mention AI direction |
 | 7: AI evaluation | States what was accepted/modified/rejected AND why | States the decision but not the reasoning | Does not evaluate AI output |
 
 ### 0:50--1:00 | In-Class Written Diagnostic

@@ -56,6 +56,7 @@ Three scenarios (not four -- first week back from break, sustained attention is 
 - Think aloud: "What's the process here? First, what happened? Copilot interpreted 'fix' too broadly. I said 'fix the headings' but the outcome was a complete reformat. Where's the mismatch? In my prompt."
 - Fix: Undo, then revise: "Change the bold text on lines 3, 7, and 12 to Heading 2 style. Don't change anything else."
 - "The error here isn't a computer error. It's a communication error. Same problem as Week 2."
+- **Error type: Communication error.** The problem was in what I said, not what the tool did.
 
 **Scenario 2 -- Excel formula returns an error (pair prediction first):**
 Display a spreadsheet where a SUM formula returns `#REF!`.
@@ -65,6 +66,7 @@ Before the think-aloud: "Look at this error. Turn to your partner: what do you t
 Then instructor think-aloud: "What does this say? #REF! means a reference is wrong. The sequence: someone deleted rows, the formula still points to the old range. The expected outcome was a sum. The actual outcome is an error."
 - Fix: Correct the range.
 - "The error message told us exactly what was wrong. Most people panic and ignore the message. Read it first."
+- **Error type: Tool error.** The software's behaviour was unexpected given the input.
 
 *The pair prediction resets attention after Scenario 1 and gives students a task-based entry point before the instructor's model.*
 
@@ -73,8 +75,11 @@ Display "Permission denied" or "File not found."
 - Think aloud: "Read the message. What does each word mean? 'Permission denied' means I'm not allowed. Let me check: am I logged in? Do I own this repository? The sequence: I tried to push, the outcome was 'permission denied,' the expected outcome was success."
 - Fix: Diagnose from the message, try one thing, check the result.
 - "Error messages are written for you to read. They almost always tell you what went wrong."
+- **Error type: Data error.** The system's state didn't match what I expected.
 
 Quick vocabulary check: "Which of our five words describes what I just did in these three scenarios? I followed a _____, described the _____, and _____ the problem."
+
+Naming the error type is a skill. In Week 6 you learned to classify AI mistakes. Now you're classifying all technical errors. When you can name what kind of problem it is, you can fix it faster.
 
 ### 0:35--0:40 | The Help Request as a Genre
 **Format:** Instructor-led
@@ -90,10 +95,11 @@ Display the help request template:
 | **Problem** | What went wrong (exact error message or description) |
 | **What I tried** | The sequence of steps I took |
 | **Expected outcome** | What should have happened |
+| **How I'll know it's fixed** | What specifically I'll check to confirm the problem is gone |
 
 Show a bad help request: "It doesn't work. Can you help?"
 
-Show a good help request: "I'm trying to push my portfolio to GitHub. When I ask Copilot to push, I get 'Permission denied (publickey).' I've checked that I'm logged in and tried logging out and back in. I expected the push to succeed because it worked last week."
+Show a good help request: "I'm trying to push my portfolio to GitHub. When I ask Copilot to push, I get 'Permission denied (publickey).' I've checked that I'm logged in and tried logging out and back in. I expected the push to succeed because it worked last week. I'll know it's fixed when the push succeeds and I see my latest commit listed on my GitHub repository page."
 
 "Which one can someone actually help with? The good one gives the full sequence: what you're doing, what happened, what you tried, what you expected."
 
@@ -245,6 +251,7 @@ Instructor circulates:
 ### 2:35--2:45 | Closing
 **Format:** Whole class
 
+- "Today's errors weren't what they seemed. What looked like a formatting error was really a communication error. What looked like a formula error was really a data error. Naming the real problem is the first step to fixing it. What's actually there -- not what you assume went wrong."
 - "Today you practised two skills: diagnosing problems and explaining them clearly. Both are language skills. Reading an error message is reading comprehension. Writing a help request is professional writing."
 - "You used five new words: process, sequence, outcome, resolve, anticipate. These apply to any problem in any course, any job."
 - "Next week you start building your project in earnest. You've been thinking about it for eight weeks. You have the tools and the vocabulary. Start making it real."

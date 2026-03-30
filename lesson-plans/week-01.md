@@ -22,6 +22,7 @@ The Goal Document is a weekly writing exercise where students practise articulat
 - Instructor introduction (brief, ~3 min)
 - Frame the course: "This course is about two things: learning to say what you want clearly in English, and discovering what you can do with tools most people don't know how to use. Every week you'll learn new words, try something, and write about what you're thinking. Your thinking will change over the semester. That's how learning works."
 - Explain the rhythm: learn new words, practise a skill, write in your Goal Document
+- "One rule before we start: never put personal information into any AI tool. No passwords, no student ID numbers, no immigration documents, no home address. These tools are not private. If you share it, you cannot take it back. This is a rule for the whole course."
 - Tech check: can everyone access OneDrive on their device?
 
 ### 0:10--0:25 | Possibilities Showcase
@@ -36,7 +37,7 @@ Show 3-4 examples of things real people have built by describing what they wante
 - An interactive quiz game playable in a browser, with scoring and a leaderboard
 - A personal portfolio website with project gallery, about page, and contact form
 
-For each example, show the finished product briefly and say one sentence about who made it and *what problem they were trying to solve.*
+For each example, show the finished product briefly and say one sentence about who made it and *what problem they were trying to solve.* Mention that different examples used different AI tools -- one used Copilot, one used ChatGPT, one used Claude. Students don't need to know the differences yet, but they should hear the names early.
 
 **Key line:** "All of these were built by people who don't write code. They had an idea. They told AI what they wanted. The skill was being able to say what they meant."
 
@@ -72,7 +73,7 @@ Instructor opens their own OneDrive on the projector:
 ### 0:40--0:45 | Pre-Task Planning
 **Format:** Individual reflection
 
-"Before you open your computer, think: where are your files right now? If someone asked you to find a file from last semester, could you? Where would you look?"
+"Before you open your computer, think: where are your files right now? If someone asked you to find a file from last semester, could you? Where would you look? Most people are surprised by the answer. Your files are probably not where you think they are. This course keeps asking one question: what's actually there?"
 
 Students jot 2-3 notes on paper about where their files are (phone? laptop? email? USB?).
 
@@ -197,7 +198,8 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 ### 2:42--2:45 | Closing
 **Format:** Whole class
 
-- "Today: you discovered some things people can do with computers, and you started writing about what YOU want. That writing is a skill you'll practise every week."
+- "Today you discovered something important: your files weren't where you thought they were. That gap -- between what you assume and what's actually there -- is the question this course keeps asking. Every week, in a different way, we'll ask: what's actually there?"
+- "You also started writing about what YOU want. That writing is a skill you'll practise every week."
 - "Next week: you'll try telling AI what you want and see what happens. The question will be: can you explain what you mean clearly enough?"
 - Remind: bring your device next week with OneDrive accessible. Your GEAP 103 folder should exist.
 

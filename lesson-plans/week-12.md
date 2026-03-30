@@ -78,6 +78,8 @@ Then model a WEAK example:
 **Format:** Individual work with structured A/B pair check
 **Language skills:** Reading (own portfolio), writing (evidence mapping notes)
 
+"The evidence map shows what's actually in your portfolio -- not what you remember doing, but what you can point to right now. If you can't find evidence for a CLO, that tells you something important. Don't invent evidence. Name the gap."
+
 Students create an evidence map:
 
 | CLO | Best evidence | Where | Strong or weak? |

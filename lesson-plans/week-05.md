@@ -71,7 +71,7 @@ Instructor displays two versions of the same one-page document (e.g., an event p
 
 **Step 4:** Re-run Accessibility Checker. Errors resolved.
 
-"The question this week isn't 'can you make a nice document?' You've been doing that since Week 2. The question is: can someone else actually use what you made? Someone you've never met, using tools you've never seen?"
+"The question this week isn't 'can you make a nice document?' It's: what's actually there? A document that looks good is not one that works. What does a screen reader actually find? What does the Accessibility Checker actually report? That's what's actually there -- not what your eyes see. You've been making nice documents since Week 2. The question is: can someone else actually use what you made? Someone you've never met, using tools you've never seen?"
 
 ---
 
@@ -104,7 +104,7 @@ Instructor circulates:
 - "What did Copilot do? Did you check it? Is the alt text accurate?"
 - "What's the difference between how the document looks and how it works?"
 
-### 1:10--1:25 | Verification Note
+### 1:10--1:22 | Verification Note
 **Format:** Individual writing
 **Language skills:** Writing (descriptive, technical; in student's own words)
 
@@ -118,7 +118,7 @@ Students write a verification note (~75-100 words) covering:
 
 This is practice for the process documentation required in Artifact Packages.
 
-### 1:25--1:35 | Pair Accessibility Review
+### 1:22--1:35 | Pair Accessibility Review
 **Format:** Pair work (structured A/B turns)
 **Language skills:** Speaking (explaining problems and fixes), reading (partner's document)
 
@@ -133,6 +133,10 @@ For both turns:
 - "Read your partner's alt text. Does it describe what the image actually shows?"
 
 Brief report to partner: one thing they fixed well, one thing that still needs work.
+
+**Second-opinion check** (3 min): "One more check. Take the alt text that Copilot wrote for your image. Paste it into a different AI tool -- ChatGPT, Claude, or another one you have. Ask: 'Here is alt text for an image. Is this description accurate and complete? What is missing?' Compare what the second AI says with what Copilot wrote."
+
+"This is called a second opinion. You already know to verify AI's work. Now you're learning to verify it using a *different* AI. Two tools looking at the same output will catch different problems."
 
 ---
 
@@ -247,6 +251,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - [ ] Git maintenance instructions ready (commit before fixing, commit after fixing, check timeline)
 - [ ] Decision Log feedback (entries 1-2) ready to return to students
 - [ ] List of students who still need to complete Week 4 micro-defence (schedule for 0:00--0:15)
+- [ ] Second AI tool prepared for second-opinion alt text verification (students paste Copilot's alt text into a different AI)
 - [ ] Know which students have not yet done a Git restore (for prompting during Segment C)
 
 ## Language Development Summary

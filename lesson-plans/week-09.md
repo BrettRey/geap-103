@@ -46,7 +46,9 @@ Pairs rewrite it using at least 3 of the 5 terms to make it specific. Share 1-2 
 **Format:** Small groups (self-selected by project type), then gallery walk
 **Language skills:** Listening (worked example), reading (other groups' summaries), writing (1-sentence summary)
 
-"You've been refining your ideas for 8 weeks. Today you start building. First, a short demonstration relevant to what you're actually making."
+"You've been refining your ideas for 8 weeks. Today you start building. Here's the question for this week and next: does your artifact do what you described? The gap between what you describe and what you get -- that's the story of every project. Your job is to make that gap as small as possible, and to name it honestly when it isn't."
+
+"First, a short demonstration relevant to what you're actually making."
 
 Group students by project type. Groupings are flexible based on what students are building (combine small groups as needed):
 
@@ -73,25 +75,40 @@ Students circulate and read all groups' summaries (3-5 min). This gives everyone
 
 ## Segment B: Planning + Project Work (0:40--1:35)
 
-### 0:40--0:50 | Pre-Task Planning
+### 0:40--0:52 | Pre-Task Planning
 **Format:** Individual writing, then brief pair check with A/B turns
 **Language skills:** Writing (planning language), reading (own Goal Document)
 
 "Open your Goal Document. Re-read what you wrote in Weeks 7 and 8 -- your project plan, your risk assessment. Now write a concrete task list for today. Not 'work on my project.' Specific tasks with specific requirements."
 
+"Three things before you start building:"
+
+**1. Scaffolding.** "Don't ask AI to build your whole project at once. Start small. Ask for one piece. Check it. Then ask for the next piece."
+
+Display example:
+> **Too much at once:** "Build me a complete budget tracker with categories, charts, monthly comparison, and alerts."
+> **Scaffolded:** "Build me a spreadsheet with one column for date and one for amount. Just those two columns, nothing else." Then: "Now add a category column." Then: "Now add a total at the bottom."
+
+"Small steps, each one checked. That's how real projects get built."
+
+**2. Restatement.** "Before AI starts building, paste your task description and ask: 'Tell me what you think I'm asking for.' Read AI's answer. Does it match what you meant? If not, fix the misunderstanding before AI builds the wrong thing. You learned this in Week 2. Now you use it for real."
+
+**3. Tool selection.** "For each task, decide which AI tool you'll use. Not everything needs the same tool."
+
 Students write a task list directly in their Goal Document (this IS the Week 9 entry):
 
-**Prompt** (displayed): "Write your task list for today. What specifically will you build in the next hour? What are the requirements?"
+**Prompt** (displayed): "Write your task list for today. What specifically will you build in the next hour? What are the requirements? Which AI tool will you use for each task?"
 
 **Sentence frames** *(optional -- use if you're stuck)*:
 - "Today I will focus on _____. The requirement is _____."
 - "The first thing I need to do is _____ because _____."
 - "My draft should include _____ by the end of today."
 - "If I finish _____, I will move on to _____."
+- "For _____, I will use _____ because _____."
 
-After writing (5 min): **Partner A reads their task list aloud (1.5 min), Partner B asks one clarifying question. Switch.** "Does your partner's list make sense? Is anything missing?"
+After writing (5 min): **Partner A reads their task list aloud (1.5 min), Partner B asks one clarifying question. Switch.** "Does your partner's list make sense? Is anything missing? Did they say which tool they'll use?"
 
-### 0:50--1:35 | Project Work
+### 0:52--1:35 | Project Work
 **Format:** Individual work with instructor circulation
 **Language skills:** Writing (artifact production, process documentation), reading (AI output, system feedback)
 

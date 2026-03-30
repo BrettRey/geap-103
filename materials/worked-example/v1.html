@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Art Agent Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: monospace;
+  }
+
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  h1 {
+    color: #c8d6e5;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  canvas {
+    border: 4px solid #2d3a4a;
+    border-radius: 4px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  .controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button {
+    font-family: monospace;
+    font-size: 14px;
+    padding: 8px 18px;
+    border: 2px solid #4a6a8a;
+    border-radius: 4px;
+    background: #2d3a4a;
+    color: #c8d6e5;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  button:hover { background: #3d5a7a; }
+
+  .status-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .status-item {
+    font-size: 13px;
+    color: #8a9ab0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #555;
+  }
+  .dot.working { background: #f9ca24; }
+  .dot.done    { background: #6ab04c; }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <h1>Pixel Agent Dashboard</h1>
+  <canvas id="office" width="640" height="360"></canvas>
+  <div class="controls">
+    <button onclick="startAgent(0)">Start Research Agent</button>
+    <button onclick="startAgent(1)">Start Code Agent</button>
+    <button onclick="startAgent(2)">Start Review Agent</button>
+    <button onclick="resetAll()">Reset All</button>
+  </div>
+  <div class="status-row">
+    <div class="status-item"><span class="dot" id="dot0"></span><span id="label0">Research Agent: idle</span></div>
+    <div class="status-item"><span class="dot" id="dot1"></span><span id="label1">Code Agent: idle</span></div>
+    <div class="status-item"><span class="dot" id="dot2"></span><span id="label2">Review Agent: idle</span></div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById("office");
+const ctx = canvas.getContext("2d");
+
+/*
+  Grid: 640 / 4 = 160 columns, 360 / 4 = 90 rows.
+  Layout (row numbers):
+    0-14   ceiling
+   14-28   upper wall (lighter)
+   28-52   lower wall (darker)
+   52-55   baseboard
+   55-90   floor
+*/
+
+const PX = 4;
+function rect(x, y, w, h, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x * PX, y * PX, w * PX, h * PX);
+}
+
+/* ── palette ──────────────────────────────────────────────── */
+const C = {
+  ceiling:     "#4a5568",
+  ceilingTrim: "#3d4a5c",
+  wallUpper:   "#7a8a9a",
+  wallLower:   "#6a7a8a",
+  baseboard:   "#4a5568",
+  floor:       "#8B7355",
+  floorLine:   "#7a6545",
+  floorAlt:    "#9a8365",
+
+  deskTop:     "#c4955a",
+  deskFront:   "#a07840",
+  deskLeg:     "#8a6530",
+  deskDrawer:  "#b08848",
+  drawerPull:  "#d4a860",
+
+  monitor:     "#2a2a2a",
+  monitorStand:"#3a3a3a",
+  screen:      "#2196F3",
+  screenBright:"#64B5F6",
+  screenOff:   "#1a1a22",
+  screenText:  "#e0f0ff",
+  screenText2: "#90caf9",
+  keyboard:    "#4a4a4a",
+  keyHighlight:"#5a5a5a",
+
+  chairBack:   "#3a3a3a",
+  chairSeat:   "#4a4a4a",
+  chairArm:    "#444",
+  chairLeg:    "#333",
+  chairWheel:  "#2a2a2a",
+
+  skinA: "#f5c5a3", skinB: "#d4a07a", skinC: "#8d6e4c",
+  shirtA: "#e74c3c", shirtB: "#2980b9", shirtC: "#27ae60",
+  hairA: "#3a2518", hairB: "#1a1020", hairC: "#8B4513",
+  pants: "#2c3e50",
+  shoe:  "#1a1a1a",
+
+  plantPot:  "#9b5e3c",
+  plantLeaf: "#2ecc71",
+  plantDark: "#1a8a4a",
+  plantLight:"#55d98d",
+
+  clockFrame: "#5a5a5a",
+  clockFace:  "#e8e8e8",
+  clockHand:  "#333",
+
+  windowFrame: "#5a6a7a",
+  windowGlass: "#a0d8ef",
+  windowGlare: "#c8ecff",
+
+  posterBg:  "#f0e68c",
+  posterTxt: "#555",
+  posterBg2: "#e8d0d0",
+
+  ceilingLight: "#e0e0c0",
+  lightFixture: "#888",
+};
+
+/* ── agents ───────────────────────────────────────────────── */
+const agents = [
+  { name: "Research Agent", state: "idle", timer: 0, skin: C.skinA, shirt: C.shirtA, hair: C.hairA },
+  { name: "Code Agent",     state: "idle", timer: 0, skin: C.skinB, shirt: C.shirtB, hair: C.hairB },
+  { name: "Review Agent",   state: "idle", timer: 0, skin: C.skinC, shirt: C.shirtC, hair: C.hairC },
+];
+
+const WORK_DURATION = 300; // ~5 seconds at 60 fps
+
+function startAgent(i) {
+  if (agents[i].state === "working") return;
+  agents[i].state = "working";
+  agents[i].timer = WORK_DURATION;
+}
+function resetAll() {
+  agents.forEach(a => { a.state = "idle"; a.timer = 0; });
+}
+
+/* ── office background ────────────────────────────────────── */
+function drawOffice() {
+  // ceiling
+  rect(0, 0, 160, 14, C.ceiling);
+  rect(0, 14, 160, 1, C.ceilingTrim);
+
+  // wall
+  rect(0, 15, 160, 18, C.wallUpper);
+  rect(0, 33, 160, 19, C.wallLower);
+
+  // baseboard
+  rect(0, 52, 160, 3, C.baseboard);
+
+  // floor: alternating tile pattern
+  for (let row = 55; row < 90; row++) {
+    for (let col = 0; col < 160; col += 16) {
+      const alt = ((Math.floor(row / 8) + Math.floor(col / 16)) % 2 === 0);
+      rect(col, row, 16, 1, alt ? C.floor : C.floorAlt);
+    }
+  }
+  // floor tile grid lines
+  for (let col = 0; col < 160; col += 16) {
+    rect(col, 55, 1, 35, C.floorLine);
+  }
+  for (let row = 55; row < 90; row += 8) {
+    rect(0, row, 160, 1, C.floorLine);
+  }
+
+  // ceiling lights
+  drawCeilingLight(35, 2);
+  drawCeilingLight(80, 2);
+  drawCeilingLight(125, 2);
+
+  // windows
+  drawWindow(6, 17);
+  drawWindow(72, 17);
+  drawWindow(138, 17);
+
+  // wall poster between workstations
+  drawPoster(44, 24, C.posterBg);
+  drawPoster(108, 24, C.posterBg2);
+
+  // wall clock above middle desk
+  drawClock(91, 18);
+
+  // plants
+  drawPlant(2, 60);
+  drawPlant(153, 60);
+}
+
+function drawCeilingLight(x, y) {
+  rect(x, y, 10, 2, C.lightFixture);
+  rect(x + 1, y + 2, 8, 2, C.ceilingLight);
+  // glow
+  rect(x + 2, y + 4, 6, 1, "#f5f5dc80");
+}
+
+function drawWindow(x, y) {
+  // frame
+  rect(x, y, 16, 14, C.windowFrame);
+  // glass panes (2x2 grid)
+  rect(x + 1, y + 1, 6, 5, C.windowGlass);
+  rect(x + 9, y + 1, 6, 5, C.windowGlass);
+  rect(x + 1, y + 8, 6, 5, C.windowGlass);
+  rect(x + 9, y + 8, 6, 5, C.windowGlass);
+  // cross bars
+  rect(x + 7, y + 1, 2, 12, C.windowFrame);
+  rect(x + 1, y + 6, 14, 2, C.windowFrame);
+  // glare highlights
+  rect(x + 2, y + 2, 2, 1, C.windowGlare);
+  rect(x + 10, y + 2, 2, 1, C.windowGlare);
+}
+
+function drawPoster(x, y, bg) {
+  rect(x, y, 10, 12, bg);
+  rect(x + 1, y + 1, 8, 1, C.posterTxt);
+  rect(x + 2, y + 3, 6, 1, C.posterTxt);
+  rect(x + 1, y + 5, 7, 1, C.posterTxt);
+  rect(x + 2, y + 7, 5, 1, C.posterTxt);
+  rect(x + 1, y + 9, 4, 1, C.posterTxt);
+}
+
+function drawClock(x, y) {
+  rect(x, y, 8, 8, C.clockFrame);
+  rect(x + 1, y + 1, 6, 6, C.clockFace);
+  // hands
+  rect(x + 4, y + 2, 1, 3, C.clockHand);
+  rect(x + 4, y + 4, 2, 1, C.clockHand);
+  // centre dot
+  rect(x + 4, y + 4, 1, 1, "#c0392b");
+}
+
+function drawPlant(x, y) {
+  // pot
+  rect(x, y + 5, 6, 4, C.plantPot);
+  rect(x + 1, y + 9, 4, 2, C.plantPot);
+  // stem
+  rect(x + 2, y + 2, 2, 4, C.plantDark);
+  // leaves
+  rect(x + 1, y + 1, 2, 2, C.plantLeaf);
+  rect(x + 3, y + 1, 2, 2, C.plantLeaf);
+  rect(x + 0, y, 2, 2, C.plantLeaf);
+  rect(x + 4, y, 2, 2, C.plantLeaf);
+  rect(x + 2, y - 1, 2, 2, C.plantLight);
+}
+
+/* ── workstation ──────────────────────────────────────────── */
+/* each workstation occupies roughly 40 columns.
+   Three stations centred at x = 16, 60, 104. Desk top at y = 55. */
+
+const STATIONS = [
+  { x: 14, deskY: 56 },
+  { x: 58, deskY: 56 },
+  { x: 102, deskY: 56 },
+];
+
+function drawDesk(x, y) {
+  // desk surface
+  rect(x, y, 30, 2, C.deskTop);
+  // front panel
+  rect(x + 1, y + 2, 28, 8, C.deskFront);
+  // drawer lines
+  rect(x + 2, y + 3, 12, 3, C.deskDrawer);
+  rect(x + 8, y + 4, 2, 1, C.drawerPull);
+  rect(x + 16, y + 3, 12, 3, C.deskDrawer);
+  rect(x + 22, y + 4, 2, 1, C.drawerPull);
+  // legs
+  rect(x, y + 2, 1, 12, C.deskLeg);
+  rect(x + 29, y + 2, 1, 12, C.deskLeg);
+  // bottom brace
+  rect(x + 1, y + 10, 28, 1, C.deskLeg);
+}
+
+function drawMonitor(x, y) {
+  // stand
+  rect(x + 12, y - 1, 6, 1, C.monitorStand);
+  rect(x + 14, y - 2, 2, 1, C.monitorStand);
+  // body
+  rect(x + 6, y - 12, 18, 10, C.monitor);
+  // return screen bounds for separate drawing
+  return { sx: x + 7, sy: y - 11, sw: 16, sh: 8 };
+}
+
+function drawScreen(sx, sy, sw, sh, agent, f) {
+  if (agent.state === "idle") {
+    rect(sx, sy, sw, sh, C.screenOff);
+    return;
+  }
+  // screen is on
+  const working = agent.state === "working";
+  const bright = working && (Math.floor(f / 8) % 3 === 0);
+  rect(sx, sy, sw, sh, bright ? C.screenBright : C.screen);
+
+  if (working) {
+    // animated text lines that scroll
+    const scrollOffset = Math.floor(f / 15) % 4;
+    const lines = [
+      [1, 4], [1, 6], [2, 5], [1, 3], [2, 6], [1, 4], [2, 5], [1, 3]
+    ];
+    for (let i = 0; i < 4; i++) {
+      const li = (i + scrollOffset) % lines.length;
+      const lx = lines[li][0];
+      const lw = lines[li][1];
+      rect(sx + lx, sy + 1 + i * 2, lw, 1, C.screenText);
+    }
+    // blinking cursor
+    if (Math.floor(f / 12) % 2 === 0) {
+      rect(sx + 8, sy + 1 + (scrollOffset % 4) * 2, 1, 1, "#fff");
+    }
+  } else {
+    // done: show checkmark
+    rect(sx + 5, sy + 2, 1, 1, "#fff");
+    rect(sx + 6, sy + 3, 1, 1, "#fff");
+    rect(sx + 7, sy + 4, 1, 1, "#fff");
+    rect(sx + 8, sy + 3, 1, 1, "#fff");
+    rect(sx + 9, sy + 2, 1, 1, "#fff");
+    rect(sx + 10, sy + 1, 1, 1, "#fff");
+    // "DONE" text
+    rect(sx + 4, sy + 6, 8, 1, C.screenText);
+  }
+}
+
+function drawKeyboard(x, y) {
+  rect(x + 9, y + 1, 12, 2, C.keyboard);
+  // key highlights
+  rect(x + 10, y + 1, 2, 1, C.keyHighlight);
+  rect(x + 14, y + 1, 2, 1, C.keyHighlight);
+  rect(x + 18, y + 1, 2, 1, C.keyHighlight);
+}
+
+function drawChair(x, y) {
+  // x is desk-x; chair is centred on desk. y is desk-top y.
+  const cx = x + 9;
+  const cy = y - 2;
+  // chair back
+  rect(cx, cy - 8, 2, 8, C.chairBack);
+  rect(cx, cy - 9, 12, 2, C.chairBack);
+  // seat
+  rect(cx, cy, 12, 2, C.chairSeat);
+  // arm rests
+  rect(cx, cy - 5, 1, 4, C.chairArm);
+  rect(cx + 11, cy - 5, 1, 4, C.chairArm);
+  // pedestal
+  rect(cx + 5, cy + 2, 2, 4, C.chairLeg);
+  // base
+  rect(cx + 2, cy + 6, 8, 1, C.chairLeg);
+  // wheels
+  rect(cx + 1, cy + 7, 2, 1, C.chairWheel);
+  rect(cx + 9, cy + 7, 2, 1, C.chairWheel);
+}
+
+/* ── character (sitting in chair) ─────────────────────────── */
+function drawCharacter(x, deskY, agent, f) {
+  const { skin, shirt, hair } = agent;
+  const working = agent.state === "working";
+  const done = agent.state === "done";
+
+  // character sits in chair; chair seat is at deskY - 2
+  // torso centre at desk x + 15 (centred on desk width 30)
+  const cx = x + 13; // left edge of body area
+  const seatY = deskY - 2; // chair seat top
+
+  // ── legs (sitting, extending forward from seat) ──
+  rect(cx + 1, seatY, 3, 2, C.pants);
+  rect(cx + 6, seatY, 3, 2, C.pants);
+  // feet
+  rect(cx + 0, seatY + 2, 3, 1, C.shoe);
+  rect(cx + 6, seatY + 2, 3, 1, C.shoe);
+
+  // ── torso ──
+  const torsoY = seatY - 7;
+  rect(cx + 1, torsoY, 8, 7, shirt);
+  // collar detail
+  rect(cx + 4, torsoY, 2, 1, skin);
+
+  // ── head ──
+  const headY = torsoY - 5;
+  rect(cx + 2, headY, 6, 5, skin);
+
+  // ── hair ──
+  rect(cx + 2, headY - 1, 6, 2, hair);
+  rect(cx + 1, headY, 1, 3, hair);
+  rect(cx + 8, headY, 1, 3, hair);
+
+  // ── eyes ──
+  const eyeY = headY + 2;
+  rect(cx + 3, eyeY, 1, 1, "#1a1a1a");
+  rect(cx + 6, eyeY, 1, 1, "#1a1a1a");
+
+  // ── mouth / expression ──
+  if (done) {
+    // happy open mouth
+    rect(cx + 4, headY + 4, 2, 1, "#c0392b");
+  } else {
+    // neutral line
+    rect(cx + 4, headY + 4, 2, 1, "#a08070");
+  }
+
+  // ── arms ──
+  if (working) {
+    const tick = Math.floor(f / 6) % 4;
+    // arms reaching forward to keyboard
+    // left arm
+    rect(cx + 0, torsoY + 1, 1, 3, skin);
+    rect(cx - 1, torsoY + 4, 2, 1, skin);
+    // left hand on keyboard area (typing motion)
+    rect(cx - 2 + (tick < 2 ? 0 : 1), torsoY + 5, 2, 1, skin);
+
+    // right arm
+    rect(cx + 9, torsoY + 1, 1, 3, skin);
+    rect(cx + 9, torsoY + 4, 2, 1, skin);
+    // right hand
+    rect(cx + 9 + (tick >= 2 ? 0 : 1), torsoY + 5, 2, 1, skin);
+
+    // head bob while typing
+    if (Math.floor(f / 15) % 2 === 0) {
+      // slight tilt: redraw top of head shifted
+      rect(cx + 2, headY - 1, 6, 1, hair);
+    }
+  } else if (done) {
+    // left arm resting
+    rect(cx + 0, torsoY + 1, 1, 5, skin);
+
+    // right arm waving!
+    const wave = Math.floor(f / 8) % 3;
+    rect(cx + 9, torsoY + 1, 1, 2, skin);
+    if (wave === 0) {
+      rect(cx + 10, torsoY - 1, 1, 2, skin);
+      rect(cx + 11, torsoY - 3, 1, 2, skin);
+      rect(cx + 12, torsoY - 4, 2, 1, skin);
+    } else if (wave === 1) {
+      rect(cx + 10, torsoY, 1, 1, skin);
+      rect(cx + 11, torsoY - 2, 1, 2, skin);
+      rect(cx + 12, torsoY - 3, 2, 1, skin);
+    } else {
+      rect(cx + 10, torsoY - 1, 1, 2, skin);
+      rect(cx + 11, torsoY - 3, 1, 2, skin);
+      rect(cx + 12, torsoY - 5, 1, 2, skin);
+      rect(cx + 13, torsoY - 5, 1, 1, skin);
+    }
+  } else {
+    // idle: arms resting at sides
+    rect(cx + 0, torsoY + 1, 1, 5, skin);
+    rect(cx + 9, torsoY + 1, 1, 5, skin);
+  }
+}
+
+/* ── agent name labels on desks ───────────────────────────── */
+// (We skip text rendering to keep it pure pixel art;
+//  the status row below the canvas shows the names.)
+
+/* ── main loop ────────────────────────────────────────────── */
+let frame = 0;
+
+function update() {
+  agents.forEach(a => {
+    if (a.state === "working") {
+      a.timer--;
+      if (a.timer <= 0) a.state = "done";
+    }
+  });
+
+  agents.forEach((a, i) => {
+    const dot = document.getElementById("dot" + i);
+    const label = document.getElementById("label" + i);
+    if (a.state === "working") {
+      dot.className = "dot working";
+      label.textContent = a.name + ": working...";
+    } else if (a.state === "done") {
+      dot.className = "dot done";
+      label.textContent = a.name + ": done!";
+    } else {
+      dot.className = "dot";
+      label.textContent = a.name + ": idle";
+    }
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawOffice();
+
+  STATIONS.forEach((st, i) => {
+    // draw order: chair behind, then desk, then character in front
+    drawChair(st.x, st.deskY);
+    drawDesk(st.x, st.deskY);
+    const scr = drawMonitor(st.x, st.deskY);
+    drawScreen(scr.sx, scr.sy, scr.sw, scr.sh, agents[i], frame);
+    drawKeyboard(st.x, st.deskY);
+    drawCharacter(st.x, st.deskY, agents[i], frame);
+  });
+
+  frame++;
+}
+
+function loop() {
+  update();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+loop();
+</script>
+</body>
+</html>

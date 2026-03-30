@@ -164,6 +164,10 @@ Display the left column only:
 | Working on shared projects with version control |
 | Explaining your work to others |
 | Organising files and versions |
+| Knowing which AI tool to use for what |
+| Checking AI's work with a second opinion |
+| Starting fresh when a conversation gets confused |
+| Telling AI who to be (persona) |
 
 **Pair task with A/B turns** (5 min): "With your partner, match each skill to a situation in your degree program or future job. Where will you use this? Be specific — not 'everywhere' but 'in my business course when...'"
 
@@ -177,6 +181,10 @@ Display the left column only:
 | Collaborative assignments, co-op |
 | Presentations, interviews, meetings |
 | Every course, every job |
+| Choosing the right tool for each task at work or school |
+| Verifying any output before relying on it |
+| Recognising when to reset instead of pushing through |
+| Framing requests for any audience -- human or AI |
 
 "The one thing I hope you take from this course is that English is the control layer. If you can say what you mean clearly, you can get a computer to help you do almost anything."
 
@@ -191,7 +199,9 @@ Students complete the institutional course evaluation. Instructor steps away whi
 
 "You started this course 14 weeks ago. Some of you didn't know what a file path was. Some of you had never used AI. All of you have now built something real, documented how you built it, shared it with others, and explained it in English."
 
-"Your Goal Documents tell the story of how your thinking changed — 13 entries, from 'I wish my computer could...' to 'When I started I thought... now I think...' I've enjoyed reading them."
+"You also learned something most people never learn: how to manage AI, not just use it. You learned to check AI's work, to compare tools, to start fresh when conversations decay, to tell AI who to be, and to know when not to use AI at all. Those skills transfer to every tool you'll ever use."
+
+"Your Goal Documents tell the story of how your thinking changed -- 13 entries, from 'I wish my computer could...' to 'When I started I thought... now I think...' I've enjoyed reading them."
 
 "Good luck in your degree programs. You're ready."
 

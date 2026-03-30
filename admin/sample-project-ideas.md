@@ -98,6 +98,12 @@ An interactive training system for new employees at a job you know (restaurant, 
 
 ---
 
+### 23. Pixel Art Agent Dashboard
+
+A browser app that shows your AI agents as pixel art characters working in a virtual office. Each character represents one of the agents you are using (your coding agent, your research agent, your writing agent). When an agent is busy, its character sits at a desk and types. When it finishes, the character stands up and waves. When an agent is waiting for you, its character walks to your desk. You design the office, choose the characters, and write the rules for what each animation means. **What makes this hard to describe:** You have to define exactly what each agent state looks like as a character action. "Show me when the agent is working" is too vague. "When the agent is generating code, the character sits at the left desk and a progress bar appears above its head. When it finishes, the character walks to my desk and a notification sound plays. If two agents finish at the same time, they form a queue." You have to describe your own workflow clearly enough for the app to visualize it.
+
+---
+
 ## How Assessment Works
 
 These ideas show what is possible, not what is required. Your grade is based on how well you describe what you want, how honestly you document what happened, and how clearly you explain your work to someone else — not on how impressive the technology is.

@@ -19,7 +19,7 @@ Last week students practised expressing what they want. This week they find out 
 ### 0:00--0:05 | Warm-Up: From Wishes to Words
 **Format:** Whole class, interactive
 
-- "Last week you wrote about what you want. This week, you find out whether your words work. Can you explain what you mean clearly enough for AI to help?"
+- "Last week you wrote about what you want. This week, you find out whether your words work. Can you explain what you mean clearly enough for AI to help? This week's question: do your words say what you think they say?"
 - Quick show of hands: "Who has used ChatGPT, Copilot, or another AI tool? Did it do what you wanted, or something different?"
 - 2-3 students share briefly. Instructor listens for mismatch stories.
 
@@ -36,7 +36,7 @@ For each term:
 
 "These words describe a cycle you'll use all semester: say what you want (prompt), see what happens (generate), check whether it matches (verify), decide what to do (accept, reject, revise). The cycle is really about getting better at saying what you mean."
 
-### 0:15--0:35 | Worked Example: The Gap Between What I Meant and What I Said
+### 0:15--0:37 | Worked Example: The Gap Between What I Meant and What I Said
 **Format:** Instructor demonstration with think-aloud
 **Language skills:** Listening, critical evaluation vocabulary
 
@@ -47,6 +47,12 @@ Instructor states a concrete goal: "I want a one-page summary of this article th
 - Output appears: too long, too formal, missing key information
 - Think aloud: "Look at the gap. I knew what I wanted in my head, but what I typed didn't say it. I said 'summarize' but I didn't say how long, how simple, or who it's for. The problem isn't AI. The problem is what I said."
 
+**Step 1.5 -- Restatement check:**
+- "Before I revise, I want to try something. I'm going to ask AI what it thinks I'm asking for."
+- Types: "Before you do anything, tell me what you think I'm asking for."
+- AI restates its understanding (something like: "You want me to summarize the article").
+- Think aloud: "See? AI thinks I just want any summary. I didn't say B1 level, I didn't say one page, I didn't say who it's for. AI is showing me my own gap. This is called a restatement check -- you ask AI to tell you what it heard before it starts working. Try this every time you ask AI to do something important."
+
 **Step 2 -- Revised prompt:**
 - Revises: "Summarize this article in one page, using simple vocabulary. The reader is a B1 English learner."
 - Better output appears
@@ -56,21 +62,21 @@ Instructor states a concrete goal: "I want a one-page summary of this article th
 **Step 3 -- Decision Log on the projector:**
 "Now I'm going to write down what just happened: what I meant, what I said, what I got, and what I decided."
 
-Walk through each field, thinking aloud:
+Walk through the key fields, thinking aloud. Fill in Task goal, Tool used, and Decision live; point to the others: "You'll fill in the rest yourself later."
 
 | Field | What instructor writes |
 |-------|----------------------|
 | Task goal | "One-page summary of [article] at B1 level" |
-| AI used | Copilot in Word |
+| Tool used | "Copilot in Word" |
 | Prompt snippets | Shows the vague prompt, then the revised prompt |
 | Output summary | "First try was too long and formal; second was better but needed two edits" |
 | Decision | Modify |
 | Verification | "Compared three key facts with the original article" |
 | What changed | "Shortened paragraph 2; replaced two vocabulary items with simpler words" |
 
-"The Decision Log captures the gap between what you meant and what you said. That gap is where the learning happens."
+"Notice I wrote which tool I used. Different tools give different answers -- you'll see this in a few minutes. Always record which tool. And the Decision Log captures the gap between what you meant and what you said. That gap is where the learning happens."
 
-### 0:35--0:40 | Connect to the Practice
+### 0:37--0:40 | Connect to the Practice
 **Format:** Instructor-led
 
 - "Now it's your turn. You'll pick one of your wishes from last week and try to make it happen."
@@ -111,23 +117,42 @@ Students revise their prompt and try again.
 
 **Key message:** "Every mismatch teaches you something about how to say what you mean. If you discovered your original idea isn't interesting, that's just as valuable. Try something else."
 
-### 1:10--1:25 | Class Decision Log
+### 1:10--1:12 | Persona Demonstration
+**Format:** Instructor-led
+**Language skills:** Listening, critical evaluation
+
+"One more thing before you compare tools. Watch what happens when I tell AI who to be."
+
+Instructor types into Copilot: "You are a strict language teacher. Summarize this article in one page for a B1 English learner." Output is noticeably different in tone from the earlier summary -- simpler vocabulary, shorter sentences, more direct.
+
+"Same article, same length, but the voice changed because I told AI who to be. This is called a persona. 'You are a strict teacher' gives you different output than 'you are a friendly helper.' You'll use this."
+
+### 1:12--1:25 | Model Comparison
+**Format:** Pair work
+**Language skills:** Speaking (comparing, evaluating), reading (AI output)
+
+"Now try this: both of you type the SAME prompt -- the one you just used, or pick one from your wish list. But use different tools. One of you uses Copilot. The other opens ChatGPT, or Claude, or another AI tool on your phone or browser."
+
+Partner A uses Copilot. Partner B uses a different AI tool.
+- Same prompt, typed at the same time
+- Compare outputs side by side: "What's different? What's the same? Which understood you better?"
+
+"Different AI tools are built differently. They don't all give the same answer. This is like asking two people the same question -- you get two different responses. It matters which tool you use."
+
+2-3 pairs share one difference they noticed. (~13 min allows for first-time setup friction: students navigating to a second tool, possibly creating an account.)
+
+### 1:25--1:35 | Class Decision Log
 **Format:** Whole class, collaborative
 **Language skills:** Speaking (describing goals and results), writing (structured documentation)
 
 One volunteer describes their interaction. Class fills in the Decision Log template together on the projector:
 - Instructor asks: "What did you MEAN? What did you SAY to AI? What did you GET? Where's the gap?"
 - Class discusses what to write in each field
+- Instructor emphasises the "Tool used" field: "Which tool did you use? Write it down. Different tools give different answers."
 
 "The Decision Log isn't about what AI did. It's about how clearly you expressed what you wanted and what you learned from the difference."
 
-### 1:25--1:35 | Pair Debrief
-**Format:** Pair work
-**Language skills:** Speaking (comparing experiences)
-
-(Partner A describes their experience first for 3 min, then Partner B for 3 min.)
-- "What did you try? What was the biggest gap between what you meant and what you got?"
-- "Did anyone discover something new -- an idea you didn't have before you talked to AI?"
+*The Pair Debrief from the original plan has been absorbed into the model comparison activity, which is itself a pair exercise. If time permits, 2-3 students share a discovery with the whole class at the end of the Class Decision Log.*
 
 ---
 
@@ -221,8 +246,11 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 ## Instructor Prep Checklist
 
 - [ ] Copilot in Word accessible on projector and confirmed on student devices
+- [ ] Second AI tool accessible on student devices (ChatGPT or Claude web access for model comparison activity)
 - [ ] Worked example article prepared (short, B1-appropriate content for the summary task)
 - [ ] Deliberate mismatch planned: know what vague prompt to use first and what a good revision looks like
+- [ ] Restatement check prepared ("Before you do anything, tell me what you think I'm asking for")
+- [ ] Persona demonstration prepared ("You are a strict language teacher" prompt ready)
 - [ ] Vocabulary slides: prompt, generate, revise, accept/reject, verification
 - [ ] Decision Log template accessible to students (shared file on LMS or OneDrive)
 - [ ] Goal Document prompt + sentence frames on slide
@@ -232,8 +260,8 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 ## Language Development Summary
 
 - **Vocabulary:** 5 terms (prompt, generate, revise, accept/reject, verification) pre-trained in Segment A, applied in practice and Decision Log
-- **Speaking:** Warm-up sharing; class Decision Log discussion; pair debrief on gaps and discoveries; pair discussion of evolving interests; **session review** (12 min AI voice interaction: evaluating results and being precise about gaps -- the AI acts as a specificity coach, pushing back on vague descriptions)
-- **Reading:** AI-generated output (authentic digital text); Decision Log template fields
+- **Speaking:** Warm-up sharing; **model comparison** (pair: comparing outputs from two different AI tools on the same prompt -- first cross-tool evaluation); class Decision Log discussion; pair debrief on gaps and discoveries; pair discussion of evolving interests; **session review** (12 min AI voice interaction: evaluating results and being precise about gaps -- the AI acts as a specificity coach, pushing back on vague descriptions)
+- **Reading:** AI-generated output from multiple tools (authentic digital text, first cross-tool comparison); Decision Log template fields
 - **Writing:** Decision Log entry (~150-200 words; documenting the gap between intention and result); Goal Document update (~75-100 words; evaluative/exploratory)
 - **Listening:** Instructor think-aloud during worked example; volunteer's description of their experience; AI follow-up questions during session review
 

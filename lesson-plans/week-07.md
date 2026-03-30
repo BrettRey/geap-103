@@ -138,6 +138,8 @@ Process:
 
 **Stretch option for fast finishers:** "Ask AI to write a PR description for the same change you made. Compare it with yours. Which is more specific? Which provides better context? Would a collaborator prefer yours or AI's?"
 
+**Persona review technique** (3 min, after the main PR review): "Before you submit your review, try this: paste your partner's PR description into AI with a persona. Type: 'You are my teammate. You cannot see my screen. Read this PR description. Based only on what it says, tell me: what was changed? Why? What is NOT clear?' Compare AI's reading with your own. Did AI understand the same things you did? If AI was confused, your collaborator will be too."
+
 Instructor circulates:
 - "What does your PR description say? Would I know what you changed without looking at the file?"
 - "Your comment says 'looks good.' Can you be more specific?"
@@ -253,6 +255,7 @@ Display the 5 criteria:
 **Format:** Whole class
 
 - "Today's core skill: writing clearly enough that someone who isn't you can do what needs to be done. A PR description, an Issue, a help request, a task assignment -- the question is always: does the reader have enough context to act?"
+- "Your collaborator doesn't know what you know. That gap -- between your head and theirs -- is what PRs and Issues exist to bridge. The question is always: what's actually there in your description? Not what you meant to say. What you actually wrote."
 - "You practised five words: collaborate, contribute, specific, context, respond. These describe good teamwork in any setting."
 - "If you completed a PR with a comment exchange today, save a screenshot. That's your Collaboration episode for Git Episodes."
 - "Next week: Micro-Defence 2. Review your portfolio tonight. You'll present one piece of work in triads and answer questions. The two new criteria are 'show what you tried' and 'interpret an error.' Pick something where you can demonstrate those."
