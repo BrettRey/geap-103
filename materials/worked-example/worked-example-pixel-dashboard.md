@@ -289,21 +289,66 @@ When she finishes with Claude, she clicks Done. The character waves. The timer s
 
 The difference was not better English. It was better thinking. Elif had to understand what "useful" means before she could describe it. That took two failures and eight weeks of learning to think about what tools do, not just what they look like.
 
+### Between Weeks 10 and 11: Elif keeps using v3
+
+Elif uses v3 for a week. She adds her three agents. She types what each one is working on. She marks tasks done. It works. But she notices something: she is the one doing all the tracking. She opens Claude in one tab, types a task into the dashboard in another tab. She switches to Copilot, types that task into the dashboard. She switches to ChatGPT, types that task. The dashboard does not know what her agents are doing. She knows, and she is typing it in manually. This is a to-do list with pixel art on top.
+
+She writes in her Goal Document:
+
+> v3 works but I am still doing all the work. I type what my agents are doing. The dashboard does not talk to my agents. It is like writing on a whiteboard. I want to launch my agents FROM the dashboard. I want to be the project manager and the dashboard is my office.
+
+### Round 4: The project manager
+
+This is the version Elif builds during the collaborative phase. Her group partner helps test it. She describes what she wants:
+
+> I finally understand. The dashboard should not just show my agents -- it should BE where I manage them. I am the project manager. My AI agents are my team. I want to run them from one place.
+>
+> 1. When I open the dashboard, I see a pixel art office. There is one character already: me. I am the PM. I walk around the office.
+> 2. I can add a new worker. I give it a name and a command to launch it. A new character appears at an empty desk.
+> 3. When I give a worker a task, the dashboard actually runs the command. The worker's character starts typing. The worker's monitor shows the real output -- what the agent is actually saying.
+> 4. I can click on any worker's monitor to see the full output in a larger window.
+> 5. I can drag workers to different positions. Workers closer to my desk are higher priority.
+> 6. As the PM, I can assign tasks, see all active work, review output, stop a worker, and see a history of completed tasks with how long each took.
+> 7. There is a task board on the wall: To Do, In Progress, Done.
+> 8. Everything saves so I don't lose my setup.
+> 9. There is an activity log.
+
+This is a different kind of prompt from v1, v2, or v3. It is not describing appearance (v1), behaviour (v2), or function (v3). It is describing a *role*. Elif is the PM. The dashboard is her office. The agents are her team. The metaphor organises the entire design.
+
+AI tells her: "This needs two parts. An HTML file for the pixel art office, and a Python server that launches the real AI tools." This is the first time Elif's project has more than one file. She asks AI to explain what a server does. AI explains: "The server is a program that runs on your computer. It listens for instructions from the browser. When you click 'start' on a worker, the browser tells the server, and the server launches the AI tool."
+
+She gets [v4](v4/index.html). It has a Python server and an HTML dashboard. She runs `python server.py` in her terminal, opens `localhost:8080` in her browser, and sees: a pixel art office with one character -- her, the PM, in a red vest with a clipboard. She adds "Claude" as a worker. A character appears at a desk. She types a task: "find three sources about climate change for my essay." The server launches Claude. The character starts typing. The monitor shows real output from Claude.
+
+**Process documentation:**
+
+| AI prompt | AI output | My decision | Why |
+|-----------|-----------|-------------|-----|
+| "9 requirements for a PM dashboard that launches real agents, including a Python server" | Two files: server.py and index.html. Server launches CLI tools. Dashboard shows pixel art office with PM character. | Accept with changes | The server worked immediately. The dashboard needed small fixes: the clock was not showing real time, and the add-agent form was not working because the server was single-threaded. AI fixed both. |
+
+**What changed across four versions:**
+
+| Version | What Elif described | What she got | Problem |
+|---------|-------------------|--------------|---------|
+| v1 | What it should LOOK like | A nice animation with buttons | No real function. A chess timer. |
+| v2 | How agents should BEHAVE | An impressive simulation | No real data. A screensaver. |
+| v3 | What the tool should DO for her | A real tracker, but manual | Still doing all the work herself. A to-do list. |
+| v4 | What ROLE she plays and how the system works | A PM dashboard that launches real agents | Works. Useful. She manages her agents from one place. |
+
 ---
 
 ## Weeks 11-14: Finishing, Sharing, Reflecting
 
 ### Week 11: Micro-Defence 3
 
-Elif presents her dashboard to a triad. The Week 11 criteria add "describes how AI was directed" and "evaluates AI output." She walks through all three versions:
+Elif presents her dashboard to a triad. The Week 11 criteria add "describes how AI was directed" (including which tool and why) and "evaluates AI output." She walks through all four versions:
 
-> "Version 1 failed because I described the appearance, not the function. I said 'when an agent is working, the character types' but that is just an animation. Version 2 failed because I described behaviour rules for a simulation, but a simulation is not a tool. Version 3 worked because I described 8 specific things the tool has to do for me. The most important sentence was 'this is my workflow, the agents are my agents, the tasks are my real tasks.'"
+> "Version 1 failed because I described the appearance, not the function. Version 2 failed because I described behaviour rules for a simulation. Version 3 was a real tool but I was still doing all the work manually. Version 4 works because I described my role -- I am the project manager -- and the dashboard actually launches my agents. The breakthrough was not better prompting. It was understanding what I needed."
 
-The instructor asks: "What would you change about v3?" Elif says: "The characters all look similar. I want them to be more different. And I want to see how many tasks each agent finished this week, not just today."
+The instructor asks: "Which tool did you use for v4, and why?" Elif says: "I used Claude because the project needed a server and a web page, and Claude is better at writing code than Copilot in Word. I learned in Week 2 that different tools are better at different things."
 
 ### Week 12: Git Episodes
 
-Elif's Git Episodes show her version history. She has commits for v1, v2, and v3. Her Restore episode documents going back to v1 after building v2 to compare them. Her Collaboration episode shows the Issue her partner wrote about the dashboard.
+Elif's Git Episodes show her version history. She has commits for v1, v2, v3, and v4. Her Restore episode documents going back to v1 after building v2 to compare them. Her Error Recovery episode documents the single-threaded server bug in v4 -- the server could only handle one connection at a time, so adding agents failed until AI fixed the threading. Her Collaboration episode shows the Issue her partner wrote about the dashboard.
 
 ### Week 13: The Conversation
 
@@ -311,17 +356,19 @@ In her 4-minute oral reflection with the instructor, Elif discusses two CLOs:
 
 **CLO 3 (Guide AI tools to support a work goal):**
 
-> "I learned that AI does exactly what you say, not what you mean. In Week 2 I said 'help me study better' and got tips. By Week 10 I said '8 specific requirements' and got a real tool. The skill is knowing what to say."
+> "I learned that AI does exactly what you say, not what you mean. In Week 2 I said 'help me study better' and got tips. By Week 10 I said '8 specific requirements' and got a real tool. But the biggest lesson was choosing the right tool. I used Copilot for documents and Claude for code. Different tools for different work."
 
 **CLO 4 (Evaluate AI-generated text):**
 
-> "AI makes mistakes I would not expect. In Week 6 the formula was wrong for February. In Week 5 the alt text said 'an image.' I have to check everything, even when it looks right."
+> "AI makes mistakes I would not expect. In Week 6 the formula was wrong for February. In Week 5 the alt text said 'an image.' In v4, the server was single-threaded and I didn't know what that meant until it broke. I had to paste the error into AI and ask what it meant. Checking AI's work is not optional -- it is the whole skill."
 
 ### Week 14: Final Presentation
 
-Elif opens her dashboard in the browser. Three pixel art characters are at their desks. She shows the class her real activity log from the past week. 47 tasks completed. She says:
+Elif opens her terminal, runs `python server.py`, and opens `localhost:8080` in the browser. The pixel art office appears. She is the PM character in the red vest. She adds Claude, Copilot, and ChatGPT as workers. Three characters appear at desks. She assigns Claude a task: "find the definition of 'projectibility' for my philosophy essay." Claude's character starts typing. Real output streams onto the monitor.
 
-> "This app took me three tries. The first time I described what it should look like. The second time I described how it should behave. The third time I described what it should do for me. That is the difference between a picture, a toy, and a tool."
+She turns to the class:
+
+> "This app took me four tries. The first time I described what it should look like. The second time I described how it should behave. The third time I described what it should do for me. The fourth time I described what role I play. That was the breakthrough -- not a picture, not a toy, not a to-do list. A tool I actually use every day to manage my work."
 
 ---
 
@@ -329,9 +376,9 @@ Elif opens her dashboard in the browser. Three pixel art characters are at their
 
 Elif's grade was based on:
 
-- **Could she describe what she wanted clearly enough?** (Yes, by v3, after two honest failures.)
-- **Did she document the process?** (Yes: process tables, Decision Logs, commit messages, Goal Document entries tracking her evolving thinking.)
-- **Could she explain her work to someone else?** (Yes: micro-defences, peer check-ins, and the final presentation all showed she could articulate what went right and wrong.)
+- **Could she describe what she wanted clearly enough?** (Yes, by v4, after three honest failures -- each one more sophisticated than the last.)
+- **Did she document the process?** (Yes: process tables, Decision Logs, commit messages, Goal Document entries tracking her evolving thinking from wish list to PM dashboard.)
+- **Could she explain her work to someone else?** (Yes: micro-defences, peer check-ins, and the final presentation all showed she could articulate what went right and wrong -- including which tools she chose and why.)
 - **Was the final artifact impressive?** (This was not a grading criterion. But yes, it was.)
 
 The language level was B1. The project ambition had no limit.
@@ -344,6 +391,7 @@ Open these in your browser to see exactly what Elif got at each stage:
 
 - [v1.html](v1.html) -- The chess timer. Buttons and animations, no real function.
 - [v2.html](v2.html) -- The screensaver. Impressive simulation, no real data.
-- [v3.html](pixel-agent-dashboard.html) -- The real tool. Tracks actual work, saves everything.
+- [v3.html](v3.html) -- The manual tracker. Real tasks, but Elif does all the work herself.
+- [v4/](v4/) -- The PM dashboard. Run `python server.py`, open `localhost:8080`. Elif is the project manager. The dashboard launches real agents.
 
 Each version took about 10 minutes for AI to build. The time was not spent building. It was spent thinking about what to ask for.
