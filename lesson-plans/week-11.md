@@ -48,6 +48,8 @@ Display:
 
 "Every role produces different language. Nobody sits back. Groups of 3: one role each. Groups of 2: combine Builder with one other. You'll rotate roles in Week 12."
 
+"You learned PRs, Issues, and comments in Week 7. Now you use them for real. The Coordinator writes Issues that describe what needs to be done. The Builder submits PRs with descriptive messages. The Reviewer comments on PRs before they're merged. Same skills, higher stakes."
+
 Groups assign roles (2 min). Coordinator writes 1-2 Issues for today's work if they haven't already.
 
 ### 0:17--0:40 | Collaborative Building

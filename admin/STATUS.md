@@ -26,4 +26,14 @@
 
 **All 14 weeks complete. Assessment rubrics complete. Project ideas complete.**
 
-**Next:** Sample student project exemplars (2-3 worked examples at different rubric levels, due Apr 4). Instructor guide + polish (due Apr 18).
+### 2026-03-30 Session Notes (evening)
+- AI literacy integration across all 14 lesson plans. North star "What's actually there?" introduced in Week 1 and recurring through Week 14. Progressive AI literacy skills woven into existing activities (one per week, weeks 1-9). CLOs unchanged.
+- Cowen/Roberts EconTalk analysis: validated course direction, identified model literacy gap (now addressed via Week 2 model comparison activity), pushed back on prompting-will-become-trivial claim for B1 learners.
+- Worked example ("Elif's Pixel Art Agent Dashboard") written: follows one student through all 14 weeks. Four HTML artifacts (v1-v4) built during session with real AI prompts. v4 is a Python server + HTML dashboard that launches real CLI agents. Narrative documents the authentic iteration process.
+- Sample project idea #23 (Pixel Art Agent Dashboard) added.
+- Decision Log template: "AI used" → "Tool used" with expanded guidance.
+- Micro-defence criterion 6 scoring anchor expanded to include tool choice.
+- Week 14 transfer table expanded with 4 AI literacy skills.
+- Timing audited on all modified weeks — no overflows. Week 2 persona demo moved from worked example to Segment B to fit. Week 9 pre-task planning extended by 2 min (building time 43 min instead of 45).
+
+**Next:** Remaining worked examples at different rubric levels (due Apr 4). Instructor guide + polish (due Apr 18). v4 dashboard needs browser testing (server threading fix applied but not confirmed in browser).

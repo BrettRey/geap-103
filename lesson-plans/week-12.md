@@ -109,7 +109,7 @@ Groups confirm new roles and plan the session:
 **Format:** Small groups with instructor circulation
 **Language skills:** Writing (PRs, comments, Issues), speaking (coordination), reading (AI output, partner's work)
 
-Groups build. Same role-based structure as Week 11 but with rotated roles.
+Groups build. Same role-based structure as Week 11 but with rotated roles. The PR + Issue + comment workflow from Week 7 should be routine by now. If it isn't, the Coordinator should model it: write an Issue, assign it, close it when the PR is merged.
 
 **AI reflection pause at 1:05** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and what did you decide about the result?"
 

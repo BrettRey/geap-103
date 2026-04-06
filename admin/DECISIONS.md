@@ -56,6 +56,22 @@
 
 - **Transfer table as pair task, not instructor monologue.** Students match skills to future contexts, then instructor reveals. Ellis flagged passive reception.
 
+## 2026-03-30
+
+- **"What's actually there?" adopted as course north star.** Each week reveals a gap between surface and substance in a new domain. Not a slogan repeated mechanically — a question that each week's activities answer differently. Connects file management, accessibility, verification, collaboration, and project building under one principle.
+
+- **Progressive AI literacy integrated across weeks 1-9.** One teachable technique per week: privacy (wk1), restatement + model comparison + persona (wk2), context decay (wk3), when-not-to-use-AI (wk4), second opinion (wk5), failure classification (wk6), persona for review (wk7), error taxonomy + exit criteria (wk8), scaffolding + tool selection (wk9). CLOs unchanged — skills map to CLOs 2, 3, and 4.
+
+- **Decision Log "AI used" relabelled "Tool used."** Expanded guidance: "Which AI tool? Why this one?" Prompts students to reason about tool choice, not just record it.
+
+- **Worked example follows Elif through all 14 weeks.** Four HTML artifacts (v1-v4) with real AI prompts. Arc: appearance → behaviour → function → role. v4 is a two-part app (Python server + HTML) that launches real CLI agents. Not fabricated — artifacts were built by AI during the session and the process documented authentically.
+
+- **Micro-defence criterion 6 expanded to include tool choice.** "States what was asked, why, and which tool was chosen" for full credit. Aligns with the progressive AI literacy thread.
+
+- **Week 14 transfer table expanded.** Four AI literacy skills added: tool selection, second-opinion checking, starting fresh, persona assignment. Closing strengthened to name AI management as a distinct skill set.
+
+- **Cowen analysis: course is ahead of his proposals but model literacy was a real gap.** His "lock them in a room" cheating proposal maps to micro-defences (already in place). His "one-third curriculum on AI" proposal is more conservative than what GEAP 103 does. His observation that most users only know the free model prompted the model comparison activity in Week 2. Prompting technique will become trivial for native speakers but remains the core skill for B1 learners.
+
 - **Whole-sequence review (Weeks 1-7) conducted.** 5 R&R, 1 Accept. Cross-cutting fixes adopted (above). Set aside: retrofit info-gap tasks into Weeks 1-2, DL peer review, collapse three threads, replace Git with shared docs, make GD graded.
 
 - **Sample project ideas sourced from Mollick/Cummins/Willison.** 21 curated ideas in 4 tiers (identity+surprise, practical+personal, creative+ambitious, professional). Cummins' identity texts framework and Willison's "build it and ship it" ethos applied.
