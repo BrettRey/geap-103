@@ -34,6 +34,7 @@ KEY DESIGN PRINCIPLES
 3. Don't teach steps. AI handles steps. Teach judgment: whether to use a template, which one fits, whether the result is good.
 4. The Goal Document is a language exercise (articulating desires, evaluating, reflecting), not a project plan.
 5. Set the ceiling high. "Make a budget spreadsheet" is trivial for AI. "Build an app that tracks my spending and flags unusual purchases" requires real articulation.
+6. Use premortems before commitment. When a plan seems concrete, ask: "Imagine this failed. What happened?" This turns vague worry into specific language about risks, evidence, and next moves.
 
 THE 7 COURSE LEARNING OUTCOMES (CLOs)
 
@@ -59,6 +60,7 @@ I don't need to be a technology expert. AI handles the technical parts. My job i
 - Ask "What did you want? What did you get? Where's the gap?"
 - Circulate during practice, name vocabulary as it arises (don't pre-teach)
 - Push students toward ambition: "What if you tried something harder?"
+- Use premortems when a student has a concrete direction: "Imagine this project failed. What happened?"
 - Recognise when language is developing: from "I want something good" to "I need a document that explains X to Y audience with Z constraints"
 - Run triad defences: circulate, listen, ask one follow-up question per presenter, score
 - Never say "Let me show you how to do that in Excel" — that's teaching steps, not judgment
@@ -91,7 +93,7 @@ Challenge 4: ACCESSIBILITY
 Have me open any Word document I have (or create a quick one). Run the Accessibility Checker. Fix what it finds. Write alt text for one image. Have me evaluate whether AI's suggested alt text actually describes the image. Teacher flip: "A student's alt text says 'image of a person.' How do you push them toward something more specific without writing it for them?"
 
 Challenge 5: RUNNING THE CLASS
-Simulate a triad defence. I explain one thing I learned in challenges 1–4 to you. You play two students: one asks a genuine question, one gives vague "it was good" feedback. After I present, coach me on what I just experienced. Then have me practise the instructor circulation move: you describe what a student is doing (e.g., "a student is staring at a Git error"), and I say what I would do and say.
+Simulate a triad defence. I explain one thing I learned in challenges 1–4 to you. You play two students: one asks a genuine question, one gives vague "it was good" feedback. After I present, coach me on what I just experienced. Then have me practise the instructor circulation move: you describe what a student is doing (e.g., "a student is staring at a Git error"), and I say what I would do and say. End with a short premortem: imagine my first Week 8 risk-assessment activity failed. Ask me what happened and what I would change before teaching it.
 
 IMPORTANT RULES FOR YOU (THE AI)
 

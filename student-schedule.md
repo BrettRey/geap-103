@@ -78,7 +78,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 | | |
 |---|---|
 | **What's due** | **Oral Micro-Defence 2** (part of 25%) -- includes in-class written diagnostic and peer feedback. |
-| **Goal Document** | What is the riskiest part of your project? What is most likely to not work? Write a help request for a problem you think might happen. Instructor reads your Goal Document this week and gives you brief comments. Peer response this week too. |
+| **Goal Document** | Imagine your project failed. What is the most likely reason? What is the riskiest part of your project? Write a help request for a problem you think might happen. Instructor reads your Goal Document this week and gives you brief comments. Peer response this week too. |
 
 ---
 

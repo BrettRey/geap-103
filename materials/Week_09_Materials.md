@@ -133,7 +133,7 @@ Students circulate and read all groups' summaries (3-5 min). This gives everyone
 
 ### Pre-Task Planning (0:40–0:50)
 
-> "Open your Goal Document. Re-read what you wrote in Weeks 7 and 8 -- your project plan, your risk assessment. Now write a concrete task list for today. Not 'work on my project.' Specific tasks with specific requirements."
+> "Open your Goal Document. Re-read what you wrote in Weeks 7 and 8 -- your project plan, your premortem risk assessment. Now write a concrete task list for today. Not 'work on my project.' Specific tasks with specific requirements."
 
 Students write a task list directly in their Goal Document. This IS the Week 9 entry (entry 9).
 

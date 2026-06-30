@@ -18,6 +18,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 | `materials/` | Instructor materials packages, templates, setup guides, faculty preparation |
 | [Faculty preparation module](https://brettrey.github.io/geap-103/materials/faculty-preparation.html) | Self-paced AI-guided preparation for instructors (copy the prompt, paste into any AI tool) |
 | `materials/geap-103-starter.zip` | Student starter kit (folder structure, templates, copilot-instructions.md) |
+| `skills/` | Reusable AI-agent skills for course planning and instructor support |
 | `design-notes/` | Background research and design rationale |
 | `reviews/` | Simulated expert reviews from the design process |
 | `archive/` | Earlier versions of the assessment framework and topic sequence |
@@ -30,6 +31,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 - **Scaffolded assessment.** Oral assessment criteria grow with the students: 3 criteria at Week 4, 5 at Week 8, 7 at Week 11. Each expansion matches skills students have been practising.
 - **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation: the student points to portfolio evidence and evaluates their own learning.
 - **[Faculty preparation module.](https://brettrey.github.io/geap-103/materials/faculty-preparation.html)** Paste a prompt into any free AI tool. The AI walks you through the same five challenges students face, then asks you to think about what could go wrong and what you'd say as the instructor.
+- **Premortem planning.** Week 8 turns risk assessment into a lightweight premortem: students imagine their project has failed, work backward to explain why, and write a help request for the problem they can now anticipate. A fuller AI-agent version lives at `skills/premortem/SKILL.md` for instructors or curriculum designers stress-testing plans.
 - **Version control.** Students learn to protect and share their work using [Git](https://git-scm.com/)/GitHub (recommended) or cloud version history. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.
 
 ## Status

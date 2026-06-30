@@ -292,9 +292,10 @@ For each: parse the error (what happened, where, what to try). Then: demonstrate
 
 **Structured peer response on Goal Documents** (pairs read each other's GD and answer: "Is the project plan clear enough that you could help with it? What questions do you have?").
 
-**Segment C -- Goal Document:** *"Today was about things going wrong. Think about your project: what's the riskiest part? What's most likely to not work? Write a help request for a problem you think might happen."*
+**Segment C -- Goal Document:** *"Today was about things going wrong. Use the premortem frame: imagine your project failed. What is the most likely reason? What's the riskiest part? Write a help request for a problem you think might happen."*
 
 Sentence frames:
+- "My project failed because _____."
 - "The riskiest part of my project is _____ because _____."
 - "If _____ goes wrong, I would try _____."
 - "I need help with _____. I tried _____, but _____. I expected _____."
@@ -499,7 +500,7 @@ The Goal Document is designed so that the cognitive and linguistic demands incre
 | 5 | "Think about who will use what you build. What would make it hard for them to use? What accessibility issues should you plan for?" | "The person using my project might have trouble with _____." / "I need to check _____." / "One thing I learned today that applies to my project is _____." | Technical scoping |
 | 6 | "Does your project involve data? What would you need to organize and show?" | "My project involves data about _____. I would want to show _____." / "A spreadsheet would help me _____." | Technical scoping |
 | 7 | "What part could someone else help with? Write an Issue describing a task." | "I need help with _____. The task is to _____." / "To do this task, you would need to know _____." | Collaboration scoping |
-| 8 | "What's the riskiest part of your project? Write a help request for a problem you think might happen." | "The riskiest part is _____ because _____." / "If _____ goes wrong, I would try _____." | Risk assessment |
+| 8 | "Imagine your project failed. What is the most likely reason? Write a help request for a problem you think might happen." | "My project failed because _____." / "The riskiest part is _____ because _____." / "If _____ goes wrong, I would try _____." | Premortem risk assessment |
 | 9 | *(Building — Goal Document is the plan being executed: write today's task list)* | "Today I will _____. I need to finish _____ before I can _____." | Execution |
 | 10 | "Compare what you planned with what you built. Write 3-4 sentences about the gap." | "I set out to build _____. What I actually built is _____." / "The biggest difference is _____." | Reflection on gap |
 | 11 | "What is your role in the group? What are you responsible for this week?" | "My role is _____. I am responsible for _____." | New shared goal |

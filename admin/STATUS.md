@@ -37,3 +37,9 @@
 - Timing audited on all modified weeks — no overflows. Week 2 persona demo moved from worked example to Segment B to fit. Week 9 pre-task planning extended by 2 min (building time 43 min instead of 45).
 
 **Next:** Remaining worked examples at different rubric levels (due Apr 4). Instructor guide + polish (due Apr 18). v4 dashboard needs browser testing (server threading fix applied but not confirmed in browser).
+
+### 2026-06-30 Session Notes
+
+- Added a reusable `premortem` agent skill at `skills/premortem/SKILL.md`.
+- Integrated the premortem idea into the course as a lightweight Week 8 risk-assessment move: students imagine their project has failed, work backward to the most likely reason, and write a help request for the anticipated problem.
+- Updated README, instructor orientation, Week 8 lesson/instructor materials, topic sequence, student schedule, and faculty preparation prompt.

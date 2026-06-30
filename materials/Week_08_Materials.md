@@ -253,16 +253,19 @@ Display:
 
 ---
 
-### Goal Document: Risk Assessment (2:15-2:35)
+### Goal Document: Premortem Risk Assessment (2:15-2:35)
 
 > "Today was about things going wrong. Now: think forward. What might go wrong with YOUR project?"
+>
+> "Use the premortem frame: imagine it is six months from now and your project failed. What happened?"
 
 **Prompt** (display):
 
-> What's the riskiest part of your project? What's most likely to not work? Write a help request for a problem you anticipate might happen.
+> Imagine your project failed. What is the most likely reason? What's the riskiest part of your project? Write a help request for a problem you anticipate might happen.
 
 **Sentence frames** *(optional — use if you're stuck)*:
 
+> - "My project failed because _____."
 > - "The riskiest part of my project is _____ because _____."
 > - "If _____ goes wrong, I would try _____."
 > - "I anticipate a problem with _____ because _____."
@@ -324,7 +327,7 @@ Display:
 - What I tried: Steps I took
 - Expected outcome: What should have happened
 
-**4. Update your Goal Document.** Write entry 8: What's the riskiest part of your project? What might go wrong? Write a help request for a problem you anticipate.
+**4. Update your Goal Document.** Write entry 8: imagine your project failed. What is the most likely reason? What might go wrong? Write a help request for a problem you anticipate.
 
 **5. Micro-Defence make-up.** Write the diagnostic (describe a technical problem, 10 min, no AI). Schedule an ad hoc triad with your instructor during any independent work period.
 
@@ -360,7 +363,7 @@ Display:
 |---------------------|----------------------|--------|------|
 | **Micro-Defence 2** | Triads (5 criteria); written diagnostic; peer feedback | Part of 25% component | 2, 5 |
 | **Decision Log** | Entries 3-5 collected for Round 2 feedback | Part of 30% component | 3, 4 |
-| **Goal Document** | Entry 8: risk assessment (ungraded) | Instructor reads + comments | — |
+| **Goal Document** | Entry 8: premortem risk assessment (ungraded) | Instructor reads + comments | — |
 | **Git Episodes** | Error Recovery opportunity during troubleshooting | Part of 10% component | 1 |
 
 ---

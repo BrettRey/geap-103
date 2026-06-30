@@ -75,3 +75,7 @@
 - **Whole-sequence review (Weeks 1-7) conducted.** 5 R&R, 1 Accept. Cross-cutting fixes adopted (above). Set aside: retrofit info-gap tasks into Weeks 1-2, DL peer review, collapse three threads, replace Git with shared docs, make GD graded.
 
 - **Sample project ideas sourced from Mollick/Cummins/Willison.** 21 curated ideas in 4 tiers (identity+surprise, practical+personal, creative+ambitious, professional). Cummins' identity texts framework and Willison's "build it and ship it" ethos applied.
+
+## 2026-06-30
+
+- **Premortem added as a planning and risk-assessment routine.** Week 8's risk assessment now uses a lightweight premortem frame: students imagine their project has failed, explain why, and write the help request they would need if the failure began. The full reusable agent skill is stored at `skills/premortem/SKILL.md` for instructor/curriculum planning.

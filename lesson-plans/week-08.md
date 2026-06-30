@@ -16,8 +16,8 @@
 
 **No session review this week.** The diagnostic, triad defence, and peer feedback are the reflection activities (same as Week 4). Session reviews resume in Week 9.
 
-**Goal Thread -- Risk Assessment:**
-Students have been describing what they want (Weeks 1-4) and what they plan to build (Weeks 5-7). This week adds a new language skill: anticipating what might go wrong. "If X happens, I would..." "The riskiest part is..." This is conditional and hypothetical language, a key B1 development area. Writing a help request for a problem that hasn't happened yet requires students to imagine failure, describe the conditions that would trigger it, and propose what they'd try.
+**Goal Thread -- Risk Assessment / Premortem:**
+Students have been describing what they want (Weeks 1-4) and what they plan to build (Weeks 5-7). This week adds a new language skill: anticipating what might go wrong. The prompt is framed as a lightweight premortem: imagine the project already failed, then work backward to explain why. "If X happens, I would..." "The riskiest part is..." This is conditional and hypothetical language, a key B1 development area. Writing a help request for a problem that hasn't happened yet requires students to imagine failure, describe the conditions that would trigger it, and propose what they'd try.
 
 ---
 
@@ -230,15 +230,18 @@ Instructor circulates:
 
 **Git Episodes -- Error Recovery opportunity:** Students who diagnose and resolve a Git error (Scenario 3) can document this as their Error Recovery episode. Remind: "If you fixed a Git problem, save a screenshot of the error and what you did."
 
-### 2:15--2:35 | Goal Document: Risk Assessment
+### 2:15--2:35 | Goal Document: Premortem Risk Assessment
 **Format:** Individual writing, then pair exchange
 **Language skills:** Writing (conditional, hypothetical, anticipatory)
 
 "Today was about things going wrong. You practised reading error messages and writing help requests for real problems. Now: think forward. What might go wrong with YOUR project?"
 
-**Prompt** (displayed): "What's the riskiest part of your project? What's most likely to not work? Write a help request for a problem you anticipate might happen."
+"Use the premortem frame: imagine it is six months from now and your project failed. What happened?"
+
+**Prompt** (displayed): "Imagine your project failed. What is the most likely reason? What's the riskiest part of your project? Write a help request for a problem you anticipate might happen."
 
 **Sentence frames** *(optional -- use if you're stuck)*:
+- "My project failed because _____."
 - "The riskiest part of my project is _____ because _____."
 - "If _____ goes wrong, I would try _____."
 - "I anticipate a problem with _____ because _____."

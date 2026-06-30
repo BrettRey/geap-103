@@ -80,6 +80,16 @@ Some students will have consistent interests across four weeks. Some will change
 
 ---
 
+## The premortem move
+
+When a student has a concrete project direction, use a premortem before building: "Imagine it is six months from now and this project failed. What happened?" That frame is stronger than "What could go wrong?" because it asks for a story, not a polite list of worries.
+
+In GEAP 103, the student version is simple. In Week 8, students name the riskiest part of their project, explain why it might fail, and write the help request they would need if that failure started happening. This practises conditional language, troubleshooting vocabulary, and professional help-seeking before the problem is real.
+
+For instructor or curriculum planning, the full reusable agent skill is in `skills/premortem/SKILL.md`. Use it to stress-test lesson plans, faculty preparation, assessment logistics, or any high-cost course decision before implementation.
+
+---
+
 ## What "good" looks like
 
 ### Good instructor moves
@@ -87,6 +97,7 @@ Some students will have consistent interests across four weeks. Some will change
 - "What did you want? What did you get? Where's the gap?" (focuses on articulation)
 - "Can you explain that to your partner? Did they understand?" (tests whether language works)
 - "What would you ask for differently next time?" (develops revision skills)
+- "Imagine this has already failed. What happened?" (turns vague risk into a concrete premortem story)
 - "That's an interesting idea. Can you describe it more specifically? What would someone see if they looked at it?" (pushes articulation toward precision)
 - "You changed your mind since last week. What happened?" (values reflection, not consistency)
 

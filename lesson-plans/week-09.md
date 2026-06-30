@@ -79,7 +79,7 @@ Students circulate and read all groups' summaries (3-5 min). This gives everyone
 **Format:** Individual writing, then brief pair check with A/B turns
 **Language skills:** Writing (planning language), reading (own Goal Document)
 
-"Open your Goal Document. Re-read what you wrote in Weeks 7 and 8 -- your project plan, your risk assessment. Now write a concrete task list for today. Not 'work on my project.' Specific tasks with specific requirements."
+"Open your Goal Document. Re-read what you wrote in Weeks 7 and 8 -- your project plan, your premortem risk assessment. Now write a concrete task list for today. Not 'work on my project.' Specific tasks with specific requirements."
 
 "Three things before you start building:"
 
