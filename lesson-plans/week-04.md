@@ -25,9 +25,9 @@ For three weeks students have practised expressing desires (Week 1), evaluating 
 **Language skills:** Reading (file paths, naming conventions), writing (brief process documentation), vocabulary application
 
 Students finalize their file-system artifact for submission:
-- GEAP 103 folder in OneDrive: organized, named consistently, clear structure
-- Commit current state to portfolio repository on GitHub (if set up)
-- Submit OneDrive share link via Blackboard
+- GEAP 103 folder on a local drive or cloud service: organized, named consistently, clear structure
+- Save or commit the current state in the student's chosen version-history path
+- Submit a share link, screenshots/file listing, or exported folder package through Blackboard
 
 **Process documentation** (new this week): Students write 2-3 sentences alongside their submission:
 
@@ -164,7 +164,7 @@ Instructor circulates with scoring sheets. For each group:
 
 With ~7 groups and 28 minutes across 3 rounds, the instructor will hear ~15 of ~21 presenters substantively (2-3 min each). The remaining students are scored on briefer observation. The scoring sheet's "evidence basis" field (full / partial / deferred) tracks this.
 
-**Observation tracking:** After this round, record which students received partial or deferred observation. At Week 8, those students' groups are visited first. This guarantees every student receives at least 2 full observations across the 3 micro-defence rounds.
+**Observation tracking:** After this round, record which students received partial or deferred observation. At Week 8, those students' groups are visited first. This improves coverage but does not guarantee two full observations within the current 30-minute blocks. If the direct evidence for a student's oral score is insufficient, record Deferred and arrange a short live follow-up outside class; do not treat missed observation as weak performance.
 
 **Make-up for absent students:** Students who miss Week 4 write the diagnostic during settling-in the following week, then do an ad hoc triad (instructor + 2 volunteers) during any independent work period. The instructor hears the full presentation.
 
@@ -232,7 +232,7 @@ Students write entry 4 (~10 min). Some students' interests will have been consis
 ## After Class
 
 - **Instructor reads all Goal Documents** and returns brief comments (1-3 sentences per student). Focus: Is the student's thinking developing? Can you tell what interests them? What's still vague?
-- **Score micro-defences** using scoring sheets. For "partial observation" students, score what you heard. For "deferred" students, schedule a 2-min follow-up at the start of Week 5.
+- **Score micro-defences** using scoring sheets. For "partial observation" students, score what you heard. For "deferred" students, arrange a short live follow-up outside class.
 - **Score diagnostic writing** holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 11.
 - **Spot-check file-system artifacts** including the 2-3 sentence process documentation.
 - **Collect Decision Log entries 1-2** for formative feedback (returned by Week 6).
@@ -241,7 +241,7 @@ Students write entry 4 (~10 min). Some students' interests will have been consis
 
 ## Instructor Prep Checklist
 
-- [ ] File-system artifact submission method decided (OneDrive share link via Blackboard recommended)
+- [ ] File-system artifact submission accepts local and cloud folders: share link, screenshots/file listing, or exported folder package via Blackboard
 - [ ] Process documentation prompt on slide ("How did you organize? What naming convention? What would you change?")
 - [ ] Triad groups pre-assigned (list of groups of 3, posted or ready to announce)
 - [ ] Scoring sheets printed: one per student (3 criteria + fluency band + evidence basis)
@@ -267,7 +267,7 @@ Students write entry 4 (~10 min). Some students' interests will have been consis
 
 ## Assessment Alignment
 
-- **File-system artifact package due (7% of final grade):** Organized OneDrive folder + portfolio repository + 2-3 sentences of process documentation (CLO 1)
+- **File-system artifact package due (7% of final grade):** Organized local or cloud folder + evidence of named versions/recovery + 2-3 sentences of process documentation (CLO 1)
 - **Oral Micro-Defence 1 (part of 25% component):**
   - In-class written diagnostic (10% of micro-defence grade): unmediated writing
   - Oral triad defence (30% fluency + 50% task = 80%): sustained explanation to 2 partners, instructor circulates and samples

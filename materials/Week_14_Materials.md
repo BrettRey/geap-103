@@ -7,7 +7,7 @@
 
 This file contains everything you need to prepare slides and run the class for Week 14. The lesson plan (`lesson-plans/week-14.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 14, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
-**Week 14 design note:** This is the final class. One graded item is due: the Final Artifact Package (10%). Everything else is celebratory. The session review (explaining to a future student) is the last of 14 weeks of AI-assisted speaking practice. The sharing event (individual and group presentations) is ungraded. The wrap-up connects course skills to degree programs. The course ends with the student's voice, not their writing.
+**Week 14 design note:** In the 14- and 13-meeting deliveries, this is the final class. One graded item is due: the Final Artifact Package (10%). Everything else is celebratory. The session review (explaining to a future student) is the last of ten speaking-practice sessions across the 14-unit curriculum. The sharing event (individual and group presentations) is ungraded. In the 12-meeting delivery, use the asynchronous Week 14 closeout instead.
 
 **No new vocabulary.** All 40 terms from Weeks 1--9 should be part of active vocabulary. The best evidence of acquisition is this week: students use terms without prompting across presentations, discussions, and reflections.
 
@@ -99,7 +99,7 @@ Students finalise and submit. Tasks:
 
 ### Session Review (0:27--0:38)
 
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 
 **Role-setting prompt** (on slide):
 
@@ -111,15 +111,15 @@ Students finalise and submit. Tasks:
 
 AI role: Future student.
 
-Students talk to AI for 10 minutes. The AI asks follow-ups: "What was the hardest part?" "What would you do differently?" "What advice would you give me?"
+On the AI route, students talk to AI for 10 minutes. On a fallback route, a partner or instructor asks the same follow-ups: "What was the hardest part?" "What would you do differently?" "What advice would you give me?"
 
-This is the final session review. The scenario is reflective and forward-looking, a fitting end to 14 weeks of speaking practice.
+This is the final session review. The scenario is reflective and forward-looking, closing the speaking-practice sequence across the 14 curricular units.
 
 **Self-check** (1 min):
 
 > "Write two sentences: What did the 'future student' ask about? What advice did you give?"
 
-**Note:** Voice mode starts a new chat.
+**If using AI voice:** Voice mode starts a new chat. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ---
 
@@ -288,7 +288,7 @@ Instructor steps away from the room (or moves to a far corner out of sight) whil
 
 **Format:** Whole class
 
-> "You started this course 14 weeks ago. Some of you didn't know what a file path was. Some of you had never used AI. All of you have now built something real, documented how you built it, shared it with others, and explained it in English."
+> "At the start of this course, some of you didn't know what a file path was. Some of you had never used AI. All of you have now built something real, documented how you built it, shared it with others, and explained it in English."
 >
 > "Your Goal Documents tell the story of how your thinking changed -- 13 entries, from 'I wish my computer could...' to 'When I started I thought... now I think...' I've enjoyed reading them."
 >

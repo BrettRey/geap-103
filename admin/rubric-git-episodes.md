@@ -9,7 +9,7 @@
 
 ## Overview
 
-Three required episodes, documented during Weeks 6--12, submitted Week 12. By this point, students have had 7 weeks of Git activity. The collaboration episode arises naturally from the Phase 3 group work in Weeks 11--12. Closing Git Episodes in Week 12 (alongside Decision Logs) clears Week 13 for the oral reflection.
+Three required episodes, documented during Weeks 6--12 and submitted Week 12. Students may use GitHub, local Git, or an approved document/cloud version-history path. Decision Logs close in Week 11; closing the episodes in Week 12 clears Week 13 for the oral reflection.
 
 Assessment is checklist-based.
 
@@ -19,11 +19,11 @@ Assessment is checklist-based.
 
 | Episode | Evidence Required | CLO |
 |---------|-------------------|-----|
-| **Restore** | Demonstrate recovering an earlier version (screenshot/log of revert/checkout/restore) | 1 |
+| **Restore** | Recover an earlier version as a usable file/state; show the before state, recovery action, and result. A history preview alone is insufficient. | 1 |
 | **Error recovery** | One "something broke -- diagnosis -- fix" sequence with error text captured | 1, 2 |
-| **Collaboration** | One PR (or equivalent) with description + one comment exchange | 7 |
+| **Collaboration** | The student's own change handoff, a specific comment received, and the student's reply, through a PR or approved equivalent | 7 |
 
-**Equivalent alternatives for the collaboration episode:** A shared document with tracked changes and a handoff note explaining what was changed and why; a OneDrive version history showing alternating contributions with descriptive file-save comments; or a GitHub Issue with description + response thread. The key requirement: evidence that two people communicated about shared work through a documented channel.
+**Equivalent alternatives for the collaboration episode:** An individual document copy with tracked changes/version history plus a What/Why/What-not handoff note, specific partner comment, and reply; or a GitHub Issue/change thread that shows the same three elements. Each student's action must be individually identifiable. Watching a demonstration, using a partner's history, or submitting one undifferentiated group artifact is practice, not assessment evidence.
 
 Each episode must include both the story (what happened) and the evidence (screenshot or log).
 
@@ -50,9 +50,9 @@ Each episode must include both the story (what happened) and the evidence (scree
 
 | Episode | &#10003; Clear evidence | Weak evidence | Missing | Notes |
 |---------|------------------------|---------------|---------|-------|
-| Restore: recovered an earlier version (screenshot/log) | | | | |
+| Restore: usable earlier version recovered; before/action/result shown | | | | |
 | Error recovery: broke -- diagnosed -- fixed (error text captured) | | | | |
-| Collaboration: PR with description + comment exchange | | | | |
+| Collaboration: own handoff + specific comment received + reply | | | | |
 
 **Overall level (circle one):** Complete / Mostly complete / Partial / Insufficient
 
@@ -70,9 +70,9 @@ _____________________________________________________________________________
 
 By Week 14, students should understand version history as a timeline of saved states that can be navigated (not just "undo"). They should be able to explain, in simple terms, that:
 
-- A commit is a snapshot
-- Restoring means going back to an earlier snapshot
-- Collaboration means two people contributing snapshots to the same timeline
+- A commit or named version is a snapshot
+- Restoring/recovery produces a usable earlier state
+- Collaboration includes an identifiable change handoff and response
 
 The command-line details are secondary to this conceptual understanding.
 
@@ -99,7 +99,7 @@ The oral confirmation is brief (2 min) and non-punitive. The goal is to verify t
 
 Before submitting (Week 12), confirm:
 
-- [ ] Restore: recovered an earlier version (screenshot/log of revert/checkout/restore)
+- [ ] Restore: recovered an earlier version as a usable file/state and showed the before state, action, and result
 - [ ] Error recovery: something broke, you diagnosed it, you fixed it (error + fix captured)
-- [ ] Collaboration: a PR with description + one comment exchange (screenshot/link)
+- [ ] Collaboration: my own change handoff + a specific comment received + my reply (PR or approved equivalent)
 - [ ] Each episode has both the story (what happened) and the evidence (screenshot or log)

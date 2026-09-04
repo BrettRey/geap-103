@@ -52,15 +52,15 @@ Students open their Git Episodes evidence. Display the self-check:
 > **Git Episodes -- check your evidence now:**
 > - [ ] **Restore:** recovered an earlier version (screenshot or log of revert/checkout/restore)
 > - [ ] **Error Recovery:** something broke, you diagnosed it, you fixed it (error message + fix)
-> - [ ] **Collaboration:** a PR with description + one comment exchange (screenshot or link)
+> - [ ] **Collaboration:** your own change handoff + specific comment + reply, through a PR or tracked-change/version-history exchange
 >
 > If you're missing one, you have until end of class. If you're missing two, come see me.
 
 Students who are complete: submit now through the established process.
 
-Students missing episodes: use collaborative building time (Segment B) to generate evidence. The Collaboration episode is the easiest to generate today -- a PR with description + comment exchange during group work counts.
+Students missing episodes: use collaborative building time (Segment B) to generate evidence. A PR exchange or an equivalent tracked-change/version-history handoff can complete the Collaboration episode.
 
-**Contingency for the Collaboration episode:** If a student needs this episode but their group partner is unavailable, pair them with another student who also needs the episode. They can create a quick cross-group PR exchange.
+**Contingency for the Collaboration episode:** If a student's group partner is unavailable, pair them with another student who needs the episode or use the instructor's prepared sample response. Every student still submits their own handoff, received comment, and reply.
 
 ---
 
@@ -156,9 +156,9 @@ Groups build. Same role-based structure as Week 11 but with rotated roles.
 
 > "Stop building. Write one sentence: what did you just ask AI to do, and what did you decide about the result?"
 
-**Git Episodes -- last chance:** Students missing the Collaboration episode should submit a PR with description + comment exchange during this building time.
+**Version-control episodes -- last chance:** Students missing the Collaboration episode complete their own change handoff + specific comment + reply during this building time.
 
-> "If you need a Collaboration episode, do it now. Submit a PR, get a comment from your partner, save the screenshot."
+> "If you need a Collaboration episode, do it now. Complete a PR or tracked-change handoff, get a specific comment, reply, and save your evidence."
 
 **What to say while circulating:**
 
@@ -168,16 +168,16 @@ Groups build. Same role-based structure as Week 11 but with rotated roles.
 | Student unclear on new role | "What's your new role? How is it different from last week?" |
 | Group near completion | "What has your group accomplished? What's the plan for finishing by next week?" |
 | PR descriptions are vague | "Read your PR description. Could someone who wasn't here understand what you changed?" |
-| Student needs Collaboration episode | "Submit a PR now with a clear description. Ask your partner to comment. Save the screenshot. That's your episode." |
+| Student needs Collaboration episode | "Use your working route now: make a clear handoff, get a specific comment, reply, and save your own evidence." |
 | Group stuck or off track | "Coordinator: what Issue are you working on? What's the next step?" |
 
 ---
 
-### Commit + Git Episodes Final Submission (1:25--1:35)
+### Save Version + Episodes Final Submission (1:25--1:35)
 
 **Format:** Individual
 
-All students commit their work. Students who haven't submitted Git Episodes: submit now. This is the deadline.
+All students save a named version in their established path. Students who have not submitted the episodes submit now. This is the deadline.
 
 > "Git Episodes deadline. Submit now. Three episodes: Restore, Error Recovery, Collaboration. If you're missing one, submit what you have."
 
@@ -189,13 +189,13 @@ All students commit their work. Students who haven't submitted Git Episodes: sub
 
 ## Segment C: Goal Document + Session Review + Closing (1:50--2:45)
 
-### Goal Document: Comparing Week 4 with Now (1:50--2:10)
+### Goal Document: Comparing Week 4 with Now (1:50--2:05)
 
 **Format:** Individual reading, then writing
 
 > "Go back to your Week 4 Goal Document entry -- the one where you took stock after Phase 1. Read it. Then write about what changed."
 
-**Reading** (5 min): Students read their Week 4 entry (and optionally skim Weeks 1--3).
+**Reading** (4 min): Students read their Week 4 entry (and optionally skim Weeks 1--3).
 
 **Prompt** (display):
 
@@ -208,11 +208,23 @@ All students commit their work. Students who haven't submitted Git Episodes: sub
 > - "I didn't expect _____, but it turned out that _____."
 > - "Although I thought _____, what actually happened is _____."
 
-**Writing** (15 min): Students write entry 12 in their Goal Document. This requires temporal comparison: looking back 8 weeks and articulating what changed and why. This is the most linguistically demanding comparison the Goal Document has asked for.
+**Writing** (11 min): Students write entry 12 in their Goal Document. This requires temporal comparison: looking back 8 weeks and articulating what changed and why.
 
 ---
 
-### Bridging Activity (2:10--2:12)
+### Cross-Group Goal Document Response (2:05--2:15)
+
+Pair students with someone outside their project group. Exchange entries through a tested share link or Blackboard/file handoff. Each student writes:
+
+> 1. One change I can see since Week 4 is _____.
+> 2. The evidence for that change is _____.
+> 3. One question I still have is _____.
+
+Students discuss responses for the final four minutes. Use one triad for odd numbers or absence; each student still receives a written response. If a link fails, switch immediately to the file/Blackboard route.
+
+---
+
+### Bridging Activity (2:15--2:17)
 
 **Format:** Individual, silent
 
@@ -220,9 +232,9 @@ All students commit their work. Students who haven't submitted Git Episodes: sub
 
 ---
 
-### Session Review (2:12--2:25)
+### Session Review (2:17--2:30)
 
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 
 **Role-setting prompt** (on slide):
 
@@ -236,17 +248,19 @@ AI role: Sceptical instructor.
 
 Students talk to AI for 10--12 minutes. The AI challenges their self-assessment: "You rated this Excellent. What makes it Excellent and not just Proficient?" "What evidence supports your rating?"
 
+If AI voice is unavailable, a cross-group partner uses the same sceptical-instructor questions from a prompt card, or the student makes a private phone recording and answers both questions. Complete the same self-check.
+
 This directly rehearses the oral reflection (Week 13), where the instructor will ask similar questions.
 
 **Self-check** (1 min):
 
 > "Write two sentences: What rating did you defend? What was the hardest question AI asked?"
 
-**Note:** Voice mode starts a new chat.
+**If using AI voice:** Voice mode starts a new chat. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ---
 
-### Week 13 Preparation (2:25--2:35)
+### Week 13 Preparation (2:30--2:40)
 
 **Format:** Whole class
 
@@ -269,7 +283,7 @@ Display:
 
 ---
 
-### Closing (2:35--2:45)
+### Closing (2:40--2:45)
 
 **Format:** Whole class
 
@@ -279,7 +293,7 @@ Display:
 >
 > "Collaborative work continues next week during the finalization time. Roles persist."
 >
-> "Next week: I talk to each of you one-on-one for 4 minutes about your learning. This is the culmination of 13 weeks of speaking practice. You've been doing this with AI every week. Now you do it with me."
+> "Next week: I talk to each of you one-on-one for 4 minutes about your learning. This is the culmination of the speaking practice you've done through AI voice, typed-and-read exchanges, live role-play, and micro-defences. Now you do it with me."
 
 ---
 
@@ -309,7 +323,7 @@ In Week 12, we submitted Git Episodes, mapped portfolio evidence to CLOs, contin
 |---------|-------------------|
 | **Restore** | Recovered an earlier version (screenshot or log of revert/checkout/restore) |
 | **Error Recovery** | Something broke, you diagnosed it, you fixed it (error message + fix) |
-| **Collaboration** | A PR with description + one comment exchange (screenshot or link) |
+| **Collaboration** | Your own change handoff + specific comment + reply, via PR or tracked-change/version-history exchange |
 
 Contact the instructor about a late deadline. This is 10% of your grade.
 
@@ -323,6 +337,8 @@ Use the simplified CLO table: (1) Manage files and versions, (2) Troubleshoot, (
 You need this for the Week 13 oral reflection.
 
 **3. Update your Goal Document.** Write entry 12: Compare what you wrote in Week 4 with where you are now. What changed? Why?
+
+Arrange a cross-group response with the instructor: receive one written response that identifies a visible change, cites evidence, and asks one genuine question.
 
 **4. Prepare for the oral reflection (Week 13).** You will have a 4-minute one-on-one conversation with the instructor. You pick one CLO you feel strongest about, show the evidence, and evaluate how strong it is. The instructor picks a second CLO. Your evidence map is your preparation.
 
@@ -340,10 +356,11 @@ You need this for the Week 13 oral reflection.
 - [ ] Session review slide: role-setting prompt + Week 12 scenario ("Defend your DL self-assessment")
 - [ ] Week 13 oral reflection format on slide (4 min, 2 CLOs, pre-tagging)
 - [ ] Goal Document prompt + sentence frames on slide (frames labelled "optional")
+- [ ] Cross-group Goal Document pairings and two exchange routes ready (tested share link plus Blackboard/file handoff)
 - [ ] Role rotation plan (who switches to which role)
 - [ ] Collaborative building Issues reviewed (know where groups are)
 - [ ] Plan for students missing Git Episodes (brief conversation about what's possible in class)
-- [ ] Contingency for Collaboration episode (cross-group pairing if needed)
+- [ ] Contingency for Collaboration episode (cross-group pairing or instructor-prepared sample response; individual evidence still required)
 - [ ] Mid-semester artifact package feedback returned (or prioritised immediately)
 
 ---
@@ -383,9 +400,10 @@ You need this for the Week 13 oral reflection.
 | Collaborative building | 0:45--1:25 | 40 | Role-based group work, AI pause at 1:05 |
 | Commit + Git Episodes final submission | 1:25--1:35 | 10 | Deadline |
 | **Break** | **1:35--1:50** | **15** | |
-| Goal Document: Week 4 vs. now | 1:50--2:10 | 20 | Reading (5 min) + writing (15 min) |
-| Bridging activity | 2:10--2:12 | 2 | Silent preparation for session review |
-| Session review | 2:12--2:25 | 13 | AI voice: sceptical instructor |
-| Week 13 preparation | 2:25--2:35 | 10 | Oral reflection format explained |
-| Closing | 2:35--2:45 | 10 | Git Episodes done, evidence map reminder |
+| Goal Document: Week 4 vs. now | 1:50--2:05 | 15 | Reading (4 min) + writing (11 min) |
+| Cross-group Goal Document response | 2:05--2:15 | 10 | Written response + short discussion; alternate exchange route ready |
+| Bridging activity | 2:15--2:17 | 2 | Silent preparation for session review |
+| Session review | 2:17--2:30 | 13 | AI voice or paired text/oral alternative: sceptical instructor |
+| Week 13 preparation | 2:30--2:40 | 10 | Oral reflection format explained |
+| Closing | 2:40--2:45 | 5 | Episodes done, evidence map reminder |
 | **Total** | | **150 min instruction** | |

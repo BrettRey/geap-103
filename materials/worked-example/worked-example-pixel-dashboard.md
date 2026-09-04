@@ -14,7 +14,7 @@ In her first Goal Document entry, Elif writes:
 
 > I wish my computer could help me study better. I always forget what I need to do for my courses. I want to learn how to make something useful, not just write essays. I wish I could make an app but I think that is too hard. I want to learn how to organize my files because I lose everything.
 
-She sets up her GEAP 103 folder in OneDrive. She sketches a file-system map and discovers that most of her files are in Downloads with names like `Document (3).docx`. She renames one file and moves it to a folder. It feels small but it is the first time she has thought about where her files live.
+She sets up her GEAP 103 folder in the storage available on her computer. She sketches a file-system map and discovers that most of her files are in Downloads with names like `Document (3).docx`. She renames one file and moves it to a folder. It feels small but it is the first time she has thought about where her files live.
 
 ### Week 2: Testing her words
 

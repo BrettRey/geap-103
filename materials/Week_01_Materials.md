@@ -25,25 +25,26 @@ Instructor introduction (brief, ~2 min). Then display or say:
 
 ### Showcase (0:10–0:15)
 
-Two examples of things real people built by describing what they wanted to AI. Keep it fast – one minute per example.
+Two quick, inspectable examples. The examples themselves take about 90 seconds.
 
-**Example 1: Study habits tracker**
+**Example 1: [Scoop Sort](https://freja-games.itch.io/scoop-sort/devlog/1547096/first-prototype-live-built-with-claude-ai)**
 
-- Show: a working app on a phone screen with colourful charts showing study hours by day.
-- Say: "This person wanted to see if they were actually studying as much as they thought. They described what they wanted to track and how to display it. They don't write code."
+- Show: the browser puzzle on a phone or the projector. Let students sort a few ice-cream scoops for about one minute.
+- Say: "The maker wanted an ice-cream sorting game. They directed Claude, tested the game, and made 30 levels."
+- Instructor note: the maker's statement that they had no prior coding experience is a self-report. The playable artifact and development note are what students can inspect on the page.
 
-**Example 2: Portfolio website**
+**Example 2: [The GEAP 103 repository](https://github.com/BrettRey/geap-103)**
 
-- Show: a personal website with an About Me page, a project gallery, and a contact form.
-- Say: "This person needed something to send with job applications. They described what sections they wanted and how it should look."
+- Show: the repository homepage and its visible revision history for about 30 seconds.
+- Say: "This course is also a project. I use AI to help me make and revise these materials. I still decide what belongs, check it, and change things that do not work."
 
 **Key line** (display):
 
-> Both of these were built by people who described what they wanted in English. That's what this course teaches.
+> AI can help make the thing. The person still has to decide what they want, check the result, and change what does not work.
 
 "Turn to your partner. Partner A goes first: did either of those make you think of something you wish you could do? (1 min.) Then Partner B. (1 min.)" Move on.
 
-**Note for instructors:** You don't need these exact examples. Find two things that show what's possible – something practical and something creative. If you've built something with AI yourself, show that.
+**Before class:** Test the Scoop Sort page on the Humber network. If it is blocked or unavailable, use a saved screenshot or substitute [Sasha Stiles's *A LIVING POEM*](https://www.moma.org/calendar/exhibitions/5839). For a research example, show [Mark Humphries's Transcription Pearl](https://github.com/mhumphries2323/Transcription_Pearl) as a picture of historical handwriting beside typed text. Do not ask students to read these pages during the showcase.
 
 ---
 
@@ -75,7 +76,7 @@ Display:
 
 > 1. Find a file from last semester (or any old file on your device)
 > 2. Find your Downloads folder
-> 3. Find your OneDrive (the top level)
+> 3. Find the top level of the storage location you will use for this course (OneDrive, Documents, an external drive, or a campus-computer folder)
 >
 > On paper, sketch a map of where your files actually are. Not where they should be – where they are right now. Boxes for folders, lines connecting them.
 
@@ -113,15 +114,15 @@ geap-103/
   portfolio/
 ```
 
-> Create this in your OneDrive now. Just these five folders. You'll add more week folders as we go – or next week, you can ask AI to create them for you.
+> Create this in OneDrive or your local Documents folder now. Just these five folders. You'll add more week folders as we go – or next week, you can ask AI to create them for you.
 
-Students create the structure (10 min). Circulate, help, keep it moving. Common issues: creating folders inside the wrong place, misspelling, not finding OneDrive.
+Students create the structure (10 min). Circulate, help, keep it moving. Common issues: creating folders inside the wrong place, misspelling, or not knowing whether a file is local or synced. Students using local-only storage make a dated backup before leaving or use the campus storage path.
 
 **While students work, name the convention:**
 
 > "Notice the names: lowercase, hyphens instead of spaces. No capitals, no spaces. This matters because some tools can't handle spaces in folder names. Lowercase with hyphens works everywhere."
 
-**If time allows** (students finished folders quickly): "While you're here, go to github.com and create an account. Use your Humber email. You'll need this from Week 3 onward." Students who already have an account can help neighbours. This is optional — catch-up instructions cover it for anyone who doesn't do it today.
+**If time allows** (students finished folders quickly): "If you already have a GitHub account, do not create another one. Check that you can sign in. If you need an account, go to github.com and create one. GitHub Education is a separate, optional benefit that requires your own current student documentation." Students who already have an account may help neighbours navigate public pages, but they must not view passwords, authentication codes, or documents.
 
 Once most students are done, one quick check:
 
@@ -195,7 +196,7 @@ Then 2–3 volunteers share one wish with the class.
 
 Reminders (display):
 - Bring your device next week
-- Your geap-103 folder should exist in OneDrive
+- Your geap-103 folder should exist in OneDrive or on your local drive, with a dated backup plan
 - Your Goal Document should be in the goal-document folder
 
 ---
@@ -220,7 +221,7 @@ Two minutes of silence. Students look at their work and prepare.
 
 Display:
 
-> **Open your AI tool. Start a new chat.** Use any AI – Copilot, ChatGPT, Claude, or anything you have. On your phone is fine. **Voice mode is encouraged** – talk to AI like you'd talk to a classmate.
+> **Choose a speaking-practice route.** Prefer AI voice if it is available. Otherwise, use a typed AI exchange and read your responses aloud, or complete the same role-play with a partner or the instructor.
 >
 > **First, say this (or paste it if using text):**
 > "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
@@ -246,7 +247,7 @@ Once they're in, they have 10–12 minutes for a short exchange. Spoken or typed
 | Student is silent | Approach quietly: "Start with one thing you did today. What folder did you create?" |
 | Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 > If you can, save your conversation. Copy it into a document in your week-01 folder, or screenshot it on your phone. You'll want to look back at this later.
 
@@ -300,7 +301,7 @@ Share this with any student who missed Week 1 (e.g., post on LMS or email).
 
 Welcome to GEAP 103. Here is what you need to do before Week 2.
 
-**1. Create your course folder structure in OneDrive.**
+**1. Create your course folder structure in OneDrive or your local Documents folder.**
 
 ```
 geap-103/
@@ -330,22 +331,22 @@ These don't have to be realistic. Write what you actually want.
 | Term | Meaning |
 |------|---------|
 | **folder** | A container for files on your computer, like a drawer in a filing cabinet |
-| **file path** | The address that tells you where a file lives (e.g., OneDrive > geap-103 > week-01 > notes.docx) |
+| **file path** | The address that tells you where a file lives (e.g., Documents > geap-103 > week-01 > notes.docx) |
 | **file extension** | The letters after the dot (.docx, .xlsx, .pdf) that tell the computer what kind of file it is |
 | **cloud sync** | When your files are saved on the internet and your computer at the same time |
 | **version** | A saved copy of your file at a specific moment – you can go back to an older version |
 
-**4. Create a GitHub account.**
+**4. Check or create a GitHub account.**
 
-Go to github.com/signup. Use your Humber email. Apply for the [Student Developer Pack](https://education.github.com/pack) (free — gives you GitHub Copilot). Verification may take a few days, so do this now.
+If you already have a personal account, use it; do not create a second account. Otherwise, go to github.com/signup if you want the GitHub-web path. A regular GitHub account is enough for public repositories. GitHub Education is a separate student benefit: it requires your own current student documentation, and you should allow 72 hours after approval for Copilot Student activation. Upload documents only through GitHub, never to your instructor or a classmate.
 
 **5. Test your AI access before Week 2.**
 
-Open an AI tool on your device – Copilot (copilot.microsoft.com), ChatGPT (chatgpt.com), Claude (claude.ai), or any other. Make sure it works. If you want to try the CLI, [install GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) and run `copilot` once to authenticate. If you have trouble, email the instructor before class.
+Open an AI tool on your device – Copilot (copilot.microsoft.com), ChatGPT (chatgpt.com), Claude (claude.ai), or any other. Make sure it works. If you want to try the optional CLI, use the [official GitHub Copilot CLI quickstart](https://docs.github.com/en/copilot/get-started/cli-quickstart). If no live AI is available, tell the instructor; Week 2 includes a prepared-response path.
 
 **6. Come to Week 2 ready.**
 
-Bring your device with OneDrive accessible. Make sure your geap-103 folder exists and your Goal Document is inside it.
+Bring your device with your chosen course folder accessible. Make sure your geap-103 folder exists and your Goal Document is inside it. If you need a campus computer, tell the instructor before class.
 
 ---
 
@@ -358,7 +359,7 @@ Bring your device with OneDrive accessible. Make sure your geap-103 folder exist
 - [ ] Goal Document prompt + sentence frames on a slide
 - [ ] Session review slide: role-setting prompt + Week 1 scenario ("Tell AI what you set up today and what you want to learn")
 - [ ] Paper or notebooks available for file-system mapping
-- [ ] Pre-class email sent confirming all students have OneDrive access and a device
+- [ ] Pre-class email sent asking each student to confirm a usable storage path and device/campus-computer plan
 - [ ] AI tool available for session review (any tool – GitHub Copilot CLI, Copilot Chat, ChatGPT, Claude, etc.)
 
 ---

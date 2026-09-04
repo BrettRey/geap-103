@@ -141,6 +141,8 @@ Two minutes of silence. Students think and prepare.
 
 ### Session Review -- Speaking Practice (1:52–2:04)
 
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
+
 Display:
 
 > **Open your AI tool. Start a new chat.**
@@ -156,7 +158,7 @@ Students talk to AI for 10–12 minutes. The AI asks follow-up questions as a cl
 
 This is the first scenario where the audience is non-technical. Previous weeks practised explaining to peers, teammates, and help desks. A client audience requires simplifying technical details and foregrounding purpose over process.
 
-**Note:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 **What to listen for while circulating:**
 
@@ -221,7 +223,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 
 ---
 
-*DL feedback round 2 is returned at the start of Week 11, not today. Students have zero bandwidth for reading evaluative feedback after submitting, presenting, reflecting, and forming groups.*
+*DL feedback round 2 is distributed digitally before the Week 11 unit, using the exact section date in the delivery ledger. Do not add an in-class feedback block to this already full meeting.*
 
 ---
 

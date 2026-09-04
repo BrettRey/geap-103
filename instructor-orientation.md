@@ -1,7 +1,7 @@
 # GEAP 103: What This Course Is
 
 **For:** Instructors preparing to teach GEAP 103 Basic Computer Skills
-**Date:** 2026-02-12
+**Date:** 2026-09-04
 **Status:** Working document
 
 ---
@@ -66,7 +66,7 @@ Think bigger. "Build me a spreadsheet with built-in API support." "Create an app
 
 **What it looks like:** "Step 1: Click File. Step 2: Click New. Step 3: Select Template."
 
-**Why it's wrong:** AI handles steps. Students can say "create a new document from the report template" and it happens. What AI can't do is decide WHETHER to use a template, WHICH template fits the purpose, and WHETHER the result is any good. Those are judgment calls. Judgment requires understanding the problem, which requires being able to articulate it, which is English.
+**Why it's wrong:** AI can often handle steps. Students can ask it to create a new document from a report template. What AI can't decide for them is whether to use a template, which template fits the purpose, and whether the result is any good. Those are judgment calls. Judgment requires understanding the problem, which requires being able to articulate it, which is English.
 
 Your job as an instructor is to develop judgment, not teach procedures.
 
@@ -100,6 +100,7 @@ For instructor or curriculum planning, the full reusable agent skill is in `skil
 - "Imagine this has already failed. What happened?" (turns vague risk into a concrete premortem story)
 - "That's an interesting idea. Can you describe it more specifically? What would someone see if they looked at it?" (pushes articulation toward precision)
 - "You changed your mind since last week. What happened?" (values reflection, not consistency)
+- During Micro-Defences, record Full, Partial, or Deferred. If you lack enough direct evidence, let the student book a short live follow-up outside class; keep the result Deferred until it happens.
 
 ### Bad instructor moves
 
@@ -131,7 +132,7 @@ These goals reinforce each other. You can't discover tools without being able to
 
 ## What you don't need to be
 
-You don't need to be a technology expert. You don't need to know Excel formulas or Git commands or how to write code. AI handles all of that. What you need to be is someone who can:
+You don't need to be a technology expert. You don't need to know Excel formulas or Git commands or how to write code. AI can often supply technical steps, and the course provides static or non-AI paths when it can't. What you need to be is someone who can:
 
 - Hear what a student is trying to say and help them say it more clearly
 - Ask "What did you want? What did you get?" and listen to the answer
@@ -155,8 +156,18 @@ Your job is to expand what they can describe. The computer will handle the rest.
 
 If you're not familiar with Git, AI tools, or the concepts in this course, there's a self-paced preparation module that walks you through the same challenges your students will do. It takes about 90 minutes.
 
-**How it works:** You paste a prompt into any free AI tool (ChatGPT, Claude, Copilot Chat — whatever you have) and the AI guides you through five hands-on challenges: setting up folders, using AI to build something, creating a Git repository, fixing document accessibility, and practising the instructor moves you'll use in class. No special software needed. No Copilot licence needed.
+**How it works:** You paste a prompt into any free AI tool (ChatGPT, Claude, Copilot Chat — whatever you have) and the AI guides you through five hands-on challenges: setting up folders, using AI to build something, practising version history through an available tool, fixing document accessibility, and rehearsing the instructor moves you'll use in class. No Copilot licence is needed. Use an existing GitHub account if you have one; don't create a clean account or try to reproduce a student's individualized Education-verification process.
 
 **The file:** `materials/faculty-preparation.html` — open it in any web browser, click "Copy prompt," paste into your AI tool, and follow the AI's lead.
 
-You don't need to complete it. You don't need to submit anything. But if you've never created a Git repository or run an Accessibility Checker, doing this before Week 1 will make your first few classes dramatically easier. You'll know what the error messages look like, what students will struggle with, and what to say when they get stuck — because you got stuck first.
+You don't need to complete it or submit anything. If you've never used version history or run an Accessibility Checker, doing this before Week 1 will make the first few classes easier. Practise one successful path and one fallback path so you know what evidence a student can produce when an account, device, network, partner, or AI service isn't available.
+
+## Choose the section schedule before teaching
+
+GEAP 103 has 14 curricular units, but the Fall 2026 sections don't have the same number of live meetings.
+
+- The Wednesday section uses the [14-meeting schedule](schedules/fall-2026-wednesday-14-meetings.md).
+- The Monday section uses the [12-meeting schedule](schedules/fall-2026-monday-12-meetings.md). It combines curricular Weeks 9 and 10, preserves Weeks 11–13 as live meetings, and moves only the ungraded Week 14 sharing and transfer work online.
+- A section with 13 content meetings uses the [13-meeting map](schedules/13-content-meeting-map.md), which also combines Weeks 9 and 10 but keeps Week 14 live.
+
+Don't combine Weeks 12 and 13. Those meetings contain separate peer-response and individual oral-assessment evidence. Before each class, check the [delivery ledger](admin/delivery-ledger.md) for the minimum evidence, preparation, and fallback for that meeting.

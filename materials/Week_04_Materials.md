@@ -9,7 +9,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 **Week 4 design note:** This is the first assessment week. Two things are graded: the file-system artifact package (7%) and the first oral micro-defence (part of 25%). The rest of the session is review, peer response on Goal Documents, and a project-type menu that is purely informational. The most important thing today is that students experience explaining their work aloud for the first time, and that the experience is low-stakes enough to be useful rather than terrifying. The diagnostic writing (10 min, no AI) gives you an unmediated baseline for each student's independent written English.
 
-**Format change from lesson plan:** The lesson plan describes individual micro-defences (one student presents to the instructor while others wait). This materials package uses **simultaneous triad defences** instead: groups of three, all presenting at the same time, instructor circulating. This gets all students through in one 30-minute block with no overflow into Week 5, and every student is speaking or giving feedback at all times. The instructor samples each group and asks one follow-up question per presenter.
+**Format alignment:** The current lesson plan and this materials package both use **simultaneous triad defences**: groups of three present at the same time while the instructor circulates and records Full/Partial/Deferred evidence. The instructor asks follow-up questions during observed presentations. When the evidence is insufficient to score, the student may book a short live follow-up outside class.
 
 **No new vocabulary.** All 15 terms from Weeks 1–3 are reviewed.
 
@@ -25,12 +25,12 @@ Decide how students submit. Options:
 
 | Method | Pros | Cons |
 |--------|------|------|
-| **OneDrive share link** | Students already have OneDrive; no new tool | You have to click through individual links |
+| **Cloud share link** | Shows the live folder structure | Permissions or sign-in may fail |
 | **Blackboard assignment** | Centralised; familiar to students | Students upload a screenshot or file list, not the live folder |
 | **GitHub repository** | You can see the folder AND the commit history | Not all students will have pushed by Week 4 |
 | **In-class spot-check** | You see the real thing on their device | Only works during class; no record |
 
-**Recommendation:** OneDrive share link submitted via Blackboard, plus an in-class spot-check during Segment A. This gives you both the live folder and a submission record.
+**Recommendation:** Use a Blackboard submission that accepts a cloud share link **or** screenshots/file listing/exported folder package, plus an in-class spot-check. A local folder is valid; no student should lose access to the assessment because OneDrive sharing fails.
 
 ### Triad Groups
 
@@ -61,13 +61,13 @@ Display:
 
 > Before we start, take 10 minutes to make sure your geap-103 folder is ready:
 >
-> 1. Is it in your OneDrive?
+> 1. Can you open it on your local drive or cloud service and identify its full path?
 > 2. Does every folder have a clear name? (lowercase-with-hyphens)
 > 3. Are your files in the right folders? (Week 1 files in week-01, etc.)
 > 4. Do you have a Goal Document with entries from Weeks 1–3?
-> 5. If you have a GitHub repository, commit your current state now.
+> 5. Save or commit the current state in your chosen version-history path.
 >
-> When you're done, submit your OneDrive share link on Blackboard.
+> When you're done, submit a working share link or upload screenshots/file listing/exported folder evidence on Blackboard.
 >
 > **Also write 2–3 sentences:** How did you organize your files? What naming convention did you choose and why? What would you change?
 >
@@ -77,13 +77,13 @@ Circulate with quick spot-checks. For each student, glance at:
 
 | What to check | What to say if it's missing |
 |---------------|---------------------------|
-| geap-103 folder exists in OneDrive | "Where are your course files? Let's find them and move them." |
+| geap-103 folder exists locally or in a cloud service | "Where are your course files? Let's find them and record the full path." |
 | Subfolders exist (week-01 through week-14, or at least week-01 through week-03) | "Do you have folders for each week? You can create the rest now — ask AI if you want." |
 | Files are in the right places | "This file is from Week 2 but it's in your top folder. Where should it go?" |
 | Goal Document exists with content | "Where's your Goal Document? If you haven't started one, you'll write your first entry today." |
 | Naming is consistent | "You have 'Week 1 stuff' and 'w2-files'. Pick one convention and use it everywhere. I recommend lowercase-with-hyphens." |
 
-Students who finish early: help a neighbour, or review their GitHub repository for completeness.
+Students who finish early: help a neighbour navigate, or review their own version-history evidence for completeness. Each student's submitted artifact must remain their own work.
 
 **Students who are behind:** Some students will have missed a week, or their files are chaotic. That's fine. They participate in everything else today. They can submit the file-system artifact by end of Week 5 with no penalty — announce this now:
 
@@ -137,7 +137,7 @@ This is informational only. No decisions, no commitments.
 
 > "Over the next few weeks you'll learn more tools and discover more about what you can do. Here are some kinds of things people build. You don't need to choose anything today. This is just so you know what's possible."
 
-Display one slide with the table. For each type, show one screenshot or 30-second example on the projector:
+Select 5–6 rows from the table for one slide. Include the AI Evaluation / Safety Test so students see that an investigation can be a project. For each selected type, show one screenshot or 30-second example on the projector:
 
 | Type | What it is | Example |
 |------|-----------|---------|
@@ -148,9 +148,12 @@ Display one slide with the table. For each type, show one screenshot or 30-secon
 | **Video** | A video or animation for a specific audience | A mini-documentary about your neighbourhood, with narration, captions, and AI-generated transitions |
 | **Art** | Digital art, illustration, or design | A series of AI-generated illustrations for a personal calendar, each in a consistent artistic style |
 | **Novel** | A sustained piece of narrative or creative writing | A complete illustrated short story with chapter headings, character portraits, and a designed cover |
+| **AI Evaluation / Safety Test** | A repeatable test of whether an AI tool works for a real task and where it fails | Testing whether an AI tool explains current college information correctly, using official webpages as the answer key |
 | **Combination** | A multi-part project using 2+ types | A personal portfolio website with an embedded project gallery, resume, and contact form |
 
 > "These are examples, not limits. You can combine types, go beyond them, or invent something new. For now, just notice which ones are interesting to you."
+
+For the new test-based route, use the student-friendly description “test whether AI works for a real task.” The [AI Evaluation / Safety Test student guide](AI_Evaluation_Safety_Project_Guide.md) gives the full method for students who later choose it.
 
 Brief pair exchange (1 min): "Which type caught your eye? Tell your partner." No reporting out.
 
@@ -266,7 +269,7 @@ All groups run simultaneously. Three rounds of roughly 9 minutes each (4 min pre
 3. Score the checklist and fluency band
 4. Move to the next group
 
-With ~7 groups and 28 minutes across 3 rounds, you will not visit every group in every round. Realistically, you will hear ~15 of ~21 presenters, spending 2–3 minutes with each. The remaining students get scored on what you caught in passing. That's fine for a diagnostic baseline — the scoring sheet's "evidence basis" field tracks this. Note which students you sampled briefly; you can follow up individually in Week 5 if needed.
+With ~7 groups and 28 minutes across 3 rounds, you will not visit every group in every round. Realistically, you will hear ~15 of ~21 presenters, spending 2–3 minutes with each. The remaining students get scored on what you caught in passing. That's fine for a diagnostic baseline — the scoring sheet's "evidence basis" field tracks this. Note which students you sampled briefly; arrange a short live follow-up outside class if needed.
 
 **Follow-up questions** (pick one per presenter based on what you heard):
 
@@ -286,7 +289,7 @@ With ~7 groups and 28 minutes across 3 rounds, you will not visit every group in
 |-------------|-----------|
 | You heard most of the presentation | Score normally |
 | You arrived late and heard only 1–2 min | Score what you heard; note "partial observation" on the sheet |
-| You missed a student entirely (rare, but possible) | Ask the student to give you a 2-minute summary after class or at the start of Week 5. Note "deferred" on the sheet. |
+| You missed a student entirely (rare, but possible) | Mark "deferred" and ask the student to book a short live follow-up outside class. |
 
 **At 1:35, brief whole-class check:**
 
@@ -323,7 +326,7 @@ With ~7 groups and 28 minutes across 3 rounds, you will not visit every group in
 
 **Evidence basis:** ☐ Full observation (~3+ min) ☐ Partial observation (~1–2 min) ☐ Deferred
 
-**Peer feedback quality (from observation or peer report):** ☐ Specific + uses terminology ☐ Generic but present ☐ Not observed
+**Peer feedback quality:** ☐ Specific + uses terminology ☐ Generic but present ☐ Not observed
 
 **Notes / follow-up:**
 
@@ -339,7 +342,7 @@ The instructor is fully available for this segment — no competing micro-defenc
 
 ### Structured Peer Response on Goal Documents (1:50–2:20)
 
-**Pairs:** Assign in advance or let students self-pair. Each student should have their partner's Goal Document open via OneDrive sharing. Triad partners from Segment B work well here — pick any two from each group.
+**Pairs:** Assign in advance or let students self-pair. Each student should have their partner's Goal Document open through a tested share link or Blackboard/file exchange. Triad partners from Segment B work well here — pick any two from each group.
 
 Display:
 
@@ -423,8 +426,8 @@ No AI session review this week — the diagnostic, triad defence, and peer respo
 |------|----------|-------|
 | Read all Goal Documents (entries 1–4) | Before Week 5 | Return 1–3 sentence comments per student. Focus: Is the student's thinking developing? Can you tell what interests them? What's still vague? Comment on clarity of thinking and language, not on whether they've chosen a project. |
 | Spot-check file-system artifacts | Before Week 5 | Check organisation, naming, structure. Flag any that need revision. |
-| Score micro-defences | Before Week 5 | Using scoring sheets from today. Enter scores. For students marked "partial observation," score what you heard. For any marked "deferred," schedule a 2-minute follow-up at the start of Week 5. |
-| Score diagnostic writing samples | Before Week 5 | Rate each sample holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 12. |
+| Score micro-defences | Before Week 5 | Using scoring sheets from today. Enter scores. For students marked "partial observation," score what you heard. For any marked "deferred," arrange a short live follow-up outside class. |
+| Score diagnostic writing samples | Before Week 5 | Rate each sample holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 11. |
 | Collect Decision Log entries 1–2 | Before Week 5 | For formative feedback (returned by Week 6). |
 | Review peer response written answers | Before Week 5 | Collected at the end of peer response. Check: did the student identify their partner's interest? Did they ask a genuine question? This is supplementary evidence of evaluative reading. |
 
@@ -450,14 +453,14 @@ In Week 4, we reviewed everything from the first three weeks, started oral micro
 
 **1. Submit your file-system artifact** by the end of Week 5.
 
-Your geap-103 folder in OneDrive should be:
+Your local or cloud geap-103 folder should be:
 - Organised with subfolders (at minimum: week-01, week-02, week-03)
 - Named consistently (lowercase-with-hyphens recommended)
 - Containing your files from Weeks 1–3 (Goal Document, Decision Logs, any AI-created work)
 
-If you have a GitHub repository, make sure it has at least 2–3 commits with descriptive messages.
+Include evidence of at least two clearly named versions and one actual recovery. This may come from Git/GitHub or a document/cloud version-history tool.
 
-Submit your OneDrive share link on Blackboard.
+Submit a working share link or upload screenshots/file listing/exported folder evidence on Blackboard.
 
 **2. You still need to do your micro-defence and diagnostic.** The instructor will arrange this during Week 5:
 - You'll write a short diagnostic at the start of class (10 min, no AI, on paper): "Describe something you tried to do with AI this semester. What happened? What would you do differently?"
@@ -504,7 +507,7 @@ Use the sentence frames:
 - [ ] Process documentation prompt on slide ("How did you organize? What naming convention? What would you change?")
 - [ ] Goal Document prompt + sentence frames on slide
 - [ ] Peer response instructions on slide (2 questions about partner's Goal Document)
-- [ ] OneDrive sharing instructions ready (for peer response — students need to share their Goal Document with their partner)
+- [ ] Two peer-response exchange routes ready (working share link or Blackboard/file exchange); check permissions before reading time begins
 - [ ] Slide or announcement: "If your folder isn't ready, you have until end of Week 5"
 - [ ] Optional: phone lanyards available for students who want to record their defence
 
@@ -514,13 +517,13 @@ Use the sentence frames:
 
 | Assessment component | What happens this week | Weight | CLOs |
 |---------------------|----------------------|--------|------|
-| **File-system artifact package** | Due (submit organised folder + repository + 2–3 sentences process documentation) | 7% of final grade | 1 |
+| **File-system artifact package** | Due (organised local/cloud folder + version/recovery evidence + 2–3 sentences process documentation) | 7% of final grade | 1 |
 | **Oral Micro-Defence 1** | In-class diagnostic (10%) + triad defence (30% fluency + 50% task, 3 criteria) + peer feedback (10%) | Part of 25% component | 2, 5 |
 | **Decision Log entries 1–2** | Collected for formative feedback (returned by Week 6) | Part of 30% component | 3, 4 |
 | **Goal Document** | Entry 4 written; instructor reads and returns brief comments | Ungraded | — |
 | **Git Episodes** | Not yet (begin Week 6). Students who restored in Week 3 can document it now. | Part of 10% component | 1 |
 
-**Diagnostic baseline:** The micro-defence this week is explicitly a diagnostic baseline for CLOs 2 and 5 — the first data point. Students are not yet expected to meet target. Score what you see honestly; the progression across Weeks 4, 8, and 12 is the assessment.
+**Diagnostic baseline:** The micro-defence this week is explicitly a diagnostic baseline for CLOs 2 and 5 — the first data point. Students are not yet expected to meet target. Score what you see honestly; the progression across Weeks 4, 8, and 11 is the assessment.
 
 ---
 
@@ -546,7 +549,7 @@ Use the sentence frames:
 | Pre-task planning | 0:40–0:50 | 10 | Choose artifact, open it, think about what to say |
 | Written diagnostic | 0:50–1:00 | 10 | Unmediated, no AI, on paper |
 | Setup + triad formation | 1:00–1:07 | 7 | Collect papers, announce groups, explain format, distribute lanyards |
-| Triad defences (3 rounds) | 1:07–1:35 | 28 | All students present; instructor circulates and scores |
+| Triad defences (3 rounds) | 1:07–1:35 | 28 | Students present complete the triad task; instructor records evidence basis |
 | **Break** | **1:35–1:50** | **15** | |
 | Peer response on Goal Documents | 1:50–2:20 | 30 | Read + write + discuss; instructor circulates freely |
 | Goal Document entry 4 | 2:20–2:35 | 15 | Evaluative/reflective writing |

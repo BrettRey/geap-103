@@ -23,7 +23,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 | Material | Description | How to share |
 |----------|-------------|-------------|
-| **Survey results spreadsheet** | Worked example: 20 rows of class survey data (favourite food, hours of sleep, commute time). 2-3 formulas. 1 bar chart. **One deliberate data error:** one person typed 800 instead of 80 for commute time, producing an average of 847 minutes. | Display on projector only |
+| **Survey results spreadsheet** | Worked example: 20 rows of class survey data (favourite food, hours of sleep, commute time). 2-3 formulas. 1 bar chart. **One deliberate data error:** one person typed 800 instead of 80 for commute time, producing an implausibly high class average (for example, about 78 minutes rather than about 40). | Display on projector only |
 | **Practice dataset Variant A** | Student monthly budget. Rows = months, columns = categories (rent, food, transport, phone, other). 15-20 rows. 2-3 formulas. 1 chart. **Planted error:** an outlier in the rent column (e.g., $12,000 instead of $1,200). | Share via OneDrive or Blackboard |
 | **Practice dataset Variant B** | Same structure and domain as Variant A, but different numbers. **Planted error:** a formula referencing the wrong column range (e.g., =AVERAGE of the "other" column instead of "food"). | Share via OneDrive or Blackboard |
 | **Blank spreadsheet screenshot** | Empty grid with one formula visible and one chart. For the vocabulary pair confirmation task. | Display on slide |
@@ -159,7 +159,7 @@ Two prompts, both on slide:
 
 > "Open the spreadsheet I've shared. Raise your hand when you see data on your screen."
 
-Wait until all hands are up. Help students who are stuck (wrong browser, not logged in, file opens in desktop app instead of web, Excel Online loads slowly on old laptops). Do not start the reading task until everyone has the file open.
+Run a three-minute access checkpoint. Help with one quick fix (wrong browser, sign-in, desktop/web choice), then route blocked students to the prepared downloadable `.xlsx` or accessible CSV/HTML copy. A partner may help with navigation, but each student records answers from an individually identifiable A or B dataset. Start the reading task on time and follow up on unresolved access after the first checkpoint.
 
 Once everyone is ready:
 
@@ -304,7 +304,7 @@ Display:
 >
 > Start with: "I made a change to the budget spreadsheet. I _____."
 
-**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
 
 Students talk to AI for 10-12 minutes. Instructor circulates and listens. No intervention unless a student is stuck or silent.
 

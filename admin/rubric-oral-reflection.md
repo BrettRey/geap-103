@@ -96,7 +96,7 @@ _____________________________________________________________________________
 
 ## Connection to Session Review Speaking Practice
 
-Students have been practising explaining their work to AI every week since Week 1. The session review is low-stakes rehearsal for this culminating conversation. By Week 13, explaining work orally is a well-practised skill, not a novel demand.
+Students have been practising explanations through AI voice, typed-and-read exchanges, live role-play, and micro-defences since Week 1. The session review is low-stakes rehearsal for this culminating conversation. By Week 13, explaining work orally is a well-practised skill, not a novel demand.
 
 Week 12's session review scenario directly rehearses this: "AI plays an instructor asking about one of your Decision Log entries. Defend your self-assessment rating." AI role: Sceptical instructor.
 

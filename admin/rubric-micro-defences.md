@@ -10,7 +10,7 @@
 
 ## Overview
 
-Three check-ins across the semester combining written technical communication, oral demonstration of understanding, and peer feedback. All students present at the same time in simultaneous triads (groups of 3). Each student presents to two partners, who give structured feedback. The instructor circulates with scoring sheets, sampling each group and asking one follow-up question per presenter. All students assessed in one ~30-minute block with no overflow into the following week.
+Three check-ins across the semester combine written technical communication, oral demonstration of understanding, and peer feedback. Students who are present work in simultaneous triads (groups of 3). Each student presents to two partners, who give structured feedback. The instructor circulates with scoring sheets and records the evidence basis as Full, Partial, or Deferred. The 30-minute block accommodates the presentations, but it does not guarantee enough direct instructor observation to score every student's oral performance. When evidence is insufficient, the student may book a short live follow-up outside class.
 
 **Schedule:** Weeks 4, 8, 11 (equal weight: ~8.3% each)
 
@@ -208,7 +208,7 @@ _____________________________________________________________________________
 
 ## Observation Tracking Protocol
 
-After each micro-defence round, the instructor records which students received "partial" or "deferred" observation. At the next round, those students' groups are visited first. This guarantees every student receives at least 2 full observations across the 3 rounds.
+After each micro-defence round, the instructor records which students received "partial" or "deferred" observation. At the next round, those students' groups are visited first. This improves coverage but does not guarantee two full observations for classes of 15–24 within three 30-minute blocks. Do not assign an oral-performance score from missed observation or peer report alone. When direct evidence is insufficient, the student may book a short live follow-up outside class; keep the result Deferred until the follow-up occurs.
 
 ### F/P/D Rotation Checklist
 
@@ -241,9 +241,7 @@ After each micro-defence round, the instructor records which students received "
 | | | | | |
 | | | | | |
 
-**Rule:** If a student has been partially observed at both Weeks 4 and 8, their group is the instructor's first stop at Week 11.
-
-With ~7 groups and 28 min across 3 rounds, the instructor will hear ~15 of ~21 presenters substantively (2--3 min each). The remaining students are scored on briefer observation.
+**Rule:** If a student has been partially observed at both Weeks 4 and 8, their group is the instructor's first stop at Week 11. If the remaining evidence is still insufficient, arrange the short booked live follow-up.
 
 ---
 

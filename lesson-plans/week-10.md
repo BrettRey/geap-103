@@ -113,7 +113,7 @@ Students who finish early: begin reading their full Goal Document from Week 1 (p
 "You just submitted your artifact. In two minutes, you'll present it to AI as if AI were a client who paid for the work. Think about: what does it do? Who is it for? What's one decision you made during the process?"
 
 ### 1:52--2:04 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (presenting work to a non-technical audience, responding to follow-ups)
 
 **Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
@@ -128,7 +128,7 @@ This is the first scenario where the audience is non-technical. Previous weeks p
 
 **Self-check** (1 min): "Write two sentences: What did the 'client' want to know most? What was hardest to explain?"
 
-**Note:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:04--2:16 | Goal Document: Reflection on the Gap
 **Format:** Individual writing
@@ -165,7 +165,7 @@ This is the first scenario where the audience is non-technical. Previous weeks p
 
 Once groups form, they begin discussing: "What do *we* want to build together?" This is the beginning, not a commitment.
 
-*DL feedback round 2 is returned at the start of Week 11, not today. Students have zero bandwidth for reading evaluative feedback after submitting, presenting, reflecting, and forming groups. Returning it fresh at Week 11 opening means students can actually process it before writing entries 6-8.*
+*DL feedback round 2 is distributed digitally before the Week 11 unit. Do not add an in-class feedback block to this already full meeting; post it on the section date in the delivery ledger so students can apply it while curating entries 6-8.*
 
 ### 2:40--2:45 | Closing
 **Format:** Whole class
@@ -214,7 +214,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 ## Assessment Alignment
 
 - **Mid-Semester Artifact Package due (8% of final grade):** Product + process documentation + verification note + evidence of sharing (CLOs 1, 4, 6)
-- **Decision Log feedback round 2:** Prepared this week, returned at start of Week 11. Written feedback on entries 3-5 with confirmation signal ("target addressed" / "target still developing"). Entries 6-8 are assessed summatively.
+- **Decision Log feedback round 2:** Return digitally before the Week 11 unit, using the exact section date in the delivery ledger. Written feedback on entries 3-5 includes the confirmation signal ("target addressed" / "target still developing"). Entries 6-8 are assessed summatively.
 - **Goal Document:** Reflection on gap (entry 10). Not graded. Instructor reads at Week 13 (next reading point).
 - **Session review** (formative, not graded): Week 10 scenario practises presenting to a non-technical audience -- builds toward the Week 14 artifact sharing event
 - **CLO 7** (Collaborate): Collaborative project formation begins. Groups formed. No assessment yet, but the collaborative artifact and Git Episodes (collaboration episode) will be assessed in Weeks 11-14.

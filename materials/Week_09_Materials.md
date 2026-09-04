@@ -26,6 +26,7 @@ This file contains everything you need to prepare slides and run the class for W
 | **Vocabulary slides** | design, draft, evaluate, requirement, focus (definitions + pair task) | Display on projector |
 | **Vague project description** | "I'm going to work on my project today." (for pair rewriting task) | Display on slide |
 | **Project-type demonstrations** | 2-3 prepared for the groups you can't lead live (screencasts or step-by-step guides) | Share via OneDrive |
+| **AI evaluation / safety guide** | Student method for test cases, answer keys, scoring, reporting, and safety limits | [Share the guide](AI_Evaluation_Safety_Project_Guide.md) |
 | **Gallery walk materials** | Shared slide deck, sticky notes, or whiteboard space for group summaries | Physical or digital |
 | **Goal Document prompt + sentence frames** | Task list prompt with frames labelled "optional" | Display on slide |
 | **Peer check-in guidance** | The four evaluation questions for alignment checking | Display on slide |
@@ -35,7 +36,7 @@ This file contains everything you need to prepare slides and run the class for W
 ### Grouping Preparation
 
 - Review Goal Documents from Weeks 7-8 to determine each student's project type
-- Plan groupings by project type: document/novel, data tool, presentation/video, game/app, art, combination
+- Plan groupings by project type: document/novel, data tool, presentation/video, game/app, art, AI evaluation/safety, combination
 - Combine small groups as needed (any group under 3 joins the closest match)
 - Decide which demonstration you will lead live and which need screencasts or step-by-step guides
 - Prepare screencasts or guides for groups you can't lead live
@@ -103,6 +104,7 @@ Announce groupings. Students move to sit with their project-type group.
 | **Presentation / video** | Slides or Clipchamp | Generating slides from an outline, writing speaker notes, adding captions. *Introduce slide, layout, speaker notes, caption, colour contrast here.* |
 | **Game / app** | Interactive browser content | Describing a simple quiz to AI and testing the output |
 | **Art** | AI image generation + design layout | Generating images with a specific prompt and arranging them |
+| **AI evaluation / safety** | A small test of an AI tool | Writing three cases, making an answer key from an official source, recording the output, and applying one scoring rule. Continue with the [student guide](AI_Evaluation_Safety_Project_Guide.md). |
 | **Combination** | Multi-tool projects | Embedding a chart in a report, linking outputs across tools |
 
 **Logistics for one instructor:** Run the 2 largest groups as sequential live demos (~10 min each). Other groups follow prepared step-by-step guides at their own pace (via OneDrive). Instructor floats to guide groups between live demos.
@@ -270,7 +272,7 @@ Display:
 
 AI role: Debugging partner.
 
-**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
 
 Students talk to AI for 10-12 minutes, describing the gap between their Goal Document plan and their artifact draft. The AI pushes back when the description is vague: "What specifically doesn't match? What did you expect to see?"
 
@@ -378,7 +380,7 @@ In Week 9, we started building our mid-semester artifacts and practised evaluati
 | Assessment component | What happens this week | Weight | CLOs |
 |---------------------|----------------------|--------|------|
 | **Mid-semester artifact** | Students begin building (artifact package due Week 10) | Part of 25% component | 6 |
-| **Decision Log** | Optional entry this week (students choose 8 of 12 eligible weeks) | Part of 30% component | 3, 4 |
+| **Decision Log** | Optional entry this week (students curate 8 entries from the Week 2-11 window) | Part of 30% component | 3, 4 |
 | **Goal Document** | Entry 9: task list (ungraded). Instructor does not read Goal Documents this week. | Ungraded | -- |
 | **Session review** | Week 9 scenario: diagnosing gap between intention and result (formative, not graded). Directly rehearses self-evaluation language for artifact package (Week 10) and oral reflection (Week 13). | Formative | 5 |
 | **Process documentation** | Students accumulate notes during building. Not collected yet. | Part of artifact package | 3 |

@@ -1,13 +1,13 @@
 # GEAP 103 Week 11: Instructor Materials Package
 
-**Title:** Showing What We've Learned
+**Title:** What Do We Want to Build Together?
 **Phase:** Creation (Week 11 of 14) -- Assessment Week
 **Contact time:** 3 x 55 min (165 min total: 150 min instruction + 15 min break)
 **Date prepared:** 2026-03-28
 
 This file contains everything you need to prepare slides and run the class for Week 11. The lesson plan (`lesson-plans/week-11.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 11, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
-**Week 11 design note:** This is the heaviest assessment week in the course. Three things happen: Micro-Defence 3 (triads, 7 criteria), Decision Logs due (8 curated entries + self-assessment, 30% of final grade), and DL feedback round 2 returned. The collaborative project work provides both the content students present in their defences and evidence for the Collaboration Git Episode. No session review this week -- the diagnostic, triad defence, and peer feedback are the reflection activities.
+**Week 11 design note:** This is the heaviest assessment week in the course. Micro-Defence 3 and the eight-entry Decision Log submission converge. DL feedback round 2 must already have been returned before this unit so students can use it. Collaborative work provides possible defence content and an opportunity to complete individual Collaboration evidence. No session review this week.
 
 **No new vocabulary.** Consolidation of all 40 terms from Weeks 1--9 applied in collaborative context. Key recycled terms: repository, commit, push, pull request, issue, comment, review, process, evaluate, resolve.
 
@@ -21,7 +21,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 | Material | Description | How to share |
 |----------|-------------|-------------|
-| **DL feedback round 2** | Written feedback on entries 3--5 with confirmation signal ("target addressed" / "target still developing") | Return individually |
+| **DL feedback round 2 follow-up** | Confirmation that feedback on entries 3--5 was returned before class; list of students who have not opened it | Follow up individually |
 | **DL submission instructions** | Where and how students submit 8 curated entries + self-assessment | Display on slide |
 | **Scoring sheets** | 7 criteria + fluency band + evidence basis, one per student | Print |
 | **Written diagnostic prompt** | "Describe one time you used AI to help you build something this semester..." | Display on slide |
@@ -62,7 +62,7 @@ Display:
 > | 1 | Open your Decision Log file (all 8 entries + self-assessment for each). |
 > | 2 | Check: Do you have 8 entries? Does each entry have all fields? |
 > | 3 | Submit through [established submission process]. |
-> | 4 | **Deadline: 11:59 PM tonight.** No extensions. |
+> | 4 | **Deadline: 11:59 PM tonight**, unless Blackboard shows an approved accommodation or documented-barrier date for you. |
 
 **Ungrouped students:** Any student who missed Week 10's group formation is placed now. Assign them to an existing group or form a new pair. Maximum 2 minutes.
 
@@ -98,24 +98,24 @@ Groups build. Each student works within their role:
 - **Reviewer:** Reviews work, checks accessibility, writes verification notes
 
 **Minimum requirements for this session:**
-- Each student submits at least one PR with a descriptive message
-- Each student comments on at least one partner's PR
-- The Coordinator updates at least one Issue
+- Each student makes one individually identifiable change handoff with a descriptive note
+- Each student comments specifically on at least one partner's change and replies to feedback received
+- The Coordinator updates at least one Issue or equivalent task record
 
 **What to say while circulating:**
 
 | What you see | What to say |
 |-------------|------------|
 | Student unclear on their role | "What's your role? What are you doing right now?" |
-| PR descriptions are vague or empty | "Read your PR description. Could someone who wasn't here understand what you changed?" |
+| Change descriptions are vague or empty | "Read your description. Could someone who wasn't here understand what you changed?" |
 | Comments are generic ("looks good") | "What specifically looks good? Use a course term." |
 | Student hasn't counted DL entries | "Have you counted your Decision Log entries? Are you at 8?" |
 | Group is off track or stuck | "Coordinator: what's your group's goal for today? What Issue are you working on?" |
-| Strong group finishing minimum requirements | "Save screenshots of your PR + comment exchange. That's your Collaboration Git Episode if you haven't already got one." |
+| Strong group finishing minimum requirements | "Each person: save your own handoff, received comment, and reply. A PR or tracked-change/version-history exchange counts." |
 
-**Git Episodes -- Collaboration episode:** Students completing PR + comment exchanges have evidence for the required episode. Remind:
+**Version-control -- Collaboration episode:** Students completing their own change handoff + specific comment + reply have evidence through a PR or the approved equivalent. Remind:
 
-> "Save screenshots if you haven't already. Git Episodes are due next week."
+> "Save your individual evidence if you haven't already. The three episodes are due next week."
 
 ---
 
@@ -202,7 +202,7 @@ Instructor circulates with scoring sheets. For each group:
 3. Score the 7-criterion checklist + fluency band + evidence basis
 4. Move to the next group
 
-**Priority order:** Visit students with partial/deferred from Weeks 4 and 8 first.
+**Priority order:** Visit students with partial/deferred from Weeks 4 and 8 first. If direct evidence remains insufficient, arrange a short live follow-up outside class.
 
 **Scoring sheet (one per student):**
 
@@ -261,7 +261,7 @@ Instructor circulates with scoring sheets. For each group:
 >
 > _______________________________________________________________
 >
-> **Observation tracking:** Weeks 4/8 status for this student: [ ] F [ ] P [ ] D
+> **Observation tracking:** Weeks 4/8 status and routes for this student: __________________
 >
 > Week 11 status: [ ] F [ ] P [ ] D
 >
@@ -283,7 +283,7 @@ At 1:35:
 
 **Format:** Small groups with instructor circulation
 
-Groups resume building. Same role-based structure as Segment A. Students who haven't yet submitted a PR or commented on a partner's work should do so now.
+Groups resume building. Same role-based structure as Segment A. Students who have not yet completed their own handoff, partner comment, and reply should do so now through the established GitHub or equivalent path.
 
 **What to say while circulating:**
 
@@ -294,7 +294,7 @@ Groups resume building. Same role-based structure as Segment A. Students who hav
 | Group progressing well | "What has your group accomplished? What's next?" |
 | Coordinator not tracking progress | "Coordinator: update your Issue. What's done? What's still open?" |
 | Student who needs one more DL entry | "You can write one more Decision Log entry right now, based on what you're building. What AI did you just use? What did it give you? What did you decide?" |
-| Reviewer not reviewing | "Reviewer: has anyone submitted a PR for you to check? If not, ask your Builder to push something." |
+| Reviewer not reviewing | "Reviewer: has anyone handed you an identifiable change to check? If not, ask the Builder to save and share one now." |
 
 **Git Episodes reminder:**
 
@@ -331,7 +331,7 @@ Groups resume building. Same role-based structure as Segment A. Students who hav
 
 > "Today was the heaviest assessment day of the semester. You did a micro-defence, submitted your Decision Logs, and continued building your group project. That's a lot."
 >
-> "Decision Logs: if you haven't submitted 8 entries with self-assessment, do it tonight. This is 30% of your grade. No extensions."
+> "Decision Logs: if you haven't submitted 8 entries with self-assessment, do it tonight. This is 30% of your grade. Use any approved alternate date shown for you in Blackboard."
 >
 > "Next week: Git Episodes are due (Restore, Error Recovery, Collaboration). Check your evidence now. If you're missing an episode, plan how to get it this week."
 >
@@ -350,7 +350,7 @@ Groups resume building. Same role-based structure as Segment A. Students who hav
 | Score Micro-Defence 3 | Return within 1 week (by Week 12) | This is the summative round -- scores carry equal weight with Weeks 4 and 8. |
 | Read Decision Logs (8 entries per student) | Before Week 13 oral reflections | Score summatively (entries 6--8) using the DL rubric. Check self-assessment calibration: where do students over- or under-rate? Note patterns for the oral reflection conversations. |
 | Confirm observation tracking | After scoring | Every student should have at least 2 full observations across Weeks 4, 8, and 11. Any student with fewer needs documentation in the grading notes. |
-| Review group repositories | Before Week 12 | Check PRs, comments, and Issues for evidence of collaboration and language quality. |
+| Review group work records | Before Week 12 | Check PRs/equivalent handoffs, comments, replies, and Issues/task notes for individual collaboration evidence. |
 | Mid-semester artifact package feedback | Should have been returned by now | If not, prioritise immediately. |
 
 ---
@@ -359,7 +359,7 @@ Groups resume building. Same role-based structure as Segment A. Students who hav
 
 ### If You Missed Week 11
 
-In Week 11, we returned DL feedback round 2, assigned collaborative roles, ran Micro-Defence 3 (7 criteria), submitted Decision Logs, continued group building, and wrote a group evaluation in the Goal Document.
+Before Week 11, DL feedback round 2 was returned. In class, we assigned collaborative roles, ran Micro-Defence 3 (7 criteria), submitted Decision Logs, continued group building, and wrote a group evaluation in the Goal Document.
 
 **1. Submit your Decision Logs immediately.** Your 8 curated entries + self-assessment are due. Each entry needs all fields:
 
@@ -384,13 +384,13 @@ Submit through the established process. Contact the instructor about a late dead
 
 **5. Check your collaborative role.** Ask your group what role you've been assigned. If you missed the role assignment, the instructor will place you. Roles rotate in Week 12.
 
-**6. Check your Git Episodes.** Git Episodes are due next week (Week 12). Do you have evidence for all three: Restore, Error Recovery, Collaboration? If you're missing the Collaboration episode, complete a PR + comment exchange this week.
+**6. Check your version-control episodes.** They are due next week. Do you have evidence for Restore, Error Recovery, and Collaboration? If Collaboration is missing, complete your own change handoff + specific comment + reply through a PR or approved equivalent.
 
 ---
 
 ## Instructor Prep Checklist
 
-- [ ] DL feedback round 2 ready to return with confirmation signal ("target addressed" / "target still developing")
+- [ ] DL feedback round 2 already returned; follow-up list prepared for students who have not opened it
 - [ ] DL submission process confirmed (where and how students submit 8 entries + self-assessment)
 - [ ] Triad groups pre-assigned (mix based on Weeks 4 and 8 data; partial/deferred students' groups visited first)
 - [ ] Scoring sheets printed: one per student (7 criteria + fluency band + evidence basis)
@@ -441,7 +441,7 @@ Submit through the established process. Contact the instructor about a late dead
 |---------|------|---------|-------|
 | DL feedback + submission reminder | 0:00--0:07 | 7 | Return feedback, count entries |
 | Collaborative roles introduction | 0:07--0:17 | 10 | Role table + assignment |
-| Collaborative building | 0:17--0:40 | 23 | Role-based group work, PR + comment minimum |
+| Collaborative building | 0:17--0:40 | 23 | Role-based group work, individual handoff + comment + reply |
 | Pre-task planning | 0:40--0:50 | 10 | Review portfolio, choose artifact, study 7 criteria |
 | Written diagnostic | 0:50--1:00 | 10 | Unmediated, no AI |
 | Recovery buffer | 1:00--1:02 | 2 | Mode switch from writing to speaking |

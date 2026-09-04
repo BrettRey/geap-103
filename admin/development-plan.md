@@ -26,7 +26,7 @@ By end of Winter 2026 semester: a fully developed course with materials that cou
 |-------------|-------------|-------|
 | Course Learning Outcomes (CLOs) | ✓ Done | See `CLOs.md` – 8 outcomes across 3 domains |
 | Assessment framework | Jan 31 | ✓ Complete (v3, 2026-02-12). Reviewed by simulated Leung/Guzdial/Boud. See `Assessment_Framework_Draft_v3_2026-02-12.md` |
-| Technology decision | Feb 7 | ✓ Done. Copilot (MS ecosystem, all students have access), BYOD |
+| Technology decision | Feb 7 | ✓ Superseded Sep 4. Tool-agnostic, access-neutral delivery; Copilot is optional; BYOD plus campus/local/static paths |
 | 14-week topic sequence | Feb 7 | ✓ Complete (v4 revised, 2026-02-12). Reviewed by simulated Ellis/Wilson/Mayer. See `14_Week_Topic_Sequence_v4_2026-02-12.md` |
 
 ### Phase 2: Core Materials (by Mar 7)

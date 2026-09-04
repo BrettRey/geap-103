@@ -1,4 +1,4 @@
-# GEAP 103 Week 11 Lesson Plan: Showing What We've Learned
+# GEAP 103 Week 11 Lesson Plan: What Do We Want to Build Together?
 
 **Context:** 3 x 55 min (150 min instruction + 15-min break), B1 learners, BYOD, Office 365 + Copilot
 **Week 11 of 14** | Phase 3: Creation (assessment week)
@@ -13,7 +13,7 @@
 
 **No session review this week.** The diagnostic, triad defence, and peer feedback are the reflection activities (same as Weeks 4 and 8). Session reviews resume in Week 12.
 
-**This is the heaviest assessment week in the course.** Three things happen: Micro-Defence 3 (triads, 7 criteria), Decision Logs due (8 entries + self-assessment), and DL feedback round 2 returned. The collaborative project work provides the content students present in their defences. The timing is tight but the triad format keeps the defence to ~30 min.
+**This is the heaviest assessment week in the course.** Two graded submissions converge: Micro-Defence 3 (triads, 7 criteria) and Decision Logs (8 entries + self-assessment). DL feedback round 2 must already have reached students before this unit so they can use it. The collaborative project work provides possible content for the defences.
 
 **Goal Thread -- Evaluating and Comparing:**
 Phase 3 language: students are no longer planning or justifying. They are evaluating what they've done and comparing it with what they intended. The Goal Document this week asks: "What has my group accomplished so far? What's working? What isn't?" This requires the subordination and concession language practised in Week 10, now applied to collaborative rather than individual work.
@@ -48,7 +48,7 @@ Display:
 
 "Every role produces different language. Nobody sits back. Groups of 3: one role each. Groups of 2: combine Builder with one other. You'll rotate roles in Week 12."
 
-"You learned PRs, Issues, and comments in Week 7. Now you use them for real. The Coordinator writes Issues that describe what needs to be done. The Builder submits PRs with descriptive messages. The Reviewer comments on PRs before they're merged. Same skills, higher stakes."
+"You learned change handoffs, task notes, and comments in Week 7. Now you use them for real. GitHub groups may use PRs and Issues; other groups use tracked changes/version history and the same What/Why/What-not and task-note templates. Same communication skills, higher stakes."
 
 Groups assign roles (2 min). Coordinator writes 1-2 Issues for today's work if they haven't already.
 
@@ -62,20 +62,20 @@ Groups build. Each student works within their role:
 - **Reviewer:** Reviews work, checks accessibility, writes verification notes
 
 **Minimum requirements for this session:**
-- Each student submits at least one PR with a descriptive message
-- Each student comments on at least one partner's PR
-- The Coordinator updates at least one Issue
+- Each student makes one individually identifiable change handoff with a descriptive note
+- Each student comments specifically on at least one partner's change and replies to feedback received
+- The Coordinator updates at least one Issue or equivalent task record
 
-**Concrete milestone for this session:** By the end of Segment A (0:40), each group should have: a shared repository with Issues, at least one artifact file started (even a rough draft), and a PR from the Builder. This gives the instructor something to check.
+**Concrete milestone for this session:** By the end of Segment A (0:40), each group should have a shared work location, an Issue/task record, at least one artifact file started, and one individually identifiable handoff from the Builder.
 
 **AI reflection pause at 0:30** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and was the result what you expected? This is practice for the two new micro-defence criteria."
 
 Instructor circulates:
 - **Role check:** "What's your role? What are you doing right now?"
 - **Language check:** Are PR descriptions substantive? Are comments genuine?
-- **Progress check:** "Show me your repository. Do you have an Issue, a file, and a PR?"
+- **Progress check:** "Show me your shared work location. Do you have a task record, a file, and a change handoff?"
 
-**Git Episodes -- Collaboration episode:** Students completing PR + comment exchanges have evidence for the required episode. Remind: "Save screenshots if you haven't already. Git Episodes are due next week."
+**Version-control -- Collaboration episode:** A student's own PR + comment + reply or equivalent tracked-change/version-history exchange supplies evidence. Shared-screen participation or a groupmate's history does not.
 
 ---
 
@@ -169,7 +169,7 @@ Instructor circulates with scoring sheets. For each group:
 | Describes how AI was directed (what asked, why) | ✓ / partial / ✗ |
 | Evaluates AI output (accepted/modified/rejected, why) | ✓ / partial / ✗ |
 
-**Observation tracking:** Students with partial/deferred from Weeks 4 and 8 are visited first. After this round, every student should have at least 2 full observations across the 3 rounds. Check the F/P/D rotation checklist.
+**Observation tracking:** Students with partial/deferred from Weeks 4 and 8 are visited first. After this round, every student should have at least 2 full observations across the 3 rounds. Check the F/P/D rotation checklist. If direct evidence remains insufficient, arrange a short live follow-up outside class.
 
 At 1:35:
 
@@ -187,7 +187,7 @@ At 1:35:
 **Format:** Small groups with instructor circulation
 **Language skills:** Writing (PRs, comments, Issues), speaking (coordination), reading (AI output)
 
-Groups resume building. Same role-based structure as Segment A. Students who haven't yet submitted a PR or commented on a partner's work should do so now.
+Groups resume building. Same role-based structure as Segment A. Students who have not yet completed their own change handoff, partner comment, and reply should do so now through the established GitHub or equivalent path.
 
 **AI reflection pause at 2:05** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and what did you decide about the result?"
 
@@ -218,7 +218,7 @@ Instructor circulates:
 **Format:** Whole class
 
 - "Today was the heaviest assessment day of the semester. You did a micro-defence, submitted your Decision Logs, and continued building your group project. That's a lot."
-- "Decision Logs: if you haven't submitted 8 entries with self-assessment, do it tonight. This is 30% of your grade. No extensions."
+- "Decision Logs: if you haven't submitted 8 entries with self-assessment, do it tonight. This is 30% of your grade. If an approved accommodation or documented barrier applies, use the date posted for you in Blackboard rather than an improvised verbal deadline."
 - "Next week: Git Episodes are due (Restore, Error Recovery, Collaboration). Check your evidence now. If you're missing an episode, plan how to get it this week."
 - "Week 12 is also your last full building week before the oral reflection (Week 13) and the sharing event (Week 14). Use the time well."
 - "Roles rotate next week. Today's Coordinator becomes next week's Builder (or Reviewer). Everyone gets a different perspective."
@@ -230,14 +230,14 @@ Instructor circulates:
 - **Score Micro-Defence 3.** Return scores within one week. This is the summative round — scores carry equal weight with Weeks 4 and 8.
 - **Read Decision Logs (8 entries per student).** Score summatively (entries 6-8) using the DL rubric. Check self-assessment calibration: where do students over- or under-rate? Note patterns for the oral reflection conversations in Week 13.
 - **Observation tracking:** Confirm every student has at least 2 full observations across Weeks 4, 8, and 11. Any student with fewer needs documentation in the grading notes.
-- **Review group repositories.** Check PRs, comments, and Issues for evidence of collaboration and language quality.
+- **Review group work records.** Check PRs or equivalent handoffs, comments, replies, and Issues/task notes for individual collaboration evidence and language quality.
 - **Mid-semester artifact package feedback:** Should have been returned by now. If not, prioritize immediately.
 
 ---
 
 ## Instructor Prep Checklist
 
-- [ ] DL feedback round 2 ready to return with confirmation signal ("target addressed" / "target still developing")
+- [ ] DL feedback round 2 already returned; list students who have not opened it and follow up individually
 - [ ] DL submission process confirmed (where and how students submit 8 entries + self-assessment)
 - [ ] Triad groups pre-assigned (mix based on Weeks 4 and 8 data; partial/deferred students' groups visited first)
 - [ ] Scoring sheets printed: one per student (7 criteria + fluency band + evidence basis)
@@ -269,7 +269,7 @@ Instructor circulates:
   - **CLOs 2, 3, 4, 5 assessed** (first time CLOs 3-4 are formally assessed in the oral defence)
   - **7 criteria** (5 from Week 8 + 2 new: "describes how AI was directed," "evaluates AI output")
 - **Decision Logs due (30% of final grade):** 8 curated entries with self-assessment. Entries 6-8 assessed summatively. Self-assessment calibration noted for oral reflection (Week 13).
-- **DL feedback round 2 returned:** Entries 3-5 with confirmation signal. This is the last DL feedback before summative scoring.
-- **Git Episodes -- Collaboration episode:** Students completing PR + comment exchanges today have evidence. Git Episodes due next week.
+- **DL feedback round 2 available before this unit:** Entries 3-5 with confirmation signal. This is the last DL feedback before summative scoring.
+- **Version-control -- Collaboration episode:** Students completing their own handoff + comment + reply today have evidence through a PR or approved equivalent. Episodes are due next week.
 - **Goal Document:** Entry 11 (ungraded; instructor reads at Week 13)
 - **Observation tracking:** Every student should now have at least 2 full observations across 3 rounds. Confirm and document.

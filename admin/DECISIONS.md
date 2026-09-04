@@ -1,4 +1,5 @@
 # GEAP 103 Decisions Log
+<!-- SUMMARY: Durable GEAP 103 curriculum and delivery decisions through the Fall 2026 schedule/access repair · status: active · updated: 2026-09-04 -->
 
 ## 2026-03-25
 
@@ -79,3 +80,19 @@
 ## 2026-06-30
 
 - **Premortem added as a planning and risk-assessment routine.** Week 8's risk assessment now uses a lightweight premortem frame: students imagine their project has failed, explain why, and write the help request they would need if the failure began. The full reusable agent skill is stored at `skills/premortem/SKILL.md` for instructor/curriculum planning.
+
+## 2026-09-04
+
+- **Assessment Framework v6 governs all delivery versions.** The canonical sequence is Micro-Defence 3 and eight Decision Logs in curricular Week 11, version-control episodes in Week 12, the live oral reflection in Week 13, and the Final Artifact Package in Week 14.
+
+- **Separate 14-, 13-, and 12-content-meeting deliveries.** The Wednesday Fall 2026 section receives all 14 units. The Monday section has 12 live meetings: curricular Weeks 9 and 10 are redesigned as one meeting, and ungraded Week 14 sharing/transfer moves to an accessible asynchronous closeout. The 13-content-meeting version combines only Weeks 9 and 10. Weeks 12 and 13 are never combined.
+
+- **GitHub Education is not a prerequisite.** This supersedes the 2026-03-27/28 hard-prerequisite decision. Education verification is individualized, requires the student's own current documentation, and cannot be reproduced on a clean instructor account. Allow 72 hours after approval for Copilot Student activation. A regular GitHub account, local Git, or document/cloud version history supports the course evidence.
+
+- **Individual evidence survives fallbacks.** Instructor demonstrations, shared-screen partner work, and a partner's history are practice only. Restore requires a usable recovered earlier version. Collaboration requires each student's own change handoff, a specific comment received, and a reply, through a PR or tracked-change/version-history equivalent.
+
+- **Decision Log feedback round 2 arrives before Week 11.** This supersedes the 2026-03-27/28 wording that placed return at the Week 11 opening. Students need time to apply the feedback to entries 6-8 before the summative submission.
+
+- **Assessment absences use defined equivalent make-ups.** Micro-Defences use the same diagnostic and ad hoc triad within seven calendar days. The Week 13 oral reflection uses the same live, unmediated four-minute, two-CLO conversation within five instructional days; a recording, gallery post, or written response is not a substitute.
+
+- **Micro-Defence missed observation uses a simple live fallback.** If the instructor lacks enough direct evidence from a student's in-class triad, the student may book a short live follow-up outside class. Keep the result Deferred until the follow-up occurs. This is not a mandatory rotation and is separate from the full make-up for absence.

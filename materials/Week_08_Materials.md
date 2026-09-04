@@ -12,7 +12,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 **New vocabulary (5 AWL terms):** process, sequence, outcome, resolve, anticipate
 
-**AI tools:** AI handles Git commands and formula explanations. Students handle the diagnosis: reading the error, identifying the mismatch between expected outcome and actual outcome, describing the process they followed.
+**AI tools:** AI may assist with Git commands and formula explanations, but at least one scenario must work without AI or GitHub. Students handle the diagnosis: reading the error, identifying the mismatch between expected and actual outcomes, and describing the process they followed.
 
 ---
 
@@ -22,8 +22,8 @@ This file contains everything you need to prepare slides and run the class for W
 
 | Material | Description | How to share |
 |----------|-------------|-------------|
-| **4 error scenarios** (worked examples) | Copilot reformat gone wrong, #REF! formula, bad Git commit, "Permission denied" error | Display on projector |
-| **3-4 staged error scenarios** (pair practice) | Broken formula, accessibility issues, confusing commit history, AI-generated wrong output | Share via OneDrive |
+| **3 error scenarios** (worked examples) | Copilot reformat gone wrong, #REF! formula, and "Permission denied"/"File not found" | Display on projector |
+| **3-4 staged error scenarios** (pair practice) | Broken formula, accessibility issues, confusing version history, AI-generated wrong output; at least one no-AI/no-GitHub case | Downloadable from Blackboard |
 | **Bad help request** | "It doesn't work. Can you help?" | Display on slide |
 | **Good help request** | Full example with context/problem/tried/expected | Display on slide |
 | **Help request template** | 4-field template | Display on slide |
@@ -207,7 +207,7 @@ All groups run simultaneously. Instructor circulates.
 3. Score 5-criterion checklist + fluency band + evidence basis (full/partial/deferred)
 4. Move to next group
 
-**Priority order:** Visit Week 4 partial/deferred students first.
+**Priority order:** Visit Week 4 partial/deferred students first. If direct evidence remains insufficient, arrange a short live follow-up outside class.
 
 At 1:35:
 
@@ -340,12 +340,11 @@ Display:
 - [ ] Scoring sheets printed (5 criteria + fluency band + evidence basis)
 - [ ] Written diagnostic prompt on slide
 - [ ] Paper or locked-down devices for diagnostic
-- [ ] 4 error scenarios for worked examples:
+- [ ] 3 error scenarios for worked examples:
   - [ ] Copilot reformat gone wrong
   - [ ] #REF! formula error in Excel
-  - [ ] Git commit with wrong file
   - [ ] "Permission denied" or "File not found"
-- [ ] 3-4 staged error scenarios shared via OneDrive for pair practice
+- [ ] 3-4 staged error scenarios downloadable from Blackboard for pair practice; at least one requires neither Copilot nor GitHub
 - [ ] Help request template on slide
 - [ ] Good vs. bad help request on slide
 - [ ] Vocabulary slides: process, sequence, outcome, resolve, anticipate

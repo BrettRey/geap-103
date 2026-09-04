@@ -6,11 +6,11 @@
 **Learning Objectives (Week 1):**
 1. Discover what people can make with everyday computer tools
 2. Practise expressing personal desires and interests in English ("I wish...", "I want to learn...")
-3. Navigate OneDrive and organize files using folders, paths, and naming conventions (CLO 1 begins)
+3. Navigate local or cloud storage and organize files using folders, paths, and naming conventions (CLO 1 begins)
 4. Begin the Goal Document as a weekly language exercise
 
 **Goal Thread — The Language of Wanting:**
-The Goal Document is a weekly writing exercise where students practise articulating what they want, evaluating what's feasible, and revising their thinking. This week they write their first entry: a wish list. The English skill is expressing desires and interests. Students will return to this document every week, and their thinking will change. Changing your mind is the point, not a problem. The wishes that survive, grow, or get replaced all tell the story of what the student learned.
+The Goal Document is a recurring writing exercise where students practise articulating what they want, evaluating what's feasible, and revising their thinking. This week they write their first entry: a wish list. The English skill is expressing desires and interests. Students return to this document through Week 13, and their thinking will change. Changing your mind is the point, not a problem. The wishes that survive, grow, or get replaced all tell the story of what the student learned.
 
 ---
 
@@ -23,7 +23,7 @@ The Goal Document is a weekly writing exercise where students practise articulat
 - Frame the course: "This course is about two things: learning to say what you want clearly in English, and discovering what you can do with tools most people don't know how to use. Every week you'll learn new words, try something, and write about what you're thinking. Your thinking will change over the semester. That's how learning works."
 - Explain the rhythm: learn new words, practise a skill, write in your Goal Document
 - "One rule before we start: never put personal information into any AI tool. No passwords, no student ID numbers, no immigration documents, no home address. These tools are not private. If you share it, you cannot take it back. This is a rule for the whole course."
-- Tech check: can everyone access OneDrive on their device?
+- Tech check: can everyone access either OneDrive or a local Documents folder on their device? Record who needs a campus-computer path.
 
 ### 0:10--0:25 | Possibilities Showcase
 **Format:** Instructor-led demonstration with active engagement
@@ -31,15 +31,14 @@ The Goal Document is a weekly writing exercise where students practise articulat
 
 **Before showing anything:** "As you watch these, think about your own life. Your studies, your job, your family. Does anything here make you think 'I wish I could do something like that'?"
 
-Show 3-4 examples of things real people have built by describing what they wanted to AI:
-- A working web app that tracks study habits and shows weekly patterns on a phone
-- A children's picture book with AI-generated illustrations, laid out and printed
-- An interactive quiz game playable in a browser, with scoring and a leaderboard
-- A personal portfolio website with project gallery, about page, and contact form
+Show only two examples. The examples themselves should take about 90 seconds:
 
-For each example, show the finished product briefly and say one sentence about who made it and *what problem they were trying to solve.* Mention that different examples used different AI tools -- one used Copilot, one used ChatGPT, one used Claude. Students don't need to know the differences yet, but they should hear the names early.
+1. **[Scoop Sort](https://freja-games.itch.io/scoop-sort/devlog/1547096/first-prototype-live-built-with-claude-ai):** Let students play or watch the browser puzzle for about one minute. Say: "The maker wanted an ice-cream sorting game. They directed Claude, tested the game, and made 30 levels." The maker's statement that they had no prior coding experience is a self-report; it is not needed for the lesson.
+2. **[The GEAP 103 repository](https://github.com/BrettRey/geap-103):** Show the repository and its history for about 30 seconds. Say: "This course is also a project. I use AI to help me make and revise the materials. I still decide what belongs, check it, and change things that do not work."
 
-**Key line:** "All of these were built by people who don't write code. They had an idea. They told AI what they wanted. The skill was being able to say what they meant."
+Students do not read either page. They see a finished artifact and hear one sentence about what its maker wanted and what the person still had to decide or check. Test the Scoop Sort page on the Humber network before class. If it is unavailable, use a screenshot or substitute [Sasha Stiles's *A LIVING POEM*](https://www.moma.org/calendar/exhibitions/5839). [Mark Humphries's Transcription Pearl](https://github.com/mhumphries2323/Transcription_Pearl) is a second visual alternative: show historical handwriting beside the resulting typed text.
+
+**Key line:** "AI can help make the thing. The person still has to decide what they want, check the result, and change what does not work."
 
 **Pause (2 min):** "Turn to your partner. Did anything catch your attention? Did anything make you think of something you wish you could do?" (Partner A speaks first for 1 min, then Partner B for 1 min.)
 
@@ -60,7 +59,7 @@ Quick comprehension check: display a file path on screen, ask volunteers to iden
 **Format:** Instructor demonstration
 **Language skills:** Listening, reading (authentic digital text)
 
-Instructor opens their own OneDrive on the projector:
+Instructor opens their own file storage on the projector and shows both a local path and, if available, a OneDrive path:
 - "Here's where I keep my work. I have a folder for each course I teach. Inside each one, I know where everything is."
 - Points out naming convention, folder structure, where things sync
 - Traces a file path aloud: "The path to this file is OneDrive > Courses > GEAP 103 > Week 01 > lesson-plan.docx"
@@ -81,10 +80,10 @@ Students jot 2-3 notes on paper about where their files are (phone? laptop? emai
 **Format:** Individual, then pairs
 **Language skills:** Reading (file paths, folder names, extensions)
 
-Students open OneDrive on their own device. Tasks:
+Students open their normal file storage on their own device. OneDrive is recommended, but a local drive, external drive, or campus-computer folder is valid. Tasks:
 1. Find a file from last semester (or any old file)
 2. Find the Downloads folder
-3. Find the OneDrive root
+3. Find the top level of the storage location they will use for this course
 
 On paper: sketch a map of where your files actually are. Not where they should be -- where they are right now. Boxes for folders, lines connecting them, file names where you remember them.
 
@@ -116,7 +115,7 @@ GEAP 103/
   Portfolio/
 ```
 
-Students create this structure in their OneDrive. Instructor walks through it step by step, pausing for students to keep up.
+Students create this structure in OneDrive or a local Documents folder. Instructor shows both paths and pauses for students to keep up. Students using local-only storage make a dated backup before leaving class or use a campus storage option.
 
 Vocabulary check while students work: "What's the file path to your Week 01 folder? What about your Portfolio folder?"
 
@@ -171,7 +170,7 @@ Students create a new document in their GEAP 103/Goal Document/ folder.
 *This bridges the register shift from reflective Goal Document writing to conversational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
 
 ### 2:29--2:41 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (expressing desires, answering follow-up questions)
 
 "Open your AI tool and start a new chat. Say or paste this prompt."
@@ -186,7 +185,7 @@ Students talk to AI for 10-12 minutes, explaining what they did today (folder se
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:41--2:42 | Self-Check
 **Format:** Individual, written
@@ -199,23 +198,23 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 **Format:** Whole class
 
 - "Today you discovered something important: your files weren't where you thought they were. That gap -- between what you assume and what's actually there -- is the question this course keeps asking. Every week, in a different way, we'll ask: what's actually there?"
-- "You also started writing about what YOU want. That writing is a skill you'll practise every week."
+- "You also started writing about what YOU want. You'll return to that writing throughout the course."
 - "Next week: you'll try telling AI what you want and see what happens. The question will be: can you explain what you mean clearly enough?"
-- Remind: bring your device next week with OneDrive accessible. Your GEAP 103 folder should exist.
+- Remind: bring your device next week with your GEAP 103 folder accessible, whether it is in OneDrive or local storage.
 
 ---
 
 ## Instructor Prep Checklist
 
 - [ ] OneDrive accessible on classroom projector
-- [ ] Possibilities showcase prepared (4 examples with screenshots or live demos; for each, know who made it and what problem they were solving)
+- [ ] Possibilities showcase prepared (Scoop Sort + the GEAP 103 repository; test both links on the Humber network and keep one screenshot or visual alternative)
 - [ ] Vocabulary slides: folder, file path, file extension, cloud sync, version
 - [ ] Own file system ready to display (realistic, not artificially tidy)
 - [ ] Course folder template on slide
 - [ ] Goal Document prompt + sentence frames on slide
 - [ ] Session review slide: role-setting prompt + Week 1 scenario ("Tell AI what you set up today and what you want to learn")
 - [ ] Paper or notebooks available for file-system mapping
-- [ ] Confirm all students have OneDrive access and device (pre-class email)
+- [ ] Confirm each student has a usable storage path and device/campus-computer plan (pre-class email)
 
 ## Language Development Summary
 

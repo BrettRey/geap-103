@@ -109,22 +109,22 @@ Groups confirm new roles and plan the session:
 **Format:** Small groups with instructor circulation
 **Language skills:** Writing (PRs, comments, Issues), speaking (coordination), reading (AI output, partner's work)
 
-Groups build. Same role-based structure as Week 11 but with rotated roles. The PR + Issue + comment workflow from Week 7 should be routine by now. If it isn't, the Coordinator should model it: write an Issue, assign it, close it when the PR is merged.
+Groups build. Same role-based structure as Week 11 but with rotated roles. The change-handoff + task-note + comment workflow from Week 7 should be routine by now. GitHub groups may use PRs and Issues; other groups use tracked changes/version history and the supplied task-note template.
 
 **AI reflection pause at 1:05** (2 min): "Stop building. Write one sentence: what did you just ask AI to do, and what did you decide about the result?"
 
-**Git Episodes — last chance:** Students missing the Collaboration episode: submit a PR with description + comment exchange during this building time. Remind: "If you need a Collaboration episode, do it now. Submit a PR, get a comment from your partner, save the screenshot."
+**Version-control episodes — last chance:** Students missing the Collaboration episode complete their own change handoff + specific comment + reply during this building time. A PR or tracked-change/version-history exchange is accepted.
 
 Instructor circulates:
 - **Git Episodes:** "Have you submitted your three episodes? If not, which one are you missing?"
 - **Role check:** "What's your new role? How is it different from last week?"
 - **Progress:** "What has your group accomplished? What's the plan for finishing by next week?"
 
-### 1:25--1:35 | Commit + Git Episodes Final Submission
+### 1:25--1:35 | Save Version + Episodes Final Submission
 **Format:** Individual
 **Language skills:** Writing (commit messages, episode documentation)
 
-All students commit their work. Students who haven't submitted Git Episodes: submit now. This is the deadline.
+All students save a named version in their established path. Students who have not submitted the three episodes submit now. This is the deadline.
 
 ---
 
@@ -134,13 +134,13 @@ All students commit their work. Students who haven't submitted Git Episodes: sub
 
 ## Segment C: Goal Document + Session Review + Closing (1:50--2:45)
 
-### 1:50--2:10 | Goal Document: Comparing Week 4 with Now
+### 1:50--2:05 | Goal Document: Comparing Week 4 with Now
 **Format:** Individual reading, then writing
 **Language skills:** Reading (own Goal Document), writing (temporal comparison, subordination, evaluative)
 
 "Go back to your Week 4 Goal Document entry — the one where you took stock after Phase 1. Read it. Then write about what changed."
 
-**Reading** (5 min): Students read their Week 4 entry (and optionally skim Weeks 1-3).
+**Reading** (4 min): Students read their Week 4 entry (and optionally skim Weeks 1-3).
 
 **Prompt** (displayed): "Compare what you wrote in Week 4 with where you are now. What changed? Why?"
 
@@ -150,15 +150,27 @@ All students commit their work. Students who haven't submitted Git Episodes: sub
 - "I didn't expect _____, but it turned out that _____."
 - "Although I thought _____, what actually happened is _____."
 
-**Writing** (15 min): Students write entry 12 in their Goal Document. This requires temporal comparison: looking back 8 weeks and articulating what changed and why.
+**Writing** (11 min): Students write entry 12 in their Goal Document. This requires temporal comparison: looking back 8 weeks and articulating what changed and why.
 
-### 2:10--2:12 | Bridging Activity
+### 2:05--2:15 | Cross-Group Goal Document Response
+**Format:** Pairs from different project groups
+**Language skills:** Reading, writing (specific response), speaking
+
+Exchange entries through a tested share link or Blackboard/file handoff. Each student writes:
+
+1. "One change I can see since Week 4 is _____."
+2. "The evidence for that change is _____."
+3. "One question I still have is _____."
+
+Partners discuss their responses for the final four minutes. For an odd number or an absent partner, form one triad; each student still receives one written response. If a permission link fails, use the file/Blackboard exchange immediately rather than spending the activity troubleshooting access.
+
+### 2:15--2:17 | Bridging Activity
 **Format:** Individual, silent
 
 "In two minutes, you'll defend one of your Decision Log self-assessments to AI. AI is playing a sceptical instructor. Think: which DL entry did you rate yourself highest on? What would you say if I asked 'Why did you rate that Excellent?'"
 
-### 2:12--2:25 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+### 2:17--2:30 | Session Review (Speaking Practice)
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (justifying a self-evaluation, defending with evidence)
 
 **Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
@@ -169,13 +181,15 @@ AI role: Sceptical instructor.
 
 Students talk to AI for 10-12 minutes. The AI challenges their self-assessment: "You rated this Excellent. What makes it Excellent and not just Proficient?" "What evidence supports your rating?"
 
+If AI voice is unavailable, a cross-group partner uses the same sceptical-instructor questions from a prompt card, or the student makes a private phone recording and answers both questions. Complete the same self-check.
+
 This directly rehearses the oral reflection (Week 13), where the instructor will ask similar questions.
 
 **Self-check** (1 min): "Write two sentences: What rating did you defend? What was the hardest question AI asked?"
 
-**Note:** Voice mode starts a new chat.
+**If using AI voice:** Voice mode starts a new chat. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
-### 2:25--2:35 | Week 13 Preparation
+### 2:30--2:40 | Week 13 Preparation
 **Format:** Whole class
 **Language skills:** Listening, reading (oral reflection format)
 
@@ -196,13 +210,13 @@ Display:
 
 "The evidence mapping you did today is your preparation. Review it before next class. Know where your strongest evidence is for each CLO."
 
-### 2:35--2:45 | Closing
+### 2:40--2:45 | Closing
 **Format:** Whole class
 
 - "Git Episodes are submitted. That's 10% done."
 - "Your evidence map is your preparation for next week's oral reflection. Review it before class."
 - "Collaborative work continues next week during the finalization time. Roles persist."
-- "Next week: I talk to each of you one-on-one for 4 minutes about your learning. This is the culmination of 13 weeks of speaking practice. You've been doing this with AI every week. Now you do it with me."
+- "Next week: I talk to each of you one-on-one for 4 minutes about your learning. This is the culmination of the speaking practice you've done through AI voice, typed-and-read exchanges, live role-play, and micro-defences. Now you do it with me."
 
 ---
 
@@ -226,6 +240,7 @@ Display:
 - [ ] Session review slide: role-setting prompt + Week 12 scenario ("Defend your DL self-assessment")
 - [ ] Week 13 oral reflection format on slide (4 min, 2 CLOs, pre-tagging)
 - [ ] Goal Document prompt + sentence frames on slide (frames labelled "optional")
+- [ ] Cross-group Goal Document pairings and two exchange routes ready (tested share link plus Blackboard/file handoff)
 - [ ] Role rotation plan (who switches to which role)
 - [ ] Collaborative building Issues reviewed (know where groups are)
 - [ ] Plan for students missing Git Episodes (brief conversation about what's possible in class)

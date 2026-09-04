@@ -180,7 +180,7 @@ At 2:18: "Commit your work now. Descriptive message: what did you accomplish tod
 "In two minutes, you'll explain something to AI. Think about this: you built something today, and it probably doesn't perfectly match what you intended. What's the gap? What did you want, and what did you get?"
 
 ### 2:22--2:35 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (diagnosing a gap between intention and result, responding to follow-ups)
 
 **Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
@@ -197,7 +197,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 *If students are visibly exhausted at this point in the session, the instructor can simplify: "Tell AI one thing you're proud of from today's building." This still produces speaking practice, just at a lower cognitive demand.*
 
-**Note:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:35--2:45 | Closing
 **Format:** Whole class
@@ -247,7 +247,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - **CLO 6** (produce digital products): Students begin building their mid-semester artifact
 - **CLO 3** (guide AI tools): Task list writing; process documentation of AI interactions
 - **CLO 4** (evaluate AI text): Peer check-in evaluates whether building matches stated intentions; Decision Log entry (optional)
-- **Decision Log entries:** Optional this week (students choose 8 of 12 eligible weeks)
+- **Decision Log entries:** Optional this week (students curate 8 entries from the ten-week window, Weeks 2-11)
 - **Goal Document:** The task list IS the Goal Document entry this week (entry 9). Instructor does not read Goal Documents this week (next reading point is after Week 8 — already returned).
 - **Session review** (formative, not graded): Week 9 scenario practises gap diagnosis between intention and result -- directly rehearses the self-evaluation language needed for the mid-semester artifact package (Week 10) and the oral reflection (Week 13)
 - **Process documentation:** Students should be accumulating notes for the artifact package. Not collected yet.

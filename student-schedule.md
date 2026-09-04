@@ -1,8 +1,13 @@
 # GEAP 103 Basic Computer Skills -- Week-by-Week Schedule
 
-**Semester:** Foundation Semester (B1), 14 weeks, 3 hours/week
+**Semester:** Foundation Semester (B1), 14 curricular units
 
-This schedule tells you what happens each week: the topic, what you need to hand in and how much it is worth, and what you will write in your Goal Document.
+This schedule describes the complete course sequence. Use the dated schedule for your section:
+
+- [Wednesday section: 14 meetings](schedules/fall-2026-wednesday-14-meetings.md)
+- [Monday section: 12 meetings](schedules/fall-2026-monday-12-meetings.md)
+
+The Monday section combines curricular Weeks 9 and 10 and completes Week 14 asynchronously. Both sections use the same learning outcomes, assessment weights, and evidence requirements.
 
 ---
 
@@ -30,7 +35,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 | | |
 |---|---|
-| **What's due** | Nothing -- Git is introduced this week; you will practise before anything is graded |
+| **What's due** | Nothing -- version history is introduced this week; you will practise before anything is graded |
 | **Goal Document** | If you could make something with a computer, what kind of thing might it be? Describe what someone would see. |
 
 ---
@@ -39,7 +44,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 | | |
 |---|---|
-| **What's due** | **File System artifact package** (7% of your grade). **Oral Micro-Defence 1** (part of 25%) -- includes in-class written diagnostic and peer feedback. |
+| **What's due** | **File System artifact package** (7% of your grade). **Oral Micro-Defence 1** (part of 25%) -- includes an in-class written diagnostic, two short written artifacts, and peer feedback. |
 | **Goal Document** | What have you learned in 4 weeks? What can you do now that you couldn't before? What interests you most? Instructor reads your Goal Document this week and gives you brief comments. Peer response this week too. |
 
 ---
@@ -69,7 +74,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 | | |
 |---|---|
 | **What's due** | Nothing new due. Keep working on Decision Log entries and Git episodes. |
-| **Goal Document** | What part of your project is hardest? What could someone else help with? Write a GitHub Issue describing one task a partner could do. |
+| **Goal Document** | What part of your project is hardest? What could someone else help with? Write a GitHub Issue or task note describing one task a partner could do. |
 
 ---
 
@@ -77,7 +82,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 | | |
 |---|---|
-| **What's due** | **Oral Micro-Defence 2** (part of 25%) -- includes in-class written diagnostic and peer feedback. |
+| **What's due** | **Oral Micro-Defence 2** (part of 25%) -- includes an in-class written diagnostic, two short written artifacts, and peer feedback. |
 | **Goal Document** | Imagine your project failed. What is the most likely reason? What is the riskiest part of your project? Write a help request for a problem you think might happen. Instructor reads your Goal Document this week and gives you brief comments. Peer response this week too. |
 
 ---
@@ -95,7 +100,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 | | |
 |---|---|
-| **What's due** | **Mid-Semester Artifact Package** (8% of your grade). **Decision Log feedback round 2 returned.** |
+| **What's due** | **Mid-Semester Artifact Package** (8% of your grade). **Decision Log feedback round 2 returned before Week 11.** |
 | **Goal Document** | Compare what you planned with what you built. Write 3 -- 4 sentences about the gap between your plan and your result. |
 
 ---
@@ -106,8 +111,8 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 | | |
 |---|---|
-| **What's due** | **Oral Micro-Defence 3** (part of 25%) -- includes in-class written diagnostic and peer feedback. **All 8 Decision Log entries due** (30% of your grade). |
-| **Goal Document** | What is your role in the group? What are you responsible for this week? |
+| **What's due** | **Oral Micro-Defence 3** (part of 25%) -- includes an in-class written diagnostic, two short written artifacts, and peer feedback. **All 8 Decision Log entries due** (30% of your grade). |
+| **Goal Document** | What has your group accomplished? What is working well, what is not working yet, and what are you responsible for next? |
 
 ---
 
@@ -120,7 +125,7 @@ This schedule tells you what happens each week: the topic, what you need to hand
 
 ---
 
-### Week 13: Making It Better
+### Week 13: The Conversation
 
 | | |
 |---|---|

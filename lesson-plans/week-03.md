@@ -1,12 +1,12 @@
 # GEAP 103 Week 3 Lesson Plan: Never Losing Work Again
 
-**Context:** 3 x 55 min (150 min instruction + 15-min break), B1 learners, BYOD, Office 365 + Copilot
+**Context:** 3 x 55 min (150 min instruction + 15-min break), B1 learners, BYOD, access-neutral version control
 **Week 3 of 14** | Phase 1: Discovery
 
 **Learning Objectives (Week 3):**
 1. Understand version control as a timeline of snapshots you control (CLO 1 continues)
-2. Create a portfolio repository and add course work to it
-3. Make commits and restore earlier versions using AI-assisted Git
+2. Establish a reliable version-history location for course work
+3. Save named versions and recover an earlier version using Git/GitHub or an equivalent version-history tool
 4. Practise describing imagined possibilities in the Goal Document
 
 **Goal Thread — The Language of Imagining:**
@@ -40,7 +40,7 @@ Draw on board or display a slide: a timeline with labelled snapshots.
                                     <-- "I can go back here"
 ```
 
-"You already have something like this in OneDrive -- version history. Git is the same idea, but YOU control when to save a snapshot, and it works for sharing with other people."
+"You may already have something like this in OneDrive, Google Drive, or a desktop app -- version history. Git is another way to save named snapshots, and it works well for sharing with other people."
 
 **5 terms** mapped onto the diagram:
 - **Repository:** the whole timeline -- the place where your work and its history are kept
@@ -52,12 +52,12 @@ Draw on board or display a slide: a timeline with labelled snapshots.
 For each term: point to where it lives on the diagram. Repeat the term. Ask a volunteer to use it in a sentence: "When I commit, I am _____."
 
 ### 0:20--0:40 | Worked Example: Save, Change, Go Back
-**Format:** Instructor demonstration (all through Copilot/AI)
+**Format:** Instructor demonstration (Git/GitHub plus a non-Git version-history example)
 **Language skills:** Listening, reading (system output)
 
 Instructor demonstrates, narrating each step:
 
-1. **Create a repository** on GitHub. "This is where my work lives. It's empty right now."
+1. **Create a repository** on GitHub. "This is one place where work and its history can live."
 2. **Add a file** (a simple text document). **Commit** with a message: "Added first draft of my notes."
 3. **Change the file** (add a paragraph, delete a sentence). **Commit** again: "Revised introduction, added summary."
 4. **Show the two snapshots** side by side. "See? Both versions exist. The old one isn't gone."
@@ -65,9 +65,9 @@ Instructor demonstrates, narrating each step:
 
 **Aside (conversation hygiene):** "One thing about AI conversations: they have a shelf life. If you've been chatting with AI for 20 minutes and the conversation is long, AI starts losing track of what you said earlier. When a conversation gets confusing or AI starts repeating itself, start a new chat. It's like a clean desk -- AI thinks more clearly without 50 messages of history. You'll notice this as you use AI more. When it happens, just start fresh."
 
-6. **Push** to GitHub. "Now it's online. Safe. Someone else could see it too."
+6. **Push** to GitHub. "Now the remote copy is online. Someone else could see it if I share it."
 
-All commands through Copilot or an AI chat interface -- not typed into a terminal.
+Demonstrate the same save-change-recover cycle once in a non-Git tool (for example, OneDrive or Google Drive version history). Students are assessed on the visible cycle and their explanation, not on access to one service. Do not use a student account or a student's identity documents in the demonstration.
 
 **Key message:** "The commands don't matter. AI handles those. What matters is: WHEN do you save? And WHAT do you write to describe it? The commit message is a piece of writing -- a note to your future self about what you did and why."
 
@@ -82,22 +82,19 @@ All commands through Copilot or an AI chat interface -- not typed into a termina
 
 "Think: what have you made so far? Which files would you want to find again in 6 months?"
 
-### 0:45--1:05 | Create Portfolio Repository
+### 0:45--1:05 | Choose a Version-History Path and Save Once
 **Format:** Instructor-guided, individual
 **Language skills:** Reading (interface text, instructions), writing (commit messages)
 
-**GitHub accounts MUST be created before class** (assigned as homework in Week 2 closing or via Blackboard). Account creation in class consumes 15-20 min of unpredictable friction. Plan extra time ONLY for the 2-3 students who didn't complete the homework.
+Run a two-minute readiness check, then route students immediately:
 
-Step by step, instructor on projector, students on their own devices:
-1. Sign in to GitHub
-2. Create a new repository: name it `GEAP-103-Portfolio`
-3. Add one file: Week 1 file-system map (upload or copy-paste)
-4. Write a commit message: "Added Week 1 file system map"
-5. Commit
+- **Path A -- GitHub web:** sign in, create `GEAP-103-Portfolio`, upload the Week 1 file-system map, write a descriptive commit message, and commit.
+- **Path B -- local Git:** create a local repository, add the Week 1 map, and make a named commit. A remote GitHub repository can be connected later.
+- **Path C -- document/cloud version history:** open a course file in a tool with version history, save or name the current version, and record where its history is found.
 
-Instructor circulates, troubleshoots sign-in issues for the few students who need help.
+A regular free GitHub account is enough for Paths A and B; GitHub Education and Copilot are optional and may still be pending. Account registration or Education verification continues outside the timed activity. Never ask a student to display or send identity documents to teaching staff.
 
-Students who finish early: add the Week 2 Decision Log or Goal Document as a second commit. Each commit gets its own message.
+Students who finish early: add the Week 2 Decision Log or Goal Document as a second named version. Each snapshot gets its own descriptive note.
 
 ### 1:05--1:25 | Partner-Guided Commits
 **Format:** Pair work
@@ -106,7 +103,7 @@ Students who finish early: add the Week 2 Decision Log or Goal Document as a sec
 Pairs take turns: (Partner A goes first, then they switch.)
 - **Student A** changes a file (e.g., adds a sentence to the file-system map)
 - **Student B** guides the commit: "Now save this version. What's your commit message going to say? Describe what you changed."
-- A executes the commit (using Copilot: "Commit this file with the message _____")
+- A saves the named version in their chosen tool
 - Switch roles
 
 Focus: writing good commit messages. "A commit message describes what you did. 'Updated file' tells you nothing. 'Added Week 2 folder to file map' tells your future self exactly what happened."
@@ -119,8 +116,9 @@ Focus: writing good commit messages. "A commit message describes what you did. '
 
 Students:
 1. Make a change to a file
-2. Commit the change
-3. Restore the previous version (using Copilot: "Show me the previous version" or "Go back to the last commit")
+2. Save the changed version
+3. **Recover the previous version as a usable file**; merely opening or viewing the history does not complete the task
+4. Keep both the current and recovered versions so the recovery is reversible
 
 Pairs confirm: "Show your partner the restored version. Is it the old one?" (Partner A shows first, then Partner B.)
 
@@ -134,15 +132,16 @@ Pairs confirm: "Show your partner the restored version. Is it the old one?" (Par
 
 ## Segment C: Application + Goal Document + Session Review (1:50--2:45)
 
-### 1:50--2:05 | Continued Practice + Push
+### 1:50--2:05 | Continued Practice + Remote Copy Where Available
 **Format:** Individual with instructor support
 **Language skills:** Reading (system output, error messages)
 
-Students continue adding to their repository:
-- Add remaining files (Week 2 documents, Goal Document), commit each with a descriptive message, push to GitHub
-- For students who are comfortable: visit their GitHub repository page in a browser and see their commits listed
+Students continue in their selected path:
+- Add remaining files or save another named version with a descriptive note
+- GitHub/local-Git students connect or push a remote copy where available
+- Version-history students locate the history again and export or duplicate the recovered version
 
-Instructor circulates, helps with errors. Common errors to watch for: authentication problems, file-not-found, forgetting to write a commit message. Help students read the error message: "What does this say? What does it want you to do?"
+Instructor circulates, helps with errors. Common errors to watch for: authentication problems, a missing file, a disabled history control, insufficient permissions, or an unnamed version. Help students read the message: "What does this say? What does it want you to do?" If one path remains blocked after two focused attempts, move the student to another path and record the unresolved issue for follow-up.
 
 ### 2:05--2:27 | Goal Document Update: Imagining
 **Format:** Guided writing, then pair discussion
@@ -169,7 +168,7 @@ Instructor circulates, helps with errors. Common errors to watch for: authentica
 *This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
 
 ### 2:29--2:41 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (explaining a technical decision to a non-expert)
 
 "Open your AI tool and start a new chat. Say or paste this prompt."
@@ -184,7 +183,7 @@ Students talk to AI for 10-12 minutes, explaining what a commit message is, why 
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:41--2:42 | Self-Check
 **Format:** Individual, written
@@ -200,18 +199,18 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - "You also saw what's actually there in your work history -- not what you remember doing, but what Git recorded. Version control doesn't lie. That's its power."
 - Quick vocabulary check: "What's a commit?" "What's a repository?" "What does restore mean?" (volunteers answer)
 - "Next week is a check-in. You'll show what you've done, explain your work to someone, and reflect on what you've learned so far."
-- **Specific prep for Week 4:** "Your file-system artifact is due next week. Make sure your GEAP 103 folder in OneDrive is organized with clear naming and folders. Your portfolio repository should have at least 2-3 commits."
+- **Specific prep for Week 4:** "Your file-system artifact is due next week. Make sure your GEAP 103 folder is organized with clear names. Bring evidence of at least two named versions and one actual recovery from the version-history path you used."
 
 ---
 
 ## Instructor Prep Checklist
 
-- [ ] **GitHub accounts MUST be created before class** (assigned as homework in Week 2 closing or via Blackboard). Account creation in class consumes 15-20 min of unpredictable friction. Have a fallback plan ONLY for the 2-3 students who didn't complete the homework.
+- [ ] Post the three supported paths (GitHub web, local Git, and document/cloud version history); do not predict how many students will need each path
 - [ ] Visual model slide or whiteboard plan: timeline with snapshots and vocabulary labels
 - [ ] Vocabulary slides: repository, commit, snapshot, restore, push
-- [ ] Copilot/AI interface tested for Git commands (create repo, commit, restore, push)
+- [ ] Instructor-owned GitHub/local-Git example and a non-Git version-history example tested; a public demo verifies only the shared interface, not each student's registration or eligibility
 - [ ] Worked example file prepared (something simple to commit and modify)
-- [ ] Plan for common errors: GitHub authentication failures, wrong directory, missing commit message
+- [ ] Plan for common errors: authentication failure, wrong directory, missing history, permissions, and unclear snapshot names; prepare downloadable practice files
 - [ ] Students' Week 1 and Week 2 files identified (for uploading to repository)
 - [ ] Goal Document prompt + sentence frames on slide
 - [ ] Session review slide: role-setting prompt + Week 3 scenario ("Explain what a commit message is and why yours was better than AI's suggestion")
@@ -229,7 +228,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - No graded assessment this week
 - CLO 1 continues (manage files + versions -- Git/GitHub as version control)
 - CLO 1 continues (manage files + versions -- repository as a way to organize and protect work)
-- Portfolio repository established (used for all future submissions and Git Episodes assessment)
+- Version-history location established; GitHub remains the preferred portfolio path, with equivalent evidence accepted when access is blocked
 - Goal Document updated (ungraded; instructor reads at Week 4)
-- Students should have at least 1 Decision Log entry (from Week 2); additional entries are optional (students choose 8 of 12 eligible weeks). Instructor collects entries 1-2 by ~Week 4
+- Students should have at least 1 Decision Log entry (from Week 2); they curate 8 entries from the ten-week window, Weeks 2-11. Instructor collects entries 1-2 by ~Week 4
 - **Session review** (formative, not graded): Week 3 scenario practises explaining a technical concept to a non-expert -- builds toward Micro-Defence 1 (Week 4, 3 criteria: clear description, terminology, explaining a decision)

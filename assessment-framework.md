@@ -1,9 +1,9 @@
 # GEAP 103 Assessment Framework (Draft v6)
 
 **Course:** GEAP 103 Basic Computer Skills
-**Version:** Draft v6, 2026-03-25
+**Version:** Draft v6, revised 2026-09-04
 
-**Changes from v5:** (1) Semester timeline staggered — DLs close Week 11, Git Episodes close Week 12, Week 14 = 10% only. (2) Micro-Defence 3 moved to Week 11. (3) Evidence-Indexed Reflection changed from written to oral one-on-one with instructor, Week 13 (4 min + pre-tagging). (4) Micro-defence format specified as simultaneous triads with observation tracking. (5) Task criteria evolve across Weeks 4, 8, 11 (3 → 5 → 7 criteria). (6) Weekly speaking practice (session review) documented as formative thread feeding micro-defences and oral reflection. (7) Within-component weighting for micro-defences specified (equal). (8) Session review scenarios specified for all 14 weeks.
+**Changes from v5:** (1) Semester timeline staggered — DLs close Week 11, Git Episodes close Week 12, Week 14 = 10% only. (2) Micro-Defence 3 moved to Week 11. (3) Evidence-Indexed Reflection changed from written to oral one-on-one with instructor, Week 13 (4 min + pre-tagging). (4) Micro-defence format specified as simultaneous triads with observation tracking. (5) Task criteria evolve across Weeks 4, 8, 11 (3 → 5 → 7 criteria). (6) Weekly speaking practice (session review) documented as formative thread feeding micro-defences and oral reflection. (7) Within-component weighting for micro-defences specified (equal). (8) Session review scenarios specified across all 14 curricular units.
 
 ---
 
@@ -14,7 +14,7 @@
 - Language level: Exit target B1.2 (IELTS 4.5 / TOEFL PBT 487 / TOEFL iBT 56)
 - Entry level: A2+ to low-B1
 - Class size: 15–24 students
-- Environment: Office 365 + Copilot (baseline; students may use additional AI tools as capabilities evolve)
+- Environment: Office 365 plus any available AI tool. GitHub Education and Copilot Student are optional benefits, not assessment prerequisites.
 
 ---
 
@@ -30,7 +30,7 @@
 
 **Total: 100%**
 
-**Weight rationale:** Process (30%) + Language (25%) + Artifact Package (25%) + Collaboration (10%) + Metacognition (10%). The Decision Logs carry the most weight because they are where students practise the course's core skill: evaluating AI output and making justified decisions. "Artifact Package" means the product together with the documentation, explanation, and sharing that surround it — the communicative package, not just the thing itself. Git is reduced to reflect the realistic scope for this population in 14 weeks.
+**Weight rationale:** Process (30%) + Language (25%) + Artifact Package (25%) + Collaboration (10%) + Metacognition (10%). The Decision Logs carry the most weight because they are where students practise the course's core skill: evaluating AI output and making justified decisions. "Artifact Package" means the product together with the documentation, explanation, and sharing that surround it — the communicative package, not just the thing itself. Git is reduced to reflect the realistic scope for this population within the course.
 
 ---
 
@@ -74,7 +74,7 @@
 
 *Note on ambition: "Ambitious" is calibrated to B1 — it means the student attempted something that genuinely challenged their ability to articulate what they wanted, not something technically sophisticated. A student who struggles to describe a complex goal and documents that struggle is demonstrating more than a student who describes a trivial goal perfectly. The language is B1; the ambition can be high.*
 
-**Feedback cycle:** Instructor provides written feedback on entries 1–2 (submitted by ~Week 4) before entry 3 is due. Feedback highlights one strength and one specific improvement target. Students are expected to identify in a subsequent entry what they changed based on feedback. A second feedback round covers entries 3–5 (by ~Week 8). Entries 6–8 are assessed summatively. The DL self-assessments also inform the micro-defence check-ins: patterns of over- or under-rating are discussed in the one-on-one moments during triads.
+**Feedback cycle:** Instructor provides written feedback on entries 1–2 (submitted by ~Week 4) before entry 3 is due. Feedback highlights one strength and one specific improvement target. Students are expected to identify in a subsequent entry what they changed based on feedback. A second feedback round covers entries 3–5 (by ~Week 8) and is returned before the Week 11 unit, so students can use it when curating entries 6–8. Entries 6–8 are assessed summatively. The DL self-assessments also inform the micro-defence check-ins: patterns of over- or under-rating are discussed in the one-on-one moments during triads.
 
 ---
 
@@ -84,7 +84,7 @@
 
 **Schedule:** Weeks 4, 8, 11
 
-**Format: Simultaneous triads.** All students present at the same time in groups of 3. Each student presents to two partners, who give structured feedback. The instructor circulates with scoring sheets, sampling each group and asking one follow-up question per presenter. All students assessed in one ~30-minute block with no overflow into the following week.
+**Format: Simultaneous triads.** Students who are present work in groups of 3. Each student presents to two partners, who give structured feedback. The instructor circulates with scoring sheets and records the evidence basis as Full, Partial, or Deferred. The 30-minute block accommodates the student presentations, but it does not by itself guarantee enough direct instructor observation to score every student's oral performance. Do not infer a score from missed observation; a student may book a short live follow-up outside class when the recorded evidence is insufficient.
 
 **Process:**
 1. **In-class written diagnostic** (10 min, unmediated, whole class simultaneous): Brief writing task completed in class without AI assistance. Handwritten or on a locked-down device.
@@ -92,7 +92,7 @@
 3. **Three rotations** (~9 min each): Each student presents for 4 min, then receives feedback from both partners (~5 min). Instructor circulates, spending 2–3 min per group, asks one follow-up question, scores.
 4. Student submits 2 written artifacts before each check-in (e.g., help request + troubleshooting log, or GitHub issue + collaboration note). These may be AI-assisted.
 
-**Make-up for absent students:** Students who miss a micro-defence week write the diagnostic during settling-in the following week, then do an ad hoc triad (instructor + 2 volunteers) during any independent work period. The instructor hears the full presentation.
+**Make-up for absent students:** Students who miss a micro-defence week complete the same diagnostic and an ad hoc triad (instructor + 2 volunteers) within seven calendar days. If more than two students need a make-up, the instructor schedules one shared make-up block instead of removing another lesson's circulation time. The instructor hears the full presentation.
 
 **Written artifact types (CLO 5):** These are genres of technical communication, not tied to specific tools:
 - Help request
@@ -165,7 +165,7 @@ The task criteria expand across the three check-ins, reflecting the growing rang
 
 **Instructor sampling:** With ~7 groups and 28 min across 3 rounds, the instructor will hear ~15 of ~21 presenters substantively (2–3 min each). The remaining students are scored on briefer observation. The scoring sheet includes an "evidence basis" field (full observation / partial observation / deferred) for transparency.
 
-**Observation tracking protocol:** After each micro-defence round, the instructor records which students received "partial" or "deferred" observation. At the next round, those students' groups are visited first. This guarantees every student receives at least 2 full observations across the 3 rounds. A simple rotation checklist (student name × 3 rounds, mark F/P/D) is printed alongside the scoring sheets. If a student has been partially observed at both Weeks 4 and 8, their group is the instructor's first stop at Week 11.
+**Observation tracking protocol:** After each micro-defence round, the instructor records which students received "partial" or "deferred" observation. At the next round, those students' groups are visited first. The target is at least 2 full observations per student across the 3 rounds; absences and unresolved deferrals require a named make-up. A simple rotation checklist (student name × 3 rounds, mark F/P/D) is printed alongside the scoring sheets. If direct evidence remains insufficient, the student may book a short live follow-up outside class; keep the result Deferred until that observation occurs.
 
 **Within-component weighting:** The three micro-defence rounds are weighted equally (~8.3% each within the 25% allocation). Equal weighting is appropriate because the evolving criteria already reflect rising expectations: meeting 3/3 at Week 4 represents diagnostic-level performance, while meeting 7/7 at Week 11 represents summative-level performance. The scores are comparable in meaning (proportion of applicable criteria met), even though the criteria themselves expand.
 
@@ -184,7 +184,7 @@ The task criteria expand across the three check-ins, reflecting the growing rang
 
 | Package | Week | Weight | Requirements |
 |---------|------|--------|--------------|
-| Organised file system | 4 | 7% | Logical folder structure, consistent naming, version awareness |
+| Organised file system | 4 | 7% | Logical local/cloud folder structure, consistent naming, two named states, and one actual usable recovery |
 | Mid-semester artifact | 10 | 8% | A working artifact addressing a genuine need, with accessibility where applicable, accompanied by process documentation and evidence of sharing |
 | Final artifact | 14 | 10% | More complex or ambitious artifact, iteration visible, documentation shows how the work was explained to others |
 
@@ -230,13 +230,15 @@ The task criteria expand across the three check-ins, reflecting the growing rang
 | **Error recovery** | One "something broke → diagnosis → fix" sequence with error text captured | 1, 2 |
 | **Collaboration** | One PR (or equivalent) with description + one comment exchange | 7 |
 
-**Submission deadline:** Week 12. By this point, students have had 7 weeks of Git activity. The collaboration episode arises naturally from the Phase 3 group work in Weeks 11–12. Closing Git Episodes in Week 12 (alongside Decision Logs) clears Week 13 for the oral reflection.
+**Equivalent evidence paths:** GitHub Education, Copilot Student, and local software installation are not prerequisites. A student may demonstrate Restore through local Git or a cloud version-history recovery; Error recovery through an authentic or instructor-staged error in an available tool; and Collaboration through tracked changes or a version-history handoff with the same change description and response. In every path, the evidence must belong to the individual student. Watching a demonstration or using a partner's history is practice, not assessment evidence.
 
-*Conflict Resolution was included in v2 but removed after review. Merge conflict resolution requires a conceptual model of branching and state that is unrealistic for this population in 14 weeks. If authentic conflicts arise during collaborative work, they can be documented as bonus evidence, but they are not required.*
+**Submission deadline:** Week 12. By this point, students have had seven curricular weeks of version-control activity. The collaboration episode arises naturally from work in Weeks 7 and 11–12. Decision Logs already closed in Week 11; closing the episodes in Week 12 clears Week 13 for the oral reflection.
+
+*Conflict Resolution was included in v2 but removed after review. Merge conflict resolution requires a conceptual model of branching and state that is unrealistic for this population within the course. If authentic conflicts arise during collaborative work, they can be documented as bonus evidence, but they are not required.*
 
 **Assessment:** Checklist-based. Short oral confirmation for any suspiciously "perfect" artifact.
 
-**Target mental model:** By Week 14, students should understand version history as a timeline of saved states that can be navigated (not just "undo"). They should be able to explain, in simple terms, that a commit is a snapshot, that restoring means going back to an earlier snapshot, and that collaboration means two people contributing snapshots to the same timeline. The command-line details are secondary to this conceptual understanding.
+**Target mental model:** By Week 14, students should understand version history as a timeline of saved states that can be navigated (not just "undo"). They should be able to explain, in simple terms, that a commit or named version is a snapshot, restoring/recovery produces a usable earlier state, and collaboration requires an identifiable handoff and response. Command-line details are secondary.
 
 **CLO Alignment:**
 - CLO 1: Manage files and versions using version-control tools
@@ -259,7 +261,7 @@ The task criteria expand across the three check-ins, reflecting the growing rang
 
 **Format:** Individual oral reflection (~4 min per student + 1 min transition), conducted during Week 13. The student has their portfolio open with evidence pre-tagged (see below). The instructor selects 2 CLOs to discuss (not all 7 — the oral format samples rather than exhausts).
 
-**Pre-tagging (5 min, whole class, start of Week 13):** Before reflections begin, students spend 5 minutes tagging their portfolio: for 3–4 CLOs, they open or bookmark the specific artifact they would point to as evidence. This reduces navigation friction during the conversation and ensures the 4 minutes are spent on articulation and evaluation, not searching for files.
+**Pre-tagging (5 min, whole class, start of Week 13):** Before reflections begin, students spend 5 minutes tagging their portfolio: for 3–4 CLOs, they open or bookmark the specific artifact they would point to and keep a local/exported copy or screenshot. This reduces navigation friction and preserves the conversation if a sign-in or network fails.
 
 **Process:**
 1. Instructor asks: "Pick one CLO you feel strongest about. Show me the evidence."
@@ -269,11 +271,13 @@ The task criteria expand across the three check-ins, reflecting the growing rang
 
 **This is unmediated.** No AI assistance. The student's portfolio is open for reference (they need to find and point to evidence), but the language is entirely their own. This is the culminating unmediated spoken performance of the semester.
 
+**Make-up for absence:** The student completes the same live, four-minute, two-CLO conversation within five instructional days. It may be in person or live online. An asynchronous recording or Week 14 gallery post is not a substitute.
+
 **Why oral, not written:** The oral format produces stronger validity evidence than the written alternative. At B1, students can articulate reflective claims more naturally in speech than in writing. The one-on-one format allows the instructor to probe understanding ("Can you tell me more about why you chose that example?") in a way that written submissions cannot. It also eliminates authenticity concerns — the student is speaking in real time, with their portfolio visible.
 
 **Why one-on-one, not triads:** Reflection on one's own learning is personal. A student cannot usefully serve as audience for another student's CLO-indexed self-assessment. The triad format works for technical explanations (Weeks 4, 8, 11) because the audience can evaluate clarity. It does not work for metacognitive reflection because there is no information gap — the peers have no basis for feedback.
 
-**Connection to session review speaking practice:** Students have been practising explaining their work to AI every week since Week 1. The session review is low-stakes rehearsal for this culminating conversation. By Week 13, explaining work orally is a well-practised skill, not a novel demand.
+**Connection to session review speaking practice:** Students have been practising explanations through AI voice, typed-and-read exchanges, or live role-play since Week 1. The session review is low-stakes rehearsal for this culminating conversation. By Week 13, explaining work orally is a well-practised skill, not a novel demand.
 
 **Logistics:** At 5 min per student (4 min conversation + 1 min transition):
 
@@ -325,6 +329,8 @@ This checklist is a deliverable: students submit it (checked off, with notes) by
 
 ## Semester Timeline
 
+This table names curricular units. The canonical mappings to actual meetings are in [`admin/delivery-ledger.md`](admin/delivery-ledger.md), with dated section schedules in [`schedules/`](schedules/).
+
 | Week | Phase | Assessment Activity |
 |------|-------|---------------------|
 | 1 | Discovery | — |
@@ -336,7 +342,7 @@ This checklist is a deliverable: students submit it (checked off, with notes) by
 | 7 | Building | |
 | 8 | Building | **Oral Micro-Defence 2** (triads, 5 criteria) |
 | 9 | Building | |
-| 10 | Building | **Mid-Semester Artifact Package due**; **Decision Log feedback round 2 returned** |
+| 10 | Building | **Mid-Semester Artifact Package due**; **Decision Log feedback round 2 returned before Week 11** |
 | 11 | Creation | **Oral Micro-Defence 3** (triads, 7 criteria); **Decision Logs due** (8 curated entries + self-assessment) |
 | 12 | Creation | **Git Episodes due** |
 | 13 | Creation | **Oral Reflection** (one-on-one, 4 min per student) |
@@ -344,11 +350,19 @@ This checklist is a deliverable: students submit it (checked off, with notes) by
 
 **Deadline distribution:** Week 11: part of 25% + 30%. Week 12: 10%. Week 13: 10%. Week 14: 10%. Week 11 is the heaviest at ~38%, but the DLs are curation of existing entries (not new composition) and the micro-defence runs in a 30-minute triad block — they do not compete for cognitive resources. Weeks 12–14 are each ≤10%, with the instructor reading DLs between Weeks 11–13.
 
+### Delivery variants
+
+- **14 meetings:** Teach Weeks 1–14 separately.
+- **13 meetings:** Combine Weeks 9 and 10 using the dedicated compressed lesson; preserve Weeks 11–14 separately.
+- **12 meetings:** Use the same combined Weeks 9–10 lesson; preserve Weeks 11–13 separately; complete Week 14 through the asynchronous closeout. The final Artifact Package keeps the same rubric and weight.
+
+Do not combine Weeks 12 and 13. Week 12 provides the evidence map, Git deadline, and rehearsal required for the Week 13 reflection.
+
 ---
 
 ## Weekly Speaking Practice (Session Review)
 
-**What:** A 10–15 minute AI-assisted speaking practice at the end of each class (Weeks 1–14). Students talk to AI using voice mode, practising the same oral skills assessed in micro-defences and the oral reflection.
+**What:** A 10–15 minute speaking practice in ten classes. The preferred route is AI voice; typed AI exchanges read aloud and live partner/instructor role-plays use the same prompts when voice access is unavailable. Weeks 4, 8, and 11 use micro-defences instead; Week 13 uses the oral reflection. Students practise the same oral skills across these recurring formats.
 
 **Setup:** Students say or paste a role-setting prompt at the start: "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me." This prompt is on the weekly slide and in the `copilot-instructions.md` file in the starter zip.
 
@@ -358,11 +372,11 @@ This checklist is a deliverable: students submit it (checked off, with notes) by
 |------|----------|---------|---------------------|
 | 1 | Tell AI what you set up today and what you want to learn. | Curious classmate | Expressing desires, answering follow-ups |
 | 2 | Describe what happened when you tried your prompt — what you expected vs. what you got. | Specificity coach | Evaluating results, being precise about gaps |
-| 3 | Explain what a commit message is and why yours was better than AI's suggestion. | Confused classmate who doesn't understand Git | Explaining a technical decision to a non-expert |
+| 3 | Explain what a commit message or named-version label is and why a specific one is better than a generic one. | Confused classmate who doesn't understand version history | Explaining a technical decision to a non-expert |
 | 4 | No session review (diagnostic + triad defence are the reflection activities). | — | — |
 | 5 | Describe an accessibility problem you found, what the Checker said, and how you fixed it. | Help desk | Narrating a troubleshooting sequence |
 | 6 | You made a change to a shared document. Explain what you changed and why to someone who needs to review it. | Teammate reviewing your work | Justifying a change to someone with authority to reject it |
-| 7 | A collaborator's PR has a problem. Describe the problem clearly enough for them to fix it without your help. | Collaborator who can't see your screen | Writing/speaking a bug report with reproduction steps |
+| 7 | A collaborator's proposed change has a problem. Describe it clearly enough for them to fix without your help. | Collaborator who can't see your screen | Writing/speaking a bug report with reproduction steps |
 | 8 | No session review (diagnostic + triad defence are the reflection activities). | — | — |
 | 9 | You built something but it doesn't do what you intended. Explain to AI what you wanted, what you got, and what you think went wrong. | Debugging partner | Diagnosing a gap between intention and result |
 | 10 | Present your mid-semester artifact to AI as if it were a client. Explain what it does, who it's for, and one decision you made during the process. | Client who commissioned the work | Presenting work to a non-technical audience |
@@ -373,7 +387,7 @@ This checklist is a deliverable: students submit it (checked off, with notes) by
 
 **Design note on AI role-setting:** The role-setting prompt ("Speaking practice. I'm a B1 English student...") deliberately instructs AI to push back when explanations are vague but does not instruct AI to model vocabulary. This is intentional: the goal is to force production, not supply language. If the student says "the thing broke," AI should ask "What thing? What happened?" rather than offering "Do you mean you got an error message?" Instructors should understand this design choice and not modify the prompt to add vocabulary modelling, which would undermine the production demand.
 
-**Assessment:** Not graded. The session review is formative — it builds the speaking skills assessed in micro-defences (Weeks 4, 8, 11) and the oral reflection (Week 13). Students may save transcripts as portfolio evidence for Decision Logs or the oral reflection.
+**Assessment:** Not graded. The session review is formative — it builds the speaking skills assessed in micro-defences (Weeks 4, 8, 11) and the oral reflection (Week 13). Students may use text chat, a peer exchange, or a phone recording when an AI voice tool is unavailable. They may save transcripts or notes as portfolio evidence for Decision Logs or the oral reflection.
 
 **Optional phone recording:** Students may record their session review using a phone on a lanyard (chest-level, ~20 cm from mouth). The recording is for self-review ("Listen to yourself. Did you say what you meant?"), not graded. Introduced in Week 4 alongside the triad defence.
 
@@ -462,11 +476,11 @@ The B1.2 exit target is a program-level claim supported by converging evidence a
 | Decision Log self-assessments (×8) | Semi-independent written | Student's own evaluative language applied to their work |
 | Peer feedback (×3) | Semi-independent written | Student's own evaluative language applied to a peer's work |
 | Written artifacts (×6) | AI-assisted | Genre competence in technical communication (with AI support) |
-| Session review transcripts (ongoing) | Semi-independent spoken | Sustained practice of oral explanation across 14 weeks |
+| Session review transcripts (ongoing) | Semi-independent spoken | Sustained practice of oral explanation across the 14-unit curriculum |
 
 **What the framework does not claim:** That any single percentage score on any single assessment corresponds to a CEFR level. The fluency rubric bands are course-internal performance descriptors, not CEFR ratings.
 
-**What the framework does claim:** That a student who passes the course (50%+) has demonstrated, through multiple unmediated and semi-independent performances across 14 weeks, communicative competence consistent with B1.2 in the domain of technical/digital communication. The strongest evidence comes from the unmediated sources (oral defences, oral reflection, and in-class diagnostics); the AI-assisted sources provide supporting evidence of genre competence and task articulation.
+**What the framework does claim:** That a student who passes the course (50%+) has demonstrated, through multiple unmediated and semi-independent performances across the curriculum, communicative competence consistent with B1.2 in the domain of technical/digital communication. The strongest evidence comes from the unmediated sources (oral defences, oral reflection, and in-class diagnostics); the AI-assisted sources provide supporting evidence of genre competence and task articulation.
 
 **Limitation:** This framework assesses language use in a specific domain (digital/technical communication). It does not constitute a general English proficiency assessment. The B1.2 exit target applies to this domain; students' general English proficiency may differ.
 
@@ -482,4 +496,4 @@ The B1.2 exit target is a program-level claim supported by converging evidence a
 - Self- and peer assessment are integrated into existing components (not standalone assessments) to develop evaluative judgment without adding separate graded tasks
 - The framework is designed to be tool-independent. AI capabilities will change between the time this framework is written and the course launch. The skills assessed (articulation, evaluation, documentation, communication, collaboration, metacognition) are durable regardless of which tools students use
 - Ambition is calibrated to B1: the student attempted something that genuinely challenged their ability to articulate what they wanted. The language level is B1; the project ambition can be high
-- Weekly speaking practice (session review) is the formative thread that makes the summative oral assessments work. Without it, the micro-defences and oral reflection would be isolated performances. With it, they are the culmination of a 14-week practice arc.
+- Weekly speaking practice (session review) is the formative thread that makes the summative oral assessments work. Without it, the micro-defences and oral reflection would be isolated performances. With it, they are the culmination of a course-long practice arc.

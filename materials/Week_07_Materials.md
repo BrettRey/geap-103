@@ -9,11 +9,11 @@ This file contains everything you need to prepare slides and run the class for W
 
 **Week 7 design note:** This is the first collaboration week. Students shift from working alone to working with a partner. The core skill: writing clearly enough that someone who doesn't share your context can act on what you write. Pull requests, Issues, and comments are treated as communication genres, not GitHub features. The quality criterion is always: "Could someone who isn't you act on this?"
 
-**Pre-class requirement:** Students must fork the shared practice repository before class. Assign this in Week 6 closing or via Blackboard. This prevents forking friction from consuming the paired PR exercise.
+**Pre-class readiness:** Share both a public GitHub repository and a downloadable copy of the same practice file. Ask students to try their preferred route, but do not make a successful fork a condition of participation.
 
 **New vocabulary (5 AWL terms):** collaborate, contribute, specific, context, respond
 
-**AI tools:** AI handles Git commands. The human handles the writing. Stretch activity: students compare their PR description with an AI-generated one.
+**AI tools:** AI may help with Git commands or interface questions, but is not required. The human handles the writing and verifies the result. Stretch activity: students compare their change description with an AI-generated one.
 
 ---
 
@@ -23,24 +23,21 @@ This file contains everything you need to prepare slides and run the class for W
 
 | Material | Description | How to share |
 |----------|-------------|-------------|
-| **Shared practice repository** | A simple document (student club FAQ or campus event page) with deliberate problems: 3-4 missing headings (bold text, no heading styles), placeholder text in section 3, one image with no alt text, one incorrect date. | Public GitHub repo or GitHub Classroom template. Share URL via Blackboard with forking instructions. |
+| **Shared practice artifact** | The same simple document in a public GitHub repository and as a downloadable file, with deliberate problems: 3-4 missing headings, placeholder text, one image with no alt text, and one incorrect date. | Share both routes in Blackboard. |
 | **Pre-made comment exchange** | Screenshot or second-account demo showing a reviewer commenting on a PR ("The heading change looks good. Can you also add alt text to the image in section 2?") and the author responding ("Good catch. I'll add that."). | Display on projector |
 | **Bad PR description for vocabulary task** | "Title: Updated file. Description: Fixed some stuff. Looks better now." | Display on slide |
 | **Good vs. bad examples** | 3 pairs (see Segment A below) | Display on slides |
 | **Week 8 micro-defence criteria** | Table of 5 criteria with 2 new ones highlighted | Display on slide |
 
-**Repository setup notes:**
-- Use a GitHub template repository or a public repo that students can fork.
-- If using GitHub Classroom, create an assignment with individual forks.
-- Test that 20 simultaneous forks don't hit rate limits.
-- **Fallback:** If forking fails for any student, they can work in the GitHub web editor using a branch on the instructor's repo. Set branch permissions to allow this.
+**Path setup notes:**
+- GitHub route: use a public template repository students can fork into their own accounts.
+- Document route: provide a downloadable copy that supports Track Changes/Suggesting, version history, and comments.
+- Test the instructor-owned public repository and downloadable file. This does not test or guarantee student registration, permissions, Education eligibility, or device configuration.
+- Do not grant improvised write access to an instructor-owned branch as a fallback. Route blocked students to individual document copies.
 
-### Pre-Fork Verification
+### Pre-Class Status Check
 
-Before class, check how many students have forked:
-- Go to your repository → Insights → Forks
-- Or check GitHub Classroom dashboard
-- Students who haven't forked will need 2-3 minutes at the start of Segment B
+Before class, verify that both posted artifacts open from a signed-out browser. At the start of class, students report which path is usable today. GitHub status is individual; do not assume that a public test or another student's result reproduces it.
 
 ---
 
@@ -127,11 +124,21 @@ Open a sample Issue. Show Title + Description fields.
 
 > "An Issue has a title and a description. The title says what the problem is. The description gives context: where is the problem, what should it look like, what does the helper need to know."
 
+**Show the equivalent document route** (3 min, within the demonstration):
+
+1. Download or duplicate the practice file so the instructor original remains unchanged.
+2. Turn on Track Changes/Suggesting and make the same edit.
+3. Put the PR template in a change-note block at the top or in the Blackboard handoff.
+4. Share the individual copy with a partner or exchange it through Blackboard.
+5. The reviewer leaves one specific comment; the author replies and saves the resulting version.
+
+Name the equivalence explicitly: a fork is an individual copy; the change note serves the rhetorical purpose of the PR description; the comment-and-reply exchange supplies the collaboration evidence.
+
 ---
 
 ### Comprehension Gate (0:30-0:32)
 
-> "Before we practise, make sure you know the four steps. Turn to your partner. Take turns saying them: first you fork, then you _____, then you _____, then your partner _____."
+> "Before we practise, make sure you know the four steps. Turn to your partner. Take turns saying them: first you make your own copy, then you _____, then you _____, then your partner _____."
 
 Listen to 2-3 pairs. Clarify if needed.
 
@@ -169,15 +176,15 @@ Display each pair. Pairs discuss (30 seconds), then share.
 
 ---
 
-### Fork Confirmation (0:43-0:45)
+### Path and Partner Confirmation (0:43-0:45)
 
-> "Everyone should have forked the practice repository. Open GitHub and find your fork. Raise your hand when you see it."
+> "Open your GitHub fork or your own downloaded copy. Raise your hand when you can edit your copy without changing the instructor's original."
 
-Help students who haven't forked (2 min). **Fallback:** students who can't fork work in the GitHub web editor on a branch.
+Route working GitHub users to the PR path and everyone else to the tracked-change/comment path. If a partner is absent, create one triad or use the instructor's prepared sample response. Do not treat shared-screen work as both students' evidence.
 
 ---
 
-### Paired PR Exercise (0:45-1:13)
+### Paired Change-Handoff Exercise (0:45-1:13)
 
 **PR template and sentence frames stay on screen:**
 
@@ -194,9 +201,11 @@ Help students who haven't forked (2 min). **Fallback:** students who can't fork 
 Display the steps:
 
 > 1. Divide the work with your partner (2 min): "I'll fix _____. You fix _____."
-> 2. Make your changes (12 min)
-> 3. Write your PR description using the template (6 min)
-> 4. Read your partner's PR. Leave one specific comment (8 min)
+> 2. Make your changes independently in your own fork or copy (12 min)
+> 3. Write your PR description or change note using the template (6 min)
+> 4. Read your partner's PR or tracked changes. Leave one specific comment (8 min)
+
+**Document-path handoff:** keep Track Changes/Suggesting on, place the completed What/Why/What-not note at the top of the copy or in the Blackboard submission text, exchange the copy/link with the assigned partner, then reply to the partner's comment. Do not edit the instructor's original or share a single file as both students' evidence.
 
 **Checkpoint at 1:00** (display or announce):
 
@@ -213,12 +222,12 @@ Display the steps:
 | Student writing PR description | "Read it to me. Would I know what you changed without looking at the file?" |
 | Student's comment says "looks good" | "Can you be more specific? What exactly looks good?" |
 | Both partners fixed the same thing | "What went wrong in your planning? How would you prevent that?" |
-| Student stuck on Git | "What are you trying to do? Ask AI to help. If that doesn't work, use the web editor." |
-| Strong pair finished with comment exchange | "Save a screenshot -- that's your Collaboration episode for Git Episodes." |
+| Student stuck on GitHub | "Try two focused fixes. If it is still blocked, move to the document path and keep the error for your Decision Log." |
+| Strong pair finished with comment exchange | "Each of you: save your own handoff, your partner's comment, and your reply." |
 
 **Git Episodes reminder:**
 
-> "If you finished a PR with a comment exchange, save a screenshot. This counts as your Collaboration episode."
+> "Save your own change handoff, your partner's specific comment, and your reply. A PR or a tracked-change/version-history exchange can count as your Collaboration episode."
 
 ---
 
@@ -256,7 +265,7 @@ Display the steps:
 
 > 1. Partner A explains their project using the frames above (2 min)
 > 2. Partner B asks questions: "What part are you stuck on? What would help?" (2 min)
-> 3. Partner B writes an Issue on Partner A's repo using the template (6 min)
+> 3. Partner B writes an Issue on Partner A's repo or completes the supplied task-note template (6 min)
 > 4. Switch roles (10 min for reverse)
 >
 > When done: read the Issue your partner wrote for you. "I could / could not do this task because _____."
@@ -317,6 +326,8 @@ Display the steps:
 
 ### Session Review -- Speaking Practice (2:12-2:25)
 
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
+
 Display:
 
 > **Open your AI tool. Start a new chat.**
@@ -324,9 +335,9 @@ Display:
 > **First, say this (or paste it):**
 > "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
 >
-> **Then, your task:** A collaborator's pull request has a problem. Describe the problem clearly enough for them to fix it without your help. They can't see your screen.
+> **Then, your task:** A collaborator's proposed change has a problem. Describe it clearly enough for them to fix it without your help. They can't see your screen.
 >
-> Start with: "I was reviewing a pull request and I found a problem. The problem is _____."
+> Start with: "I was reviewing a proposed change and I found a problem. The problem is _____."
 
 Students talk to AI for 10-12 minutes. Instructor circulates and listens.
 
@@ -368,7 +379,7 @@ Display the 5 criteria:
 >
 > "You practised five words: collaborate, contribute, specific, context, respond. These describe good teamwork in any setting."
 >
-> "If you completed a PR with a comment exchange today, save a screenshot. That's your Collaboration episode for Git Episodes."
+> "Save evidence of your own change handoff, your partner's specific comment, and your reply. A PR and a tracked-change handoff both count."
 >
 > "Next week: Micro-Defence 2. Review your portfolio tonight. Pick one piece of work. The two new criteria are 'show what you tried' and 'interpret an error.' Pick something where you can demonstrate those."
 
@@ -380,8 +391,8 @@ Display the 5 criteria:
 
 | Task | Deadline | Notes |
 |------|----------|-------|
-| Review student PRs and Issues | Before Week 8 | Note vague descriptions -- these students need support in Week 8 |
-| Track collaboration episode evidence | Ongoing | Which students have PR + comment exchange? |
+| Review student handoffs and task notes | Before Week 8 | Note vague descriptions -- these students need support in Week 8 |
+| Track collaboration episode evidence | Ongoing | Does each student have their own handoff + comment + reply? |
 | Review session review patterns | Before Week 8 | Could students describe problems remotely? Note struggles. |
 | Prepare Week 8 micro-defence | Before Week 8 | Triad groupings, scoring sheets (5 criteria), observation rotation (students with "partial/deferred" from Week 4 get first visits) |
 
@@ -391,7 +402,7 @@ Display the 5 criteria:
 
 ### If You Missed Week 7
 
-In Week 7, we learned to work together using pull requests and Issues on GitHub.
+In Week 7, we learned to hand changes to a collaborator clearly. GitHub pull requests are one route; tracked changes/version history plus comments is an equivalent route.
 
 **1. Learn these 5 terms:**
 
@@ -411,12 +422,12 @@ In Week 7, we learned to work together using pull requests and Issues on GitHub.
 | **Issue** | "Here's a problem or idea. Someone should work on it." |
 | **Fork** | "I want my own copy of your work so I can try something." |
 
-**3. Write a PR description.** Find the shared practice repository (link on Blackboard). Fork it, make one change (fix a heading, add alt text, correct a date), and write a PR description using this template:
+**3. Write a change description.** Use the shared GitHub repository or download your own copy of the practice file. Make one change and write a PR description/change note using this template:
 - What I changed: _____
 - Why I changed it: _____
 - What I did NOT change: _____
 
-**4. Write an Issue on your own repository.** Describe one task that someone else could help with:
+**4. Write an Issue or task note.** Describe one task that someone else could help with:
 - Title: [specific]
 - Context: My project is _____
 - Task: Change / Add / Fix _____
@@ -430,9 +441,10 @@ In Week 7, we learned to work together using pull requests and Issues on GitHub.
 
 ## Instructor Prep Checklist
 
-- [ ] Shared practice repository created and URL shared (Blackboard or Week 6 closing)
-- [ ] Pre-fork homework assigned and verified (check Insights → Forks before class)
-- [ ] Fallback plan: branch permissions set so students can work in web editor if forking fails
+- [ ] Shared practice artifact posted as both a public GitHub repository and a downloadable document
+- [ ] Readiness prompt posted; successful forking is not a participation prerequisite
+- [ ] GitHub PR and tracked-change/comment evidence paths tested; no student needs write access to the instructor repository
+- [ ] Absent-partner route prepared (one triad plus an instructor sample response)
 - [ ] Pre-made comment exchange (second account or screenshot) for worked example
 - [ ] Good vs. bad example slides (3 pairs)
 - [ ] Bad PR description for vocabulary rewriting task
@@ -453,10 +465,10 @@ In Week 7, we learned to work together using pull requests and Issues on GitHub.
 
 | Assessment component | What happens this week | Weight | CLOs |
 |---------------------|----------------------|--------|------|
-| **Git Episodes -- Collaboration** | PR + comment exchange = evidence for Collaboration episode | Part of 10% component | 1, 7 |
+| **Version control -- Collaboration** | Individual change handoff + specific comment + reply, via PR or tracked-change/version-history exchange | Part of 10% component | 1, 7 |
 | **Session review** | Week 7: remote problem description (formative) | Feeds Micro-Defence 2 | 5 |
 | **Goal Document** | Entry 7: collaboration scoping (ungraded) | Instructor reads after Week 8 | -- |
-| **Decision Log** | Optional this week (students choose 8 of 12) | Part of 30% component | 3, 4 |
+| **Decision Log** | Optional this week (students curate 8 entries from the Week 2-11 window) | Part of 30% component | 3, 4 |
 
 **CLO 7 begins** (collaborate using shared practices). **CLO 5 continues** (communicate about technical work). **CLO 1 continues** (manage files + versions).
 
@@ -479,12 +491,12 @@ In Week 7, we learned to work together using pull requests and Issues on GitHub.
 | Segment | Time | Minutes | Notes |
 |---------|------|---------|-------|
 | Vocabulary | 0:00-0:10 | 10 | 5 AWL terms + bad-PR rewriting task |
-| Worked example | 0:10-0:30 | 20 | Fork → change → PR → comment cycle |
+| Worked example | 0:10-0:30 | 20 | Own copy → change → handoff → comment cycle |
 | Comprehension gate | 0:30-0:32 | 2 | Pairs narrate back the 4 steps |
 | Good vs. bad examples | 0:32-0:40 | 8 | 3 pairs, pair check + share |
 | Pre-task planning | 0:40-0:43 | 3 | Collaboration reflection |
-| Fork confirmation | 0:43-0:45 | 2 | Verify pre-fork; fallback for stragglers |
-| Paired PR exercise | 0:45-1:13 | 28 | Divide → change → write PR → review PR |
+| Path/partner confirmation | 0:43-0:45 | 2 | Choose GitHub or document path; route absences |
+| Paired handoff exercise | 0:45-1:13 | 28 | Divide → change → describe → review |
 | Debrief | 1:13-1:16 | 3 | Surface "looks good" pattern |
 | Issue writing (partner) | 1:16-1:35 | 19 | Oral briefing → questions → write Issue → switch |
 | **Break** | **1:35-1:50** | **15** | |

@@ -99,10 +99,12 @@ Students open their Goal Document from Week 1.
 **Format:** Individual with instructor circulation
 **Language skills:** Writing (prompts as goal articulation), reading (AI output), critical evaluation
 
-Students open Word + Copilot. Two paths:
+Students open any available AI tool. A third path keeps the activity moving when no live account works:
 
-**Path A (most students):** Try to get Copilot to help with a wish from their list.
-**Path B (students who want to explore):** Ask Copilot to suggest possibilities. "I'm interested in _____. What could I make with a computer that would help me?" Then try one suggestion.
+**Path A (most students):** Try to get an available AI tool to help with a wish from their list.
+**Path B (students who want to explore):** Ask the available AI to suggest possibilities. "I'm interested in _____. What could I make with a computer that would help me?" Then try one suggestion.
+
+**Path C (AI access blocked):** Evaluate two prepared static AI responses to the same sample prompt, identify which constraints each response meets or misses, revise the prompt, and document the decision. Retry in a live tool later; account setup is not the learning target for this class.
 
 Both paths are valid. Path B is Mollick-style discovery: using AI to expand what you can imagine.
 
@@ -131,9 +133,9 @@ Instructor types into Copilot: "You are a strict language teacher. Summarize thi
 **Format:** Pair work
 **Language skills:** Speaking (comparing, evaluating), reading (AI output)
 
-"Now try this: both of you type the SAME prompt -- the one you just used, or pick one from your wish list. But use different tools. One of you uses Copilot. The other opens ChatGPT, or Claude, or another AI tool on your phone or browser."
+"Now compare responses to the SAME prompt. If two live tools are available, use different tools. Otherwise compare one live response with a prepared static response, or compare the two prepared responses."
 
-Partner A uses Copilot. Partner B uses a different AI tool.
+Partner A explains one response; Partner B explains the other. Both identify one substantive difference and decide which better meets the stated constraints.
 - Same prompt, typed at the same time
 - Compare outputs side by side: "What's different? What's the same? Which understood you better?"
 
@@ -198,7 +200,7 @@ Instructor circulates, helps with language, checks that entries capture the gap 
 *This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
 
 ### 2:29--2:41 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (evaluating results, being precise about gaps)
 
 "Open your AI tool and start a new chat. Say or paste this prompt."
@@ -213,7 +215,7 @@ Students talk to AI for 10-12 minutes, describing their AI interaction from Segm
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:41--2:42 | Self-Check
 **Format:** Individual, written
@@ -228,7 +230,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - 1-2 volunteers share: "What was the biggest gap between what you meant and what you got?" or "What new idea did you discover?"
 - "Today's real lesson: the skill isn't using AI. The skill is knowing what you want and being able to say it. When you can't say it clearly, you learn something about your own thinking. That skill -- saying what you mean -- is what this course is about."
 - "Next week: you've started making things. What happens when you lose work? We'll make sure that never happens."
-- **Homework for next week:** "Create a GitHub account at github.com/signup. Use your Humber email. If you get stuck, ask AI to help. Having your account ready is required for Week 3."
+- **Preparation for next week:** "If you already have a GitHub account, keep using it; do not make a second one. If you need an account, begin registration at github.com/signup. A regular free account is enough. GitHub Education is a separate, individualized process and is not required for Week 3. Next week you can also use local Git or document/cloud version history."
 - Remind: bring your device. Your Week 1 folder map and Week 2 Decision Log should both be in your GEAP 103 folder.
 
 ---
@@ -245,8 +247,8 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 
 ## Instructor Prep Checklist
 
-- [ ] Copilot in Word accessible on projector and confirmed on student devices
-- [ ] Second AI tool accessible on student devices (ChatGPT or Claude web access for model comparison activity)
+- [ ] Instructor-owned AI example accessible on projector; do not infer student access from the instructor account
+- [ ] Two prepared static responses available for students with no live AI access and for the model-comparison activity
 - [ ] Worked example article prepared (short, B1-appropriate content for the summary task)
 - [ ] Deliberate mismatch planned: know what vague prompt to use first and what a good revision looks like
 - [ ] Restatement check prepared ("Before you do anything, tell me what you think I'm asking for")
@@ -267,7 +269,7 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 
 ## Assessment Alignment
 
-- **Decision Log entries begin** (30% component, ongoing; 8 entries across Weeks 2-13)
+- **Decision Log entries begin** (30% component, ongoing; 8 curated entries from the Week 2-11 window)
 - CLO 3 begins (guide AI tools)
 - CLO 4 begins (evaluate AI text)
 - Goal Document updated (ungraded; instructor reads at Week 4)

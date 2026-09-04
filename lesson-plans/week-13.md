@@ -13,7 +13,7 @@
 
 **No session review this week.** The oral reflection IS the reflection activity.
 
-**This is the centrepiece assessment of the course's metacognitive thread.** The oral reflection (10%) is the culminating unmediated spoken performance. Students have been practising explaining their work to AI every week since Week 1. By Week 13, explaining work orally is a well-practised skill, not a novel demand. The session review from Week 12 (defending a DL self-assessment to a sceptical instructor) was the direct rehearsal.
+**This is the centrepiece assessment of the course's metacognitive thread.** The oral reflection (10%) is the culminating unmediated spoken performance. Students have been practising explanations through AI voice, typed-and-read exchanges, live role-play, and micro-defences since Week 1. By Week 13, explaining work orally is a well-practised skill, not a novel demand. The session review from Week 12 (defending a DL self-assessment to a sceptical instructor) was the direct rehearsal.
 
 **Goal Thread -- Final Written Entry:**
 Students read their entire Goal Document from Week 1 and write about how their goals changed and what they learned about what they want. This is the highest language demand of the semester: temporal comparison across 13 weeks, evaluative judgment, and honest self-assessment. The student who wrote "I wish my computer could..." in Week 1 now writes about what they can do and how their thinking changed.
@@ -36,7 +36,7 @@ Students read their entire Goal Document from Week 1 and write about how their g
 
 "Open your portfolio. You have 5 minutes to tag your evidence. For 3-4 CLOs, open or bookmark the specific artifact you would point to. Use your evidence map from last week."
 
-Students tag their portfolio: open Decision Log entries, artifact packages, Git history, PRs, or Goal Document entries that serve as evidence for specific CLOs. This reduces navigation friction during the conversation.
+Students tag their portfolio: open Decision Log entries, artifact packages, version history/change handoffs, or Goal Document entries that serve as evidence for specific CLOs. They also keep a local/exported copy or screenshots of the selected evidence so a sign-in or network failure does not cancel the conversation.
 
 Display:
 
@@ -116,13 +116,13 @@ Students continue through the finalization checklist and collaborative artifact 
 - What PRs they submitted and reviewed
 - What they contributed to the group's planning and quality
 
-"This is checked against your Git history. Be accurate."
+"This is checked against your group's Git history or equivalent change/version record. Be accurate."
 
 ### 1:25--1:35 | Commit + Submit Collaborative Artifact
 **Format:** Group + individual
 **Language skills:** Writing (commit messages, contribution statements)
 
-Groups commit and submit. Each member submits their individual contribution statement alongside the group submission.
+Groups save a named version and submit. Each member submits their individual contribution statement alongside the group submission. The statement identifies PRs or equivalent tracked-change/version-history handoffs.
 
 ---
 
@@ -184,6 +184,7 @@ For students not currently in a reflection:
 - "Your collaborative artifact is submitted. Your Goal Document has 13 entries. Next week: final submissions and sharing."
 - "Next week you submit: (1) Final Artifact Package (product + documentation + verification + sharing evidence), (2) Evidence-Indexed Reflection is done (that was today's conversation). Come ready to show what you built and say what you learned."
 - "I'll read your Goal Documents this week — all 13 entries — and return brief final comments."
+- "If you were absent today, your make-up is the same live, unmediated four-minute conversation about two CLOs. Complete it within five instructional days using the exact appointment posted in Blackboard."
 
 ---
 
@@ -191,7 +192,8 @@ For students not currently in a reflection:
 
 - **Score oral reflections (10%).** Use the rubric above. Score during or immediately after each conversation.
 - **Read all Goal Documents (entries 1-13).** Return brief final comments by Week 14. Comment on the arc: how thinking and language developed.
-- **Check contribution statements against Git history.** Flag mismatches for conversation before grading.
+- **Check contribution statements against the group's Git history or equivalent change/version record.** Flag mismatches for conversation before grading.
+- **Schedule absent students' oral-reflection make-ups** within five instructional days. Use the same four-minute, two-CLO live conversation; do not substitute a recording or written response.
 - **Review collaborative artifacts.** Groups that didn't finish: brief extension to start of Week 14.
 - **Spot-check finalization checklists.** Students should have them completed.
 - **Begin grading DLs** (submitted Week 11) if not already done. Need to be complete before final grade calculation.
@@ -212,6 +214,8 @@ For students not currently in a reflection:
 - [ ] Timer for 4-min conversations (visible to student)
 - [ ] Plan for students who finish early (pair rehearsal, portfolio review)
 - [ ] Plan for large classes: schedule to ensure all reflections fit in 150 min
+- [ ] Offline/local evidence backup requested before class; one evidence-map copy available per student if the network fails
+- [ ] Make-up appointment block reserved within five instructional days for absent students
 
 ## Language Development Summary
 
@@ -224,7 +228,7 @@ For students not currently in a reflection:
 ## Assessment Alignment
 
 - **Oral Evidence-Indexed Reflection (10% of final grade):** One-on-one, 4 min per student. 2 CLOs discussed. Scored on: specificity of claims, appropriateness of evidence, honesty of evaluation, ability to answer follow-ups. (All CLOs)
-- **Collaborative artifact submitted:** With contribution statements. Not graded separately but verified against Git history for CLO 7 evidence.
+- **Collaborative artifact submitted:** With contribution statements. Not graded separately but verified against the group's Git or equivalent change/version record for CLO 7 evidence.
 - **Goal Document:** Final written entry (entry 13). Not graded. Instructor reads all 13 entries and returns brief final comments.
 - **Finalization checklist:** Ungraded. Provides structure during reflections.
 - **Week 14 preview:** Students prepare for sharing event and final artifact package submission.

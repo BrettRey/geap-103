@@ -2,29 +2,24 @@
 
 This guide is for instructors preparing GEAP 103 students for the GitHub and VS Code parts of the course.
 
-The main operational fact is that this is a **multi-stage account process**:
+The main operational fact is that these are **separate access paths**, not one mandatory chain:
 
 ```text
 GitHub account
-      ↓
-GitHub Education application
-      ↓
-Education decision (usually within minutes)
-      ↓
-Education approval
-      ↓
-72-hour wait → Copilot email
-      ↓
-VS Code installation and GitHub sign-in
-      ↓
-Copilot Chat smoke test
-      ↓
-Copilot helps with Git installation
-      ↓
-course repository or starter files
+      ├── GitHub Free repositories → GitHub web path
+      └── GitHub Education application
+             ├── individual current-student documentation
+             ├── Education approval
+             └── 72-hour wait → Copilot Student activation
+
+VS Code + Git installation → local Git path
+
+OneDrive or another version-history tool → equivalent evidence path
+
+Public course repository or starter ZIP → available without Education approval
 ```
 
-Do not schedule the first Git-dependent activity immediately after telling students to apply. Start the process at least one week before it is needed. The operational sequence is: Education application, Education decision (usually within minutes), Education approval, **72-hour wait after approval**, then the Copilot email.
+GitHub Education requires each student to use their own current documentation. The instructor cannot reproduce, complete, or adjudicate this individualized process on a clean account. Begin it early, allow 72 hours after approval for Copilot Student activation, and keep every course activity usable without Education or Copilot.
 
 ## What the course should promise
 
@@ -38,6 +33,7 @@ Promise students:
 Do not promise:
 
 - that Education approval and the Copilot email will arrive at the same time;
+- that an application will be decided immediately;
 - that every student will see the same Copilot models;
 - that Education approval automatically activates Copilot; or
 - that an instructor can fix an account decision from inside the classroom.
@@ -46,11 +42,12 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 
 ## Recommended timeline
 
-### Two weeks before the first Git-dependent class
+### Two weeks before the first Git-dependent class, or as soon as the roster is available
 
 - Send students the [student setup guide](../onboarding/student-setup.md).
 - Tell students to begin GitHub Education verification immediately.
 - Explain what counts as proof of current student status.
+- Explain that documents remain inside GitHub's application and are never sent to the instructor.
 - Give a concrete date by which students should show you a pending, approved, or blocked status.
 - Decide what the class fallback will be: campus computers, browser-based work, OneDrive version history, paired work, or instructor demonstration.
 
@@ -58,7 +55,7 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 
 - Check your own GitHub Education and Copilot status.
 - Verify that the course repository, Pages site, starter ZIP, and links work in a private browser window.
-- Test the student path on a clean account or with a colleague who has not previously configured GitHub Education.
+- Test the public and signed-out path: course links, starter ZIP, and public repository. Test instructor-owned tools only with your own authorized account. Do not attempt to reproduce a student's Education-verification result.
 - Confirm whether students need to create personal repositories, use a teacher-provided repository, or use GitHub Classroom. Do not make students guess which repository is theirs.
 - Prepare a class troubleshooting sheet using the table below.
 
@@ -72,9 +69,9 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 
 ### First class
 
-- Demonstrate the whole flow on the projector before students work independently.
+- Explain the separate paths on the projector. Do not demonstrate a student's individualized document submission or ask a student to project it.
 - Have students open their own account and status page, not share accounts.
-- Use a two-minute smoke test: open VS Code, sign in to GitHub, open Chat, ask a small question, and locate the course folder.
+- Use a two-minute smoke test on each student's available path: open the course folder, use an available AI or static-output task, and confirm the student's declared version-history path.
 - Pair students by task, not by account status: one student can explain what they see while the other follows the steps.
 - Move blocked students to the fallback activity without making them wait for the whole class.
 
@@ -104,14 +101,15 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 - [ ] I know how students will ask for help.
 - [ ] I have a short smoke test ready.
 - [ ] I have allowed time for account and installation problems rather than treating them as student failure.
+- [ ] I have a GitHub-web, local-Git, and version-history evidence path, and each produces individual evidence.
 
 ## Suggested status sheet
 
 Keep only the minimum information needed. A useful status sheet has:
 
-| Student | GitHub username | Education status | Approval date | Copilot status | Email received | Git installed | VS Code signed in | Smoke test | Next action |
-|---|---|---|---|---|---|---|---|---|---|
-|  |  | Not started / Pending / Approved / Not approved |  | Waiting for 72h / Email received / Active |  |  |  |  |  |
+| Student | GitHub sign-in | Education status | Approval date | Copilot status | Git/VS Code | Declared evidence path | Smoke test | Next action |
+|---|---|---|---|---|---|---|---|---|
+|  | Works / blocked | Not started / Pending / Approved / Not approved |  | Waiting for 72h / Active | Ready / blocked | GitHub / local Git / version history | Pass / needs support |  |
 
 Do not record passwords, two-factor codes, identity-document contents, or screenshots of private account pages.
 
@@ -126,13 +124,13 @@ The first test should be small enough to complete even when students are anxious
 5. Ask the student to say whether the answer matches the request.
 6. Open the course folder or the repository assigned by the instructor.
 
-This tests access, sign-in, the editor, Copilot, and the course's central habit—articulating and evaluating a request—without creating a complicated project.
+For students without Copilot or VS Code, run the same request in an available AI tool or give them a static response to evaluate, then open the course folder and confirm the version-history path. The smoke test checks participation readiness, not entitlement to one product.
 
 ## Troubleshooting decision tree
 
 ### A. The Education application is pending or not approved
 
-The application is usually decided within a few minutes. Ask the student to show only the status wording, not private documents. Confirm:
+GitHub's verification process is individually tailored. Ask the student to show only the status wording, not private documents. Confirm:
 
 - they used the intended GitHub account;
 - they submitted the application rather than only opening it;
@@ -161,7 +159,7 @@ Have the student ask Copilot for safe, step-by-step instructions for their opera
 
 ### F. The computer cannot install software
 
-Use one of the course's equity fallbacks:
+Use one of the course's equity paths:
 
 - a campus computer;
 - a browser-based repository or Codespaces route, if available and tested;
@@ -169,7 +167,7 @@ Use one of the course's equity fallbacks:
 - OneDrive version history for the version-control concept; or
 - instructor demonstration and a written verification note.
 
-The learning target is not ownership of a particular laptop. It is the ability to articulate a task, evaluate what happened, document decisions, and recover from problems.
+The learning target is not ownership of a particular laptop. It is the ability to articulate a task, evaluate what happened, document decisions, and recover from problems. A demonstration or partner's account provides practice only; graded Restore, Error recovery, and Collaboration evidence must show the individual student's action on an available path.
 
 ## Support script for authentication problems
 
@@ -198,7 +196,7 @@ For the current course design, keep the student-facing path simple:
 - use the public GEAP 103 repository as the source of course materials;
 - give each student a clearly named working copy or personal repository when individual Git work begins;
 - use the starter ZIP when a clean folder structure is more important than repository administration; and
-- introduce pull requests and issues as communication genres in Week 7.
+- introduce pull requests and issues as communication genres in Week 7 while providing the tracked-change/version-history handoff equivalent.
 
 If the course later adopts GitHub Classroom, test the complete teacher and student path before class. GitHub's current documentation notes that the GitHub Classroom extension for VS Code is no longer in active development; do not make that extension a required dependency without testing it first.
 

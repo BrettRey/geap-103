@@ -58,7 +58,7 @@ Instructor circulates:
 "Before the sharing event, one last conversation with AI. Think about a new student who will take this course next semester. What would you tell them? What do they need to know?"
 
 ### 0:27--0:38 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (teaching/transferring knowledge, responding to follow-ups)
 
 **Role-setting prompt** (on slide): "Speaking practice. I'm a B1 English student practising explaining my work. Ask me follow-up questions. If my explanation is vague, tell me what's unclear and ask me to be more specific. Don't do the explaining for me."
@@ -67,9 +67,9 @@ Instructor circulates:
 
 AI role: Future student.
 
-Students talk to AI for 10 minutes. The AI asks: "What was the hardest part?" "What would you do differently?" "What advice would you give me?"
+On the AI route, students talk to AI for 10 minutes. On a fallback route, a partner or instructor asks the same questions: "What was the hardest part?" "What would you do differently?" "What advice would you give me?"
 
-This is the final session review. The scenario is reflective and forward-looking — a fitting end to 14 weeks of speaking practice.
+This is the final session review. The scenario is reflective and forward-looking, closing the speaking-practice sequence across the 14 curricular units.
 
 **Self-check** (1 min): "Write two sentences: What did the 'future student' ask about? What advice did you give?"
 
@@ -197,7 +197,7 @@ Students complete the institutional course evaluation. Instructor steps away whi
 ### 2:35--2:45 | Closing
 **Format:** Whole class
 
-"You started this course 14 weeks ago. Some of you didn't know what a file path was. Some of you had never used AI. All of you have now built something real, documented how you built it, shared it with others, and explained it in English."
+"At the start of this course, some of you didn't know what a file path was. Some of you had never used AI. All of you have now built something real, documented how you built it, shared it with others, and explained it in English."
 
 "You also learned something most people never learn: how to manage AI, not just use it. You learned to check AI's work, to compare tools, to start fresh when conversations decay, to tell AI who to be, and to know when not to use AI at all. Those skills transfer to every tool you'll ever use."
 
@@ -242,7 +242,7 @@ Students complete the institutional course evaluation. Instructor steps away whi
 ## Assessment Alignment
 
 - **Final Artifact Package due (10% of final grade):** Product + process documentation + verification note + evidence of sharing. Most complex artifact package. (CLOs 1, 4, 6)
-- **Session review** (formative, not graded): Final scenario — explaining to a future student. The last of 14 weeks of speaking practice.
+- **Session review** (formative, not graded): Final scenario — explaining to a future student. The last of ten session reviews across the 14-unit curriculum.
 - **Informal presentations:** Not graded. Evidence of oral fluency development. Instructor may note observations for B1.2 exit evidence.
 - **Goal Document:** No written entry. The oral sharing answers the Goal Document prompt. Instructor returns final comments on the 13-entry arc.
 - **Course complete.** Final grades: Decision Logs 30% + Oral Micro-Defences 25% + Artifact Packages 25% (7% + 8% + 10%) + Git Episodes 10% + Oral Reflection 10%.

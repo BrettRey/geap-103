@@ -9,11 +9,11 @@ This file contains everything you need to prepare slides and run the class for W
 
 **Week 5 design note:** This is the first Building phase week. Students shift from discovering tools to using them for a purpose. The purpose this week: making something that works for someone else, not just you. The difference between a document that looks nice and one that actually works (headings vs. bold text, alt text vs. no alt text) is invisible until you check. The Accessibility Checker makes the invisible visible. The language shift is from "I want..." to "The user might need..." — from first-person desire to third-person consideration. This is harder English than anything in Phase 1.
 
-**Format change from lesson plan:** The lesson plan reserves the first 15 minutes for leftover Week 4 micro-defences. The triad format in Week 4 eliminates overflow, so this time is reallocated to vocabulary and the worked example, giving both activities more room.
+**Format alignment:** The current lesson plan and this package reserve the opening for Decision Log feedback, vocabulary, and the worked example. Any Week 4 micro-defence make-up receives a specific slot within seven days during independent work or a separate published appointment; it does not delay the whole class.
 
 **New vocabulary (5):** heading (style), alt text, screen reader, Accessibility Checker, contrast
 
-**AI tools:** Same tool-agnostic approach. Students use AI to fix accessibility issues (e.g., "Apply heading styles to all section titles"). The skill being practised is evaluating what AI did — did the heading styles make sense? Did the alt text actually describe the image?
+**AI tools:** AI is optional. Students may use it to propose fixes, but can apply the same fixes manually. If the automated Accessibility Checker is missing, use the supplied manual headings/alt-text/contrast/table-header checklist and record that the check was manual.
 
 ---
 
@@ -162,6 +162,8 @@ Display:
 > 4. For alt text: check what AI wrote. Does it describe the image accurately? If not, revise it.
 > 5. Re-run the Accessibility Checker to confirm the issues are resolved
 
+If the Checker is unavailable, inspect the four criteria manually and record the evidence. Do not invent a checker result.
+
 **What to say while circulating:**
 
 | What you see | What to say |
@@ -237,21 +239,21 @@ Display:
 
 > "Now apply what you learned to something of your own. Open a document from your geap-103 folder — something you made in Weeks 2–4, or start something new connected to what interests you. Run the Accessibility Checker. Fix what it finds."
 
-**Git maintenance (first 5 min):** Before students start fixing their document, they commit what they have now.
+**Version-history maintenance (first 5 min):** Before students start fixing their document, they save a named state in their established Git/GitHub or document/cloud version-history path.
 
 Display:
 
-> Before you change anything, commit your current document. Use a message like "before accessibility fixes." After you fix the accessibility issues, commit again with a message describing what you fixed. Then check your Git timeline: can you see both versions?
+> Before you change anything, save a named state such as "before accessibility fixes." After the fixes, save another named state describing what changed. Confirm that you can identify both versions.
 
-This reinforces the commit-before-changing habit from Week 3 and bridges the gap between the Week 3 Git introduction and the Week 6 Git Episodes launch.
+This reinforces the save-before-changing habit from Week 3 and bridges to the Week 6 version-control episodes.
 
 Students work on their own documents. This is the first time accessibility principles meet the student's personal project direction. Some students will have a clear project idea; others are still exploring. Both are fine. The task is the same: make whatever you have accessible.
 
-**Git Restore episode opportunity:** Students have been using Git since Week 3. While circulating, invite students who haven't done a Git restore yet:
+**Restore/Recovery episode opportunity:** Invite students who still need recovery evidence:
 
-> "Have you tried going back to an earlier version of a file? This is a good time to try. Commit what you have now. Then make some changes. If something goes wrong, restore the previous version."
+> "Preserve your current file. Then recover the version from before the accessibility fixes as a usable copy and open it. Merely viewing the history is not enough."
 
-This is one of the three required Git Episodes (Restore). Not a formal activity — an invitation the instructor extends individually. Note which students attempt it.
+This can supply the required Restore/Recovery episode when the student preserves the current state, recovers the earlier state as a usable file, and documents the result.
 
 **What to say while circulating:**
 
@@ -260,9 +262,9 @@ This is one of the three required Git Episodes (Restore). Not a formal activity 
 | Student running Checker on their own document | "Good. What did it find? Any surprises?" |
 | Student adding alt text to their own images | "Read it to me. Would someone who can't see the image understand what it shows?" |
 | Student has no document to work on | "Start something connected to what you wrote about in your Goal Document. Even a single page with a heading and an image is enough to practise." |
-| Student finished quickly | "Commit your changes to Git. Write a commit message that says what you fixed. Then try restoring an earlier version to see the difference." |
-| Student attempting a Git restore | "Good — that's one of your three Git Episodes. Save a screenshot or copy the output as evidence." |
-| Student didn't commit before fixing | "That's OK for now. Commit what you have. Next time, remember: commit before you change, commit after you change. Two snapshots." |
+| Student finished quickly | "Save the fixed version with a descriptive name. Then preserve it and recover the pre-fix version as a usable copy." |
+| Student attempting recovery | "Open the recovered file and point to evidence that it is the earlier state. Save the action and result as evidence." |
+| Student did not save before fixing | "Save the current state now. Next time, remember: name the state before and after a change." |
 
 ---
 
@@ -324,9 +326,11 @@ Display:
 
 AI role: Help desk.
 
-**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
 
 Students talk to AI for 10–12 minutes, narrating the troubleshooting sequence from today's work: what accessibility issue they found, what the Accessibility Checker reported, what they did to fix it, and whether the fix worked. The AI pushes back when the explanation is vague.
+
+If AI voice is unavailable, use the same help-desk role card in a structured partner exchange or make a private phone recording, then complete the same self-check.
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent.
 
@@ -339,7 +343,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 | Student is silent | Approach quietly: "Start with one problem. What did the Checker say was wrong?" |
 | Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ---
 
@@ -363,7 +367,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 Remind:
 
-> "Check your Git timeline. You should have at least two commits from today — one before your accessibility fixes and one after."
+> "Check your version history. You should be able to identify the state before accessibility fixes and the state after."
 
 ---
 
@@ -375,9 +379,9 @@ Remind:
 |------|----------|-------|
 | Return DL feedback (entries 1–2) | This week (Week 5 or 6 at latest) | One strength + one improvement target per entry |
 | Spot-check verification notes | Before Week 6 | Are students writing in their own words? Are they describing what they checked, not just what AI did? |
-| Note Git restore attempts | Before Week 6 | Track which students attempted a restore during Segment C (for Git Episodes tracking) |
-| Note Git maintenance commits | Before Week 6 | Which students completed two commits (before and after accessibility fixes)? |
-| Follow up on "deferred" triad students from Week 4 | Start of Week 5 or after class | Brief 2-min follow-up for any students the instructor didn't observe during triads |
+| Note Restore/Recovery evidence | Before Week 6 | Track which students produced an actual usable recovery, not only a history preview |
+| Note version-history maintenance | Before Week 6 | Which students saved identifiable before/after states and, where attempted, a usable recovery? |
+| Follow up on "deferred" triad students from Week 4 | Outside class | Arrange a short live follow-up for any student the instructor did not observe sufficiently during triads. |
 | Make-up defence for Week 4 absentees | During guided practice (0:50–1:15) or application (1:50–2:10) | Absent student writes diagnostic during settling in (0:00–0:05) or arrives 10 min early. During a work period, form an ad hoc triad with 2 volunteers. Score as normal — you hear the whole thing. |
 | Listen for session review patterns | Before Week 6 | Were students able to narrate the troubleshooting sequence (problem, Checker output, fix)? Did the AI push them to be specific? Note any students who were silent or struggled — consider pairing them with a partner next week before going to voice. |
 
@@ -413,7 +417,7 @@ In Week 5, we learned about accessibility — making documents that work for eve
 
 **5. Read your Decision Log feedback** (entries 1–2). Your next entry should show you've thought about the feedback.
 
-**6. Git maintenance:** Commit your current work, then commit again after making changes. Check that both commits appear in your timeline.
+**6. Version-history maintenance:** Save a named state before changing the document and another afterward. Confirm both appear in your established path.
 
 ---
 
@@ -421,18 +425,17 @@ In Week 5, we learned about accessibility — making documents that work for eve
 
 - [ ] Document A ("looks nice") and Document B ("actually works") prepared for projector demo
 - [ ] Practice document prepared and shared via OneDrive or Blackboard (one copy per student)
-- [ ] Accessibility Checker confirmed working on student devices (Word for web and Word desktop both support it)
+- [ ] Accessibility Checker tested on instructor-owned files; manual headings/alt-text/contrast/table-header checklist available
 - [ ] Vocabulary reference slide ready (5 terms in table)
 - [ ] Screen reader clip or description prepared (optional but powerful)
 - [ ] Verification note instructions on slide (what AI did, what I changed, what I checked)
 - [ ] Goal Document prompt + sentence frames on slide (sentence frames labelled "optional -- use if you're stuck")
 - [ ] Session review slide: role-setting prompt + Week 5 scenario ("Describe an accessibility problem you found, what the Checker said, and how you fixed it")
-- [ ] Git maintenance instructions on slide (commit before fixing, commit after fixing, check timeline)
+- [ ] Version-history instructions on slide (save named state before fixing, save another afterward, identify both)
 - [ ] Decision Log feedback (entries 1–2) ready to return
-- [ ] List of any "deferred" micro-defence students from Week 4 (for brief follow-up)
-- [ ] List of students absent in Week 4 who need make-up defence (diagnostic paper + ad hoc triad during a work period)
+- [ ] List of "deferred" or absent Week 4 micro-defence students, each with a specific make-up slot within seven days (diagnostic paper + ad hoc triad during independent work or a separate appointment)
 - [ ] Scoring sheets printed for any make-up students
-- [ ] Know which students have not yet done a Git restore (for prompting during Segment C)
+- [ ] Know which students still need usable Restore/Recovery evidence
 
 ---
 
@@ -443,11 +446,11 @@ In Week 5, we learned about accessibility — making documents that work for eve
 | **Decision Log feedback** | Entries 1–2 returned with feedback (one strength, one improvement target) | Part of 30% component | 3, 4 |
 | **Artifact Packages** | Verification note practises process documentation format | Part of 25% component | 4, 6 |
 | **Git Episodes** | Restore episode opportunity during Segment C (individual invitation) | Part of 10% component | 1 |
-| **Git maintenance** | Two commits (before and after accessibility fixes) reinforce commit-as-snapshot mental model | Formative | 1 |
+| **Version-history maintenance** | Two named states (before and after accessibility fixes) reinforce the snapshot model | Formative | 1 |
 | **Goal Document** | Entry 5 written (third-person consideration, conditional language) | Ungraded | — |
 | **Session review** | Week 5 scenario: narrate a troubleshooting sequence to a help desk (formative, not graded) | Feeds Micro-Defence 2 (Week 8) | 5 |
 
-**CLO 6 begins** this week (produce digital products to college standards, including accessibility). Students encounter accessibility for the first time and practise fixing it with AI assistance. **CLO 1 reinforced** (manage files and versions — Git maintenance commits bridge Weeks 3–6).
+**CLO 6 begins** this week (produce digital products to college standards, including accessibility). Students encounter accessibility and practise fixing it with or without AI assistance. **CLO 1 is reinforced** through named before/after versions.
 
 ---
 
@@ -475,7 +478,7 @@ In Week 5, we learned about accessibility — making documents that work for eve
 | Verification note | 1:15–1:25 | 10 | Write in own words: what happened, what I checked |
 | Pair accessibility review | 1:25–1:35 | 10 | Swap documents, run Checker, give feedback (structured A/B) |
 | **Break** | **1:35–1:50** | **15** | |
-| Application + Git maintenance | 1:50–2:10 | 20 | Commit before fixing, fix own documents, commit after, Git restore opportunity |
+| Application + version maintenance | 1:50–2:10 | 20 | Save before, fix, save after, recovery opportunity |
 | Goal Document entry 5 | 2:10–2:25 | 15 | Writing (8 min) + pair share (7 min, structured A/B) |
 | Bridging activity | 2:25–2:27 | 2 | Pick one accessibility problem, rehearse sequence |
 | Session review (student) | 2:27–2:40 | 13 | AI voice: describe problem to help desk |

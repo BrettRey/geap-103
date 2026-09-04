@@ -5,7 +5,7 @@
 
 **Learning Objectives (Week 5):**
 1. Distinguish between visual formatting and structural formatting in a document (CLO 6 begins)
-2. Identify and fix accessibility issues using the Accessibility Checker and Copilot
+2. Identify and fix accessibility issues using an available checker or manual checklist, with AI assistance optional
 3. Write a verification note describing what AI did, what the student changed, and what was checked (CLO 4)
 4. Shift from first-person desire language ("I want...") to third-person consideration language ("The user might need...")
 
@@ -18,17 +18,13 @@ This is the first week where students move from describing what they want to des
 
 ## Segment A: Vocabulary + Worked Example (0:00--0:40)
 
-### 0:00--0:15 | Remaining Week 4 Micro-Defences
-**Format:** Individual presentations (instructor + 1 peer), while others review DL feedback
-**Language skills:** Speaking (sustained technical explanation), listening (peer), evaluative language (peer feedback)
+### 0:00--0:05 | Decision Log Feedback + Settling In
+**Format:** Individual reading
+**Language skills:** Reading evaluative feedback
 
-Any students who did not complete their oral micro-defence in Week 4 go now. Use the same format: 3-4 min walkthrough, 1-2 instructor questions, 1 min peer feedback. Aim for 2-3 students maximum (~15 min).
+Return Decision Log feedback (entries 1-2). Students identify one improvement target they will apply to their next entry. Students needing a Week 4 micro-defence make-up receive a specific time within seven days; make-ups run during an independent work period or a separately published appointment, not as an unplanned whole-class delay.
 
-**While waiting:** Other students review the Decision Log feedback that was returned this week (entries 1-2). Instructor has marked one strength and one specific improvement target per student. Students read the feedback and think about what they will change in future entries.
-
-*If no remaining micro-defences, use this time for DL feedback review + vocabulary pre-training (expand the vocabulary segment below to 15 min).*
-
-### 0:15--0:25 | Vocabulary Pre-Training
+### 0:05--0:20 | Vocabulary Pre-Training
 **Format:** Instructor-led, interactive
 **Language skills:** Academic vocabulary building
 
@@ -43,7 +39,7 @@ For each term:
 
 Quick check: "If I make text bigger and bold but don't apply a heading style, can a screen reader find it?" (No.)
 
-### 0:25--0:40 | Worked Example: Two Documents, Same Content
+### 0:20--0:45 | Worked Example: Two Documents, Same Content
 **Format:** Instructor demonstration with think-aloud
 **Language skills:** Listening, critical evaluation, reading (system feedback)
 
@@ -99,6 +95,8 @@ Students work through the fix:
 2. Fix each issue. Students can use Copilot ("Apply heading styles to all section titles") or do it manually. For alt text, students should check what Copilot writes -- does it actually describe the image?
 3. Re-run Accessibility Checker to confirm issues are resolved.
 
+**If the Checker is unavailable:** use the supplied manual checklist for heading structure, alt text, contrast, and table headers. Record that the check was manual; do not claim a tool reported a result it did not produce.
+
 Instructor circulates:
 - "What errors did the Checker find? Can you read me the first one?"
 - "What did Copilot do? Did you check it? Is the alt text accurate?"
@@ -134,9 +132,9 @@ For both turns:
 
 Brief report to partner: one thing they fixed well, one thing that still needs work.
 
-**Second-opinion check** (3 min): "One more check. Take the alt text that Copilot wrote for your image. Paste it into a different AI tool -- ChatGPT, Claude, or another one you have. Ask: 'Here is alt text for an image. Is this description accurate and complete? What is missing?' Compare what the second AI says with what Copilot wrote."
+**Second-opinion check** (3 min): Compare the alt text with the image using a second available AI tool **or a partner using the manual criteria**: accuracy, relevant detail, and purpose. Record who/what gave the second opinion and which suggestion you accepted or rejected.
 
-"This is called a second opinion. You already know to verify AI's work. Now you're learning to verify it using a *different* AI. Two tools looking at the same output will catch different problems."
+"This is called a second opinion. It does not replace your own check. Another tool or person may notice a different problem, and you still decide whether the advice matches the image and purpose."
 
 ---
 
@@ -152,17 +150,17 @@ Brief report to partner: one thing they fixed well, one thing that still needs w
 
 "Now apply what you learned to something of your own. Open a document related to your project goal -- something you made in Weeks 2-4, or start something new connected to what interests you. Run the Accessibility Checker. Fix what it finds."
 
-**Git maintenance (first 5 min):** Before students start fixing their document, they commit what they have now. "Before you change anything, commit your current document. Use a message like 'before accessibility fixes.' After you fix the accessibility issues, commit again with a message describing what you fixed. Then check your Git timeline: can you see both versions?" This reinforces the commit-before-changing habit from Week 3 and bridges the gap between the Week 3 Git introduction and the Week 6 Git Episodes launch.
+**Version-history maintenance (first 5 min):** Before fixing, students save a named state such as "before accessibility fixes" in their established Git/GitHub or document/cloud history path. After fixing, they save another named state and confirm both are visible.
 
 Students work on their own documents. This is the first time accessibility principles meet the student's personal project direction. Some students will have a clear project idea; others are still exploring. Both are fine. The task is the same: make whatever you have accessible.
 
-**Git Restore episode opportunity:** Students have been using Git since Week 3. During this work time, instructor can prompt students who haven't yet done a restore: "Have you tried going back to an earlier version of a file? This is a good time to try. If you break something while fixing accessibility, you can always restore the previous version." This is one of the three required Git Episodes. Not a formal activity; an invitation the instructor can extend individually.
+**Restore/Recovery episode opportunity:** During this work time, invite students who still need evidence to recover the named pre-fix version as a usable file in their established path. Preserve the current version first. A history preview alone is not evidence.
 
 Instructor circulates:
 - "What did the Checker find? Can you explain the error in your own words?"
 - "Who is going to use this document? What do they need?"
-- "Did you commit before you started fixing? Good. After you finish, commit again so you can see both versions."
-- For students ready for Git: "Want to try restoring an earlier version? Commit what you have now, then try going back."
+- "Did you save a named version before fixing? After you finish, save another so you can identify both."
+- For students needing recovery evidence: "Preserve the current file, then recover the earlier version as a usable copy and open it."
 
 ### 2:10--2:25 | Goal Document
 **Format:** Individual writing, then pair share (structured A/B turns)
@@ -195,7 +193,7 @@ Instructor circulates:
 *This bridges the register shift from reflective Goal Document writing to the session review. Students retrieve specific content from today's work and switch from reflective to explanatory mode before the voice interaction begins.*
 
 ### 2:27--2:40 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (narrating a troubleshooting sequence, responding to follow-up questions)
 
 "Open your AI tool and start a new chat. Say or paste this prompt."
@@ -208,11 +206,13 @@ AI role: Help desk.
 
 Students talk to AI for 10-12 minutes, narrating the troubleshooting sequence from today's work: what accessibility issue they found, what the Accessibility Checker reported, what they did to fix it, and whether the fix worked. The AI pushes back when the explanation is vague.
 
+If AI voice is unavailable, students use the same role card in a structured partner exchange or make a private phone recording and complete the same written self-check.
+
 "The AI is playing a help desk. You're calling in to describe a problem you already solved. They need to understand what you did so they can close the ticket. Be specific."
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 **Self-check** (final minute): "Before you close the chat, write one sentence in your notes: what did AI ask you to clarify?"
 
@@ -223,7 +223,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 - "The language shifted too. You went from 'I want' to 'the user might need.' That shift -- thinking about someone you can't see -- is one of the hardest things in communication."
 - "You got feedback on your Decision Logs this week. Read it carefully. Your next DL entry should show you've thought about the feedback."
 - "Next week: making sense of numbers. We'll read a spreadsheet before we build one."
-- Remind: "Check your Git timeline. You should have at least two commits from today -- one before your accessibility fixes and one after."
+- Remind: "Check your version history. You should be able to identify the state before accessibility fixes and the state after."
 
 ---
 
@@ -231,9 +231,9 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 - **Decision Log feedback round 1 returned** (entries 1-2): If not yet distributed, return by the start of Week 5. Each entry gets one strength and one specific improvement target.
 - **Spot-check verification notes** from Segment B: Are students writing in their own words? Are they describing what they checked, not just what AI did?
-- **Note which students attempted a Git restore** during Segment C (for Git Episodes tracking)
-- **Note which students completed the Git maintenance commits** (two commits visible in timeline: before and after accessibility fixes)
-- **Collect any remaining micro-defence scores** from students who presented at the start of this week
+- **Note which students produced usable Restore/Recovery evidence** during Segment C
+- **Note which students saved both named states** (before and after accessibility fixes)
+- **Complete scheduled Week 4 micro-defence make-ups** within seven days and record the evidence basis; do not displace the Week 5 opening for the whole class
 - **Listen for session review patterns:** Were students able to narrate the troubleshooting sequence (problem, Checker output, fix)? Did the AI push them to be specific? Note any students who were silent or struggled -- consider pairing them with a partner next week before going to voice.
 
 ---
@@ -242,17 +242,17 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 - [ ] Two versions of the same document prepared: one "looks nice" (no structure), one "actually works" (heading styles, alt text, contrast). Visually near-identical.
 - [ ] Poorly formatted document for student practice prepared and shared (OneDrive or LMS)
-- [ ] Accessibility Checker confirmed working on student devices (Word for web and Word desktop both support it)
+- [ ] Accessibility Checker tested on instructor-owned files; manual headings/alt-text/contrast/table-header checklist available when the feature is missing
 - [ ] Vocabulary slides: heading (style), alt text, screen reader, Accessibility Checker, contrast
 - [ ] Screen reader example or video prepared (optional but powerful: show 10 seconds of a screen reader navigating a document without headings)
 - [ ] Goal Document prompt + sentence frames on slide (sentence frames labelled "optional -- use if you're stuck")
 - [ ] Verification note instructions on slide (what AI did, what I changed, what I checked)
 - [ ] Session review slide: role-setting prompt + Week 5 scenario ("Describe an accessibility problem you found, what the Checker said, and how you fixed it.")
-- [ ] Git maintenance instructions ready (commit before fixing, commit after fixing, check timeline)
+- [ ] Version-history instructions ready (save before fixing, save after fixing, identify both states)
 - [ ] Decision Log feedback (entries 1-2) ready to return to students
-- [ ] List of students who still need to complete Week 4 micro-defence (schedule for 0:00--0:15)
-- [ ] Second AI tool prepared for second-opinion alt text verification (students paste Copilot's alt text into a different AI)
-- [ ] Know which students have not yet done a Git restore (for prompting during Segment C)
+- [ ] List of students needing a Week 4 micro-defence make-up, each with a published slot within seven days during independent work or a separate appointment
+- [ ] Second-opinion route prepared: another AI where available or partner review using the manual criteria
+- [ ] Know which students still need usable Restore/Recovery evidence
 
 ## Language Development Summary
 
@@ -266,10 +266,10 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 - **CLO 6 begins** (produce digital products to college standards, including accessibility features)
 - **CLO 4 continues** (evaluate AI text -- via Copilot's accessibility fixes and verification notes)
-- **CLO 1 reinforced** (manage files and versions -- Git maintenance commits during application time bridge Weeks 3-6)
+- **CLO 1 reinforced** (manage files and versions -- named states before and after a change)
 - **Decision Log feedback round 1 returned** (entries 1-2): Students should apply feedback to future entries
-- **Git Restore episode opportunity** (part of 10% Git Episodes component): Students who recover an earlier version during Segment C can document this as their Restore episode
-- **Git maintenance** (formative): Two commits (before and after accessibility fixes) reinforce the commit-as-snapshot mental model and keep Git practice active between the Week 3 introduction and Week 6 formal launch
+- **Restore/Recovery episode opportunity** (part of the 10% version-control component): Students who recover an earlier version as a usable file can document the episode
+- **Version-history maintenance** (formative): Two named states reinforce the snapshot model between the Week 3 introduction and Week 6 formal episode launch
 - **Session review** (formative, not graded): Week 5 scenario practises narrating a troubleshooting sequence -- builds toward Micro-Defence 2 (Week 8, 5 criteria) where students must show what was tried and interpret errors
 - **Goal Document updated** (ungraded; instructor reads at Week 8)
 - **Verification note** practises process documentation format used in Artifact Packages (25%)

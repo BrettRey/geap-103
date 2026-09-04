@@ -13,11 +13,13 @@ This file contains everything you need to prepare slides and run the class for W
 
 | Tool | How to access | Notes |
 |------|--------------|-------|
-| **GitHub Copilot CLI** (recommended) | Free GitHub account + [Student Developer Pack](https://education.github.com/pack). [Install](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli): standalone executable, shell script, Homebrew (Mac), WinGet (Windows), or npm. No package manager required. | Works in the project folder, sees your files, saves conversations, free for students. The strongest "English is the control layer" experience. |
+| **GitHub Copilot CLI** (optional) | A GitHub account with available Copilot access. [Install](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) only after access is confirmed. Education verification and Copilot Student activation are separate and may still be pending. | Works in the project folder. Do not make installation or the Student benefit a Week 2 participation gate. |
 | **Copilot Chat** | copilot.microsoft.com, sign in with Humber account | Free, no install, works in any browser |
 | **ChatGPT** | chatgpt.com | Free tier available, no institutional dependency |
 | **Claude** | claude.ai | Free tier available |
 | **Other** | Whatever the student already uses or prefers | Fine. The DL "AI used" field captures which tool. |
+
+Prepare two short static AI responses to the same sample prompt: one that matches the request and one that misses an important constraint. A student with no working AI account evaluates, revises, and documents these outputs, then retries in a live tool later. This preserves the language and judgment task without turning account setup into the lesson.
 
 If you want to demonstrate the CLI in class (recommended), install it before the session using any method above and authenticate with your GitHub account. First launch prompts browser-based login – no terminal auth commands needed. The CLI works in the terminal, inside the student's project folder, and the conversation is captured automatically.
 
@@ -64,7 +66,7 @@ Display only Slide 1. Students start immediately.
 | **accept / modify / reject** | To keep what AI created (accept), change part of it (modify), or throw it away and try again (reject) |
 | **verification** | Checking whether AI's output is correct and matches what you wanted |
 
-**First-time AI access:** Some students will need 5–10 minutes to set up or log in. This is their Week 2 troubleshooting moment. Help them get in while others are already working on Step 1. Don't hold the class for stragglers – the students who are working are learning.
+**First-time AI access:** Try one focused sign-in fix, then move the student to the prepared static-output path. Record the exact blocker and continue setup outside the timed activity. Do not hold the class or make a student wait for an account decision.
 
 ---
 
@@ -250,7 +252,7 @@ Display:
 
 AI role: Specificity coach.
 
-**Voice mode encouraged.** Remind students: voice mode starts a new chat. Paste the role-setting prompt first, then switch to speaking.
+**Routes:** Prefer AI voice. If it is unavailable, use a typed AI exchange that the student reads aloud, or a live partner/instructor role-play with the same follow-up questions.
 
 Students talk to AI for 10–12 minutes, describing their AI interaction from Segment B – what they wanted, what they said, what they got, and where the gap was. The AI pushes back when descriptions are vague: "What exactly did you expect? What specifically was different?"
 
@@ -265,7 +267,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 | Student is silent | Approach quietly: "Start with one thing. What did you ask AI to do?" |
 | Student and AI are having a genuine back-and-forth | Let it run. This is the goal. |
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ---
 
@@ -285,13 +287,13 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 > Next week: you've started making things. What happens when you lose work? We'll make sure that never happens.
 
-**Homework for next week:** "Create a GitHub account at github.com/signup. Use your Humber email. If you get stuck, ask AI to help. Having your account ready is required for Week 3."
+**Preparation for next week:** "Choose the version-history path you can use. If you already have a GitHub account, keep using it. If you need one and want the GitHub-web path, begin at github.com/signup. A regular free account is enough. Week 3 also supports local Git or document/cloud version history, so account approval is not a prerequisite."
 
 Reminders (display):
 - Bring your device
 - Your Decision Log entry should be in your geap-103/decision-logs/ folder
 - Your Goal Document should have two entries now
-- **Create a GitHub account at github.com/signup before next class (use your Humber email)**
+- **Know which Week 3 path you will try first: GitHub web, local Git, or document/cloud version history**
 
 ---
 
@@ -417,4 +419,4 @@ Add 2–3 sentences: what do you think now about your wishes? Did anything chang
 | **reject** | To throw away what AI created and try again |
 | **verification** | Checking whether AI's output is correct and matches what you wanted |
 
-**5. Create a GitHub account** at github.com/signup. Use your Humber email. This is required for Week 3.
+**5. Prepare a version-history path.** If you already have a GitHub account, keep using it. If you want the GitHub-web path and need an account, begin at github.com/signup. Do not make a second account. You can also use local Git or document/cloud version history in Week 3. GitHub Education is optional and requires your own current documentation.

@@ -7,7 +7,7 @@
 
 This file contains everything you need to prepare slides and run the class for Week 13. The lesson plan (`lesson-plans/week-13.md`) has the pedagogical rationale. This file has the concrete content. In case of conflict between this materials package and the lesson plan for Week 13, this materials package governs (it reflects March 2026 design revisions). For anything not covered here, the lesson plan governs.
 
-**Week 13 design note:** This is the centrepiece assessment of the course's metacognitive thread. The oral reflection (10% of final grade) is the culminating unmediated spoken performance. Students have been practising explaining their work to AI every week since Week 1. By Week 13, explaining work orally is a well-practised skill, not a novel demand. The session review from Week 12 (defending a DL self-assessment to a sceptical instructor) was the direct rehearsal. Three other things happen alongside: the collaborative artifact is submitted with contribution statements, the final Goal Document entry traces change across 13 weeks, and students prepare for the Week 14 sharing event.
+**Week 13 design note:** This is the centrepiece assessment of the course's metacognitive thread. The oral reflection (10% of final grade) is the culminating unmediated spoken performance. Students have been practising explanations through AI voice, typed-and-read exchanges, or live role-play since Week 1. By Week 13, explaining work orally is a well-practised skill, not a novel demand. The session review from Week 12 (defending a DL self-assessment to a sceptical instructor) was the direct rehearsal. Three other things happen alongside: the collaborative artifact is submitted with contribution statements, the final Goal Document entry traces change across 13 weeks, and students prepare for the Week 14 sharing event.
 
 **No new vocabulary.** All 40 terms from Weeks 1--9 deployed naturally in oral reflection, contribution statements, and Goal Document writing. The oral reflection is the best single indicator of whether vocabulary has been acquired to productive level.
 
@@ -47,6 +47,8 @@ This file contains everything you need to prepare slides and run the class for W
 - Plan the call order. Students with partial/deferred observations from earlier rounds go first.
 - Confirm collaborative artifact submission process (commit to shared repository or other established method).
 - Review group repositories: are groups near completion? Flag groups that need intervention.
+- Ask students to download, export, or screenshot their pre-tagged evidence before class. A network or sign-in failure must not cancel the oral reflection.
+- Reserve and publish an oral-reflection make-up block within five instructional days.
 
 ---
 
@@ -68,7 +70,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 > "Open your portfolio. You have 5 minutes to tag your evidence. For 3--4 CLOs, open or bookmark the specific artifact you would point to. Use your evidence map from last week."
 
-Students tag their portfolio: open Decision Log entries, artifact packages, Git history, PRs, or Goal Document entries that serve as evidence for specific CLOs. This reduces navigation friction during the conversation.
+Students tag their portfolio: open Decision Log entries, artifact packages, version history/change handoffs, or Goal Document entries that serve as evidence for specific CLOs. They also keep local/exported copies or screenshots of the selected evidence.
 
 Display:
 
@@ -185,10 +187,10 @@ Display:
 
 > **Write your contribution statement (2--3 sentences):**
 > - What did you build or produce?
-> - What PRs did you submit and review?
+> - What PRs or equivalent tracked-change/version-history handoffs did you submit and review?
 > - What did you contribute to the group's planning and quality?
 >
-> "This is checked against your Git history. Be accurate."
+> "This is checked against your group's Git history or equivalent change/version record. Be accurate."
 
 Each student submits their individual contribution statement alongside the group submission.
 
@@ -265,6 +267,8 @@ For students not currently in a reflection:
 > "Next week you submit: (1) Final Artifact Package (product + documentation + verification + sharing evidence), (2) Evidence-Indexed Reflection is done (that was today's conversation). Come ready to show what you built and say what you learned."
 >
 > "I'll read your Goal Documents this week, all 13 entries, and return brief final comments."
+>
+> "If you were absent today, your make-up is the same live, unmediated four-minute conversation about two CLOs. Complete it within five instructional days using the appointment posted in Blackboard."
 
 ---
 
@@ -276,7 +280,8 @@ For students not currently in a reflection:
 |------|----------|-------|
 | Score oral reflections (10%) | Same day if possible; before Week 14 at latest | Use the rubric. Score during or immediately after each conversation. If scoring after, do it the same day while the conversations are fresh. |
 | Read all Goal Documents (entries 1--13) | Before Week 14 | Return brief final comments. Comment on the arc: how thinking and language developed from Week 1 to Week 13. |
-| Check contribution statements against Git history | Before grading | Flag mismatches for conversation before final grade calculation. |
+| Check contribution statements against the group's Git or equivalent change/version record | Before grading | Flag mismatches for conversation before final grade calculation. |
+| Complete oral-reflection make-ups | Within five instructional days | Same live, unmediated four-minute, two-CLO conversation; no recording or written substitute. |
 | Review collaborative artifacts | Before Week 14 | Groups that didn't finish: brief extension to start of Week 14. |
 | Spot-check finalization checklists | Within 1 week | Students should have them completed. Not graded, but identifies students who disengaged during waiting time. |
 | Continue grading DLs (submitted Week 11) | Before final grade calculation | Must be complete before final grades. |
@@ -289,7 +294,7 @@ For students not currently in a reflection:
 
 In Week 13, the instructor conducted one-on-one oral reflections (4 min each, 10% of your grade), groups submitted the collaborative artifact with contribution statements, and students wrote the final Goal Document entry (entry 13).
 
-**1. Schedule your oral reflection immediately.** This is 10% of your grade. Contact the instructor to arrange a make-up during Week 14 (before or after the sharing event, or during office hours). Bring your portfolio with evidence pre-tagged for 3--4 CLOs. The format:
+**1. Schedule your oral reflection immediately.** This is 10% of your grade. Use the live in-person or online make-up appointment posted in Blackboard and complete it within five instructional days. A recording or written response is not equivalent. Bring local/exported evidence pre-tagged for 3--4 CLOs. The format:
 
 | Step | What happens |
 |------|-------------|
@@ -301,10 +306,10 @@ Use your evidence map from Week 12 to prepare.
 
 **2. Submit your contribution statement.** Write 2--3 sentences:
 - What did you build or produce?
-- What PRs did you submit and review?
+- What PRs or equivalent tracked-change/version-history handoffs did you submit and review?
 - What did you contribute to the group's planning and quality?
 
-This is checked against your Git history. Be accurate. Submit through the established process.
+This is checked against your group's Git history or equivalent change/version record. Be accurate. Submit through the established process.
 
 **3. Check that your group submitted the collaborative artifact.** If your group couldn't submit without you, contact them and the instructor immediately.
 
@@ -330,6 +335,8 @@ This is checked against your Git history. Be accurate. Submit through the establ
 - [ ] Plan for students who finish all tasks early (pair rehearsal, portfolio review, Week 14 preparation)
 - [ ] Plan for large classes: schedule to ensure all reflections fit in 150 min
 - [ ] Collaborative artifact submission process confirmed
+- [ ] Offline/local evidence backup requested; one evidence-map copy available per student if the network fails
+- [ ] Make-up appointment block reserved within five instructional days
 
 ---
 
@@ -338,7 +345,7 @@ This is checked against your Git history. Be accurate. Submit through the establ
 | Assessment component | What happens this week | Weight | CLOs |
 |---------------------|----------------------|--------|------|
 | **Oral Evidence-Indexed Reflection** | One-on-one, 4 min per student. 2 CLOs discussed. Scored on: specificity of claims, appropriateness of evidence, honesty of evaluation, ability to answer follow-ups. | 10% of final grade | All |
-| **Collaborative artifact submitted** | With contribution statements. Not graded separately but verified against Git history for CLO 7 evidence. | Part of collaborative artifact component | 7 |
+| **Collaborative artifact submitted** | With contribution statements, verified against the group's Git or equivalent change/version record. | Part of collaborative artifact component | 7 |
 | **Goal Document** | Final written entry (entry 13). Not graded. Instructor reads all 13 entries and returns brief final comments. | Ungraded | -- |
 | **Finalization checklist** | Ungraded. Provides structure during reflections. Submitted by end of session. | Ungraded | -- |
 | **Week 14 preview** | Students prepare for sharing event and final artifact package submission. | -- | -- |

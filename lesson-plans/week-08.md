@@ -188,7 +188,7 @@ Instructor circulates with scoring sheets. For each group:
 | Shows what was tried (not just "it doesn't work") | ✓ / partial / ✗ |
 | Interprets instruction/error message accurately | ✓ / partial / ✗ |
 
-**Observation tracking:** Record evidence basis (full / partial / deferred). Students with "partial" or "deferred" from Week 4 are visited first this round. After this round, every student should have at least one full observation across the two rounds.
+**Observation tracking:** Record evidence basis (full / partial / deferred). Students with "partial" or "deferred" from Week 4 are visited first this round. After this round, every student should have at least one full observation across the two rounds. If direct evidence remains insufficient, arrange a short live follow-up outside class.
 
 **Make-up for absent students:** Write diagnostic next class, do ad hoc triad (instructor + 2 volunteers) during independent work.
 
@@ -280,12 +280,11 @@ Instructor circulates:
 - [ ] Students with partial/deferred from Week 4 identified — their groups visited first
 - [ ] Written diagnostic prompt on slide
 - [ ] Paper or locked-down devices for diagnostic (no AI access)
-- [ ] 4 error scenarios prepared for Segment A worked examples:
+- [ ] 3 error scenarios prepared for Segment A worked examples:
   - [ ] Word document with Copilot reformatting gone wrong
   - [ ] Excel spreadsheet with a #REF! or similar formula error
-  - [ ] Git repository with a bad commit (wrong file included)
   - [ ] A real error message (permission denied, file not found)
-- [ ] 3-4 staged error scenarios for pair troubleshooting practice (shared via OneDrive)
+- [ ] 3-4 staged error scenarios for pair troubleshooting practice (downloadable from Blackboard; at least one works without Copilot or GitHub)
 - [ ] Help request template on slide (context / problem / what I tried / expected outcome)
 - [ ] Good vs. bad help request examples on slide
 - [ ] Vocabulary slides: process, sequence, outcome, resolve, anticipate (AWL terms; error message, troubleshoot, debug, help request, log introduced contextually)

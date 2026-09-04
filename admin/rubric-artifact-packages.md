@@ -69,19 +69,20 @@ Each artifact package includes:
 
 ### Package 1: Organised File System (Week 4, 7%)
 
-- **Product:** geap-103 folder in OneDrive with logical subfolder structure (at minimum: week-01, week-02, week-03), consistent naming (lowercase-with-hyphens recommended), files in the right places
+- **Product:** geap-103 folder on a local drive or cloud service with logical subfolder structure (at minimum: week-01, week-02, week-03), consistent naming (lowercase-with-hyphens recommended), and files in the right places
 - **Process documentation:** 2--3 sentences describing how the student organised their files, what naming convention they chose and why, and what they would change
-- **Verification:** Files are in the right folders, naming is consistent, Goal Document exists with content
-- **Evidence of sharing:** Submitted via OneDrive share link; peer response activity in Week 4 provides sharing context
+- **Verification:** Files are in the right folders, naming is consistent, Goal Document exists with content, and the student shows two named versions plus one actual recovery through Git/GitHub or an equivalent version-history tool
+- **Evidence of sharing:** Submitted through Blackboard as a working cloud link, screenshots/file listing, or exported folder package; peer response in Week 4 provides sharing context
 - **Late submission:** Students may submit by end of Week 5 with no penalty
 
 | What to check | Evidence |
 |---------------|----------|
-| geap-103 folder exists in OneDrive | Folder visible |
+| geap-103 folder exists locally or in a cloud service | Folder visible through a working link, screenshots/file listing, exported package, or in-class spot-check |
 | Subfolders exist | At least week-01 through week-03 |
 | Files are in the right places | Files from each week in the corresponding folder |
 | Goal Document exists with content | Entries from Weeks 1--3 present |
 | Naming is consistent | One convention applied throughout |
+| Version awareness is demonstrated | Two named states and one usable recovered earlier version; a history preview alone is insufficient |
 
 ### Package 2: Mid-Semester Artifact (Week 10, 8%)
 

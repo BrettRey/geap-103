@@ -105,7 +105,7 @@ Two prompts, both on screen:
 
 "Open the spreadsheet I've shared. Raise your hand when you see data on your screen."
 
-Wait until all hands are up. Help students who are stuck (wrong browser, not logged in, file opens in desktop app). This prevents 3-5 students from losing the first 5 minutes of the reading task to file-access friction.
+Run a three-minute access checkpoint. Try one quick fix, then route blocked students to the prepared downloadable `.xlsx` or accessible CSV/HTML copy. Partners may help with navigation, but each student answers from an individually identifiable A or B dataset. Start the reading task on time and log unresolved access for follow-up.
 
 Once everyone has the file open: "This is a student's monthly budget. The rows are months. The columns are categories: rent, food, transport, phone, other. The formulas calculate totals and averages. The chart shows spending over time. Now let's read it."
 
@@ -215,7 +215,7 @@ Focus: What did I ask Copilot to do? What did it produce? How did I check it? Wa
 *This bridges the register shift from reflective Goal Document writing to confrontational session review. Students retrieve specific content and switch from reflective to explanatory mode before the voice interaction begins.*
 
 ### 2:12--2:25 | Session Review (Speaking Practice)
-**Format:** Individual, AI voice mode
+**Format:** Individual speaking practice. Prefer AI voice; if it is unavailable, use a typed AI exchange read aloud or a live partner/instructor role-play with the same follow-up questions.
 **Language skills:** Speaking (justifying a change, responding to follow-up questions)
 
 "Open your AI tool and start a new chat. Say or paste this prompt."
@@ -232,7 +232,7 @@ Students talk to AI for 10-12 minutes, explaining what they did with the spreads
 
 Instructor circulates and listens. No intervention unless a student is stuck or silent. This is production practice, not instruction.
 
-**Note:** Voice mode starts a new chat. Students cannot paste work into the conversation and then switch to voice. The prompt is said aloud or pasted at the start, then the conversation is entirely spoken.
+**If using AI voice:** Voice mode starts a new chat. The prompt is said aloud or pasted at the start. The learning target is the student's explanation and follow-up answers, not access to voice mode.
 
 ### 2:25--2:35 | Git Episodes Introduction
 **Format:** Whole class, instructor-led
