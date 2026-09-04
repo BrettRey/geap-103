@@ -60,6 +60,7 @@ Common project types are presented in Week 4 as examples of what people build. T
 | **Video** | A video or animation for a specific audience | Clipchamp, phone camera | A mini-documentary about your neighbourhood, with narration, captions, and AI-generated transitions |
 | **Art** | Digital art, illustration, or design | AI image generation, design tools | A series of AI-generated illustrations for a personal calendar, each in a consistent artistic style |
 | **Novel / creative writing** | A sustained piece of narrative or creative writing | Word + Copilot | A complete illustrated short story with chapter headings, character portraits, and a designed cover |
+| **Physical product / prototype** | A physical object planned digitally and checked with a simple prototype | AI or design tools + paper, cardboard, or a 3D printer if available | A desk organizer designed for a specific user, with dimensions and a cardboard prototype tested for fit |
 | **[AI evaluation / safety test](materials/AI_Evaluation_Safety_Project_Guide.md)** | A small, repeatable test of whether an AI tool works for a real task and where it fails | AI tool + Excel or Word table | Testing whether an AI tool explains current college information correctly, using official webpages as the answer key |
 | **Combination** | A multi-part project using 2+ types | Any combination | A personal portfolio website with an embedded project gallery, resume, and contact form |
 

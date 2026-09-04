@@ -148,6 +148,7 @@ Select 5–6 rows from the table for one slide. Include the AI Evaluation / Safe
 | **Video** | A video or animation for a specific audience | A mini-documentary about your neighbourhood, with narration, captions, and AI-generated transitions |
 | **Art** | Digital art, illustration, or design | A series of AI-generated illustrations for a personal calendar, each in a consistent artistic style |
 | **Novel** | A sustained piece of narrative or creative writing | A complete illustrated short story with chapter headings, character portraits, and a designed cover |
+| **Physical Product / Prototype** | A physical object planned digitally and checked with a simple prototype | A desk organizer designed for a specific user, with dimensions and a cardboard prototype tested for fit |
 | **AI Evaluation / Safety Test** | A repeatable test of whether an AI tool works for a real task and where it fails | Testing whether an AI tool explains current college information correctly, using official webpages as the answer key |
 | **Combination** | A multi-part project using 2+ types | A personal portfolio website with an embedded project gallery, resume, and contact form |
 
