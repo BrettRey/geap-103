@@ -1,0 +1,15 @@
+GEAP 103: practice files
+
+These files were made for this class. They are not anyone's personal files.
+
+1. Open the folders. Find notes.txt.
+2. Open notes.txt and read it.
+3. Change its name to Shopping_List.txt. Keep the .txt ending.
+4. Move it to your GEAP 103 / Week 01 folder.
+5. Tell your partner where it is. Can they find and open it?
+
+Extra: compare shopping-list-v1.txt and shopping-list-v2.txt.
+What changed?
+
+The Downloads folder here is a practice folder. Your computer also has
+its own Downloads folder.

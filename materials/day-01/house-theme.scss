@@ -1,0 +1,265 @@
+/*-- scss:defaults --*/
+
+// House-style Quarto theme for reveal.js slides
+// Default format for all presentations. Use this YAML in slides.qmd:
+//
+//   format:
+//     revealjs:
+//       theme: [default, ../../.house-style/quarto-theme.scss]
+//       width: 1600
+//       height: 900
+//       center: false
+//       slideNumber: true
+//       embed-resources: true
+//       hash-type: number
+//       navigation-mode: linear
+//
+// Provides: semantic spans (.term, .mention, .olang, .thesis),
+//           WCAG AA colour palette (dual vibrant/text variants),
+//           EB Garamond font stack, accessibility defaults
+
+// EB Garamond from Google Fonts (embeds in self-contained HTML)
+// Local copy of Brett's house theme, 2026-09-08. Fonts load from day-01.scss
+// so the rendered teaching deck can work without Google Fonts or a network.
+
+// Font stacks
+$font-family-serif: "EB Garamond", Garamond, Georgia, serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// House colour palette (matches plot_style.py and LaTeX)
+// Vibrant variants: use for plot fills, backgrounds, decorative elements
+// Text variants (-text): WCAG AA on white (≥4.5:1) — use for text and thin lines
+$primary:    #2E5077;  // deep blue - main data                    (8.30:1 ✓ AAA)
+$secondary:  #E85D4C;  // coral red - fills/highlight              (3.44:1 — large only)
+$tertiary:   #4DA375;  // sage green - fills/third series          (3.08:1 — large only)
+$quaternary: #9B6B9E;  // muted purple - fills                    (4.21:1 — large only)
+$quinary:    #D4A03E;  // goldenrod - fills                       (2.36:1 — FAIL)
+$light:      #E8E8E8;  // light gray - backgrounds, grids
+$dark:       #2D2D2D;  // near black - text, axes                 (13.77:1 ✓ AAA)
+$accent:     #6AADE4;  // sky blue - fills                        (2.41:1 — FAIL)
+
+// Accessible text variants — darkened to WCAG AA (≥4.5:1 on white)
+$secondary-text:  #C74F41;  // coral text                         (4.54:1 ✓ AA)
+$tertiary-text:   #3D825D;  // sage text                          (4.62:1 ✓ AA)
+$quaternary-text: #946697;  // purple text                        (4.56:1 ✓ AA)
+$quinary-text:    #94702B;  // gold text                          (4.55:1 ✓ AA)
+$accent-text:     #4B7AA1;  // blue text                          (4.57:1 ✓ AA)
+
+// Reveal.js font variables (slides only; ignored for HTML papers)
+$body-font-family: $font-family-serif;
+$heading-font-family: $font-family-serif;
+$presentation-font-size-root: 36px;
+$presentation-line-height-root: 1.4;
+$presentation-heading-font: $font-family-serif;
+$presentation-heading-color: $dark;
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.3em;
+
+// Colours
+$body-bg: #ffffff;
+$body-color: $dark;
+$link-color: #800020;  // dark maroon per house style
+
+/*-- scss:rules --*/
+
+// ---------- Semantic spans ----------
+// These classes are used via Pandoc bracketed spans:
+//   [text]{.term}  [text]{.mention}  [text]{.olang}  [text]{.thesis}
+
+.term {
+  font-variant: small-caps;
+}
+
+.mention {
+  font-style: italic;
+}
+
+.olang {
+  font-style: italic;
+}
+
+.thesis {
+  background: lighten($primary, 52%);
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  display: block;
+  margin: 0.4em 0;
+}
+
+// ---------- Reveal.js slides ----------
+// Applied only when format is revealjs
+
+.reveal {
+  font-family: $font-family-serif;
+  color: $dark;
+}
+
+// Slide headings: small-caps dark bar
+.reveal h2 {
+  font-family: $font-family-serif;
+  background-color: $primary;
+  color: #ffffff;
+  padding: 0.3em 0.6em;
+  margin: -40px -40px 0.6em -40px;
+  font-weight: 400;
+  font-size: $presentation-h2-font-size;
+  font-variant: small-caps;
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+
+// Body text
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal blockquote,
+.reveal .slide-content {
+  font-family: $font-family-serif;
+  font-size: 0.85em;
+}
+
+// Links
+.reveal a {
+  color: #800020;
+}
+
+// Block quotes
+.reveal blockquote {
+  border-left: 4px solid $primary;
+  padding: 0.4em 0.8em;
+  margin: 0.5em 0;
+  background: lighten($primary, 48%);
+  font-style: italic;
+  width: 90%;
+}
+
+.reveal blockquote p {
+  font-size: 1em;
+}
+
+// Tables
+.reveal table {
+  font-family: $font-family-serif;
+  font-size: 0.85em;
+  border-collapse: collapse;
+}
+
+.reveal table th {
+  font-weight: 500;
+  border-bottom: 2px solid $dark;
+  padding: 0.3em 0.6em;
+}
+
+.reveal table td {
+  padding: 0.25em 0.6em;
+  border-bottom: 1px solid lighten($primary, 40%);
+}
+
+// Lists
+.reveal ul, .reveal ol {
+  font-family: $font-family-serif;
+}
+
+.reveal li {
+  margin-bottom: 0.3em;
+}
+
+// Title slide
+.reveal .quarto-title-block {
+  text-align: left;
+}
+
+#title-slide h1.title {
+  font-family: $font-family-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: $dark;
+  line-height: 1.2;
+}
+
+#title-slide .subtitle {
+  font-family: $font-family-serif;
+  font-size: 0.7em;
+  color: $primary;
+  margin-top: 0.3em;
+}
+
+#title-slide .quarto-title-authors,
+#title-slide .quarto-title-author-name {
+  font-family: $font-family-serif;
+  font-size: 0.65em;
+  color: $dark;
+}
+
+#title-slide .date {
+  font-family: $font-family-serif;
+  font-size: 0.55em;
+  color: $dark;
+}
+
+// Figure captions
+.reveal figcaption {
+  font-family: $font-family-serif;
+  font-size: 0.7em;
+  color: $dark;
+}
+
+// Slide number
+.reveal .slide-number {
+  font-family: $font-family-serif;
+  font-size: 0.55em;
+  color: $dark;
+  right: 16px;
+  bottom: 12px;
+  z-index: 100;
+}
+
+// Speaker notes
+.reveal .speaker-notes {
+  font-family: $font-family-serif;
+  font-size: 0.9em;
+}
+
+// Fragment (incremental) styling
+.reveal .fragment.fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reveal .fragment.fade-in.visible {
+  opacity: 1;
+}
+
+// ---------- Accessibility ----------
+
+// Respect reduced-motion preference (WCAG 2.3.3)
+@media (prefers-reduced-motion: reduce) {
+  .reveal .fragment.fade-in {
+    transition: none;
+  }
+  .reveal .slides section {
+    transition: none !important;
+  }
+}
+
+// Focus indicators for keyboard navigation (WCAG 2.4.7)
+.reveal a:focus,
+.reveal button:focus {
+  outline: 3px solid $quinary-text;
+  outline-offset: 2px;
+}
+
+// Ensure sufficient contrast for code blocks
+.reveal code {
+  color: $dark;
+  background: darken($light, 3%);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.reveal pre code {
+  padding: 0.8em;
+  font-size: 0.75em;
+  line-height: 1.4;
+}

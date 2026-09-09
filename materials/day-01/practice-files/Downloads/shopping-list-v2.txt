@@ -1,0 +1,8 @@
+Shopping list: version 2
+
+rice
+apples
+tea
+milk
+
+Practice file for GEAP 103.

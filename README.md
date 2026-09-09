@@ -18,6 +18,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 | `instructor-orientation.md` | What the course is, what traps to avoid, what good teaching looks like |
 | `lesson-plans/` | Lesson plans for all 14 curricular weeks plus a compressed Weeks 9–10 plan |
 | `materials/` | Instructor materials packages, templates, setup guides, faculty preparation |
+| [Day 1 classroom pack](materials/day-01/README.md) | Quarto slides with speaker notes, slide PDF, one-page reference sheet, and practice files |
 | `onboarding/` | Student setup guide for GitHub Education, Copilot Student, Git, and VS Code |
 | `admin/github-education-and-vscode-onboarding.md` | Teacher timeline, preflight checklist, troubleshooting, and fallback plan |
 | [Faculty preparation module](https://brettrey.github.io/geap-103/materials/faculty-preparation.html) | Self-paced AI-guided preparation for instructors (copy the prompt, paste into any AI tool) |

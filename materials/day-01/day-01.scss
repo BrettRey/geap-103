@@ -1,0 +1,101 @@
+/*-- scss:defaults --*/
+$presentation-font-size-root: 44px;
+$presentation-line-height-root: 1.28;
+$code-font-family: "Inconsolata", monospace;
+
+/*-- scss:rules --*/
+.reveal { font-variant-numeric: lining-nums; }
+.reveal .slides { text-align: left; }
+.reveal h1, .reveal h2 {
+  background: none;
+  color: #800020;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 0 0.55em;
+  line-height: 1.08;
+}
+.reveal h1 { font-size: 1.8em; }
+.reveal h2 { font-size: 1.42em; }
+.reveal p, .reveal li, .reveal td, .reveal blockquote { font-size: 1em; }
+.reveal p { margin: 0 0 0.55em; }
+.reveal ol, .reveal ul { margin: 0 0 0 1.1em; }
+.reveal li { margin-bottom: 0.35em; }
+.reveal strong { font-weight: 600; }
+.reveal .term { font-variant: normal; font-weight: 600; color: #800020; }
+.reveal .smallcaps { font-variant: small-caps; }
+.reveal .large { font-size: 1.35em; line-height: 1.2; }
+.reveal .small { font-size: 0.78em; }
+.reveal .quiet { color: #505050; }
+.reveal .space { margin-top: 0.85em; }
+.reveal .columns { gap: 1.1em; }
+.reveal .column { min-width: 0; }
+.reveal a { text-decoration: underline; text-underline-offset: 0.1em; }
+.reveal code {
+  font-family: "Inconsolata", monospace;
+  color: #2d2d2d;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.87em;
+}
+.reveal pre {
+  font-size: 1em;
+  margin: 0.35em 0 0.55em;
+  box-shadow: none;
+  border: 0;
+  background: none;
+}
+.reveal pre code { padding: 0; font-size: 0.86em; line-height: 1.28; }
+.reveal .path { font-family: "Inconsolata", monospace; font-size: 0.87em; margin-bottom: 0.85em; }
+.reveal .file-location { align-items: flex-start; }
+.reveal .file-location .column:last-child { font-size: 0.88em; }
+.reveal .visual-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(#62c5fa, #258bd4);
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
+.reveal .document-icon { background: #607586; }
+.reveal .folder-tree { padding: 0.12em 0; }
+.reveal .tree-row { display: flex; align-items: center; gap: 18px; position: relative; height: 100px; }
+.reveal .tree-row code { font-size: 0.98em; white-space: nowrap; }
+.reveal .depth-1 { margin-left: 52px; }
+.reveal .depth-2 { margin-left: 104px; }
+.reveal .depth-3 { margin-left: 156px; }
+.reveal .tree-branch { position: absolute; left: -23px; top: -12px; width: 22px; height: 62px; border-left: 2px solid #b8c8d5; border-bottom: 2px solid #b8c8d5; border-bottom-left-radius: 5px; }
+.reveal .file-ending { color: #800020; }
+.reveal .sync-explanation { font-size: 0.86em; }
+.reveal .sync-caption { text-align: center; font-size: 0.8em; color: #006aab; margin-top: 16px; }
+.reveal .sync-diagram { display: grid; grid-template-columns: 1fr 85px 1fr 85px 1fr; align-items: center; gap: 16px; margin: 8px 0 28px; padding-top: 96px; }
+.reveal .sync-place { text-align: center; }
+.reveal .sync-place:nth-child(3) { transform: translateY(-96px); }
+.reveal .sync-place .visual-icon { display: block; margin: 0 auto; width: 90px; height: 80px; }
+.reveal .place-label { font-size: 0.82em; margin: 0 0 12px; white-space: nowrap; }
+.reveal .sample-file { width: 210px; margin: 0 auto; padding: 12px 20px; border: 1.5px solid #afc2d1; background: #fbfdff; text-align: left; }
+.reveal .sample-file > span { display: block; font-family: "Inconsolata", monospace; font-size: 0.78em; line-height: 1.25; }
+.reveal .sample-name { display: block; font-size: 0.76em; padding-bottom: 7px; margin-bottom: 7px; border-bottom: 1px solid #dbe5ed; }
+.reveal .new-line { color: #006aab; }
+.reveal .sync-link { align-self: end; height: 84px; }
+.reveal .sync-link span { display: block; width: 130px; margin-left: -22.5px; height: 3px; background: #2b91d4; position: relative; transform: translateY(-48px) rotate(-48deg); }
+.reveal .sync-link:nth-child(4) span { transform: translateY(-48px) rotate(48deg); }
+.reveal .sync-link span::before, .reveal .sync-link span::after { content: ""; position: absolute; top: -6px; width: 12px; height: 12px; border-top: 3px solid #2b91d4; border-right: 3px solid #2b91d4; }
+.reveal .sync-link span::before { left: 0; transform: rotate(225deg); }
+.reveal .sync-link span::after { right: 0; transform: rotate(45deg); }
+.reveal .sync-caution { margin-bottom: 0.5em; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal .fragment { transition: none !important; }
+}
+.reveal .game-image { max-height: 520px; width: auto; display: block; margin: 0 auto; }
+.reveal figure { margin: 0; }
+.reveal .slide-number { font-size: 18px; }
+.reveal .notes { font-size: 20px; }
+@media print {
+  .reveal .slides section { padding: 0 !important; }
+  .reveal a { text-decoration: none; }
+}

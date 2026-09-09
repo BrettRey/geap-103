@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url("assets/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("assets/EBGaramond-Italic.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("assets/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 200 900;
+}
+
+/* Keep asset URLs here so Quarto embeds them relative to this folder. */
+.reveal .folder-icon { --icon: url("assets/folder.svg"); }
+.reveal .document-icon { --icon: url("assets/document.svg"); }
+.reveal .laptop-icon { --icon: url("assets/laptop.svg"); }
+.reveal .cloud-icon { --icon: url("assets/cloud.svg"); }

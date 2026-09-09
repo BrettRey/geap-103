@@ -1,0 +1,82 @@
+---
+pagetitle: "GEAP 103: Day 1 reference"
+lang: en
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: article
+    fontsize: 12pt
+    mainfont: EB Garamond
+    monofont: Inconsolata
+    colorlinks: true
+    linkcolor: "800020"
+    urlcolor: "800020"
+    geometry: [letterpaper, margin=0.65in]
+    pagestyle: empty
+    toc: false
+    include-in-header:
+      text: |
+        \usepackage{titlesec}
+        \titleformat{\section}{\large\scshape\color[HTML]{800020}}{}{0pt}{}
+        \titlespacing*{\section}{0pt}{8pt}{3pt}
+        \setlength{\parskip}{3pt}
+        \setlength{\parindent}{0pt}
+        \AtBeginDocument{\pagestyle{empty}}
+---
+
+\begin{center}
+{\Large GEAP 103: Day 1}\\[2pt]
+Your files and your wishes
+\end{center}
+
+# Five useful words
+
+**Folder:** a place to keep files.  
+**File path:** the steps through folders to a file.  
+**File extension:** the ending after the dot, such as `.txt` or `.docx`.  
+**Cloud sync:** when you change a file, OneDrive can update other copies.  
+**Version:** the file as it was at one time, before more changes.
+
+Example path: `Documents / GEAP 103 / Week 01 / notes.txt`
+
+A file you see on your computer may still need the internet to open.
+
+# A place for your course work
+
+Create these folders in **Documents** or **OneDrive**:
+
+```text
+GEAP 103/
+  Week 01/
+  Week 02/
+  Goal Document/
+  Decision Logs/
+  Portfolio/
+```
+
+Save your writing in `Goal Document`.  
+Name the file `Goal_Document_YourName.docx`. Use your name.
+
+# Your first wishes
+
+Write **3–5 things** you wish a computer could do for you.
+
+"I wish my computer could ..."  
+"It'd help me if I could ..."  
+"I want to learn how to ..."
+
+Your wishes don't have to be realistic. You don't need to know how to make them happen yet. Your wishes can change.
+
+# Talking about today
+
+Tell a partner or a **large language model (LLM)** what you did and one thing you want to learn. An LLM is a computer tool you can talk or write to.
+
+With an LLM, say or paste: "I'm learning English. Ask me what I did with my files today and what I want to learn. Ask one question at a time. If I'm not clear, ask me to explain more. Let me do the explaining."
+
+With a partner, take turns. Ask "Where?", "Why?", or "Can you show me?"
+
+# Before you go
+
+Write one sentence: what did your partner or the LLM ask you to explain more?
+
+Check that you can find and open your Goal Document. Make sure you can get to it next class, especially if you're using a school computer.
