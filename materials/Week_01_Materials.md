@@ -406,3 +406,5 @@ Bring your device with your chosen course folder accessible. Make sure your geap
 | Session review (instructor) | 2:20–2:27 | 7 | One prompt, read, brief reaction |
 | Buffer | 2:27–2:30 | 3 | Overflow or early dismissal |
 | **Total** | | **150 min instruction** | |
+
+Practice making changes and forking
