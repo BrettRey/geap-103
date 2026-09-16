@@ -184,6 +184,8 @@ If your instructor asks you to download the starter kit from the course reposito
 3. Unzip the downloaded file in a place you can find again, such as a course folder in Documents or OneDrive.
   
 4. In VS Code, choose **File** → **Open Folder** and select the unzipped course folder.
+
+The starter kit may also include ready-to-use class files, such as the Week 2 shared practice tasks in `week-02/shared-practice/`.
   
 
 If your instructor gives you a personal repository link, follow that link instead and confirm it is private. Keep one continuing Decision Log at `decision-logs/decision-log.md`. At collection points, submit a permanent link to the committed version in Blackboard, or upload the same `.md` file if GitHub is unavailable. Follow the [Decision Log workflow](decision-logs.md).

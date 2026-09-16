@@ -18,13 +18,14 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 | `instructor-orientation.md` | What the course is, what traps to avoid, what good teaching looks like |
 | `lesson-plans/` | Lesson plans for all 14 curricular weeks plus a compressed Weeks 9–10 plan |
 | `materials/` | Instructor materials packages, templates, setup guides, faculty preparation |
+| [Week 2 shared practice repo kit](materials/week-02-shared-practice-repo/README.md) | Public download-and-play practice files plus an additive Week 2 standardization route |
 | [Day 1 classroom pack](materials/day-01/README.md) | Quarto slides with speaker notes, slide PDF, one-page reference sheet, and practice files |
 | [Needs assessment and speaking cards](materials/needs-assessment/README.md) | Online form link and reusable questions; 25 printable speaking cards, one per page |
 | `onboarding/` | Student setup guide for GitHub Education, Copilot Student, Git, and VS Code |
 | [Decision Log workflow](onboarding/decision-logs.md) | One Markdown log in each student's private portfolio; committed-version links submitted through Blackboard |
 | `admin/github-education-and-vscode-onboarding.md` | Teacher timeline, preflight checklist, troubleshooting, and fallback plan |
 | [Faculty preparation module](https://brettrey.github.io/geap-103/materials/faculty-preparation.html) | Self-paced AI-guided preparation for instructors (copy the prompt, paste into any AI tool) |
-| `materials/geap-103-starter.zip` | Student starter kit (folder structure, templates, copilot-instructions.md) |
+| `materials/geap-103-starter.zip` | Student starter kit (folder structure, templates, copilot-instructions.md, and Week 2 shared practice files) |
 | `skills/` | Reusable AI-agent skills for course planning and instructor support |
 | `design-notes/` | Background research and design rationale |
 | `reviews/` | Simulated expert reviews from the design process |

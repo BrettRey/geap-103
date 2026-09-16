@@ -9,6 +9,8 @@ This file contains everything you need to prepare slides and run the class for W
 
 **Week 2 design note:** AI's output improves in direct proportion to how much the student can say about themselves, their purpose, and their perspective. The student experiences this firsthand, with their own wish from Week 1, not by watching the instructor demonstrate it. The instructor's role is to circulate, notice what students are doing, name the vocabulary as it arises, and push students to say more. Both the Decision Log and the Goal Document are assigned this week. They serve different purposes: the DL looks backward at a specific interaction; the GD looks forward at evolving interests.
 
+**Additive Fall 2026 option:** If you want a more common student experience with less account/setup variance, use the companion package `Week_02_Shared_Practice_Repo_Materials.md` and the public kit in `materials/week-02-shared-practice-repo/README.md`. That route standardizes the task files for Week 2 without replacing this original personal-wish version.
+
 **AI tools:** This course is tool-agnostic. Students use whatever AI they can access. The assessment is on what they can articulate, evaluate, and produce – not which tool they use. Recommended options:
 
 | Tool | How to access | Notes |
