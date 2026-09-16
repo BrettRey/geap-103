@@ -27,7 +27,7 @@ She gets a generic list of study tips. This is not what she wanted. She wanted a
 | Field | What Elif writes |
 |-------|-----------------|
 | Task goal | "I wanted a tool that helps me study, not a list of tips" |
-| AI used | Copilot in Word |
+| Tool used | Copilot in Word |
 | Prompt | "Help me study better" |
 | Output summary | "It gave me 10 tips like 'take breaks' and 'use flashcards.' This is not a tool." |
 | Decision | Reject |
@@ -49,7 +49,7 @@ In the model comparison activity, Elif and her partner type the same prompt into
 
 ## Week 3: Never Losing Work Again
 
-Elif creates her `GEAP-103-Portfolio` repository on GitHub. She uploads her file-system map and her Decision Log. She writes commit messages:
+Elif creates her private `geap-103-portfolio` repository on GitHub and invites her teacher. She uploads her file-system map and her continuing `decision-logs/decision-log.md`. She writes commit messages:
 
 - `Added Week 1 file system map`
 - `Added Week 2 decision log about study schedule`
@@ -109,7 +109,7 @@ Decision Log entry:
 | Field | What Elif writes |
 |-------|-----------------|
 | Task goal | "Add a daily spending average to my budget spreadsheet" |
-| AI used | Copilot in Excel |
+| Tool used | Copilot in Excel |
 | Prompt | "Add a column that shows my average daily spending each month" |
 | Output summary | "The formula divides by 30 for every month. February has 28 days. The number was wrong." |
 | Decision | Modify |

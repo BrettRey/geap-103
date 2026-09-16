@@ -173,20 +173,20 @@ git --version
 
 You should see a version number. If you see an error, copy the exact error message for your help request.
 ## 9. Open the course files
-Use the repository or starter files provided by your instructor. Do not edit the instructor's repository unless the instructor tells you to.
+Use the public course repository for teaching materials. Your own work belongs in your private `geap-103-portfolio` repository, introduced in Week 3, with your teacher invited. Don't upload personal coursework to the instructor's public repository. Use a local course folder or OneDrive while GitHub access is unavailable.
 
 If your instructor asks you to download the starter kit from the course repository:
 
-1. Open the course repository in your browser.
+1. Download the [student starter ZIP](../materials/geap-103-starter.zip) from the course repository.
   
-2. Choose **Code** → **Download ZIP**.
+2. Save `geap-103-starter.zip`. You don't need to download or fork the entire teaching repository.
   
 3. Unzip the downloaded file in a place you can find again, such as a course folder in Documents or OneDrive.
   
 4. In VS Code, choose **File** → **Open Folder** and select the unzipped course folder.
   
 
-If your instructor gives you a personal repository link, follow that link instead. The important thing is that you know where your files are and can open them again.
+If your instructor gives you a personal repository link, follow that link instead and confirm it is private. Keep one continuing Decision Log at `decision-logs/decision-log.md`. At collection points, submit a permanent link to the committed version in Blackboard, or upload the same `.md` file if GitHub is unavailable. Follow the [Decision Log workflow](decision-logs.md).
 ## If something goes wrong
 | What you see | What to do |
 | --- | --- |

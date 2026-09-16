@@ -61,7 +61,7 @@ git init
 
 **GitHub web path:**
 
-> Go to github.com. Click "New repository." Name it `geap-103-portfolio`. Then upload one file from your geap-103 folder.
+> Go to github.com. Click "New repository." Name it `geap-103-portfolio` and choose **Private**. Invite your teacher using the GitHub username they give you. Then upload one non-sensitive course file. Don't use the public teaching repository for your work.
 
 **Document/cloud version-history path:**
 
@@ -391,12 +391,12 @@ In Week 3, we learned version control — how to save snapshots of your work so 
 
 **1. Choose a path you can use now:** GitHub web, local Git, or version history in a document/cloud tool. A regular GitHub account is enough. The Student Developer Pack is optional and requires your own current documentation; after Education approval, allow 72 hours for Copilot Student activation. Do not send documents to your instructor.
 
-**2. Establish a version-history location.** Create a repository called `geap-103-portfolio`, or choose a course file in a tool with version history.
+**2. Establish a version-history location.** Create a **private** repository called `geap-103-portfolio` and invite your teacher, or use the local/document version-history fallback. Don't make your portfolio public to solve an access problem.
 
-- If you have the CLI: start an interactive `copilot` session, then enter `Create a Git repository here and connect it to a new GitHub repository called geap-103-portfolio.` Read the proposed commands before approving them.
-- If not: go to github.com, click "New repository," name it `geap-103-portfolio`
+- If you have the CLI: start an interactive `copilot` session, then enter `Create a Git repository here and connect it to a new private GitHub repository called geap-103-portfolio.` Read the proposed commands before approving them and check private visibility afterwards.
+- If not: go to github.com, click "New repository," name it `geap-103-portfolio`, and choose **Private**. Invite your teacher using the username they provide.
 
-**3. Add at least one file and commit it.** Upload your Goal Document or a Decision Log. Write a commit message describing what it is (e.g., "Added goal document from weeks 1-3").
+**3. Add at least one file and commit it.** Upload a non-sensitive Goal Document or your continuing `decision-logs/decision-log.md`. Write a commit message describing what you added. Keep later Decision Log entries in the same Markdown file. At collection points, submit a permanent link to the committed log in Blackboard, or the `.md` file if GitHub is unavailable. Follow the [Decision Log workflow](../onboarding/decision-logs.md).
 
 **4. Recover an earlier version.** Make a change and save a second named version. Then download, copy, or safely restore the earlier version as a usable file. Keep evidence of the before state, action, and result; merely viewing the history is not enough.
 

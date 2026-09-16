@@ -56,7 +56,7 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 - Check your own GitHub Education and Copilot status.
 - Verify that the course repository, Pages site, starter ZIP, and links work in a private browser window.
 - Test the public and signed-out path: course links, starter ZIP, and public repository. Test instructor-owned tools only with your own authorized account. Do not attempt to reproduce a student's Education-verification result.
-- Confirm whether students need to create personal repositories, use a teacher-provided repository, or use GitHub Classroom. Do not make students guess which repository is theirs.
+- Confirm approved institutional use for assessed student work, then prepare one private `geap-103-portfolio` repository per student, with the teacher invited. Use the local/OneDrive and Blackboard fallback until approval and access are confirmed. Do not make students guess which repository is theirs.
 - Prepare a class troubleshooting sheet using the table below.
 
 ### Three days before
@@ -91,7 +91,8 @@ GitHub currently distinguishes **Copilot Student** for verified students from fr
 - [ ] The README links to the student guide.
 - [ ] The starter ZIP downloads and opens.
 - [ ] The starter kit contains the expected folder structure and Copilot instructions.
-- [ ] Students have a clear path to their own working copy.
+- [ ] Each student's portfolio repository is private, and I have accepted the invitation and checked access, or we have recorded the local/OneDrive fallback.
+- [ ] Blackboard has the three Decision Log collection points and accepts a committed-version link or a fallback `.md` upload. Assessment feedback and grades stay there.
 - [ ] The repository does not contain private student data, unpublished assessment information, or teacher-only notes.
 
 ### Classroom support
@@ -194,9 +195,11 @@ Never use the unsafe request. GitHub should handle identity documents and authen
 For the current course design, keep the student-facing path simple:
 
 - use the public GEAP 103 repository as the source of course materials;
-- give each student a clearly named working copy or personal repository when individual Git work begins;
+- use a private `geap-103-portfolio` repository for each student's coursework when individual Git work begins, with teacher access confirmed;
 - use the starter ZIP when a clean folder structure is more important than repository administration; and
 - introduce pull requests and issues as communication genres in Week 7 while providing the tracked-change/version-history handoff equivalent.
+
+For Decision Logs, follow the [canonical saving and submission workflow](../onboarding/decision-logs.md): one `decision-logs/decision-log.md`, dated entries, and committed-version links submitted in Blackboard. Keep assessment feedback, grades, and sensitive personal information out of repositories. The local/OneDrive fallback uses the same Markdown file.
 
 If the course later adopts GitHub Classroom, test the complete teacher and student path before class. GitHub's current documentation notes that the GitHub Classroom extension for VS Code is no longer in active development; do not make that extension a required dependency without testing it first.
 

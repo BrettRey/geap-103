@@ -26,9 +26,11 @@ Phase 3 language: students are no longer planning or justifying. They are evalua
 **Format:** Whole class, then individual
 **Language skills:** Reading (own DL entries)
 
-*DL feedback round 2 was distributed digitally before class (via Blackboard or email). Students should have read it already. If not, they read it during the collaborative building in Segment A.*
+*DL feedback round 2 was returned through Blackboard before this unit, on the section date in the delivery ledger. Students should have read it already. If not, they read it during the collaborative building in Segment A.*
 
 "Your 8 curated Decision Log entries with self-assessment are due by **11:59 PM tonight**. Not end of class — tonight. Count your entries now. If you're short, you can write one more during the collaborative work time. This is 30% of your grade."
+
+Save, commit, and push `decision-logs/decision-log.md` to your private repository. Submit its permanent committed-version link in Blackboard. If GitHub is unavailable, upload the same `.md` file there. See the [workflow](../onboarding/decision-logs.md).
 
 **Ungrouped students:** Any student who missed Week 10's group formation is placed now. Instructor assigns them to an existing group that needs a member, or forms a new pair. This takes 2 minutes maximum. Do not delay the rest of the class.
 
@@ -238,7 +240,7 @@ Instructor circulates:
 ## Instructor Prep Checklist
 
 - [ ] DL feedback round 2 already returned; list students who have not opened it and follow up individually
-- [ ] DL submission process confirmed (where and how students submit 8 entries + self-assessment)
+- [ ] Blackboard DL assignment ready: committed-version links or fallback `.md` uploads; teacher access to private repositories checked
 - [ ] Triad groups pre-assigned (mix based on Weeks 4 and 8 data; partial/deferred students' groups visited first)
 - [ ] Scoring sheets printed: one per student (7 criteria + fluency band + evidence basis)
 - [ ] Written diagnostic prompt on slide

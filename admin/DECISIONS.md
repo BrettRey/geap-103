@@ -1,5 +1,5 @@
 # GEAP 103 Decisions Log
-<!-- SUMMARY: Durable GEAP 103 curriculum and delivery decisions through the Fall 2026 schedule/access repair · status: active · updated: 2026-09-04 -->
+<!-- SUMMARY: Durable GEAP 103 curriculum and delivery decisions, including the standard Decision Log workflow · status: active · updated: 2026-09-16 -->
 
 ## 2026-03-25
 
@@ -96,3 +96,7 @@
 - **Assessment absences use defined equivalent make-ups.** Micro-Defences use the same diagnostic and ad hoc triad within seven calendar days. The Week 13 oral reflection uses the same live, unmediated four-minute, two-CLO conversation within five instructional days; a recording, gallery post, or written response is not a substitute.
 
 - **Micro-Defence missed observation uses a simple live fallback.** If the instructor lacks enough direct evidence from a student's in-class triad, the student may book a short live follow-up outside class. Keep the result Deferred until the follow-up occurs. This is not a mandatory rotation and is separate from the full make-up for absence.
+
+## 2026-09-16
+
+- **Standard Decision Log workflow.** Brett approved one continuing `decision-logs/decision-log.md` in each student's private `geap-103-portfolio`, with the teacher invited. Week 2 starts locally; GitHub begins in Week 3. Students submit a committed-version permalink through Blackboard at the existing Week 4, 8, and 11 collection points. Grades and confidential assessment feedback stay in Blackboard. The same Markdown file can be uploaded there when GitHub access or institutional approval is unavailable. The 30% weight, rubric bands, and deadlines are unchanged. Decision owner: Brett; implementation: Codex. This approval standardizes the course materials; it does not establish institutional approval of GitHub. Durable instructions: [Decision Log workflow](../onboarding/decision-logs.md).

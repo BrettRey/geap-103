@@ -240,7 +240,7 @@ Display:
 > | Field | Your answer |
 > |-------|-------------|
 > | **Task goal + constraints** | What were you trying to do with the spreadsheet? |
-> | **AI used** | Which tool? (Copilot in Excel, ChatGPT, etc.) |
+> | **Tool used** | Which tool? (Copilot in Excel, ChatGPT, etc.) |
 > | **Prompt snippet(s)** | What did you ask? (1-3 turns) |
 > | **Output summary** | What did AI produce? |
 > | **Decision** | Accept / Modify / Reject |

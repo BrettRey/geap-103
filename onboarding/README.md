@@ -7,6 +7,7 @@ Start early. GitHub Education verification requires each student's own current d
 ## Choose the right guide
 
 - **Students:** [GitHub Education and VS Code: student setup](student-setup.md)
+- **Students and instructors:** [Decision Logs: saving, submitting, and feedback](decision-logs.md)
 - **Instructors:** [Teacher onboarding and support plan](../admin/github-education-and-vscode-onboarding.md)
 
 ## What students need

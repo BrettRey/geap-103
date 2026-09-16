@@ -49,7 +49,7 @@ This file contains everything you need to prepare slides and run the class for W
 
 **Format:** Whole class, then individual
 
-*DL feedback round 2 was distributed digitally before class (via Blackboard or email). Students should have read it already. If not, they can read it during the collaborative building time.*
+*DL feedback round 2 was returned through Blackboard before this unit, on the section date in the delivery ledger. Students should have read it already. If not, they can read it during the collaborative building time.*
 
 Display:
 
@@ -59,9 +59,9 @@ Display:
 
 > | Step | Action |
 > |------|--------|
-> | 1 | Open your Decision Log file (all 8 entries + self-assessment for each). |
+> | 1 | Open `decision-logs/decision-log.md` (all 8 selected entries + self-assessment for each). |
 > | 2 | Check: Do you have 8 entries? Does each entry have all fields? |
-> | 3 | Submit through [established submission process]. |
+> | 3 | Save, commit, and push the file to your private repository. Submit its permanent committed-version link in Blackboard. If GitHub is unavailable, upload the same `.md` file there. See the [workflow](../onboarding/decision-logs.md). |
 > | 4 | **Deadline: 11:59 PM tonight**, unless Blackboard shows an approved accommodation or documented-barrier date for you. |
 
 **Ungrouped students:** Any student who missed Week 10's group formation is placed now. Assign them to an existing group or form a new pair. Maximum 2 minutes.
@@ -361,12 +361,12 @@ Groups resume building. Same role-based structure as Segment A. Students who hav
 
 Before Week 11, DL feedback round 2 was returned. In class, we assigned collaborative roles, ran Micro-Defence 3 (7 criteria), submitted Decision Logs, continued group building, and wrote a group evaluation in the Goal Document.
 
-**1. Submit your Decision Logs immediately.** Your 8 curated entries + self-assessment are due. Each entry needs all fields:
+**1. Submit your Decision Log immediately.** Submit the committed-version link through Blackboard, or upload the same `.md` file if GitHub is unavailable. Include your 8 curated entries + self-assessment. Each entry needs all fields:
 
 | Field | Content |
 |-------|---------|
 | Task goal + constraints | 1--2 sentences |
-| AI used | Which AI tool and context |
+| Tool used | Which AI tool and context, and why this one |
 | Prompt snippet(s) | Max 3 turns |
 | Output summary | What the AI proposed (1--2 sentences) |
 | Decision | Accept / Modify / Reject |
@@ -391,7 +391,7 @@ Submit through the established process. Contact the instructor about a late dead
 ## Instructor Prep Checklist
 
 - [ ] DL feedback round 2 already returned; follow-up list prepared for students who have not opened it
-- [ ] DL submission process confirmed (where and how students submit 8 entries + self-assessment)
+- [ ] Blackboard DL assignment ready: committed-version links or fallback `.md` uploads; teacher access to private repositories checked
 - [ ] Triad groups pre-assigned (mix based on Weeks 4 and 8 data; partial/deferred students' groups visited first)
 - [ ] Scoring sheets printed: one per student (7 criteria + fluency band + evidence basis)
 - [ ] Written diagnostic prompt on slide

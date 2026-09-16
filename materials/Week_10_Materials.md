@@ -237,7 +237,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 >
 > "If you saved your session review transcript (the AI client conversation), you can add it to your package as supplementary sharing evidence. Submit it the same way."
 >
-> "I'll return your Decision Log feedback at the start of next week."
+> "Your Decision Log feedback will be in Blackboard before Week 11, on the date in our section schedule. Use it to improve your final entries."
 
 ---
 
@@ -250,7 +250,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 | Grade mid-semester artifact packages | Return feedback by Week 12 | Use Artifact Package rubric (AF v6). Focus on: does the process documentation sound like the student? Is the verification note honest? Is there evidence of sharing? |
 | Note students who did not submit or submitted incomplete packages | Before Week 11 | Follow up at the start of Week 11. |
 | Review collaborative group formations | Before Week 11 | Identify any students who were absent or didn't find a group. Plan to integrate them in Week 11. |
-| DL feedback round 2 | Prepare now; return at start of Week 11 | Include confirmation signal ("target addressed" / "target still developing") for each entry. |
+| DL feedback round 2 | Return before Week 11 on the section date in the delivery ledger | Return through Blackboard. Include confirmation signal ("target addressed" / "target still developing") for each entry. |
 | Note session review patterns | Before Week 11 | Were students able to present to a non-technical audience? Note students who struggled with the "client" framing -- this skill feeds the artifact sharing event at Week 14. |
 
 ---

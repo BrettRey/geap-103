@@ -17,7 +17,7 @@ This file contains everything you need to prepare slides and run the class for W
 | **Copilot Chat** | copilot.microsoft.com, sign in with Humber account | Free, no install, works in any browser |
 | **ChatGPT** | chatgpt.com | Free tier available, no institutional dependency |
 | **Claude** | claude.ai | Free tier available |
-| **Other** | Whatever the student already uses or prefers | Fine. The DL "AI used" field captures which tool. |
+| **Other** | Whatever the student already uses or prefers | Fine. The DL "Tool used" field captures which tool. |
 
 Prepare two short static AI responses to the same sample prompt: one that matches the request and one that misses an important constraint. A student with no working AI account evaluates, revises, and documents these outputs, then retries in a live tool later. This preserves the language and judgment task without turning account setup into the lesson.
 
@@ -144,7 +144,7 @@ Introduce the Decision Log briefly. Display the template fields:
 | Field | What to write |
 |-------|--------------|
 | **Task goal** | What were you trying to do? Why? |
-| **AI used** | Which tool? |
+| **Tool used** | Which tool? |
 | **Prompt snippets** | Copy up to 3 of your prompts |
 | **Output summary** | What did AI produce? |
 | **Decision** | Accept / Modify / Reject |
@@ -170,7 +170,9 @@ Introduce the Decision Log briefly. Display the template fields:
 
 Display the template on screen.
 
-> Write your own Decision Log entry about today's AI interaction. Save it as `dl01-yourname.docx` in your geap-103/decision-logs/ folder.
+> Write Entry 1 in the [Markdown Decision Log template](decision-log.md). Keep one file called `decision-logs/decision-log.md` inside your course folder. Add later entries to this same file.
+
+Start locally or in OneDrive today. In Week 3, put the same file in your private portfolio repository when GitHub is available, with your teacher invited. At collection points, submit a permanent link to the committed version in Blackboard; if GitHub is unavailable, upload the `.md` file instead. Feedback and grades stay in Blackboard. Follow the [Decision Log workflow](../onboarding/decision-logs.md).
 
 **Sentence frames** (display on slide – these scaffold the first few entries until students internalize the genre):
 
@@ -183,7 +185,7 @@ Display the template on screen.
 **Sample DL entry** (display briefly as a model, then remove so students write their own):
 
 > **Task goal:** I wanted to find a good route to bike to my new part-time job because I don't know the area well.
-> **AI used:** ChatGPT (phone app)
+> **Tool used:** ChatGPT (phone app)
 > **Prompt snippets:** 1. "How do I bike from Lakeshore campus to Dundas and Ossington?" 2. "I am new to Toronto. I need a safe route with bike lanes." 3. "I start work at 7 AM. Which route has the least traffic in the morning?"
 > **Output summary:** The first answer listed three routes but used street names I didn't know. The second was clearer and mentioned bike lanes. The third told me which route is quietest before 8 AM.
 > **Decision:** Modify
@@ -291,7 +293,7 @@ Instructor circulates and listens. No intervention unless a student is stuck or 
 
 Reminders (display):
 - Bring your device
-- Your Decision Log entry should be in your geap-103/decision-logs/ folder
+- Your entry should be in the continuing `decision-logs/decision-log.md` file inside your course folder
 - Your Goal Document should have two entries now
 - **Know which Week 3 path you will try first: GitHub web, local Git, or document/cloud version history**
 
@@ -315,7 +317,7 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 - [ ] AI tool accessible on projector (GitHub Copilot CLI recommended for demo; any tool works for students)
 - [ ] Four progression slides ready (Start → Add who you are → Add what you need → Add expert perspective), each with sentence frame. Only Slide 1 is shown at launch; reveal 2–4 during practice.
 - [ ] Vocabulary reference slide ready (6 terms in table format – displayed as silent reference, not pre-taught). Print copies or plan for students to photograph it if single-projector room.
-- [ ] Decision Log template accessible to students (shared on LMS or OneDrive)
+- [ ] [Markdown Decision Log template](decision-log.md) accessible; students know the single-file location and Blackboard collection route
 - [ ] Decision Log sentence frames on a slide
 - [ ] Goal Document prompt + sentence frames on a slide
 - [ ] Session review slide: role-setting prompt + Week 2 scenario ("Describe what happened when you tried your prompt – what you expected vs. what you got")
@@ -326,7 +328,7 @@ Both a Decision Log entry and a Goal Document update are assigned this week. The
 
 ## Assessment Alignment
 
-- **Decision Log entries begin** (30% component, ongoing; 8 entries across Weeks 2–13)
+- **Decision Log entries begin** (30% component, ongoing; 8 selected entries from Weeks 2–11)
 - CLO 3 begins (formulate clear requests to guide AI tools) – the 4-step progression
 - CLO 4 begins (evaluate AI-generated text) – comparing outputs across steps
 - CLO 5 begins (communicate about technical work) – the DL entry is the first instance of this genre
@@ -392,10 +394,10 @@ Save your prompts and AI's responses in a document in your geap-103/week-02/ fol
 
 **2. Write your first Decision Log entry.**
 
-Create a file called `dl01-yourname.docx` in your geap-103/decision-logs/ folder. Fill in these fields about your AI interaction:
+Use the [Markdown template](decision-log.md) to create `decision-logs/decision-log.md` inside your course folder. This is your continuing log, not a separate file for each entry. Fill in these fields about your AI interaction:
 
 - **Task goal:** What were you trying to do? Why?
-- **AI used:** Which tool?
+- **Tool used:** Which tool?
 - **Prompt snippets:** Copy up to 3 of your prompts
 - **Output summary:** What did AI produce?
 - **Decision:** Accept / Modify / Reject

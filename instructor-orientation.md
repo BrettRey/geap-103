@@ -1,8 +1,10 @@
 # GEAP 103: What This Course Is
 
 **For:** Instructors preparing to teach GEAP 103 Basic Computer Skills
-**Date:** 2026-09-04
+**Date:** 2026-09-16
 **Status:** Working document
+
+**Decision Logs:** Students keep one `decision-logs/decision-log.md` in their private portfolio repository and invite the teacher. They submit a permanent link in Blackboard at each collection point; assessment feedback and grades stay in Blackboard. See the [workflow and access fallback](onboarding/decision-logs.md).
 
 ---
 

@@ -57,7 +57,7 @@ For each term: point to where it lives on the diagram. Repeat the term. Ask a vo
 
 Instructor demonstrates, narrating each step:
 
-1. **Create a repository** on GitHub. "This is one place where work and its history can live."
+1. **Create a private repository** on GitHub. "This is one place where work and its history can live. Only people with access can open it." Use fictional practice files for the projected demonstration.
 2. **Add a file** (a simple text document). **Commit** with a message: "Added first draft of my notes."
 3. **Change the file** (add a paragraph, delete a sentence). **Commit** again: "Revised introduction, added summary."
 4. **Show the two snapshots** side by side. "See? Both versions exist. The old one isn't gone."
@@ -88,13 +88,13 @@ Demonstrate the same save-change-recover cycle once in a non-Git tool (for examp
 
 Run a two-minute readiness check, then route students immediately:
 
-- **Path A -- GitHub web:** sign in, create `GEAP-103-Portfolio`, upload the Week 1 file-system map, write a descriptive commit message, and commit.
+- **Path A -- GitHub web:** sign in, create a **private** `geap-103-portfolio` repository, invite the teacher using their supplied GitHub username, upload a non-sensitive Week 1 file-system map, write a descriptive commit message, and commit. Don't fork the public teaching repository as a personal portfolio. Confirm teacher access before the first collection.
 - **Path B -- local Git:** create a local repository, add the Week 1 map, and make a named commit. A remote GitHub repository can be connected later.
 - **Path C -- document/cloud version history:** open a course file in a tool with version history, save or name the current version, and record where its history is found.
 
 A regular free GitHub account is enough for Paths A and B; GitHub Education and Copilot are optional and may still be pending. Account registration or Education verification continues outside the timed activity. Never ask a student to display or send identity documents to teaching staff.
 
-Students who finish early: add the Week 2 Decision Log or Goal Document as a second named version. Each snapshot gets its own descriptive note.
+Students who finish early: add the Week 2 log at `decision-logs/decision-log.md`, or add a non-sensitive Goal Document, as a second named version. Each snapshot gets its own descriptive note. Keep later Decision Log entries in that same Markdown file. Practise obtaining a permanent link to its committed version for Blackboard submission. See the [Decision Log workflow](../onboarding/decision-logs.md).
 
 ### 1:05--1:25 | Partner-Guided Commits
 **Format:** Pair work

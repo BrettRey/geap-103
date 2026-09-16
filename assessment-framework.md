@@ -40,12 +40,14 @@
 
 **What:** Structured documentation of AI-assisted work, curated by student, with self-assessment.
 
+**Storage and submission:** One continuing Markdown file, `decision-logs/decision-log.md`, in the student's private portfolio repository, with teacher access confirmed. At the Week 4, Week 8, and Week 11 collection points, students submit a permanent link to the committed version through Blackboard. If GitHub is unavailable or institutional approval is pending, students keep the same file locally or in OneDrive and upload it to Blackboard. Grades and assessment feedback stay in Blackboard. See the [Decision Log workflow](onboarding/decision-logs.md) and [template](materials/decision-log.md).
+
 **Format:** Template-based log entries (max 8 across semester, student-selected as best evidence):
 
 | Field | Content |
 |-------|---------|
 | Task goal + constraints | 1–2 sentences |
-| AI used | Which AI tool and context (e.g., Copilot in Word, Claude, a coding agent, etc.) |
+| Tool used | Which AI tool and context, and why this one; identify any prepared response used on the access fallback |
 | Prompt snippet(s) | Max 3 turns (copy/paste or screenshot) |
 | Output summary | What the AI proposed (1–2 sentences) |
 | Decision | Accept / Modify / Reject |

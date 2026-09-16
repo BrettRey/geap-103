@@ -429,7 +429,7 @@ No AI session review this week — the diagnostic, triad defence, and peer respo
 | Spot-check file-system artifacts | Before Week 5 | Check organisation, naming, structure. Flag any that need revision. |
 | Score micro-defences | Before Week 5 | Using scoring sheets from today. Enter scores. For students marked "partial observation," score what you heard. For any marked "deferred," arrange a short live follow-up outside class. |
 | Score diagnostic writing samples | Before Week 5 | Rate each sample holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 11. |
-| Collect Decision Log entries 1–2 | Before Week 5 | For formative feedback (returned by Week 6). |
+| Collect Decision Log entries 1–2 | Week 4 section deadline | Blackboard: committed-version link or the same `.md` file if GitHub is unavailable. Return feedback in Blackboard by Week 6. See the [workflow](../onboarding/decision-logs.md). |
 | Review peer response written answers | Before Week 5 | Collected at the end of peer response. Check: did the student identify their partner's interest? Did they ask a genuine question? This is supplementary evidence of evaluative reading. |
 
 ### Feedback on Goal Documents

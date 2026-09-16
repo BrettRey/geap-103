@@ -259,7 +259,7 @@ Instructor circulates:
 - "You used five new words: process, sequence, outcome, resolve, anticipate. These apply to any problem in any course, any job."
 - "Next week you start building your project in earnest. You've been thinking about it for eight weeks. You have the tools and the vocabulary. Start making it real."
 - "I'll read your Goal Documents this week and give you feedback on clarity, feasibility, and how your thinking has developed since Week 4."
-- DL feedback round 2 reminder: "I'm collecting Decision Log entries 3-5 this week. I'll return feedback by Week 10, including a note on whether you addressed your Round 1 improvement target."
+- DL feedback round 2 reminder: "Submit entries 3-5 this week in Blackboard. Use a permanent link to your committed log, or upload the Markdown file if GitHub is unavailable. I'll return feedback in Blackboard before Week 11, including whether you addressed your Round 1 improvement target."
 
 ---
 

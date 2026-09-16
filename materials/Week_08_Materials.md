@@ -287,7 +287,7 @@ Display:
 >
 > "I'll read your Goal Documents this week and give you feedback on clarity, feasibility, and how your thinking has developed since Week 4."
 >
-> "Decision Log entries 3-5: I'm collecting them this week. I'll return feedback by Week 10 — including a note on whether you addressed your Round 1 improvement target."
+> "Submit entries 3-5 this week in Blackboard. Use a permanent link to your committed log, or upload the Markdown file if GitHub is unavailable. I'll return feedback in Blackboard before Week 11, including whether you addressed your Round 1 improvement target."
 
 ---
 
@@ -299,7 +299,7 @@ Display:
 |------|----------|-------|
 | Read Goal Documents (entries 1-8) | Before Week 10 | Return 1-3 sentence comments on clarity, feasibility, development since Week 4 |
 | Score micro-defences | Within 1 week | Note patterns: which criteria are strong/weak across class |
-| Collect DL entries 3-5 | This week | Return feedback by Week 10 with confirmation signal ("target addressed" / "still developing") |
+| Collect DL entries 3-5 | Week 8 section deadline | Blackboard: committed-version link or the same `.md` file if GitHub is unavailable. Return feedback before Week 11 on the section date in the delivery ledger, with "target addressed" / "still developing". See the [workflow](../onboarding/decision-logs.md). |
 | Update observation tracking | After scoring | Confirm every student has ≥1 full observation across Weeks 4-8 |
 | Note Git Episode evidence | Ongoing | Which students resolved Git errors during troubleshooting? |
 

@@ -235,7 +235,7 @@ Students write entry 4 (~10 min). Some students' interests will have been consis
 - **Score micro-defences** using scoring sheets. For "partial observation" students, score what you heard. For "deferred" students, arrange a short live follow-up outside class.
 - **Score diagnostic writing** holistically (communicates clearly / partially / not yet). File samples for comparison with Weeks 8 and 11.
 - **Spot-check file-system artifacts** including the 2-3 sentence process documentation.
-- **Collect Decision Log entries 1-2** for formative feedback (returned by Week 6).
+- **Collect Decision Log entries 1-2** through Blackboard: a permanent link to the committed log, or the same `.md` file if GitHub is unavailable. Return feedback in Blackboard by Week 6. See the [workflow](../onboarding/decision-logs.md).
 
 ---
 

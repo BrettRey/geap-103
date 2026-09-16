@@ -13,6 +13,8 @@ Students submit 8 curated log entries selected from Weeks 2--11 as their best ev
 
 With 10 weeks of potential entries and a requirement of 8 curated ones, there is ample selection.
 
+**Working file:** `decision-logs/decision-log.md`, one continuing file in each student's private portfolio. Students submit a committed-version link through Blackboard at each collection point; students on the local/OneDrive fallback upload the same `.md` file. Assess the submitted version and return feedback and grades privately in Blackboard. See the [workflow](../onboarding/decision-logs.md) and [Markdown template](../materials/decision-log.md).
+
 ---
 
 ## Entry Template
@@ -22,7 +24,7 @@ Each entry follows this template. Student-authored text per entry (excluding pas
 | Field | Content |
 |-------|---------|
 | Task goal + constraints | 1--2 sentences |
-| AI used | Which AI tool and context (e.g., Copilot in Word, Claude, a coding agent, etc.) |
+| Tool used | Which AI tool and context, and why this one; identify any prepared response used on the access fallback |
 | Prompt snippet(s) | Max 3 turns (copy/paste or screenshot) |
 | Output summary | What the AI proposed (1--2 sentences) |
 | Decision | Accept / Modify / Reject |
@@ -47,7 +49,7 @@ Each entry follows this template. Student-authored text per entry (excluding pas
 
 ## Scoring Heuristic
 
-**Scoring heuristic:** (1) Read all 8 entries once for overall impression. (2) Check ambition trajectory: do goals get more challenging over time? (3) Check failure episode quality: is there at least one entry documenting AI output that was rejected or substantially revised? (4) Check self-assessment calibration: do the student's ratings roughly match what you'd give? (5) Assign a band.
+**Scoring heuristic:** (1) Read all 8 entries once for context and development. (2) Check ambition trajectory: do goals get more challenging over time? (3) Check failure episode quality: is there at least one entry documenting AI output that was rejected or substantially revised? (4) Check self-assessment calibration: do the student's ratings roughly match what you'd give? (5) Assign the summative band to entries 6--8. Entries 1--5 remain formative; don't average their practice ratings into the final grade.
 
 ---
 
@@ -55,13 +57,13 @@ Each entry follows this template. Student-authored text per entry (excluding pas
 
 **Excellent exemplar (abridged):**
 
-> Task goal: Create a budget spreadsheet that flags unusual spending. AI used: Copilot in Excel. Prompt: "Create a formula that highlights cells over $200 in red." Output: Copilot generated a conditional formatting rule but applied it to the wrong column. Decision: Modify. Verification: Checked by entering test data -- $250 in the food column was highlighted in the rent column instead. What changed: Revised prompt to specify the exact column range. Self-assessment: Proficient -- I caught the error and fixed it, but I should have specified the column in my first prompt.
+> Task goal: Create a budget spreadsheet that flags unusual spending. Tool used: Copilot in Excel. Prompt: "Create a formula that highlights cells over $200 in red." Output: Copilot generated a conditional formatting rule but applied it to the wrong column. Decision: Modify. Verification: Checked by entering test data -- $250 in the food column was highlighted in the rent column instead. What changed: Revised prompt to specify the exact column range. Self-assessment: Proficient -- I caught the error and fixed it, but I should have specified the column in my first prompt.
 
 *Why Excellent: Ambitious goal, specific verification, honest self-assessment that identifies a real improvement area.*
 
 **Developing exemplar (abridged):**
 
-> Task goal: Make a document. AI used: Copilot. Prompt: "Write a summary." Output: It wrote a summary. Decision: Accept. Verification: Looked at it. What changed: Nothing. Self-assessment: Excellent -- it was good.
+> Task goal: Make a document. Tool used: Copilot. Prompt: "Write a summary." Output: It wrote a summary. Decision: Accept. Verification: Looked at it. What changed: Nothing. Self-assessment: Excellent -- it was good.
 
 *Why Developing: Vague goal, no specific verification, no evidence of evaluation, self-assessment is poorly calibrated.*
 
@@ -79,7 +81,7 @@ Each entry follows this template. Student-authored text per entry (excluding pas
 ### Round 2: Entries 3--5
 
 - **Submitted by:** ~Week 8
-- **Feedback returned:** Week 10--11
+- **Feedback returned:** Before Week 11, on the section's date in the delivery ledger
 - **Focus:** Whether Round 1 feedback was incorporated
 - Returned with confirmation signal ("target addressed" / "target still developing")
 

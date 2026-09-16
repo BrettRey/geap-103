@@ -1,5 +1,5 @@
 # GEAP 103 delivery ledger
-<!-- SUMMARY: Canonical mapping of GEAP 103 assessment timing, delivery variants, make-ups, and access contingencies · status: active · updated: 2026-09-04 -->
+<!-- SUMMARY: Canonical mapping of GEAP 103 assessment timing, delivery variants, make-ups, and access contingencies · status: active · updated: 2026-09-16 -->
 
 **Status:** Canonical instructor source for sequencing and assessment timing  
 **Applies to:** 14-, 13-, and 12-content-meeting deliveries  
@@ -19,6 +19,8 @@
 | Goal Document | Weeks 1–13 | Thirteen entries. In compressed delivery, entry 9 becomes pre-class planning and entry 10 remains protected class writing. |
 
 The Decision Log window contains ten curricular weeks, Weeks 2–11. Older references to “8 of 12 eligible weeks” are incorrect.
+
+**Decision Log storage and handoff:** Keep one `decision-logs/decision-log.md` in the student's private portfolio repository, with the teacher invited and access checked. At each collection point, submit a permanent link to the committed version in Blackboard. Use a local/OneDrive copy and upload the same `.md` file if GitHub access or institutional approval is unavailable. Return assessment feedback and grades through Blackboard. See the [canonical workflow](../onboarding/decision-logs.md); do not create a parallel Word log or upload student work to the public course repo.
 
 ## Delivery mappings
 

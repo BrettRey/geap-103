@@ -1,5 +1,7 @@
 # GEAP 103 Basic Computer Skills -- Week-by-Week Schedule
 
+**Decision Logs:** Keep one file at `decision-logs/decision-log.md` in your course folder and, from Week 3 when available, your private portfolio repository. At collection points, submit a permanent link to the committed version in Blackboard. If GitHub is unavailable, upload the same `.md` file instead. Your teacher returns feedback and grades in Blackboard. See [saving and submitting your log](onboarding/decision-logs.md).
+
 **Semester:** Foundation Semester (B1), 14 curricular units
 
 This schedule describes the complete course sequence. Use the dated schedule for your section:

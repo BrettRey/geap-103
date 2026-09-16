@@ -174,7 +174,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 - "You also wrote about the gap between plan and result. That writing skill -- comparing intention with result -- is what the rest of the course is about."
 - "Starting next week: Phase 3. You'll work with your group to build something together. The question shifts from 'What do I want?' to 'What do we want?'"
 - "If you saved your session review transcript (the AI client conversation), you can add it to your artifact package as supplementary sharing evidence. Submit it the same way you submitted the rest."
-- "I'll return your Decision Log feedback at the start of next week so you can read it with fresh eyes."
+- "Your Decision Log feedback will be in Blackboard before Week 11, on the date in our section schedule. Use it to improve your final entries."
 
 ---
 
@@ -183,7 +183,7 @@ Once groups form, they begin discussing: "What do *we* want to build together?" 
 - **Grade mid-semester artifact packages.** Use the Artifact Package rubric (Assessment Framework v6). Focus on: does the process documentation sound like the student? Is the verification note honest? Is there evidence of sharing? Return feedback by Week 12.
 - **Note students who did not submit** or submitted incomplete packages. Follow up at the start of Week 11.
 - **Review collaborative group formations.** Identify any students who were absent or didn't find a group. Plan to integrate them in Week 11.
-- **Decision Log feedback round 2:** Prepare for return at start of Week 11 (not today -- students need fresh bandwidth). Include confirmation signal ("target addressed" / "target still developing") for each entry.
+- **Decision Log feedback round 2:** Return through Blackboard before Week 11, on the section date in the delivery ledger. Include confirmation signal ("target addressed" / "target still developing") for each entry.
 - **Session review patterns:** Were students able to present to a non-technical audience? Note students who struggled with the "client" framing -- this skill feeds the artifact sharing event at Week 14.
 
 ---

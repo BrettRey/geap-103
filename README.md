@@ -21,6 +21,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 | [Day 1 classroom pack](materials/day-01/README.md) | Quarto slides with speaker notes, slide PDF, one-page reference sheet, and practice files |
 | [Needs assessment and speaking cards](materials/needs-assessment/README.md) | Online form link and reusable questions; 25 printable speaking cards, one per page |
 | `onboarding/` | Student setup guide for GitHub Education, Copilot Student, Git, and VS Code |
+| [Decision Log workflow](onboarding/decision-logs.md) | One Markdown log in each student's private portfolio; committed-version links submitted through Blackboard |
 | `admin/github-education-and-vscode-onboarding.md` | Teacher timeline, preflight checklist, troubleshooting, and fallback plan |
 | [Faculty preparation module](https://brettrey.github.io/geap-103/materials/faculty-preparation.html) | Self-paced AI-guided preparation for instructors (copy the prompt, paste into any AI tool) |
 | `materials/geap-103-starter.zip` | Student starter kit (folder structure, templates, copilot-instructions.md) |

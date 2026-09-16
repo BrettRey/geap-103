@@ -170,7 +170,7 @@ One volunteer describes their interaction. Class fills in the Decision Log templ
 
 Students write their own Decision Log entry about their AI interaction from Segment B. Decision Log template on screen for reference.
 
-Save to GEAP 103/Decision Logs/ folder.
+Use the [Markdown template](../materials/decision-log.md). Save one continuing file at `decision-logs/decision-log.md` inside the course folder. Students can start locally or in OneDrive today; Week 3 introduces their private GitHub portfolio. Later entries go in this same file. At collection points, submit a permanent link to the committed version through Blackboard, or upload the same `.md` file if GitHub is unavailable. See the [Decision Log workflow](../onboarding/decision-logs.md).
 
 Instructor circulates, helps with language, checks that entries capture the gap between intention and result (not just "the AI made something and I changed it" but: what did I MEAN, what did I SAY, and why were they different?).
 
@@ -254,7 +254,7 @@ Both occur this week. The DL looks back at a specific interaction; the GD develo
 - [ ] Restatement check prepared ("Before you do anything, tell me what you think I'm asking for")
 - [ ] Persona demonstration prepared ("You are a strict language teacher" prompt ready)
 - [ ] Vocabulary slides: prompt, generate, revise, accept/reject, verification
-- [ ] Decision Log template accessible to students (shared file on LMS or OneDrive)
+- [ ] [Markdown Decision Log template](../materials/decision-log.md) accessible; students know the single-file location and Blackboard collection route
 - [ ] Goal Document prompt + sentence frames on slide
 - [ ] Session review slide: role-setting prompt + Week 2 scenario ("Describe what happened when you tried your prompt -- what you expected vs. what you got")
 - [ ] Confirm students have their Goal Documents from Week 1 accessible
