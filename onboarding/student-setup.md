@@ -184,6 +184,8 @@ If your instructor asks you to download the starter kit from the course reposito
 3. Unzip the downloaded file in a place you can find again, such as a course folder in Documents or OneDrive.
   
 4. In VS Code, choose **File** → **Open Folder** and select the unzipped course folder.
+
+The starter kit may also include ready-to-use class files, such as the Week 2 shared practice tasks in `week-02/shared-practice/`.
   
 
 If your instructor gives you a personal repository link, follow that link instead. The important thing is that you know where your files are and can open them again.
