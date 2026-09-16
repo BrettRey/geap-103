@@ -12,6 +12,8 @@
 **Goal Thread — Testing Your Words:**
 Last week students practised expressing what they want. This week they find out whether their words actually work. The challenge isn't "use Copilot" -- it's "can you say what you mean clearly enough for someone else to act on it?" When the result doesn't match the intention, the question is: what was unclear in what I said? This is goal articulation as a language skill. The Decision Log captures the gap between what a student meant and what they said. The Goal Document evolves: some wishes survive contact with reality, some don't, and students might discover entirely new possibilities they hadn't imagined. All of that is good.
 
+**Additive delivery option:** If you want a more standardized, lower-friction Week 2, keep this lesson plan and use the companion route at `lesson-plans/week-02-shared-practice-repo.md`. That version moves the guided practice onto a shared public repository so the class can work from the same files without replacing the personal-wish path in this original plan.
+
 ---
 
 ## Segment A: Vocabulary + Worked Example (0:00--0:40)

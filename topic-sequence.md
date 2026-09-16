@@ -131,6 +131,8 @@ Pairs share and discuss: "What did you write? Why?"
 
 Students try their approach. After ~10 min: "Stop. Look at what you got. Is it what you wanted? If not, where's the mismatch?" Revise and try again. Complete first Decision Log entry as a class. In pairs: "What did you ask for? What did you get? What would you change?"
 
+**Shared practice repo variant (additive option):** When a section needs a more common experience, less setup variance, or a lower AI-credit footprint, the instructor may use the public shared practice repo as the default Week 2 task set. All students begin with the same small files and prompt challenges; the personal-wish route remains available as an extension path and continues in the Goal Document. See `lesson-plans/week-02-shared-practice-repo.md`, `materials/Week_02_Shared_Practice_Repo_Materials.md`, and `materials/week-02-shared-practice-repo/README.md`.
+
 **Segment C -- Goal Document update:** *"Which of your wishes could you explain most clearly? Which ones got clearer when you tried them? Did you discover any new ideas today? Write about how your thinking has changed."*
 
 Sentence frames:
