@@ -1,6 +1,6 @@
 # GEAP 103: Sample Project Ideas
 
-**For instructors and students.** These ideas are shown in Week 4 and used throughout the course. You do not have to choose from this list. You can build anything.
+**For instructors and students.** These ideas are possible directions for projects. You do not have to choose from this list. You can build anything.
 
 **The ceiling is high.** Your English is B1. Your project can be as ambitious as you want. "Make a budget spreadsheet" is too easy for AI. "Build an app that tracks my spending, warns me when I spend too much, and sends me a weekly report" — that takes real skill with words. Every project here would have needed a professional developer last year. Now it needs you to say clearly what you want.
 
@@ -109,6 +109,24 @@ A web app for someone who just arrived in Canada. You enter your situation: Are 
 ### 25. Government Form Translator
 
 Pick a real Canadian government form that confused you — a study permit renewal, an OSAP application, a tax return, a rental deposit dispute form. Build a web app that asks the same questions in plain language, one at a time, and fills out the form for you. When the official form says "indicate whether you are making an application under subsection 216(1)," your app says "Are you applying because your current permit is about to expire?" It skips questions that do not apply to you. At the end, it gives you a completed version you can copy into the real form. **What makes this hard to describe:** You have to understand what every question on the form is really asking — and then write a simpler version that gets the same information. "Make the form easier" is not enough. "Question 7 asks for your 'designated learning institution number.' My app should say: 'What school are you going to?' and then look up the DLI number automatically." You were confused by this form once. Now you are the expert.
+
+---
+
+### 26. Humber North Wastewater Monitoring
+
+Help develop a wastewater-monitoring project for Humber North and its residence. The aim is to track changes in virus levels and explore how that information could help the campus community. Possible parts include a research brief, questions for Facilities and laboratory partners, a budget, a dashboard comparing campus and city data, a plain-English information page, and a presentation proposing a pilot. Students could work on different parts of the same project.
+
+Start a demonstration with existing public data or clearly labelled simulated data. A real campus pilot would require suitable sewer access, institutional agreement, and qualified partners for sampling and laboratory analysis. The campus and residence sampling points, costs, and uses of the results remain questions to investigate.
+
+**What makes this hard to describe:** You have to explain what information each audience needs, what the measurements show, and what they cannot tell us. You need to ask useful questions, compare options, explain changes in a graph, and propose what people could do with the information.
+
+**Starting source:** [Waterloo's campus wastewater-surveillance study](https://pubmed.ncbi.nlm.nih.gov/38040360/).
+
+---
+
+## Using These Ideas in the Self-Paced Progression
+
+Introduce selected project ideas during the common task sequence, so students can see what the skills might help them accomplish. Small tasks can contribute components such as a form, a budget, an explanation, or a presentation. As students become competent, they can combine those skills in a project from this list or an idea of their own. The forthcoming progression should include these opportunities to explore and branch; they are not tied to a particular class meeting.
 
 ---
 
