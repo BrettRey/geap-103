@@ -1,9 +1,11 @@
 # GEAP 103 delivery ledger
-<!-- SUMMARY: Canonical mapping of GEAP 103 assessment timing, delivery variants, make-ups, and access contingencies · status: active · updated: 2026-09-16 -->
+<!-- SUMMARY: GEAP 103 delivery variants and access contingencies; Fall 2026 assessment timing now follows framework v7 (see notice), the v6 tables below are reference · status: active · updated: 2026-10-04 -->
 
 **Status:** Canonical instructor source for sequencing and assessment timing  
 **Applies to:** 14-, 13-, and 12-content-meeting deliveries  
-**Canonical assessment design:** `assessment-framework.md` v6
+**Canonical assessment design:** `assessment-framework.md` v7 (agreed 2026-10-04)
+
+> **Fall 2026 notice.** Assessment now follows framework v7, the conference portfolio. In-class writing runs at the curricular Week 4 (Wednesday section: Week 5, October 7), 8, and 11 meetings. Decision Log dates and feedback rounds are unchanged. Conferences run throughout, and final conferences take the Week 12–13 meetings. The final package takes the Week 14 date. Micro-Defence triads, Artifact Packages 1 and 2, the written artifacts, Git Episodes, and the separate oral reflection no longer run. The section schedules in `schedules/` show the current dates. The v6 tables below are kept for reference; their access contingencies still apply.
 
 “Curricular Week” identifies a unit in the 14-unit course design. It does not always mean a separate calendar week. Dated section schedules map those units onto actual meetings.
 

@@ -11,7 +11,7 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 | Path | What it is |
 |------|-----------|
 | `CLOs.md` | The 7 Course Learning Outcomes |
-| `assessment-framework.md` | Assessment design: triads, oral reflections, Decision Logs, evolving criteria |
+| `assessment-framework.md` | Assessment design: v7 conference portfolio for Fall 2026, with v6 kept for reference |
 | `topic-sequence.md` | Week-by-week challenge sequence |
 | `admin/delivery-ledger.md` | Canonical assessment timing and delivery rules across schedule variants |
 | `schedules/` | Dated Fall 2026 schedules for the 14-meeting Wednesday and 12-meeting Monday sections, plus a reusable 13-meeting map |
@@ -34,10 +34,10 @@ Course materials for GEAP 103 at [Humber College](https://humber.ca) (Toronto). 
 ## Key design features
 
 - **Tool-agnostic.** Students use whatever AI they can access, or prepared static outputs when live AI is blocked. [Copilot Student](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students) is an optional benefit after individualized GitHub Education verification, not a participation requirement. Assessment is on what students can articulate, evaluate, verify, and produce.
-- **Triad defences.** Oral assessments run as simultaneous groups of 3: every student is speaking or giving feedback at all times. The instructor circulates and samples.
-- **Recurring speaking practice.** Students explain their work to AI or a peer in ten formative session reviews; assessment weeks use micro-defences or the oral reflection instead. Grounded in [Kumar et al. (2026)](https://doi.org/10.1038/s41562-025-02098-1) on AI-assisted communication practice.
-- **Scaffolded assessment.** Oral assessment criteria grow with the students: 3 criteria at Week 4, 5 at Week 8, 7 at Week 11. Each expansion matches skills students have been practising.
-- **Oral reflection.** The culminating assessment is a 4-minute one-on-one conversation: the student points to portfolio evidence and evaluates their own learning.
+- **Conference assessment.** Students work through self-paced tasks while the teacher holds short one-to-one conferences; each student shows and explains their work, and the highest level reached for each outcome counts. See [how students are assessed](materials/assessment-announcement-2026-10.md).
+- **Recurring speaking practice.** Students explain their work to AI or a peer in formative session reviews. Grounded in [Kumar et al. (2026)](https://doi.org/10.1038/s41562-025-02098-1) on AI-assisted communication practice.
+- **Unmediated evidence.** Three ten-minute handwritten tasks, without AI, sample each student's own written English; conferences sample their own spoken English.
+- **Final conference.** The last conference replaces the separate oral reflection: the student shows part of the final product and explains a decision, a difficulty, and what they could now do elsewhere.
 - **[Faculty preparation module.](https://brettrey.github.io/geap-103/materials/faculty-preparation.html)** Paste a prompt into any free AI tool. The AI walks you through the same five challenges students face, then asks you to think about what could go wrong and what you'd say as the instructor.
 - **Premortem planning.** Week 8 turns risk assessment into a lightweight premortem: students imagine their project has failed, work backward to explain why, and write a help request for the problem they can now anticipate. A fuller AI-agent version lives at `skills/premortem/SKILL.md` for instructors or curriculum designers stress-testing plans.
 - **Access-neutral version control.** Students learn to protect and share their work using [Git](https://git-scm.com/)/GitHub (recommended), local Git, or an equivalent cloud/version-history path. GitHub Education and Copilot Student are useful benefits, not prerequisites for graded work. Three required [episodes](assessment-framework.md#4-git-episodes-10): restore, error recovery, collaboration.

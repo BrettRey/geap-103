@@ -2,3 +2,7 @@
 ~$*
 *.tmp
 email_draft_*
+
+# Filled trackers, student names, grades: never publish
+private/
+.~lock.*

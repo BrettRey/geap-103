@@ -1,6 +1,41 @@
-# GEAP 103 Assessment Framework (Draft v6)
+# GEAP 103 Assessment Framework (Draft v7)
 
 **Course:** GEAP 103 Basic Computer Skills
+**Version:** Draft v7, agreed 2026-10-04 for Fall 2026. Draft v6 follows below for reference.
+
+## v7: conference portfolio (Fall 2026)
+
+From October 2026, classes follow a self-paced task progression, so students reach each skill at different times. Fixed-date instruments no longer fit. The GEAP 103 instructors agreed this structure on 2026-10-04.
+
+| Assessment | Weight | What it is | CLOs |
+|---|---:|---|---|
+| Conferences | 40% | About five minutes one-to-one during class work time. The student shows something and explains it; the teacher asks one follow-up question and records the outcome shown, its level, and a short note. At least two conferences per student, then a final conference that replaces the v6 oral reflection. Every conference also asks what the student asked the AI and what they kept, changed, or rejected, which gives evidence without AI for outcomes 3 and 4; the conference-record percentage still averages outcomes 1, 2, 5, 6, and 7. | 1, 2, 5, 6, 7 (and evidence for 3, 4) |
+| Decision Log | 25% | As in v6 below: eight curated entries, same rubric and self-assessment, same collection points. | 3, 4 |
+| In-class writing | 15% | Three ten-minute tasks, by hand, no AI, whole class at once, at the curricular Week 4, 8, and 11 meetings (the Wednesday section's first task moved to Week 5, October 7). Best two count. Prompts are in the Week 4, 8, and 11 lesson plans. | 2, 5 |
+| Final package | 20% | The finished product, brief instructions, an honest account of what works and what doesn't, and a short note in the student's own words. Handed in at the Week 14 date; part of it is shown in the final conference. Not a class presentation. | 6 (1, 5) |
+
+**Levels.** Each piece of evidence (a conference, an in-class writing task, a Decision Log collection, the final package, portfolio history) is recorded as an outcome and a level. 4: does it on their own and explains what they did and why. 3: does it on their own, with gaps in the explanation. 2: does part of it, or needs prompting. 1: tries, but there's little to show. 0: hasn't shown it yet.
+
+**Confirmed levels.** Levels 3 and 4 count when the student has shown them twice, at least once without AI (a conference or in-class writing). One showing without AI is enough for levels 1 and 2, so a single showing can meet the pass gate. AI-assisted evidence can be the second occasion but can't lift an outcome above what the student shows without AI. A 3 or 4 shown only once counts one level lower. For each outcome, the highest confirmed level counts. Rationale: `reviews/grading-validity-2026-10-04.md` (Option 1, adopted 2026-10-04).
+
+**Pass gate.** Every one of the seven outcomes must reach a confirmed level 2. If not, the course grade is the weighted total or 49, whichever is lower. A remedy window in the last two meetings gives a targeted conference for any outcome below 2. Whether one outcome at level 1 may pass when all others are at 3 or higher is not yet decided.
+
+**Caps.** The final package can't score above the v6 band of the student's confirmed level for outcome 6, and the Decision Log can't score above the band of the lower of outcomes 3 and 4 (level 4: up to 100; 3: up to 84; 2: up to 69; 1 or 0: up to 49).
+
+**Required checks, across all conferences.** A recovered earlier version of a file; a technical problem solved or described clearly enough to get help; a change to a classmate's work, a comment received, and a reply. Cloud version history counts where GitHub fails. What happens to the grade if a check is missing at the end is not yet settled.
+
+**Conversion to percentages.** Not yet agreed. The conference record averages the converted confirmed levels for outcomes 1, 2, 5, 6, and 7, using proposed values 0, 40, 60, 77, 92 (each inside the v6 band of the same meaning). `admin/conference-tracker-template.xlsx` computes confirmed levels, the gate, the caps, and the course grade.
+
+**Make-ups.** Best two of three in-class writing tasks absorb one absence. The final-conference make-up follows the v6 oral-reflection rule: the same live conversation within five instructional days (by December 18 for the Monday section).
+
+**B1.2 exit evidence.** Unmediated spoken evidence comes from at least three conferences, including the final one; unmediated writing from the three in-class tasks. Graded peer feedback is no longer collected.
+
+**Superseded v6 sections.** The Assessment Overview and CLO Coverage Matrix, Oral Micro-Defences + Written Artifacts, Artifact Packages 1 and 2 (the Week 14 package becomes the final package above), Git Episodes, the Oral Evidence-Indexed Reflection as a separate 10% assessment, and the v6 Semester Timeline. The Decision Log section, assessor guidance on authenticity, and the B1.2 limitations still apply.
+
+---
+
+# Draft v6 (reference)
+
 **Version:** Draft v6, revised 2026-09-04
 
 **Changes from v5:** (1) Semester timeline staggered — DLs close Week 11, Git Episodes close Week 12, Week 14 = 10% only. (2) Micro-Defence 3 moved to Week 11. (3) Evidence-Indexed Reflection changed from written to oral one-on-one with instructor, Week 13 (4 min + pre-tagging). (4) Micro-defence format specified as simultaneous triads with observation tracking. (5) Task criteria evolve across Weeks 4, 8, 11 (3 → 5 → 7 criteria). (6) Weekly speaking practice (session review) documented as formative thread feeding micro-defences and oral reflection. (7) Within-component weighting for micro-defences specified (equal). (8) Session review scenarios specified across all 14 curricular units.
