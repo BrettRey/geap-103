@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103 terms review, October 5</title>
+<style>
+  :root { --ink: #16202e; --muted: #4a5568; --accent: #800020; --rule: #e3dcdf; --chip: #f4eff0; --bg: #ffffff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { height: 100vh; display: flex; flex-direction: column; padding: 3.2vh 4vw 2.6vh; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 1.2vh; margin-bottom: 2vh; }
+  h1 { font-size: 4.4vh; color: var(--accent); font-weight: 700; }
+  header p { font-size: 2.4vh; color: var(--muted); }
+  .words { font-size: 2.8vh; color: var(--muted); margin-bottom: 2vh; }
+  .words b { color: var(--ink); }
+  ol { flex: 1; list-style: none; display: grid; grid-template-rows: repeat(6, 1fr); row-gap: 1.2vh; }
+  li { display: grid; grid-template-columns: 5vh 1fr 34vw; align-items: center; cursor: pointer;
+    border-bottom: 0.15vh solid var(--rule); }
+  .n { font-size: 3.8vh; font-weight: 700; color: var(--accent); }
+  .d { font-size: 3.3vh; line-height: 1.25; }
+  .a { font-size: 3.4vh; font-weight: 700; color: var(--accent); background: var(--chip);
+    border-radius: 1vh; padding: 0.8vh 1.4vw; justify-self: start; visibility: hidden; }
+  li.shown .a { visibility: visible; }
+  .note { font-size: 2.5vh; color: var(--muted); margin-top: 1.4vh; visibility: hidden; }
+  .note.shown { visibility: visible; }
+  .hint { font-size: 1.7vh; color: #9aa3ad; margin-top: 0.8vh; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Which word is it?</h1>
+    <p>GEAP 103 · October 5</p>
+  </header>
+  <p class="words"><b>GitHub</b> · <b>Copilot</b> (the harness) · <b>model</b> · <b>agent</b> · <b>chat interface</b> · <b>session</b></p>
+  <ol>
+    <li><span class="n">1</span><span class="d">"I open it on my laptop, choose a project, and start a session."</span><span class="a">Copilot, the harness</span></li>
+    <li><span class="n">2</span><span class="d">"Opus 5.5"</span><span class="a">A model</span></li>
+    <li><span class="n">3</span><span class="d">"It read the club notes and saved club-message.md in my folder."</span><span class="a">An agent</span></li>
+    <li><span class="n">4</span><span class="d">"I use it in my web browser. It only sees what I paste or upload."</span><span class="a">A chat interface</span></li>
+    <li><span class="n">5</span><span class="d">"My portfolio repository is stored here, online."</span><span class="a">GitHub</span></li>
+    <li><span class="n">6</span><span class="d">"One conversation with the agent, which I can reopen later."</span><span class="a">A session</span></li>
+  </ol>
+  <p class="note">Microsoft uses the name Copilot for many products. In this course, <b>Copilot</b> means the GitHub Copilot app.</p>
+  <p class="hint">Click a line, or press Space, to show the next answer.</p>
+</main>
+<script>
+  const items = [...document.querySelectorAll("li")];
+  const note = document.querySelector(".note");
+  items.forEach(li => li.addEventListener("click", () => { li.classList.toggle("shown"); check(); }));
+  function check() { note.classList.toggle("shown", items.every(li => li.classList.contains("shown"))); }
+  document.addEventListener("keydown", e => {
+    if (e.key === " " || e.key === "ArrowRight") {
+      e.preventDefault();
+      const next = items.find(li => !li.classList.contains("shown"));
+      if (next) next.classList.add("shown");
+      check();
+    }
+    if (e.key === "Backspace" || e.key === "ArrowLeft") {
+      const shown = items.filter(li => li.classList.contains("shown"));
+      if (shown.length) shown[shown.length - 1].classList.remove("shown");
+      check();
+    }
+  });
+</script>
+</body>
+</html>
