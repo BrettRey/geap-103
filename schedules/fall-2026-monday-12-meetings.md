@@ -6,21 +6,23 @@
 
 This section covers the same learning outcomes and graded evidence as the 14-meeting section. Course Weeks 9 and 10 use one combined meeting. Course Week 14 is an asynchronous closeout after the final in-person class.
 
+Classes now follow the self-paced task guide, so the “What happens” column shows the original weekly plan. The graded work is current: see [how you'll be assessed](../materials/assessment-announcement-2026-10.md).
+
 | Date | Course unit | What happens | Graded work / deadline |
 |---|---|---|---|
 | Sep 14 | Week 1 | What Can a Computer Do for Me? | Nothing due |
 | Sep 21 | Week 2 | Getting AI to Do What I Mean | Decision Log entries begin |
 | Sep 28 | Week 3 | Never Losing Work Again | Version-history practice; nothing graded yet |
-| Oct 5 | Week 4 | Where Am I Now? | File System package (7%); Micro-Defence 1 and two short written artifacts |
-| Oct 19 | Week 5 | Making Something Others Can Read and Use | Continue Decision Logs |
-| Nov 2 | Week 6 | Making Sense of Numbers | Git Episodes begin; Decision Log feedback round 1 returned |
-| Nov 9 | Week 7 | Working Together Without Breaking Things | Collaboration practice; possible Git Collaboration episode |
-| Nov 16 | Week 8 | When Things Go Wrong | Micro-Defence 2 and two short written artifacts; submit DL entries 3–5 for feedback |
-| Nov 23 | Weeks 9+10 | Build, peer-check, verify, and document an individual artifact | DL feedback round 2 returned; Mid-Semester Artifact Package (8%) due November 25 at 11:59 p.m. |
-| Nov 30 | Week 11 | What Do We Want to Build Together? | Micro-Defence 3 and two short written artifacts; all eight Decision Logs due (30%) |
-| Dec 7 | Week 12 | Is It Working? | All three Git Episodes due (10%); oral-reflection preparation |
-| Dec 14 | Week 13 | The Conversation | Four-minute individual oral reflection (10%); collaborative artifact and contribution statement |
-| Dec 18 | Async Week 14 | Accessible gallery, transfer reflection, and course closeout | Final Artifact Package (10%) due at 11:59 p.m. |
+| Oct 5 | Week 4 | Where Am I Now? | In-class writing 1 (by hand, no AI); conferences begin; Decision Log entries collected for feedback |
+| Oct 19 | Week 5 | Making Something Others Can Read and Use | Conferences; continue Decision Logs |
+| Nov 2 | Week 6 | Making Sense of Numbers | Decision Log feedback round 1 returned; conferences |
+| Nov 9 | Week 7 | Working Together Without Breaking Things | Conferences |
+| Nov 16 | Week 8 | When Things Go Wrong | In-class writing 2; submit Decision Log entries 3–5 for feedback |
+| Nov 23 | Weeks 9+10 | Build, peer-check, verify, and document an individual artifact | Decision Log feedback round 2 returned; conferences |
+| Nov 30 | Week 11 | What Do We Want to Build Together? | In-class writing 3; all eight Decision Log entries due (25%) |
+| Dec 7 | Week 12 | Is It Working? | Final conferences begin |
+| Dec 14 | Week 13 | The Conversation | Final conferences |
+| Dec 18 | Async Week 14 | Accessible gallery, transfer reflection, and course closeout | Final package (20%) due at 11:59 p.m. |
 
 ## Combined November 23 class
 
@@ -30,7 +32,7 @@ Before leaving the November 16 class, choose an existing artifact to develop and
 
 By December 18:
 
-1. Submit the Final Artifact Package.
+1. Submit the final package.
 2. Post a short explanation of your artifact to the class gallery. Audio, video, or text is accepted.
 3. Respond specifically to two classmates.
 4. Complete the transfer reflection and institutional course evaluation.
@@ -43,4 +45,4 @@ GitHub Education requires your own current student documentation, and Copilot St
 
 ## If you miss an assessment class
 
-Contact the instructor and use the exact make-up date posted in Blackboard. Because October 12 is a holiday, the October 5 Micro-Defence make-up is held by October 9 rather than deferred to the October 19 class. The oral-reflection make-up must be completed by December 18 and uses the same live, four-minute, two-CLO conversation.
+Contact the instructor. Your best two of the three in-class writing tasks count, so one missed task doesn't lower your grade. If you miss your final conference, the make-up must be completed by December 18 and is a live conversation with the instructor.
