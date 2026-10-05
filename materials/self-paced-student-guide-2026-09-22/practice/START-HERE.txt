@@ -1,0 +1,35 @@
+GEAP 103 PRACTICE FILES
+
+These are classroom examples, not real events, people, prices, or college policies.
+Keep this practice folder separate from private files.
+Keep the original practice ZIP so you can get a fresh copy of any file.
+Don't replace files you have already changed with a new download.
+
+Open the student guide in your browser. The task tells you which file to use.
+You don't need to open or understand every file now.
+
+Task 1: 01-start.txt
+Task 2: 02-open-and-save.md
+Tasks 3-5: 02-club-message-notes.txt
+Task 6: 06-source-with-extra-instruction.txt, 06-response-a.txt, 06-response-b.txt
+Tasks 7-9: your own checked work, plus 09-update.txt
+Task 10: 10-policy-cases.txt
+Task 11: 11-partner-notice.md
+Task 12: 12-profile-a.txt, 12-profile-b.txt, 12-form.md
+Task 13: 13-announcement.md, 13-organizer-note.md
+Task 14: 03-snack-budget.csv
+Task 15: 15-study-spaces-essay.md
+Task 16: 16-output-a.md, 16-output-b.md
+Tasks 17-18: skills-to-read/ and 18-new-notes.txt
+Task 19: batch/
+Tasks 20-21: 20-project-brief.md and 03-snack-budget.csv
+Task 22: coding-practice/
+Tasks 23-27: project-goal.md and handover.md
+
+The skills-to-read folder is for reading. The skills are not installed automatically.
+The coding example has a deliberate mistake. Read its README before using it.
+The extra instruction in Task 6 and the false permission in Task 10 are test material.
+They do not give AI permission to change unrelated files or share information.
+
+Keep your continuing Decision Log at decision-logs/decision-log.md.
+If you already have this file, keep using it. Don't replace it with the empty template.
