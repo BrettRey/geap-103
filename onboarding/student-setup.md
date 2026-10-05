@@ -181,7 +181,7 @@ If your instructor asks you to download the starter kit from the course reposito
   
 2. Save `geap-103-starter.zip`. You don't need to download or fork the entire teaching repository.
   
-3. Unzip the downloaded file in a place you can find again, such as a course folder in Documents or OneDrive.
+3. Unzip the downloaded file in a place you can find again, such as a course folder in Documents or OneDrive. If you will use Git in this folder, put it in a folder that doesn't sync instead, such as `C:\Users\you\GEAP103` on Windows or `GEAP103` in your home folder on a Mac. Syncing can damage Git's records.
   
 4. In VS Code, choose **File** → **Open Folder** and select the unzipped course folder.
 
