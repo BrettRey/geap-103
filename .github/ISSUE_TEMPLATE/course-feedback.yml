@@ -17,53 +17,25 @@ body:
     validations:
       required: true
   - type: textarea
-    id: plan
+    id: imagined
     attributes:
-      label: What the course plans
-      description: What did you and your agent find in the course files? What do you think of it?
-  - type: dropdown
-    id: route
+      label: What the course imagines
+      description: What did you and your agent find in the course files?
+  - type: textarea
+    id: forward
     attributes:
-      label: How do you want to work for the rest of the term?
-      options:
-        - Finish more tasks first, then a project
-        - Start a project now and use tasks when I need them
-        - A mix of tasks and a project
-        - Something different (tell me below)
+      label: How I'd like us to work for the rest of the term, and why
+      description: Your ideas can follow the course plan or be completely different.
     validations:
       required: true
   - type: textarea
-    id: ideas
+    id: ambitious
     attributes:
-      label: My ideas for the class
-      description: How should we work? What would help you aim higher? Your ideas can follow the course plan or be different.
-    validations:
-      required: true
+      label: The most ambitious thing I'd like to make
   - type: textarea
-    id: idea
+    id: need
     attributes:
-      label: A project idea I like
-      description: From the project ideas page, or your own idea.
-  - type: dropdown
-    id: slows
-    attributes:
-      label: What slows you down most?
-      multiple: true
-      options:
-        - Setup or accounts
-        - The English in the guide
-        - Not knowing what to make
-        - Not enough time
-        - Something else (tell me above)
-  - type: dropdown
-    id: team
-    attributes:
-      label: Do you want to work alone, with a partner, or in a small group?
-      options:
-        - Alone
-        - With a partner
-        - In a small group
-        - Not sure yet
+      label: What I'd need from the class
   - type: checkboxes
     id: checked
     attributes:
