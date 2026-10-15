@@ -1,0 +1,71 @@
+name: Course feedback
+description: Tell Brett how you want to work for the rest of GEAP 103.
+title: "Feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This page is public. Don't write your full name, your student number, or anything private.
+        If you'd rather not post in public, send Brett a Blackboard message with the same answers.
+  - type: dropdown
+    id: section
+    attributes:
+      label: Your section
+      options:
+        - Monday
+        - Wednesday
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: How do you want to work for the rest of the term?
+      options:
+        - Finish more tasks first, then a project
+        - Start a project now and use tasks when I need them
+        - A mix of tasks and a project
+        - Something else (say what below)
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: A project idea you like
+      description: From the project ideas page, or your own idea.
+  - type: dropdown
+    id: slows
+    attributes:
+      label: What slows you down most?
+      multiple: true
+      options:
+        - Setup or accounts
+        - The English in the guide
+        - Not knowing what to make
+        - Not enough time
+        - Something else (say what below)
+  - type: dropdown
+    id: team
+    attributes:
+      label: Do you want to work alone, with a partner, or in a small group?
+      options:
+        - Alone
+        - With a partner
+        - In a small group
+        - Not sure yet
+  - type: textarea
+    id: change
+    attributes:
+      label: One thing you'd change about the class
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before you post
+      options:
+        - label: I read this before it was posted, and it says what I think.
+          required: true
