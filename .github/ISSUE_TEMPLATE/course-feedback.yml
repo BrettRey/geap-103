@@ -1,6 +1,6 @@
-name: Course feedback
-description: Tell Brett how you want to work for the rest of GEAP 103.
-title: "Feedback: "
+name: Ideas for GEAP 103
+description: Tell Brett how you'd like to work for the rest of GEAP 103.
+title: "Ideas: "
 body:
   - type: markdown
     attributes:
@@ -16,6 +16,11 @@ body:
         - Wednesday
     validations:
       required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: What the course plans
+      description: What did you and your agent find in the course files? What do you think of it?
   - type: dropdown
     id: route
     attributes:
@@ -24,19 +29,20 @@ body:
         - Finish more tasks first, then a project
         - Start a project now and use tasks when I need them
         - A mix of tasks and a project
-        - Something else (say what below)
+        - Something different (tell me below)
     validations:
       required: true
   - type: textarea
-    id: why
+    id: ideas
     attributes:
-      label: Why?
+      label: My ideas for the class
+      description: How should we work? What would help you aim higher? Your ideas can follow the course plan or be different.
     validations:
       required: true
   - type: textarea
     id: idea
     attributes:
-      label: A project idea you like
+      label: A project idea I like
       description: From the project ideas page, or your own idea.
   - type: dropdown
     id: slows
@@ -48,7 +54,7 @@ body:
         - The English in the guide
         - Not knowing what to make
         - Not enough time
-        - Something else (say what below)
+        - Something else (tell me above)
   - type: dropdown
     id: team
     attributes:
@@ -58,10 +64,6 @@ body:
         - With a partner
         - In a small group
         - Not sure yet
-  - type: textarea
-    id: change
-    attributes:
-      label: One thing you'd change about the class
   - type: checkboxes
     id: checked
     attributes:
