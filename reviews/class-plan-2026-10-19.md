@@ -53,7 +53,7 @@ Use `materials/milling-2026-10-19-projector.html`. Give students different start
 
 **Phrases.** Ask a volunteer for four short phrases in their language, with English meanings, and have them write the phrases on the board. If nobody volunteers, use four English phrases and say who the learner is.
 
-**Step 1: ask for ideas, not an app (about 8 minutes).** In the `demo-app` project, type the first prompt from "Prompts to display". Read the answer aloud. Ask the class: "Which idea would be best for this learner? Why?" Take two answers.
+**Step 1: ask for ideas, not an app (about 8 minutes).** In the `demo-app` project, type the "Ideas first" prompt from "Prompts to display" at the end of this plan. Read the answer aloud. Ask the class: "Which idea would be best for this learner? Why?" Take two answers.
 
 **Step 2: choose out loud (about 3 minutes).** Choose one idea and say why, including what you're giving up: "I'll take idea 2, because … Idea 1 would be … , but …"
 
@@ -63,7 +63,7 @@ Use `materials/milling-2026-10-19-projector.html`. Give students different start
 |---|---|
 | Task goal and constraints | Who the app is for, the situation, the three rules |
 | Tool used | The agent in Copilot, and the model |
-| Prompt snippets | The ideas prompt, and later the build prompt |
+| Prompt snippets | The "Ideas first" prompt, and later "The smallest version" |
 | Output summary | The three ideas, or later the first version |
 | Decision | Which idea you accepted, changed or rejected, and why |
 | Verification | Checking every phrase against your handwritten list, and trying it as your learner would |
@@ -71,7 +71,7 @@ Use `materials/milling-2026-10-19-projector.html`. Give students different start
 
 Say: "This is graded work. Eight entries are a quarter of your mark, and your app will give you plenty to write about."
 
-**Step 4: show the next prompt without running it (about 2 minutes).** Point to the build prompt: "You'll run this yourself. When the page opens, check every phrase against your list before anything else."
+**Step 4: show the build prompt without running it (about 2 minutes).** Display "The smallest version" from "Prompts to display" and say: "After you choose, this is the prompt you'll run yourself, today or next class. When the page opens, check every phrase against your list before anything else."
 
 **Teacher note.** Building the first version on screen would show what "smallest version" means, but students would copy its layout, quiz style and colours. If students seem lost in work time, build one for a single group at their table instead of on the projector.
 
@@ -126,15 +126,15 @@ The rest go on November 2 and after.
 
 ## Prompts to display
 
-**Ideas first (step 1):**
+**Ideas first:**
 
 > I want to make a small web app that teaches [my language] to [who it's for]. Here are 4 phrases and their meanings: [phrases]. Don't build anything yet. Give me three different ideas for what the learner could do with these phrases. Use simple English. For each idea, give one good point and one problem.
 
-**The smallest version (step 3):**
+**The smallest version:**
 
 > Make the smallest version of idea [number] as one web page in this folder. Use only my 4 phrases, exactly as I wrote them. Don't add other phrases or features. Then tell me how to open it.
 
-**One change at a time (step 5):**
+**One change at a time:**
 
 > Change only this: [one change]. Don't change anything else. Then tell me what you changed.
 
