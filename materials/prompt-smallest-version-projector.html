@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103: the smallest version</title>
+<style>
+  :root { --ink: #16202e; --muted: #4a5568; --accent: #800020; --rule: #d9d2d4; --bg: #ffffff; --box: #f7f3f4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { height: 100vh; display: flex; flex-direction: column; padding: 3.2vh 3.5vw 3vh; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 1.2vh; margin-bottom: 4vh; }
+  h1 { font-size: 4.4vh; color: var(--accent); font-weight: 700; }
+  header p { font-size: 2.6vh; color: var(--muted); }
+  .when { font-size: 3.2vh; color: var(--muted); margin-bottom: 2.4vh; }
+  blockquote { background: var(--box); border-left: 0.8vh solid var(--accent); border-radius: 0.8vh;
+    padding: 4vh 3.5vw; font-size: 5vh; line-height: 1.4; font-weight: 600; }
+  .slot { color: var(--accent); white-space: nowrap; }
+  .then { margin-top: 4vh; font-size: 3.4vh; line-height: 1.35; }
+  .then b { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>The smallest version</h1>
+    <p>GEAP 103</p>
+  </header>
+  <p class="when">After you choose an idea, ask your agent:</p>
+  <blockquote>Make the smallest version of idea <span class="slot">[number]</span> as one web page in this folder. Use only my 4 phrases, exactly as I wrote them. Don't add other phrases or features. Then tell me how to open it.</blockquote>
+  <p class="then"><b>Then:</b> open it, and check every phrase against your handwritten list.</p>
+</main>
+</body>
+</html>
