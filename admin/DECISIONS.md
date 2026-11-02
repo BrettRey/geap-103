@@ -180,3 +180,9 @@
 ## 2026-11-01
 
 - **Correction: the Monday section meets at 8:55 a.m.** Stated by Brett. The September 17 entry's "classes run 12:35–3:15" does not apply to the Monday section. Found when an AI ideas panel built Monday timetables on 12:35.
+
+## 2026-11-02
+
+- **Conferences are recorded in a local page, then copied into the trackers.** Brett asked for an interface for recording conferences that doesn't rely on memory. The page (`private/conference-logger/`, gitignored) is built from both trackers. For each student it shows what's on record, the last next step and the conference questions. It saves in the browser. After class the records go into the tracker's Log sheet in the same column order, so the tracker stays the record of grades. The page holds names, so it stays in `private/`. Decision owner: Brett. Drafting: Claude.
+
+- **A version of the conference page for colleagues, with no student data.** `materials/conference-logger.html` on the course site works like the private page. Each teacher loads their own tracker file, which the browser reads without uploading it, or pastes a class list. Records stay in that browser until they're pasted into the tracker's Log sheet. The page reads both tracker layouts in use (with and without an Observer heading). Its conference questions follow the shared structure agreed in October, not the Monday class's questions. For Tim and Sigrid. Decision owner: Brett. Drafting: Claude.

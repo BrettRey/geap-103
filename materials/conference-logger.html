@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Conference Log</title>
+<style>
+  :root { --ink:#16202e; --muted:#5a6575; --accent:#800020; --accent-soft:#f7eef0; --line:#e3dde0;
+    --bg:#fbfafa; --card:#ffffff; --ok:#1f7a4d; --ok-soft:#e6f4ec; --warn:#a15c00; --warn-soft:#fff3df;
+    --bad:#b3261e; --bad-soft:#fdecea; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { height:100%; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; font-size:15px; }
+  button, input, textarea { font:inherit; }
+  button { cursor:pointer; }
+  .app { display:grid; grid-template-rows:auto 1fr; height:100vh; }
+  header { display:flex; align-items:center; gap:12px; padding:9px 16px; background:var(--card);
+    border-bottom:3px solid var(--accent); flex-wrap:wrap; }
+  header h1 { font-size:19px; color:var(--accent); }
+  .seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; flex-wrap:wrap; }
+  .seg button { border:0; background:#fff; padding:6px 12px; }
+  .seg button.on { background:var(--accent); color:#fff; }
+  .today { font-weight:600; } .today .n { font-size:18px; }
+  .spacer { flex:1; }
+  .btn { border:1px solid var(--line); background:#fff; border-radius:8px; padding:7px 12px; }
+  .btn:hover { border-color:var(--accent); }
+  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .btn.primary:disabled { background:#c9b8bd; border-color:#c9b8bd; cursor:not-allowed; }
+  .btn.small { padding:3px 8px; font-size:13px; }
+  .initials { font-size:13px; color:var(--muted); display:flex; align-items:center; gap:6px; }
+  .initials input { width:56px; padding:4px 6px; border:1px solid var(--line); border-radius:6px; text-transform:uppercase; }
+  .body { display:grid; grid-template-columns:250px 1fr; min-height:0; }
+  .body.nolist { grid-template-columns:1fr; }
+  aside { border-right:1px solid var(--line); background:var(--card); display:flex; flex-direction:column; min-height:0; }
+  .aside-top { padding:10px 12px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:8px; }
+  .aside-top input { width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:8px; }
+  .sortrow { display:flex; gap:6px; font-size:13px; color:var(--muted); align-items:center; }
+  .list { overflow-y:auto; flex:1; }
+  .stu { display:flex; align-items:center; gap:8px; padding:9px 12px; border-bottom:1px solid #f0ecee; cursor:pointer; }
+  .stu:hover { background:var(--accent-soft); }
+  .stu.sel { background:var(--accent); color:#fff; }
+  .stu .nm { flex:1; line-height:1.2; }
+  .badge { min-width:24px; text-align:center; border-radius:12px; padding:1px 7px; font-size:13px; font-weight:700; background:#eee; color:var(--ink); }
+  .badge.zero { background:var(--bad-soft); color:var(--bad); }
+  .stu.sel .badge { background:#fff; color:var(--accent); }
+  .chk { font-size:11px; letter-spacing:1px; color:#b8aeb2; font-weight:700; }
+  .chk b { color:var(--ok); }
+  .stu.sel .chk, .stu.sel .chk b { color:#fff; }
+  .done-today { font-size:12px; color:var(--ok); font-weight:700; }
+  .stu.sel .done-today { color:#fff; }
+  .legend { padding:8px 12px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); line-height:1.4; }
+  main { overflow-y:auto; padding:16px 20px 90px; min-height:0; }
+  main.conf { padding:10px 16px 76px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+  .card h2 { font-size:16px; color:var(--accent); margin-bottom:8px; }
+  .card h3 { font-size:14px; margin:12px 0 4px; }
+  .card p { line-height:1.5; margin-bottom:8px; }
+  .muted { color:var(--muted); } .small { font-size:13px; }
+  .who { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:8px; }
+  .who h2 { font-size:22px; color:var(--ink); }
+  .timer { font-weight:700; padding:3px 10px; border-radius:12px; background:var(--ok-soft); color:var(--ok); }
+  .timer.amber { background:var(--warn-soft); color:var(--warn); }
+  .timer.red { background:var(--bad-soft); color:var(--bad); }
+  .opener { background:var(--accent-soft); border-left:5px solid var(--accent); border-radius:8px; padding:8px 12px; margin-bottom:10px; }
+  .opener .say { font-size:17px; font-weight:600; }
+  .opener .last { margin-top:4px; }
+  .cols2 { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:12px; align-items:start; }
+  @media (max-width:1150px) { .cols2 { grid-template-columns:1fr; } }
+  .cols2 .card { padding:9px 12px; margin-bottom:10px; }
+  .cols2 .card h2 { font-size:15px; margin-bottom:5px; }
+  ol.script { list-style:none; counter-reset:s; }
+  ol.script li { counter-increment:s; display:flex; gap:10px; align-items:flex-start; padding:4px 0; border-bottom:1px solid #f4f0f2; cursor:pointer; }
+  ol.script li::before { content:counter(s); min-width:24px; height:24px; border-radius:12px; background:var(--accent-soft);
+    color:var(--accent); font-weight:700; display:flex; align-items:center; justify-content:center; }
+  ol.script li.ticked::before { content:"\2713"; background:var(--ok); color:#fff; }
+  ol.script li.ticked .q { color:var(--muted); text-decoration:line-through; }
+  ol.script .q { font-size:15px; font-weight:600; }
+  ol.script .why { font-size:12px; color:var(--muted); }
+  .orow { display:flex; align-items:center; gap:10px; padding:4px 6px; border-radius:7px; border:1px solid transparent; }
+  .orow.picked { border-color:var(--accent); background:var(--accent-soft); }
+  .orow .otext { flex:1; min-width:0; }
+  .orow .t { font-weight:700; font-size:14px; }
+  .orow .t .num { display:inline-block; width:20px; height:20px; border-radius:10px; background:var(--accent); color:#fff;
+    text-align:center; line-height:20px; font-size:12px; margin-right:6px; }
+  .orow .look { font-size:12px; color:var(--muted); line-height:1.3; }
+  .orow .meaning { color:var(--accent); font-weight:600; }
+  .lvbtns { display:flex; flex:none; gap:4px; }
+  .lvbtns button { width:34px; border:1px solid var(--line); background:#fff; border-radius:7px; padding:5px 0; font-weight:700; }
+  .lvbtns button:hover { border-color:var(--accent); }
+  .lvbtns button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  details.more > summary { cursor:pointer; color:var(--accent); font-weight:600; margin:6px 0 4px; font-size:13px; }
+  .levelkey { font-size:13px; line-height:1.5; } .levelkey b { display:inline-block; width:16px; }
+  .pills { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .tog { display:flex; gap:8px; align-items:center; border:1px solid var(--line); border-radius:9px; padding:6px 9px; cursor:pointer; }
+  .tog.on { border-color:var(--ok); background:var(--ok-soft); }
+  .tog .box { width:18px; height:18px; border-radius:5px; border:2px solid #b9adb2; flex:none; display:flex; align-items:center;
+    justify-content:center; font-weight:900; color:#fff; font-size:12px; }
+  .tog.on .box { background:var(--ok); border-color:var(--ok); }
+  .tog .lbl { font-weight:600; font-size:13px; }
+  textarea { width:100%; min-height:50px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; resize:vertical; }
+  .chips { display:flex; flex-wrap:wrap; gap:4px; margin:2px 0 5px; }
+  .chip { border:1px solid var(--line); background:#fff; border-radius:14px; padding:3px 8px; font-size:12px; }
+  .chip:hover { border-color:var(--accent); background:var(--accent-soft); }
+  .rrow { display:flex; justify-content:space-between; gap:8px; padding:2px 0; border-bottom:1px solid #f4f0f2; font-size:13px; }
+  .lv { display:inline-block; min-width:20px; text-align:center; border-radius:5px; padding:0 5px; margin-left:3px; background:#eee; font-weight:700; }
+  .lv.l1 { background:var(--bad-soft); color:var(--bad); } .lv.l2 { background:var(--warn-soft); color:var(--warn); }
+  .lv.l3, .lv.l4 { background:var(--ok-soft); color:var(--ok); }
+  .gap { color:var(--bad); font-weight:600; }
+  .savebar { position:fixed; bottom:0; left:250px; right:0; background:var(--card); border-top:1px solid var(--line);
+    padding:10px 20px; display:flex; gap:14px; align-items:center; }
+  .warns { flex:1; font-size:13px; color:var(--warn); } .warns span { margin-right:12px; }
+  .toast { position:fixed; top:64px; right:20px; background:var(--ok); color:#fff; padding:10px 16px; border-radius:8px;
+    font-weight:600; opacity:0; transition:opacity .25s; pointer-events:none; z-index:30; }
+  .toast.show { opacity:1; }
+  .banner { padding:8px 16px; background:var(--bad-soft); color:var(--bad); font-weight:600; display:none; }
+  .rec-today { display:flex; gap:10px; align-items:flex-start; padding:7px 0; border-bottom:1px solid #f0ecee; font-size:14px; }
+  .rec-today .main { flex:1; }
+  .overlay { position:fixed; inset:0; background:rgba(22,32,46,.45); display:none; align-items:flex-start; justify-content:center; padding-top:50px; z-index:20; }
+  .overlay.show { display:flex; }
+  .modal { background:#fff; border-radius:12px; padding:20px 22px; width:min(700px,94vw); max-height:86vh; overflow-y:auto; }
+  .modal h2 { color:var(--accent); font-size:18px; margin-bottom:10px; }
+  .modal h3 { font-size:15px; margin:14px 0 4px; }
+  .modal ol { margin:6px 0 8px 20px; line-height:1.65; }
+  .modal p { line-height:1.5; margin-bottom:6px; }
+  code { background:#f3eff1; padding:1px 5px; border-radius:4px; font-size:13px; }
+  .setup { max-width:760px; margin:0 auto; }
+  .setup textarea { min-height:140px; }
+  .setup input[type=text] { padding:7px 10px; border:1px solid var(--line); border-radius:8px; width:260px; }
+  .err { color:var(--bad); font-weight:600; }
+</style>
+</head>
+<body>
+<div class="app">
+  <div>
+    <header>
+      <h1>Conferences</h1>
+      <div class="seg" id="seg"></div>
+      <button class="btn small" id="btnAdd">+ Add a class</button>
+      <div class="today" id="todayCount"></div>
+      <div class="spacer"></div>
+      <label class="initials">Your initials <input id="initials" maxlength="5"></label>
+      <button class="btn" id="btnAfter">After class: put these in your tracker</button>
+    </header>
+    <div class="banner" id="banner"></div>
+  </div>
+  <div class="body" id="body">
+    <aside id="aside">
+      <div class="aside-top">
+        <input id="search" placeholder="Type a name to find it" autocomplete="off">
+        <div class="sortrow">Order:
+          <div class="seg" id="sortSeg">
+            <button data-s="roster" class="on">Roster</button>
+            <button data-s="fewest">Fewest first</button>
+          </div>
+        </div>
+      </div>
+      <div class="list" id="list"></div>
+      <div class="legend">Number = conferences so far (red = none yet). R T P = required checks, green when done.
+        &#10003; today = logged today.</div>
+    </aside>
+    <main id="main"></main>
+  </div>
+</div>
+<div class="savebar" id="savebar" style="display:none">
+  <div class="warns" id="warns"></div>
+  <button class="btn" id="btnCancel">Cancel</button>
+  <button class="btn primary" id="btnSave">Save conference</button>
+</div>
+<div class="toast" id="toast"></div>
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+<input type="file" id="fileInput" accept=".xlsx,.xlsm" style="display:none">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+// GEAP 103 conference log. No student data ships with this page: each teacher loads their own tracker
+// file, which is read in the browser and never uploaded. Records are kept in this browser's storage until
+// they're pasted into the tracker's Log sheet.
+
+const LEVELS = [
+  [0, "Hasn't shown it yet."],
+  [1, "Tries, but there's little to show."],
+  [2, "Does part of it, or gets there only with prompting."],
+  [3, "Does it on their own, but the explanation has gaps."],
+  [4, "Does it on their own and explains what they did and why."],
+];
+const OUT = {
+  1: { t: "Manage digital files and project versions", look: "Naming, folders, cloud storage, version history. Getting back an earlier version: also tick R." },
+  2: { t: "Troubleshoot routine technical problems", look: "Reading instructions and error messages; solving the problem or describing it clearly enough to get help. Also tick T." },
+  3: { t: "Formulate clear requests to guide AI tools", look: "From the AI question: how clear the requests were, whether they checked the output, how they revised." },
+  4: { t: "Evaluate AI-generated text", look: "From the AI question: how they judged what the AI made (accurate, complete, relevant, accessible)." },
+  5: { t: "Communicate about technical work and decisions", look: "Explaining what was done, changed or rejected, and why, using the right terms." },
+  6: { t: "Produce digital products", look: "The product itself, to college standards, including basic accessibility features." },
+  7: { t: "Collaborate with peers on digital projects", look: "Contributing changes to shared work, tracking updates, negotiating revisions. Also tick P." },
+};
+const SCRIPT = [
+  ["Show me what you've done since last time.", "The student shows; you watch. At a first conference: \"Show me something you made.\""],
+  ["Explain it to me. What did you want, and what did you decide?", "Outcomes 5 and 6 usually come from here."],
+  ["What did you ask the AI? What did you keep, change, or reject, and why?", "Ask it in every conference: it's the main evidence for outcomes 3 and 4 that isn't made with AI."],
+  ["Ask one follow-up question.", "About whatever was least clear."],
+  ["Tell them their next step.", "Then type it below. Next time, this page shows it to you."],
+];
+const CHECKS = {
+  R: ["R: got back an earlier version", "Got back an earlier version."],
+  T: ["T: solved or described a problem", "Solved a technical problem or described it clearly enough to get help."],
+  P: ["P: classmate's work, comment, reply", "Changed a classmate's work, got a comment, replied."],
+};
+const SHOWED_CHIPS = [
+  "Showed a change since last time",
+  "Explained what they changed and why",
+  "Said what they asked the AI and what they kept or rejected",
+  "Couldn't say what they asked the AI",
+  "Got back an earlier version",
+  "Described a problem clearly",
+  "Hasn't checked accessibility yet",
+];
+const NEXT_CHIPS = [
+  "Fix one problem and show me next time.",
+  "Get back an earlier version and show me how you know it's the right one.",
+  "Write down what you asked the AI and what you changed.",
+  "Check it for accessibility.",
+  "Ask a classmate to try it, and reply to their comment.",
+];
+const KEY = "geap103-conference-tool-v1";
+const FIELDS = ["date", "student", "source", "oa", "la", "ob", "lb", "oc", "lc", "R", "T", "P", "Final", "observer", "showed", "next"];
+const HEADINGS = { date: "Date", student: "Student", source: "Source", oa: "Outcome A", la: "Level A", ob: "Outcome B",
+  lb: "Level B", oc: "Outcome C", lc: "Level C", R: "R", T: "T", P: "P", Final: "Final", observer: "Observer",
+  showed: "What they showed", next: "Next question" };
+const TEMPLATE_COLS = Object.fromEntries(FIELDS.map((f, i) => [f, i]));   // the current template's layout
+
+// ------------------------------------------------------------------ storage
+let storageOK = true;
+function load() {
+  try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && s.classes) return s; }
+  catch (e) { storageOK = false; }
+  return { initials: "", classes: {}, current: null, records: [], lastDownload: 0, lastChange: 0 };
+}
+function persist(changed = true) {
+  if (changed) store.lastChange = Date.now();
+  try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { storageOK = false; }
+  banner();
+}
+let store = load();
+
+// ------------------------------------------------------------------ helpers
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tidy = s => String(s ?? "").replace(/\s+/g, " ").trim();
+const outKey = outs => JSON.stringify((outs || []).map(([o, l]) => [Number(o), l === null || l === undefined ? null : Number(l)]));
+function todayISO() { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+const TODAY = todayISO();
+function fmtDate(iso) { if (!iso) return ""; const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" }); }
+function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2000); }
+function cls() { return store.current ? store.classes[store.current] : null; }
+function localRecs() { return store.records.filter(r => r.classId === store.current); }
+
+// ------------------------------------------------------------ tracker reading
+function cellDate(v) {
+  if (v === null || v === undefined || v === "") return "";
+  if (typeof v === "number" && window.XLSX) {
+    const p = XLSX.SSF.parse_date_code(v);
+    if (p) return p.y + "-" + String(p.m).padStart(2, "0") + "-" + String(p.d).padStart(2, "0");
+  }
+  if (v instanceof Date) return v.getFullYear() + "-" + String(v.getMonth() + 1).padStart(2, "0") + "-" + String(v.getDate()).padStart(2, "0");
+  return String(v).slice(0, 10);
+}
+const num = v => (v === null || v === undefined || v === "" || isNaN(Number(v))) ? null : Number(v);
+const yes = v => String(v ?? "").trim().toUpperCase() === "Y";
+
+function parseTracker(buf, fileName) {
+  const wb = XLSX.read(buf, { type: "array", cellDates: false });
+  const ro = wb.Sheets["Roster"], lg = wb.Sheets["Log"];
+  if (!ro || !lg) throw new Error("This file has no Roster and Log sheets. Is it the GEAP 103 tracker?");
+  const rRows = XLSX.utils.sheet_to_json(ro, { header: 1, raw: true, defval: null, blankrows: true });
+  const rStart = XLSX.utils.decode_range(ro["!ref"]).s.r;          // 0-based first row in the sheet range
+  const roster = [];
+  rRows.forEach((r, i) => { const rowNo = rStart + i + 1; const v = r && r[0];
+    if (rowNo >= 2 && typeof v === "string" && v.trim()) roster.push(v.trim()); });
+  if (!roster.length) throw new Error("The Roster sheet is empty. Type your students' names there first, or paste them below.");
+
+  const lRows = XLSX.utils.sheet_to_json(lg, { header: 1, raw: true, defval: null, blankrows: true });
+  const lStart = XLSX.utils.decode_range(lg["!ref"]).s.r;
+  const hi = lRows.findIndex(r => r && tidy(r[0]) === "Date" && tidy(r[1]) === "Student");
+  if (hi < 0) throw new Error("Couldn't find the Log headings (Date, Student, ...). Is it the GEAP 103 tracker?");
+  const head = lRows[hi].map(tidy);
+  const cols = {};
+  for (const f of FIELDS) { const j = head.indexOf(HEADINGS[f]); if (j >= 0) cols[f] = j; }
+  for (const f of ["date", "student", "source", "oa", "la"]) if (!(f in cols)) throw new Error(`The Log has no "${HEADINGS[f]}" heading.`);
+  const headerRow = lStart + hi + 1;                                  // 1-based
+  const dataRows = lRows.slice(hi + 2).map((r, k) => ({ r: r || [], rowNo: headerRow + 2 + k }));  // skip the example row
+  // An older layout has no Observer heading but stores initials where "What they showed" sits, shifting the notes right.
+  let shifted = false;
+  if (!("observer" in cols) && "next" in cols) {
+    const extra = cols.next + 1;
+    shifted = dataRows.some(x => tidy(x.r[cols.student]) && tidy(x.r[extra]));
+    if (shifted) { cols.observer = cols.showed; cols.showed = cols.next; cols.next = extra; }
+  }
+  const g = (r, f) => (f in cols ? r[cols[f]] : null);
+  const log = []; let last = headerRow + 1;
+  for (const { r, rowNo } of dataRows) {
+    const name = tidy(g(r, "student"));
+    if (!name) continue;
+    last = rowNo;
+    const outs = [];
+    for (const [o, l] of [["oa", "la"], ["ob", "lb"], ["oc", "lc"]]) { const ov = num(g(r, o)); if (ov !== null) outs.push([ov, num(g(r, l))]); }
+    log.push({ date: cellDate(g(r, "date")), student: name, source: tidy(g(r, "source")), outcomes: outs,
+      R: yes(g(r, "R")), T: yes(g(r, "T")), P: yes(g(r, "P")), Final: yes(g(r, "Final")),
+      observer: tidy(g(r, "observer")), showed: tidy(g(r, "showed")), next: tidy(g(r, "next")) });
+  }
+  return { id: fileName, label: fileName.replace(/\.xlsx?m?$/i, ""), fileName, loadedAt: new Date().toISOString(),
+    roster, log, cols, shifted, headerRow, nextRow: last + 1, fromTracker: true };
+}
+function dropMerged(c) {
+  const before = store.records.length;
+  store.records = store.records.filter(r => r.classId !== c.id || !c.log.some(x =>
+    x.date === r.date && x.student === r.student && x.showed === tidy(r.showed) && outKey(x.outcomes) === outKey(r.outcomes)));
+  return before - store.records.length;
+}
+function addClass(c) {
+  const isNew = !store.classes[c.id];
+  store.classes[c.id] = c; store.current = c.id;
+  const dropped = dropMerged(c);
+  persist(); form = null; stopTimer(); renderAll();
+  toast(`${isNew ? "Loaded" : "Reloaded"}: ${c.roster.length} students, ${c.log.length} log rows` + (dropped ? `; ${dropped} record(s) now in the tracker` : ""));
+}
+function pickFile() { document.getElementById("fileInput").value = ""; document.getElementById("fileInput").click(); }
+document.getElementById("fileInput").onchange = e => {
+  const f = e.target.files[0]; if (!f) return;
+  if (!window.XLSX) { setupError("The spreadsheet reader didn't load. The network may be blocking cdnjs.cloudflare.com. Paste your class list instead."); return; }
+  const rd = new FileReader();
+  rd.onload = () => { try { addClass(parseTracker(new Uint8Array(rd.result), f.name)); closeModal(); } catch (err) { setupError(err.message); } };
+  rd.readAsArrayBuffer(f);
+};
+function setupError(msg) { const el = document.getElementById("setupErr") || document.getElementById("modalErr"); if (el) el.textContent = msg; else toast(msg); }
+function addPasted(label, text) {
+  const roster = text.split(/\r?\n/).map(tidy).filter(Boolean);
+  if (!label.trim()) return setupError("Give the class a name, such as GEAP103C Tuesday.");
+  if (!roster.length) return setupError("Paste at least one name, one per line.");
+  addClass({ id: "paste:" + label.trim(), label: label.trim(), fileName: "", loadedAt: new Date().toISOString(), roster, log: [],
+    cols: TEMPLATE_COLS, shifted: false, headerRow: null, nextRow: null, fromTracker: false });
+  closeModal();
+}
+
+// -------------------------------------------------------------------- state
+let sortMode = "roster", form = null, timerHandle = null;
+function blankForm(student) {
+  return { id: null, student, startedAt: Date.now(), levels: {}, R: false, T: false, P: false, Final: false, script: {}, showed: "", next: "" };
+}
+function allRows(student) {
+  const t = cls().log.filter(x => x.student === student).map(x => ({ ...x, where: "tracker" }));
+  const l = localRecs().filter(x => x.student === student).map(x => ({ ...x, where: "today" }));
+  return t.concat(l).sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+}
+function stats(student) {
+  const rows = allRows(student);
+  const conf = rows.filter(r => r.source === "Conference");
+  const byOut = {};
+  for (const r of rows) for (const [o, l] of r.outcomes) if (l !== null && l !== undefined) (byOut[o] = byOut[o] || []).push({ l, src: r.source, date: r.date });
+  const rev = [...rows].reverse();
+  const lastNext = rev.find(r => r.source === "Conference" && tidy(r.next)) || rev.find(r => tidy(r.next));
+  return { rows, conf: conf.length, confDates: conf.map(r => r.date), R: rows.some(r => r.R), T: rows.some(r => r.T),
+    P: rows.some(r => r.P), byOut, lastNext, today: localRecs().some(r => r.student === student && r.date === TODAY) };
+}
+
+// ------------------------------------------------------------------- header
+function renderHeader() {
+  const seg = document.getElementById("seg");
+  const ids = Object.keys(store.classes);
+  seg.style.display = ids.length ? "" : "none";
+  seg.innerHTML = ids.map(k => `<button data-k="${esc(k)}" class="${k === store.current ? "on" : ""}">${esc(store.classes[k].label)}</button>`).join("");
+  seg.querySelectorAll("button").forEach(b => b.onclick = () => {
+    if (form && !confirmLeave()) return;
+    store.current = b.dataset.k; persist(false); form = null; stopTimer(); renderAll();
+  });
+  document.getElementById("btnAdd").style.display = ids.length ? "" : "none";
+  document.getElementById("btnAfter").style.display = ids.length ? "" : "none";
+  const n = cls() ? localRecs().filter(r => r.date === TODAY).length : 0;
+  document.getElementById("todayCount").innerHTML = cls() ? `Today: <span class="n">${n}</span> saved` : "";
+  const ini = document.getElementById("initials");
+  if (document.activeElement !== ini) ini.value = store.initials || "";
+}
+function banner() {
+  const b = document.getElementById("banner");
+  const pending = store.records.length;
+  if (!storageOK) { b.style.display = "block"; b.textContent = "This browser isn't saving (private window?). Use a normal window, or download a backup after every conference."; }
+  else if (pending && store.lastChange > store.lastDownload) {
+    b.style.display = "block"; b.style.background = "var(--warn-soft)"; b.style.color = "var(--warn)";
+    b.textContent = `${pending} record(s) are only in this browser. After class, click "After class" to put them in your tracker.`;
+  } else b.style.display = "none";
+}
+
+// --------------------------------------------------------------------- list
+function renderList() {
+  const c = cls();
+  document.getElementById("body").classList.toggle("nolist", !c);
+  document.getElementById("aside").style.display = c ? "" : "none";
+  if (!c) return;
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  let names = c.roster.slice();
+  if (q) names = names.filter(n => n.toLowerCase().includes(q));
+  const st = Object.fromEntries(names.map(n => [n, stats(n)]));
+  if (sortMode === "fewest") names.sort((a, b) => st[a].conf - st[b].conf);
+  document.getElementById("list").innerHTML = names.map(n => {
+    const s = st[n];
+    return `<div class="stu ${form && form.student === n ? "sel" : ""}" data-n="${esc(n)}">
+      <span class="badge ${s.conf ? "" : "zero"}">${s.conf}</span>
+      <span class="nm">${esc(n)}${s.today ? ' <span class="done-today">&#10003; today</span>' : ""}</span>
+      <span class="chk">${s.R ? "<b>R</b>" : "R"}${s.T ? "<b>T</b>" : "T"}${s.P ? "<b>P</b>" : "P"}</span></div>`;
+  }).join("") || `<p class="muted small" style="padding:12px">No name matches.</p>`;
+  document.querySelectorAll(".stu").forEach(el => el.onclick = () => pick(el.dataset.n));
+}
+function pick(name) {
+  if (form && form.student !== name && !confirmLeave()) return;
+  if (!form || form.student !== name) form = blankForm(name);
+  startTimer(); renderAll(); document.getElementById("main").scrollTop = 0;
+}
+function confirmLeave() {
+  const dirty = form && (Object.keys(form.levels).length || form.showed || form.next);
+  return !dirty || window.confirm("You haven't saved this conference. Leave it?");
+}
+function startTimer() { stopTimer(); timerHandle = setInterval(updTimer, 10000); }
+function stopTimer() { if (timerHandle) clearInterval(timerHandle); timerHandle = null; }
+function updTimer() {
+  const el = document.getElementById("timer"); if (!el || !form) return;
+  const m = Math.floor((Date.now() - form.startedAt) / 60000);
+  el.textContent = m < 1 ? "under 1 min" : m + " min";
+  el.className = "timer" + (m >= 9 ? " red" : m >= 6 ? " amber" : "");
+  el.title = "Conferences are about 5 minutes.";
+}
+
+// -------------------------------------------------------------------- views
+function renderMain() {
+  const main = document.getElementById("main");
+  document.getElementById("savebar").style.display = form ? "flex" : "none";
+  main.classList.toggle("conf", !!form);
+  if (!cls()) { main.innerHTML = setupView(true); bindSetup(); return; }
+  if (!form) { main.innerHTML = idleView(); bindIdle(); return; }
+  const s = stats(form.student);
+  const opener = s.conf === 0
+    ? `<div class="say">"Show me something you made."</div><div class="last muted">First conference with this student.</div>`
+    : `<div class="say">"Show me what you've done since last time."</div>
+       <div class="last">${s.lastNext ? `${s.lastNext.source === "Conference" ? "Next step from their last conference" : "Your note"} (${esc(fmtDate(s.lastNext.date))}, ${esc(s.lastNext.source)}): <b>${esc(s.lastNext.next)}</b>` : `<span class="muted">No next step on record.</span>`}</div>`;
+  main.innerHTML = `
+    <div class="who"><h2>${esc(form.student)}</h2><span class="timer" id="timer">under 1 min</span>
+      <span class="muted small">${s.conf} conference(s) so far${s.confDates.length ? ": " + s.confDates.map(fmtDate).join(", ") : ""}</span>
+      ${form.id ? '<span class="badge">editing a saved record</span>' : ""}</div>
+    <div class="cols2">
+      <div>
+        <div class="opener">${opener}</div>
+        <div class="card"><h2>Ask, in this order <span class="muted small">(click to tick)</span></h2>
+          <ol class="script">${SCRIPT.map((x, i) => `<li data-i="${i}" class="${form.script[i] ? "ticked" : ""}">
+            <div><div class="q">${esc(x[0])}</div><div class="why">${esc(x[1])}</div></div></li>`).join("")}</ol></div>
+        <div class="card"><h2>On record</h2>${recordTable(s)}</div>
+      </div>
+      <div>
+        <div class="card"><h2>Outcomes shown <span class="muted small">(up to three · click a level, again to clear)</span></h2>
+          ${[1, 2, 3, 4, 5, 6, 7].map(outRow).join("")}
+          <details class="more"><summary>What the levels mean</summary>
+            <div class="levelkey">${LEVELS.map(([l, m]) => `<div><b>${l}</b> ${esc(m)}</div>`).join("")}
+            <p class="muted" style="margin-top:6px">Levels 3 and 4 count once shown twice, at least once without AI (a conference or in-class writing). One showing without AI is enough for level 2. To pass, every outcome needs a confirmed 2.</p></div>
+          </details></div>
+        <div class="card"><h2>Checks <span class="muted small">(tick only if you saw it)</span></h2>
+          <div class="pills">${Object.entries(CHECKS).map(([k, [lbl, d]]) => tog(k, lbl, d)).join("")}${tog("Final", "Final conference", "The last conference of the term.")}</div></div>
+        <div class="card"><h2>What they showed</h2>
+          <div class="chips">${SHOWED_CHIPS.map(c => `<button class="chip" data-t="showed">${esc(c)}</button>`).join("")}</div>
+          <textarea id="showed" placeholder="What they showed, what they explained, what they said about the AI.">${esc(form.showed)}</textarea></div>
+        <div class="card"><h2>Next step <span class="muted small">(say it to them, then type it)</span></h2>
+          <div class="chips">${NEXT_CHIPS.map(c => `<button class="chip" data-t="next">${esc(c)}</button>`).join("")}</div>
+          <textarea id="next" placeholder="Next time, the page will show you this.">${esc(form.next)}</textarea></div>
+      </div>
+    </div>`;
+  bindMain(); updTimer(); renderWarns();
+}
+function recordTable(s) {
+  const rows = [1, 2, 3, 4, 5, 6, 7].map(o => {
+    const xs = s.byOut[o] || [];
+    const v = xs.length ? xs.map(x => `<span class="lv l${x.l}" title="${esc(x.src)}, ${esc(fmtDate(x.date))}">${x.l}</span>`).join("") : '<span class="gap">none</span>';
+    return `<div class="rrow"><span><b>${o}</b> ${esc(OUT[o].t)}</span><span>${v}</span></div>`;
+  }).join("");
+  const checks = ["R", "T", "P"].map(k => `${k} ${s[k] ? '<span style="color:var(--ok);font-weight:700">done</span>' : '<span class="gap">not yet</span>'}`).join(" · ");
+  const recent = s.rows.slice(-3).reverse().map(r => `<div class="small" style="margin-top:4px"><b>${esc(fmtDate(r.date))}, ${esc(r.source)}${r.where === "today" ? " (today)" : ""}:</b> ${esc(r.showed) || '<span class="muted">no note</span>'}</div>`).join("");
+  return `${rows}<div class="small" style="margin-top:6px">Required checks: ${checks}</div>
+    <div class="small muted" style="margin-top:2px">Hover over a level to see where and when it was shown.</div>
+    ${recent ? `<details class="more"><summary>Most recent notes</summary>${recent}</details>` : ""}`;
+}
+function outRow(o) {
+  const cur = form.levels[o];
+  return `<div class="orow ${cur !== undefined ? "picked" : ""}"><div class="otext"><div class="t"><span class="num">${o}</span>${esc(OUT[o].t)}</div>
+    <div class="look">${cur !== undefined ? `<span class="meaning">${esc(cur + ": " + LEVELS[cur][1])}</span>` : esc(OUT[o].look)}</div></div>
+    <div class="lvbtns">${LEVELS.map(([l, m]) => `<button data-o="${o}" data-l="${l}" title="${esc(m)}" class="${cur === l ? "on" : ""}">${l}</button>`).join("")}</div></div>`;
+}
+function tog(k, lbl, d) {
+  return `<div class="tog ${form[k] ? "on" : ""}" data-k="${k}" title="${esc(d)}"><div class="box">${form[k] ? "&#10003;" : ""}</div><div class="lbl">${esc(lbl)}</div></div>`;
+}
+function bindMain() {
+  document.querySelectorAll("ol.script li").forEach(li => li.onclick = () => { const i = li.dataset.i; form.script[i] = !form.script[i]; li.classList.toggle("ticked", !!form.script[i]); renderWarns(); });
+  document.querySelectorAll(".lvbtns button").forEach(b => b.onclick = () => {
+    const o = +b.dataset.o, l = +b.dataset.l;
+    if (form.levels[o] === l) delete form.levels[o];
+    else { if (!(o in form.levels) && Object.keys(form.levels).length >= 3) { toast("Three outcomes per conference (the tracker has three slots). Clear one first."); return; } form.levels[o] = l; }
+    keepText(); renderMain();
+  });
+  document.querySelectorAll(".tog").forEach(t => t.onclick = () => { form[t.dataset.k] = !form[t.dataset.k]; keepText(); renderMain(); });
+  document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
+    const ta = document.getElementById(c.dataset.t);
+    ta.value = ta.value.trim() ? ta.value.trim().replace(/[.;]?$/, "; ") + c.textContent : c.textContent;
+    keepText(); renderWarns(); ta.focus();
+  });
+  ["showed", "next"].forEach(id => document.getElementById(id).oninput = () => { keepText(); renderWarns(); });
+}
+function keepText() { const a = document.getElementById("showed"), b = document.getElementById("next"); if (a) form.showed = a.value; if (b) form.next = b.value; }
+function renderWarns() {
+  if (!form) return;
+  const w = [];
+  if (!Object.keys(form.levels).length) w.push("No outcome picked");
+  if (!form.script[2]) w.push("AI question not ticked");
+  if (!tidy(form.next)) w.push("No next step");
+  if (!(store.initials || "").trim()) w.push("Your initials are empty (top right)");
+  document.getElementById("warns").innerHTML = w.length ? w.map(x => `<span>&#9888; ${esc(x)}</span>`).join("") : '<span style="color:var(--ok)">Ready to save.</span>';
+  document.getElementById("btnSave").disabled = !Object.keys(form.levels).length && !tidy(form.showed);
+  document.getElementById("btnSave").textContent = form.id ? "Save changes" : "Save conference";
+}
+function save() {
+  keepText();
+  const outs = Object.entries(form.levels).map(([o, l]) => [+o, l]).sort((a, b) => a[0] - b[0]);
+  const rec = { id: form.id || (Date.now() + "-" + Math.random().toString(36).slice(2, 7)), classId: store.current, date: TODAY,
+    student: form.student, source: "Conference", outcomes: outs, R: form.R, T: form.T, P: form.P, Final: form.Final,
+    observer: (store.initials || "").trim().toUpperCase(), showed: tidy(form.showed), next: tidy(form.next),
+    minutes: Math.round((Date.now() - form.startedAt) / 60000), script: form.script };
+  const i = store.records.findIndex(r => r.id === rec.id);
+  if (i >= 0) store.records[i] = rec; else store.records.push(rec);
+  persist(); toast((form.id ? "Updated: " : "Saved: ") + form.student);
+  form = null; stopTimer(); document.getElementById("search").value = ""; renderAll();
+}
+
+function setupView(first) {
+  return `<div class="setup"><div class="card">
+    <h2>${first ? "Start: load your class" : "Add a class"}</h2>
+    ${first ? `<p>This page helps you record GEAP 103 conferences. Pick a student, and it shows what's on record, the next step you gave them last time, and the questions to ask. You click the levels, type a short note, and save. After class, you paste the records into your tracker.</p>` : ""}
+    <h3>Load your tracker (best)</h3>
+    <p>Pick your filled copy of the GEAP 103 tracker spreadsheet. This page reads the class list and past records from it. The file stays on your computer: the page reads it in your browser and doesn't upload it.</p>
+    <p><button class="btn primary" id="sLoad">Choose your tracker file</button></p>
+    <h3>Or paste your class list</h3>
+    <p class="small muted">Use this if you don't use the tracker. You won't see past records, and you'll paste into the first empty row of your log yourself.</p>
+    <p><input type="text" id="sLabel" placeholder="Class name, e.g. GEAP103C Tuesday"></p>
+    <textarea id="sNames" placeholder="One student name per line"></textarea>
+    <p style="margin-top:8px"><button class="btn" id="sPaste">Use this list</button></p>
+    <p class="err" id="setupErr"></p>
+    <p class="small muted">Type your initials at the top right; they go in the tracker's Observer column. Records are saved in this browser on this computer until you put them in your tracker, so use the same computer and browser each time. A private window doesn't keep them.</p>
+  </div></div>`;
+}
+function bindSetup() {
+  document.getElementById("sLoad").onclick = pickFile;
+  document.getElementById("sPaste").onclick = () => addPasted(document.getElementById("sLabel").value, document.getElementById("sNames").value);
+  if (!window.XLSX) setupError("The spreadsheet reader didn't load (the network may be blocking cdnjs.cloudflare.com). Paste your class list instead, or try another network.");
+}
+function idleView() {
+  const c = cls(); const recs = localRecs().filter(r => r.date === TODAY);
+  const zero = c.roster.filter(n => stats(n).conf === 0).length;
+  return `<div class="card"><h2>Pick the student on the left</h2>
+      <p>Type two letters of their name and press Enter. The page shows what's on record, the next step you gave them last time, and the questions to ask.</p>
+      <p class="muted small">${esc(c.label)}: ${c.roster.length} students, ${zero} with no conference yet.${c.fromTracker ? ` Loaded from ${esc(c.fileName)} at ${esc(new Date(c.loadedAt).toLocaleString())}.` : " Pasted class list."}</p></div>
+    <div class="card"><h2>The conference, in one line</h2>
+      <p>They show something → they explain it → the AI question → one follow-up → their next step, out loud. About 5 minutes.</p></div>
+    <div class="card"><h2>Today's records (${recs.length})</h2>
+      ${recs.length ? recs.map(r => `<div class="rec-today"><div class="main"><b>${esc(r.student)}</b>
+        <span class="muted small">${r.outcomes.map(([o, l]) => `${o}:${l}`).join(" · ")}${r.R ? " · R" : ""}${r.T ? " · T" : ""}${r.P ? " · P" : ""}${r.minutes ? ` · ${r.minutes} min` : ""}</span>
+        <div class="small">${esc(r.showed)}</div>${r.next ? `<div class="small muted">Next: ${esc(r.next)}</div>` : ""}</div>
+        <button class="btn small" data-edit="${r.id}">Edit</button><button class="btn small" data-del="${r.id}">Delete</button></div>`).join("")
+        : '<p class="muted">None yet.</p>'}</div>`;
+}
+function bindIdle() {
+  document.querySelectorAll("[data-edit]").forEach(b => b.onclick = () => {
+    const r = store.records.find(x => x.id === b.dataset.edit); if (!r) return;
+    form = { ...blankForm(r.student), id: r.id, levels: Object.fromEntries(r.outcomes), R: r.R, T: r.T, P: r.P, Final: r.Final,
+      script: r.script || {}, showed: r.showed, next: r.next };
+    startTimer(); renderAll();
+  });
+  document.querySelectorAll("[data-del]").forEach(b => b.onclick = () => {
+    if (b.dataset.armed) { store.records = store.records.filter(x => x.id !== b.dataset.del); persist(); renderAll(); toast("Deleted"); }
+    else { b.dataset.armed = "1"; b.textContent = "Click again to delete"; }
+  });
+}
+
+// ----------------------------------------------------------- after class
+function tsvRows(c, recs) {
+  const cols = c.cols || TEMPLATE_COLS;
+  const width = Math.max(...Object.values(cols)) + 1;
+  return recs.map(r => {
+    const o = r.outcomes.concat([[null, null], [null, null], [null, null]]).slice(0, 3);
+    const v = { date: r.date, student: r.student, source: r.source, oa: o[0][0], la: o[0][1], ob: o[1][0], lb: o[1][1], oc: o[2][0], lc: o[2][1],
+      R: r.R ? "Y" : "", T: r.T ? "Y" : "", P: r.P ? "Y" : "", Final: r.Final ? "Y" : "", observer: r.observer, showed: tidy(r.showed), next: tidy(r.next) };
+    const row = new Array(width).fill("");
+    for (const f of FIELDS) if (f in cols) row[cols[f]] = v[f] === null || v[f] === undefined ? "" : String(v[f]);
+    return row.slice(cols.date).join("\t");
+  }).join("\n");
+}
+function copyText(text) {
+  const done = () => toast("Copied. Now paste it in the tracker.");
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+  else fallbackCopy(text, done);
+}
+function fallbackCopy(text, done) {
+  const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); done(); } catch (e) { toast("Couldn't copy. Use the backup download instead."); }
+  ta.remove();
+}
+function download() {
+  const blob = new Blob([JSON.stringify({ exported: new Date().toISOString(), records: store.records }, null, 1)], { type: "application/json" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `geap103-conferences-${TODAY}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  store.lastDownload = Date.now(); persist(false); toast("Saved to your Downloads folder");
+}
+function closeModal() { document.getElementById("overlay").classList.remove("show"); }
+function openAfter() {
+  const c = cls(); const recs = localRecs();
+  const colLetter = i => String.fromCharCode(65 + i);
+  const where = c.nextRow ? `cell <b>${colLetter(c.cols.date)}${c.nextRow}</b> (the first empty row when you loaded the file)` : "column A of the first empty row";
+  document.getElementById("modal").innerHTML = `<h2>After class: put these in your tracker</h2>
+    <p>${recs.length} record(s) for ${esc(c.label)} are saved in this browser. They aren't in your tracker until you paste them.</p>
+    <ol><li><button class="btn primary small" id="mCopy" ${recs.length ? "" : "disabled"}>Copy ${recs.length} row(s)</button></li>
+      <li>Open ${c.fileName ? `<code>${esc(c.fileName)}</code>` : "your tracker"} and go to the <b>Log</b> sheet.</li>
+      <li>Click ${where}, paste, and save the file.</li>
+      <li>Back here, <button class="btn small" id="mReload">load the tracker again</button>. Rows now in the tracker leave "today", and the history updates.</li></ol>
+    <p class="small muted">The columns match your Log sheet${c.shifted ? " (including the Observer column your file keeps without a heading)" : ""}: Date, Student, Source, three outcome and level pairs, R, T, P, Final, Observer, What they showed, Next question.</p>
+    <h3>Backup</h3>
+    <p><button class="btn small" id="mDownload">Download all records</button> <span class="small muted">A file in your Downloads folder, in case this browser loses its data.</span></p>
+    <h3>Shared or borrowed computer?</h3>
+    <p><button class="btn small" id="mForget">Remove this class from this browser</button> <span class="small muted">Deletes the class list, history and any records not yet pasted. Your tracker file isn't touched.</span></p>
+    <p class="err" id="modalErr"></p>
+    <div style="text-align:right;margin-top:10px"><button class="btn" id="mClose">Close</button></div>`;
+  document.getElementById("overlay").classList.add("show");
+  document.getElementById("mCopy").onclick = () => copyText(tsvRows(c, recs));
+  document.getElementById("mDownload").onclick = download;
+  document.getElementById("mReload").onclick = pickFile;
+  document.getElementById("mClose").onclick = closeModal;
+  document.getElementById("mForget").onclick = e => {
+    const b = e.target;
+    if (!b.dataset.armed) { b.dataset.armed = "1"; b.textContent = `Click again: remove ${c.label}`; return; }
+    store.records = store.records.filter(r => r.classId !== c.id); delete store.classes[c.id];
+    store.current = Object.keys(store.classes)[0] || null; persist(); closeModal(); form = null; renderAll(); toast("Removed from this browser");
+  };
+}
+function openAdd() {
+  document.getElementById("modal").innerHTML = setupView(false) + `<div style="text-align:right"><button class="btn" id="mClose">Close</button></div>`;
+  document.getElementById("overlay").classList.add("show");
+  bindSetup(); document.getElementById("mClose").onclick = closeModal;
+}
+
+// -------------------------------------------------------------------- wire
+function renderAll() { renderHeader(); renderList(); renderMain(); banner(); }
+document.getElementById("search").oninput = renderList;
+document.getElementById("search").onkeydown = e => { if (e.key === "Enter") { const f = document.querySelector(".stu"); if (f) pick(f.dataset.n); } };
+document.querySelectorAll("#sortSeg button").forEach(b => b.onclick = () => {
+  sortMode = b.dataset.s; document.querySelectorAll("#sortSeg button").forEach(x => x.classList.toggle("on", x === b)); renderList();
+});
+document.getElementById("initials").oninput = e => { store.initials = e.target.value.trim().toUpperCase(); persist(false); renderWarns(); };
+document.getElementById("btnSave").onclick = save;
+document.getElementById("btnCancel").onclick = () => { if (confirmLeave()) { form = null; stopTimer(); renderAll(); } };
+document.getElementById("btnAfter").onclick = openAfter;
+document.getElementById("btnAdd").onclick = openAdd;
+document.getElementById("overlay").onclick = e => { if (e.target.id === "overlay") closeModal(); };
+window.addEventListener("beforeunload", e => {
+  if ((form && (Object.keys(form.levels).length || form.showed)) || (!storageOK && store.records.length)) { e.preventDefault(); e.returnValue = ""; }
+});
+if (store.current && !store.classes[store.current]) store.current = Object.keys(store.classes)[0] || null;
+persist(false);
+renderAll();
+</script>
+</body>
+</html>
