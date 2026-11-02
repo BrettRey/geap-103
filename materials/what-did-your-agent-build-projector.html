@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103: today</title>
+<style>
+  :root { --ink: #16202e; --muted: #4a5568; --accent: #800020; --bg: #ffffff; --box: #f7f3f4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { height: 100vh; display: flex; flex-direction: column; padding: 2.2vh 3.2vw 2vh; gap: 1.8vh; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 0.9vh; }
+  h1 { font-size: 4vh; color: var(--accent); font-weight: 700; }
+  header p { font-size: 2.9vh; color: var(--ink); }
+  .cols { flex: 1; display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.2vw; min-height: 0; }
+  .col { display: flex; flex-direction: column; gap: 1.4vh; }
+  section { background: var(--box); border-left: 0.8vh solid var(--accent); border-radius: 0.8vh;
+    padding: 1.2vh 1.4vw; }
+  section.side { border-left-color: var(--muted); }
+  h2 { font-size: 3vh; color: var(--accent); margin-bottom: 0.4vh; }
+  section.side h2 { color: var(--ink); }
+  p, li { font-size: 2.6vh; line-height: 1.3; }
+  p + p { margin-top: 0.5vh; }
+  ul { list-style: none; }
+  li { padding-left: 1.3em; position: relative; margin-top: 0.25vh; }
+  li::before { content: "\25A1"; position: absolute; left: 0; color: var(--accent); }
+  .type { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 2.45vh;
+    background: #fff; border: 0.15vh solid #c9b8bd; border-radius: 0.5vh; padding: 0.1vh 0.45vw; white-space: nowrap; }
+  .note { font-weight: 700; }
+  @media (max-aspect-ratio: 3/2) {
+    p, li { font-size: 2.3vh; } .type { font-size: 2.1vh; }
+    h2 { font-size: 2.65vh; } header p { font-size: 2.3vh; } h1 { font-size: 3.4vh; }
+    section { padding: 0.9vh 1.2vw; } .col { gap: 1vh; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Today</h1>
+    <p>I'll come to your desk. We'll talk about your app for about 5 minutes.</p>
+  </header>
+  <div class="cols">
+    <div class="col">
+      <section>
+        <h2>Open your app</h2>
+        <p>Open the GitHub Copilot app. On the left, click your <b>old chat</b>, where you made your app. Type:</p>
+        <p><span class="type">Open my app in the browser. Don't make a new app.</span></p>
+        <p>Copilot says the folder is empty? You're in a new chat. Click your old chat.</p>
+        <p>Made it with a group? Sit together. Use the laptop where you made it.</p>
+      </section>
+      <section>
+        <h2>Check your app. Write the answers on paper, in English.</h2>
+        <ul>
+          <li>How many lessons (or units, or levels) does it say it has? How many can you open?</li>
+          <li>Press every &#128266; button. Do you hear your language? If not, write that.</li>
+          <li>What is in it that you didn't ask for? A name? A score? Scroll up in your chat to see what you asked.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Fix one problem</h2>
+        <p>First type: <span class="type">Save a copy of this version.</span></p>
+        <p>Then tell Copilot one problem from your paper. Ask it to fix the problem or remove the extra thing. Check again. Then fix another.</p>
+        <p><span class="note">Nothing to fix?</span> Write why your app is good enough for a beginner.</p>
+      </section>
+    </div>
+    <div class="col">
+      <section class="side">
+        <h2>No app?</h2>
+        <p>In the GitHub Copilot app, type:</p>
+        <p><span class="type">Build me an app that teaches</span></p>
+        <p><span class="type">_______ to beginners.</span></p>
+        <p>Can't build? Write your name under "Need help".</p>
+      </section>
+      <section class="side">
+        <h2>Need help? Ready to show me?</h2>
+        <p>Write your name on the board. I'll come.</p>
+      </section>
+      <section class="side">
+        <h2>Don't understand this screen?</h2>
+        <p>Take a photo of it. Ask a chatbot on your phone to explain it in your language.</p>
+      </section>
+      <section class="side">
+        <h2>Keep your page</h2>
+        <p>In December you give me your app and a short piece of writing: what works and what doesn't. Your page is the start.</p>
+        <p>Paper and pens: by the door.</p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

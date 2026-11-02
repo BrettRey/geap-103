@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103 in-class writing 1</title>
+<style>
+  :root { --u: min(1vh, 0.5625vw); --ink: #16202e; --muted: #4a5568; --accent: #800020; --rule: #e3dcdf; --bg: #ffffff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { height: 100vh; display: flex; flex-direction: column; padding: 3.2vh 5vw 3vh; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 1.2vh; }
+  h1 { font-size: calc(4.8 * var(--u)); color: var(--accent); font-weight: 700; }
+  header p { font-size: calc(2.6 * var(--u)); color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .prompt { font-size: calc(6 * var(--u)); line-height: 1.25; font-weight: 600; }
+  .length { font-size: calc(3.6 * var(--u)); color: var(--muted); margin-top: 3vh; }
+  .rules { display: flex; gap: 2vw; flex-wrap: wrap; margin-top: 5vh; }
+  .rules span { font-size: calc(3 * var(--u)); background: #f4eff0; color: var(--accent); font-weight: 600;
+    padding: 1vh 1.6vw; border-radius: 1vh; }
+  footer { display: flex; justify-content: space-between; align-items: flex-end; }
+  #timer { font-size: calc(9 * var(--u)); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink); }
+  #timer.done { color: var(--accent); }
+  .hint { font-size: calc(1.7 * var(--u)); color: #9aa3ad; text-align: right; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Writing task · 10 minutes · no AI</h1>
+    <p>GEAP 103 · In-class writing 1</p>
+  </header>
+  <div class="body">
+    <p class="prompt">Describe something you tried to do with AI this semester. What happened? What would you do differently?</p>
+    <p class="length">Write about 50–100 words.</p>
+    <div class="rules"><span>By hand</span><span>No AI</span><span>No notes</span><span>No partner</span></div>
+  </div>
+  <footer>
+    <div id="timer">10:00</div>
+    <p class="hint">Space: start or pause the timer · R: reset</p>
+  </footer>
+</main>
+<script>
+  const el = document.getElementById("timer");
+  let left = 600, running = false, last = null;
+  function show() {
+    const m = Math.floor(left / 60), s = Math.floor(left % 60);
+    el.textContent = left > 0 ? `${m}:${String(s).padStart(2, "0")}` : "Time's up";
+    el.classList.toggle("done", left <= 0);
+  }
+  function tick(t) {
+    if (!running) return;
+    if (last !== null) left = Math.max(0, left - (t - last) / 1000);
+    last = t; show();
+    if (left > 0) requestAnimationFrame(tick); else running = false;
+  }
+  document.addEventListener("keydown", e => {
+    if (e.key === " ") { e.preventDefault(); running = !running; last = null; if (running) requestAnimationFrame(tick); }
+    if (e.key === "r" || e.key === "R") { running = false; left = 600; last = null; show(); }
+  });
+  show();
+</script>
+</body>
+</html>

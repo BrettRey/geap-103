@@ -1,5 +1,5 @@
 # GEAP 103 Status
-<!-- SUMMARY: GEAP 103 materials are complete through 14 curricular units; Fall 2026 delivery variants are drafted · status: active · updated: 2026-09-04 -->
+<!-- SUMMARY: GEAP 103 now runs as a self-paced task progression; the conference-portfolio assessment was agreed with Tim and Sigrid on 2026-10-04, but the published framework and schedules still show v6 · status: active · updated: 2026-10-04 -->
 
 ### 2026-03-25 Session Notes
 - Week 4 materials written, review-boarded (6 reviewers, all R&R), revised. Triad defence format adopted. Scoring sheet trimmed to 3 criteria for diagnostic baseline.
@@ -63,3 +63,23 @@
 **Micro-Defence observation fallback:** When the instructor lacks enough direct evidence from the triad, the student may book a short live follow-up outside class. The result remains Deferred until the observation occurs. This is an individual contingency, not a mandatory appointment system.
 
 **Next:** Publish the section-specific LMS schedule and exact absence make-up blocks; prepare/download the Week 2 static responses, Week 5 manual accessibility checklist, Week 6 alternate datasets, and Week 7 document-path practice artifact before teaching.
+
+### 2026-10-04 Status
+
+- Classes moved to the self-paced task progression from September 23 (`reviews/self-paced-task-progression-2026-09-17.md`; student guide in `materials/self-paced-student-guide-2026-09-22/`). The September 4 notes above are superseded where they assume weekly lessons.
+- Assessment: the conference portfolio (Plan 2 in `reviews/assessment-plans-2026-09-29.md`) was proposed on 2026-09-29 and agreed by Tim and Sigrid. See the 2026-10-04 entry in `DECISIONS.md` for its terms.
+- Tasks 11A, 14A and 17A (MCP and API use) are drafted in the progression only. They're not yet in the student guide and are untested in the app.
+- Sigrid plans to observe Brett's class on October 5, including conferences, and to compare levels with him.
+- Built for October 5, not yet pushed: student announcement (`materials/assessment-announcement-2026-10.md`), conference observation sheet (`admin/conference-observation-sheet.md`, `output/pdf/conference-observation-sheet.pdf`), conference tracker template (`admin/conference-tracker-template.xlsx`), and v7 updates to the framework, both section schedules, `student-schedule.md`, the delivery ledger, and README. Filled trackers go in the gitignored `private/` folder.
+- Grading Option 1 adopted (confirmed levels, pass gate, caps; weights unchanged). The tracker computes confirmed levels, the gate, caps, and course grades; the announcement, framework v7, observation sheet, and student schedule state the rules. Every conference also asks about AI use, giving evidence for outcomes 3 and 4.
+- Course terminology applied (GitHub, Copilot as the harness, model, agent, chat interface, session) to the student guide, its rebuilt `student-guide.zip`, and the progression. The guide now shows "Updated October 4, 2026". Not pushed.
+- Tim and Sigrid were sent the grading rules, terms, and materials on 2026-10-04. October 5 class plan: `reviews/class-plan-2026-10-05.md`; milling questions: `materials/milling-2026-10-05.md`.
+
+- The student guide folder and its zip were published on 2026-10-04 (commit 4b7d7f6); Pages serves it at https://brettrey.github.io/geap-103/materials/self-paced-student-guide-2026-09-22/. Task 4's version history and Git explanation and the new glossary entries were pushed the same day (commit e639f52). Later pushes the same day added the work-log pointer in Tasks 4–5, copying a path in Task 1, and the rule that Git repositories stay out of synced folders (Task 7 and the setup page; commit c955e29).
+
+- The announcement, the Monday schedule, and the October 5 milling questions were pushed on 2026-10-04 (commit 1c197d7).
+
+- The rest of the v7 changes students can see (Wednesday schedule, `student-schedule.md`, framework, README, delivery ledger, `.gitignore`) were pushed on 2026-10-04 (commit e16ee1f).
+- One `GEAP103` course folder in the home folder is now the rule for students (guide Task 1, step 2; Task 7; setup page; pushed in commit e43273f). Brett's files are copied to `~/GEAP103`; delete `Documents/GEAP103` after re-pointing Copilot.
+
+**Next:** Before Task 7, test where Copilot puts a repository it clones from GitHub. Decide the tolerance for one outcome at level 1 (tracker default: strict). Agree the percentage conversion (proposed values are in the tracker). Confirm October 7 for the Wednesday section's first in-class writing task (none ran on September 30). Test Tasks 11A, 14A and 17A in Copilot before adding them to the student guide.
