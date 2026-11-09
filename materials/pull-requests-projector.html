@@ -47,11 +47,11 @@
   .arrow small { display: block; font-size: calc(2.3 * var(--u)); font-weight: 400; color: var(--muted); }
 
   /* 3 words */
-  dl.words { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr);
-    grid-auto-flow: column; column-gap: 3.5vw; row-gap: 1vh; }
+  dl.words { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column; column-gap: 3.5vw; row-gap: 0.6vh; }
   dl.words div { border-bottom: 0.15vh solid var(--rule); display: flex; flex-direction: column; justify-content: center; }
-  dt { font-size: calc(3.7 * var(--u)); font-weight: 700; color: var(--accent); }
-  dd { font-size: calc(2.95 * var(--u)); line-height: 1.26; }
+  dt { font-size: calc(3.3 * var(--u)); font-weight: 700; color: var(--accent); }
+  dd { font-size: calc(2.7 * var(--u)); line-height: 1.24; }
 
   /* 4 pairs */
   .pairs { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(2, 1fr); row-gap: 5vh; padding: 1.5vh 0; }
@@ -75,6 +75,8 @@
   ol.steps { list-style: none; counter-reset: s; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
   ol.steps li { counter-increment: s; display: grid; grid-template-columns: 6vh 1fr; font-size: calc(3.2 * var(--u)); line-height: 1.3; }
   ol.steps li::before { content: counter(s); font-size: calc(4.2 * var(--u)); font-weight: 700; color: var(--accent); line-height: 1.05; }
+  ol.steps.dense li { font-size: calc(2.85 * var(--u)); line-height: 1.27; }
+  ol.steps.dense + .check, .lead + ol.steps.dense { margin-top: 0; }
   .check { font-size: calc(2.9 * var(--u)); line-height: 1.3; background: var(--chip); border-radius: 1.2vh; padding: 1.1vh 1.4vw; margin-top: 1.2vh; }
   .check b { color: var(--accent); }
 
@@ -102,28 +104,91 @@
   .ringed { position: relative; width: 100%; flex: none; line-height: 0; }
   .shot .imgs.two .ringed img { max-height: none; width: 100%; height: auto; }
   .ringed i { position: absolute; border: 0.5vh solid var(--accent); border-radius: 1.2vh; }
+  /* phone layout: a tall, narrow screen. Slides scroll, and everything stacks in one column. */
+  @media (max-aspect-ratio: 1/1) {
+    :root { --u: 1.3vw; }
+    html, body { height: auto; overflow: auto; }
+    section { height: auto; min-height: 100vh; padding: 4vw 5vw 6vw; }
+    header { flex-direction: column; align-items: flex-start; gap: 1vw; margin-bottom: 4vw; }
+    .body, ol.steps, ol.qs { justify-content: flex-start; gap: 5vw; }
+    .lead, .check { margin-bottom: 4vw; }
+    ol.steps li, ol.qs li { grid-template-columns: 9vw 1fr; }
+    .pic, .roles, .shot, .pair, .pair.three, .frame { grid-template-columns: 1fr; row-gap: 4vw; }
+    .pairs, .frames { grid-template-rows: none; row-gap: 8vw; }
+    .pair > div, .repo { padding: 4vw; }
+    .pair .vs { justify-self: center; transform: rotate(90deg); }
+    dl.words { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; row-gap: 3vw; }
+    dl.words div { padding-bottom: 3vw; }
+    .mid { flex-direction: row; gap: 4vw; }
+    .arrow span { display: inline-block; transform: rotate(90deg); line-height: 1; }
+    .shot .imgs { height: auto; }
+    .shot img, .shot .imgs.two img { max-height: none; width: 100%; }
+    .shot .cap { margin-top: 4vw; }
+    .frame { padding-bottom: 4vw; }
+    i.gap { width: 18vw; }
+    .foot { margin-top: 6vw; }
+  }
 </style>
 </head>
 <body>
 
 <section>
-  <header><h1>Changing someone else's project</h1><p>GEAP 103 · Forks and pull requests</p></header>
-  <div class="body">
-    <p class="big">You want to add something to a classmate's project.</p>
-    <p class="big">You can't change their repository. Only the owner can.</p>
-    <p class="answer">So you make your own copy, change your copy, and ask the owner to take your change.</p>
+  <header><h1>Before class</h1><p>Do these at home</p></header>
+  <ol class="steps">
+    <li><div>Send Brett your <b>GitHub username</b>, if you haven't. Use a Blackboard message.</div></li>
+    <li><div>Brett will invite you to our class group on GitHub, <b>GEAP-103</b>. GitHub emails you. Open the email and accept. The email can take a day to come, and it works for 7 days.</div></li>
+    <li><div><b>Update Copilot at home.</b> Open the GitHub Copilot app. If it asks you to update, say yes and wait. In class, don't click update. It can take a long time.</div></li>
+    <li><div>Do <b>Step 1</b>. It's on the next three slides. Then <b>stop</b>. The other slides are for a later class.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> you're in our class group when <b>github.com/GEAP-103</b> shows <b>event-template</b>. An empty page means you aren't in yet, or you aren't signed in. &nbsp; <b>Stuck?</b> Ask Copilot to explain, and bring your question to class.</p>
+</section>
+
+<section>
+  <header><h1>Step 1: Put your app on main</h1><p>A pull request to yourself</p></header>
+  <p class="lead">Copilot often builds your app on a separate branch. Then <b>main</b>, the main version on GitHub, shows only a README.</p>
+  <ol class="steps dense">
+    <li><div>Open the GitHub Copilot app. Click your <b>old chat</b>, where you made your app.</div></li>
+    <li><div>Ask Copilot: "What's the GitHub address of this project?" No address? Tell Copilot: "Put this project on GitHub in a new <b>private</b> repository." Then ask again.</div></li>
+    <li><div>Sign in to github.com in your browser, and open the address. Look at the <b>main</b> branch. Can you see your app's files? <b>Yes: you're finished.</b></div></li>
+    <li><div>No: tell Copilot:
+      <span class="say">Open a pull request from my app's branch to main. Don't merge it.</span></div></li>
+    <li><div>On GitHub, click <b>Pull requests</b> and open yours. Click <span class="btn">Merge pull request</span>, then <span class="btn">Confirm merge</span>.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> your app's files are on main. &nbsp; <b>No app? A grey button? An error?</b> Stop there, and show Brett in class.</p>
+</section>
+
+<section>
+  <header><h1>Where is your app?</h1><p>Step 1 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="pull-requests-captures/branch-menu.png" alt="A repository page on GitHub with the branch menu open, showing two branches: main and first-version."></div>
+    <div class="cap"><p>Click the <b>branch menu</b>.</p><p>This repository has two branches: <b>main</b> and <b>first-version</b>.</p><p><b>main</b> is the branch GitHub shows first. Check that your app is there.</p></div>
   </div>
 </section>
 
 <section>
-  <header><h1>Before class</h1><p>Do these at home</p></header>
-  <ol class="steps">
-    <li><div>Send Brett your <b>GitHub username</b>, if you haven't. Use a Blackboard message.</div></li>
-    <li><div>GitHub will email you an invitation to our class group, <b>GEAP-103</b>. Open the email and accept it. No email? Go to <b>github.com/GEAP-103</b>.</div></li>
-    <li><div><b>Update Copilot at home.</b> Open the GitHub Copilot app. If it asks you to update, say yes and wait. In class, don't click update. It can take a long time.</div></li>
-    <li><div>Do <b>Step 1: Put your app on main</b>. It's in these slides. <b>Stop after Step 1.</b> We'll do the rest in class.</div></li>
-  </ol>
-  <p class="check"><b>Stuck?</b> Ask Copilot to explain. Then bring your question to class.</p>
+  <header><h1>A pull request to yourself</h1><p>Step 1 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/pr1-open.png" alt="A pull request marked Open. It asks to merge one commit into main from first-version."><img src="pull-requests-captures/pr1-merged.png" alt="The same pull request marked Merged."></div>
+    <div class="cap"><p>It asks to merge <b>first-version</b> into <b>main</b>.</p><p><b class="w">Open</b> means the pull request is waiting.</p><p><b class="w">Merged</b> means the change is now in main.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Stop here</h1><p>The homework ends</p></header>
+  <div class="body">
+    <p class="big">That's the homework.</p>
+    <p class="big">The next slides are for a later class. You don't need them yet.</p>
+    <p class="answer">Some links in them won't open until you've joined our class group on GitHub.</p>
+  </div>
+</section>
+
+<section>
+  <header><h1>Changing someone else's project</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="body">
+    <p class="big">You want to add something to a classmate's project on GitHub.</p>
+    <p class="big">You can't change their repository. Only the owner can.</p>
+    <p class="answer">So you make your own copy, change your copy, and ask the owner to take your change.</p>
+  </div>
 </section>
 
 <section>
@@ -150,28 +215,32 @@
 <section>
   <header><h1>The words</h1><p>GEAP 103 · Forks and pull requests</p></header>
   <dl class="words">
-    <div><dt>fork</dt><dd>Your own copy of someone else's repository on GitHub. You can change it without changing theirs.</dd></div>
-    <div><dt>upstream</dt><dd>The repository your fork came from.</dd></div>
-    <div><dt>commit</dt><dd>Record your changes as a version.</dd></div>
-    <div><dt>pull request</dt><dd>A change you propose. The owner reviews it before it's combined with their work.</dd></div>
-    <div><dt>review</dt><dd>Read a proposed change, try it, and say what you think.</dd></div>
-    <div><dt>request changes</dt><dd>Ask the contributor to fix something before you merge.</dd></div>
-    <div><dt>merge</dt><dd>Combine the accepted change with the owner's work.</dd></div>
-    <div><dt>close</dt><dd>End a pull request without merging it.</dd></div>
+    <div><dt>fork <i class="pos">n.</i></dt><dd>Your own copy of someone else's repository on GitHub. You can change it without changing theirs.</dd></div>
+    <div><dt>upstream <i class="pos">n.</i></dt><dd>The repository your fork came from.</dd></div>
+    <div><dt>commit <i class="pos">v.</i></dt><dd>Record your changes as a version.</dd></div>
+    <div><dt>push <i class="pos">v.</i></dt><dd>Send your commits from your computer to GitHub.</dd></div>
+    <div><dt>pull request <i class="pos">n.</i></dt><dd>A change you propose (suggest). The owner reviews it before it's combined with their work.</dd></div>
+    <div><dt>review <i class="pos">v.</i></dt><dd>Read a proposed change, try it, and say what you think.</dd></div>
+    <div><dt>approve <i class="pos">v.</i></dt><dd>Say that the change is good.</dd></div>
+    <div><dt>request changes <i class="pos">v.</i></dt><dd>Ask for a fix before you merge.</dd></div>
+    <div><dt>merge <i class="pos">v.</i></dt><dd>Combine the accepted change with the owner's work.</dd></div>
+    <div><dt>close <i class="pos">v.</i></dt><dd>End a pull request without merging it.</dd></div>
   </dl>
 </section>
 
 <section>
-  <header><h1>Don't mix these up</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <header><h1>Don't confuse these words</h1><p>GEAP 103 · Forks and pull requests</p></header>
   <div class="pairs">
     <div class="pair three">
       <div><b>fork <i class="pos">n.</i></b><span>A copy of a repository on GitHub. It's a whole new repository, and it's yours.</span></div>
       <p class="vs" aria-hidden="true">&harr;</p>
       <div><b>clone <i class="pos">n.</i></b><span>A copy of a repository on your computer.</span></div>
       <p class="vs" aria-hidden="true">&harr;</p>
-      <div><b>branch <i class="pos">n.</i></b><span>A line of work inside one repository.</span></div>
+      <div><b>branch <i class="pos">n.</i></b><span>A separate version inside one repository.</span></div>
     </div>
-    <div class="pair">
+    <div class="pair three">
+      <div><b>push <i class="pos">v.</i></b><span>Send your commits from your computer to GitHub.</span></div>
+      <p class="vs" aria-hidden="true">&harr;</p>
       <div><b>pull <i class="pos">v.</i></b><span>Get changes from GitHub onto your computer.</span></div>
       <p class="vs" aria-hidden="true">&harr;</p>
       <div><b>pull request <i class="pos">n.</i></b><span>A request to the owner to take your change. The owner "pulls" it in.</span></div>
@@ -207,94 +276,59 @@
 </section>
 
 <section>
-  <header><h1>Step 1: Put your app on main</h1><p>A pull request to yourself</p></header>
-  <p class="lead">Copilot often builds your app on a separate branch. Then your <b>main</b> branch on GitHub shows only a README. Your app isn't in the main version yet.</p>
-  <ol class="steps">
-    <li><div>Open your repository on GitHub. Look at the <b>main</b> branch. Can you see your app's files?</div></li>
-    <li><div>If you can't, tell Copilot:
-      <span class="say">Open a pull request from my app's branch to main. Don't merge it.</span></div></li>
-    <li><div>Read the pull request on GitHub. If it's right, click <span class="btn">Merge pull request</span>.</div></li>
-  </ol>
-  <p class="check"><b>Check:</b> your app's files are on main. &nbsp; <b>No repository on GitHub yet?</b> Tell Copilot: "Put this project on GitHub in a new <b>private</b> repository."</p>
-</section>
-
-<section>
-  <header><h1>Where is your app?</h1><p>Step 1 on GitHub</p></header>
-  <div class="shot">
-    <div class="imgs"><img src="pull-requests-captures/branch-menu.png" alt="A repository page on GitHub with the branch menu open, showing two branches: main and first-version."></div>
-    <div class="cap"><p>Click the <b>branch menu</b>.</p><p>This repository has two branches: <b>main</b> and <b>first-version</b>.</p><p><b>main</b> is the default branch. Check that your app is there.</p></div>
-  </div>
-</section>
-
-<section>
-  <header><h1>A pull request to yourself</h1><p>Step 1 on GitHub</p></header>
-  <div class="shot">
-    <div class="imgs two"><img src="pull-requests-captures/pr1-open.png" alt="A pull request marked Open. It asks to merge one commit into main from first-version."><img src="pull-requests-captures/pr1-merged.png" alt="The same pull request marked Merged."></div>
-    <div class="cap"><p>It asks to merge <b>first-version</b> into <b>main</b>.</p><p><b class="w">Open</b> means the pull request is waiting.</p><p><b class="w">Merged</b> means the change is now in main.</p></div>
-  </div>
-</section>
-
-<section>
-  <header><h1>Stop here</h1><p>The homework ends</p></header>
-  <div class="body">
-    <p class="big">That's the homework.</p>
-    <p class="big">The next slides are for class. You don't need them yet.</p>
-    <p class="answer">Some links in them won't open until you've joined our class group on GitHub.</p>
-  </div>
-</section>
-
-<section>
   <header><h1>Our class benchmark</h1><p>Everyday AI Benchmarks</p></header>
-  <p class="lead">A <b>benchmark</b> is a test that you give to different AIs in the same way, so you can compare them. Each of us makes one <b>event</b>: a contest for AIs.</p>
-  <ol class="steps">
-    <li><div>The contestants are free chat AIs, like ChatGPT, Claude, Gemini, Grok or Muse. <b>Copilot never competes.</b> Copilot builds things for your event.</div></li>
+  <p class="lead">A <b>benchmark</b> is a set of tests for AIs. Every AI gets the same tests, so we can compare them. Each of us makes one test. We call it an <b>event</b>.</p>
+  <ol class="steps dense">
+    <li><div>The contestants (the players) are free chat AIs, like ChatGPT, Claude, Gemini, Grok or Muse. <b>Copilot never competes.</b> It can help you build things for your event.</div></li>
     <li><div>Write the rules and the scoring <b>before</b> you run your event.</div></li>
-    <li><div>For every result, write the date, the product, and the model name it shows.</div></li>
-    <li><div>If every AI gets the top score, your event is too easy. Make it harder.</div></li>
+    <li><div><b>You</b> run the event, on the AI's website. Copilot doesn't run it, and it doesn't write the result.</div></li>
+    <li><div>For every result, write the date, the product, and the model name it shows. No name? Write "not shown".</div></li>
+    <li><div>No private information: no full names, student numbers, addresses, or photos of people.</div></li>
   </ol>
-  <p class="check"><b>Ideas:</b> a word game for two AIs. A game from your country. Which AI understands your accent? Which AI says "I don't know"?</p>
+  <p class="check"><b>Too easy?</b> If every AI gets the top score, make your event harder. &nbsp; <b>Ideas:</b> a word game for two AIs. A game from your country. Which AI understands your accent? Which AI says "I don't know"?</p>
 </section>
 
 <section>
   <header><h1>Step 2: Make your event</h1><p>Your own repository in GEAP-103</p></header>
-  <ol class="steps">
+  <ol class="steps dense">
     <li><div>On <b>paper</b>, write your event's question, rules and scoring. Show a classmate. Can they follow your rules without asking you?</div></li>
-    <li><div>Open <b>github.com/GEAP-103/event-template</b>. Click <span class="btn">Use this template</span>, then <span class="btn">Create a new repository</span>. Owner: <b>GEAP-103</b>. Choose <b>Private</b>.</div></li>
-    <li><div>Fill in the README: the question, the contestants, the rules, the scoring. Copilot can help you write clearly, but the rules are yours.</div></li>
-    <li><div>Run your event once. Add your result to the <b>results</b> folder.</div></li>
+    <li><div>Open <b>github.com/GEAP-103/event-template</b>. Click <span class="btn">Use this template</span>, then <span class="btn">Create a new repository</span>.</div></li>
+    <li><div><b>Owner</b> means where the repository lives. Choose <b>GEAP-103</b>, not your own name. Repository name: your event's name, with no spaces. Choose <b>Private</b>.</div></li>
+    <li><div>Open the README and click the pencil. Write your question, contestants, rules and scoring. Copilot can help you write clearly, but the rules are yours.</div></li>
+    <li><div>Run your event once yourself. In the <b>results</b> folder, click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. Copy the lines from EXAMPLE.md and fill them in.</div></li>
   </ol>
-  <p class="check"><b>Example:</b> github.com/GEAP-103/taboo-league</p>
+  <p class="check"><b>Check:</b> your repository's address starts with <b>github.com/GEAP-103/</b> &nbsp; <b>Example:</b> github.com/GEAP-103/taboo-league</p>
 </section>
 
 <section>
   <header><h1>Step 3: Add your event to the class benchmark</h1><p>A pull request to Brett</p></header>
-  <ol class="steps">
+  <ol class="steps dense">
     <li><div>Open <b>github.com/GEAP-103/everyday-ai-benchmarks</b>. Open the <b>events</b> folder.</div></li>
-    <li><div>Click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. You can't change Brett's repository, so GitHub makes a <b class="w">fork</b> for you.</div></li>
-    <li><div>Name the file after your event, for example <b>taboo-league.md</b>. Write your event's name, your username, the link to its repository, and its question.</div></li>
+    <li><div>Click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. You can't change Brett's repository, so GitHub asks you to <b class="w">fork</b> it. Click <span class="btn">Fork this repository</span>.</div></li>
+    <li><div>Use your event's name as the file name, for example <b>word-race.md</b>. Write your event's name, your username, the link to its repository, and its question.</div></li>
     <li><div>Click <span class="btn">Commit changes</span>, then <span class="btn">Propose changes</span>, then <span class="btn">Create pull request</span>. Say what you added.</div></li>
-    <li><div>Wait for Brett's <b class="w">review</b>. If he requests changes, fix your file and reply to him.</div></li>
+    <li><div>Brett <b class="w">reviews</b> it. If he requests changes, open your pull request, click <b>Files changed</b>, and edit your file there. Then reply to him.</div></li>
   </ol>
-  <p class="check"><b>Check:</b> your pull request says <b>Merged</b>, and your event is in the events folder.</p>
+  <p class="check"><b>Check:</b> your pull request says <b>Merged</b>, and your event is in the events folder. &nbsp; <b>Don't wait.</b> Start Step 4.</p>
 </section>
 
 <section>
   <header><h1>Step 4: Run a classmate's event</h1><p>You're the contributor</p></header>
-  <ol class="steps">
-    <li><div>Choose an event from the class benchmark. Open its repository and click <span class="btn">Fork</span>.</div></li>
-    <li><div>Read the rules. Run the event with an AI that nobody has tested in it yet. Follow the rules <b>exactly</b>.</div></li>
+  <ol class="steps dense">
+    <li><div>Open a classmate's event. Brett may give you one, so that every event gets a result. Click <span class="btn">Fork</span>. Owner: your own username. Click <span class="btn">Create fork</span>.</div></li>
+    <li><div>Read the rules. Look in the <b>results</b> folder, and try to choose an AI that isn't there yet. Run the event yourself. Follow the rules <b>exactly</b>, and save what the AI wrote.</div></li>
     <li><div>Add your result to your fork. You can tell Copilot:
-      <span class="say">Work in my fork of this repository. Add my result as a new file in the results folder. Then commit and push.</span></div></li>
-    <li><div>Open a pull request to your classmate's repository. Say which AI you tested and what happened.</div></li>
-    <li><div>Read the owner's comment and reply to it.</div></li>
+      <span class="say">Clone my fork: (your fork's address). In the results folder, copy EXAMPLE.md to (your username)-(the AI).md. Fill it in with these notes: (your notes). Don't invent anything. Then commit and push.</span></div></li>
+    <li><div>On your fork's page, click <span class="btn">Compare &amp; pull request</span>. Say which AI you tested and what happened.</div></li>
+    <li><div>Read the owner's comment and reply. If they ask for a change, change your file and push again. Your pull request updates by itself.</div></li>
   </ol>
 </section>
 
 <section>
   <header><h1>Fork the repository</h1><p>Step 4 on GitHub</p></header>
   <div class="shot">
-    <div class="imgs two"><div class="ringed"><img src="pull-requests-captures/fork-button.png" alt="The top of a repository page on GitHub, with the Fork button at the top right."></div><img src="pull-requests-captures/fork-page.png" alt="A fork's page. Under the repository name it says: forked from GEAP-103/word-practice-app."></div>
-    <div class="cap"><p>Click <span class="btn">Fork</span> at the top of the owner's repository.</p><p>Your fork has the same name. Under the name, it says <b class="w">forked from</b> and the owner's repository.</p></div>
+    <div class="imgs two"><img src="pull-requests-captures/fork-button.png" alt="The top of a repository page on GitHub, with the Fork button at the top right."><img src="pull-requests-captures/fork-page.png" alt="A fork's page. Under the repository name it says: forked from GEAP-103/word-practice-app. A yellow banner has a Compare and pull request button."></div>
+    <div class="cap"><p>Click <span class="btn">Fork</span> at the top of the owner's repository.</p><p>Your fork has the same name. Under the name, it says <b class="w">forked from</b> and the owner's repository.</p><p>After you push, your fork shows <span class="btn">Compare &amp; pull request</span>.</p></div>
   </div>
 </section>
 
@@ -309,10 +343,10 @@
 <section>
   <header><h1>Step 5: A classmate sends you a result</h1><p>You're the owner</p></header>
   <ol class="steps">
-    <li><div>Open the pull request. Read the result. Did your classmate follow your rules?</div></li>
+    <li><div>Open the pull request. Read the result, and read what the AI wrote. Did your classmate follow your rules?</div></li>
     <li><div>Write your comment on <b>paper</b> first. Then type it in the pull request.</div></li>
-    <li><div>Decide. Click <span class="btn">Approve</span> or <span class="btn">Request changes</span>, then <span class="btn">Submit review</span>.</div></li>
-    <li><div>When the result follows your rules, click <span class="btn">Merge pull request</span>. If it doesn't, say why and ask for a new run.</div></li>
+    <li><div>Decide. Click <b>Files changed</b>, then <span class="btn">Submit review</span>. Choose <b>Approve</b> or <b>Request changes</b>.</div></li>
+    <li><div>When the result follows your rules, click <span class="btn">Merge pull request</span>. If it doesn't, say why, and ask them to run it again. If you don't want it at all, click <span class="btn">Close pull request</span>.</div></li>
   </ol>
   <p class="check"><b>It's your event.</b> You can say no. Give your reason.</p>
 </section>
@@ -377,13 +411,14 @@
   slides.forEach((s, i) => {
     const f = document.createElement("p");
     f.className = "foot";
-    f.innerHTML = "<span>Arrow keys or click to move.</span><span>" + (i + 1) + " / " + slides.length + "</span>";
+    f.innerHTML = "<span>Arrow keys, or tap the right side to go on and the left side to go back.</span><span>" + (i + 1) + " / " + slides.length + "</span>";
     s.appendChild(f);
   });
   let at = 0;
   function show(n) {
     at = Math.max(0, Math.min(slides.length - 1, n));
     slides.forEach((s, i) => s.classList.toggle("on", i === at));
+    window.scrollTo(0, 0);
     history.replaceState(null, "", "#" + (at + 1));
   }
   document.addEventListener("keydown", e => {
