@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103: forks and pull requests</title>
+<style>
+  :root { --u: min(1vh, 0.5625vw); --ink: #16202e; --muted: #4a5568; --accent: #800020; --rule: #e3dcdf;
+    --chip: #f4eff0; --bg: #ffffff; --you: #1d4e89; --youbg: #eef3f9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink); overflow: hidden;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  section { display: none; height: 100vh; flex-direction: column; padding: 3vh 4vw 2.4vh; }
+  section.on { display: flex; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 1.1vh; margin-bottom: 1.6vh; }
+  h1 { font-size: calc(4.6 * var(--u)); color: var(--accent); font-weight: 700; }
+  header p { font-size: calc(2.3 * var(--u)); color: var(--muted); }
+  .body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; }
+  .foot { display: flex; justify-content: space-between; font-size: calc(1.6 * var(--u)); color: #9aa3ad; margin-top: 0.8vh; }
+  b.w { color: var(--accent); }
+  .btn { font-weight: 700; background: var(--chip); border: 0.2vh solid var(--rule); border-radius: 0.8vh;
+    padding: 0 0.5vw; white-space: nowrap; }
+  .say { display: block; margin-top: 0.8vh; background: var(--youbg); border-left: 0.6vh solid var(--you);
+    padding: 0.8vh 1vw; font-size: 0.94em; }
+  .lead { font-size: calc(2.9 * var(--u)); line-height: 1.3; color: var(--muted); margin-bottom: 2vh; }
+
+  /* 1 title */
+  .big { font-size: calc(5.4 * var(--u)); line-height: 1.25; font-weight: 600; }
+  .big + .big { margin-top: 3.5vh; }
+  .answer { font-size: calc(4.2 * var(--u)); line-height: 1.3; margin-top: 5vh; color: var(--accent); font-weight: 600; }
+
+  /* 2 picture */
+  .pic { display: grid; grid-template-columns: 1fr 24vw 1fr; align-items: stretch; column-gap: 1.2vw; flex: 1; min-height: 0; }
+  .repo { border: 0.4vh solid var(--accent); border-radius: 1.6vh; padding: 2.2vh 1.6vw; display: flex;
+    flex-direction: column; justify-content: center; }
+  .repo.you { border-color: var(--you); background: var(--youbg); }
+  .repo h2 { font-size: calc(3.7 * var(--u)); line-height: 1.15; }
+  .repo .tag { font-size: calc(2.6 * var(--u)); color: var(--muted); margin: 0.6vh 0 2.6vh; }
+  .act { font-size: calc(2.9 * var(--u)); line-height: 1.28; margin-top: 2vh; }
+  .act b { display: block; font-size: calc(3.3 * var(--u)); color: var(--accent); }
+  .repo.you .act b { color: var(--you); }
+  .mid { display: flex; flex-direction: column; justify-content: space-around; text-align: center; }
+  .arrow { font-size: calc(3.3 * var(--u)); font-weight: 700; line-height: 1.2; }
+  .arrow span { display: block; font-size: calc(9 * var(--u)); line-height: 0.8; font-weight: 400; }
+  .arrow.go { color: var(--you); } .arrow.back { color: var(--accent); }
+  .arrow small { display: block; font-size: calc(2.3 * var(--u)); font-weight: 400; color: var(--muted); }
+
+  /* 3 words */
+  dl.words { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column; column-gap: 3.5vw; row-gap: 1vh; }
+  dl.words div { border-bottom: 0.15vh solid var(--rule); display: flex; flex-direction: column; justify-content: center; }
+  dt { font-size: calc(3.7 * var(--u)); font-weight: 700; color: var(--accent); }
+  dd { font-size: calc(2.95 * var(--u)); line-height: 1.26; }
+
+  /* 4 pairs */
+  .pairs { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(2, 1fr); row-gap: 5vh; padding: 1.5vh 0; }
+  .pair.three { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  i.pos { font-style: italic; font-weight: 400; font-size: 0.72em; color: var(--muted); }
+  .pair { display: grid; grid-template-columns: 1fr auto 1fr; column-gap: 1vw; align-items: stretch; }
+  .pair .vs { align-self: center; font-size: calc(6.5 * var(--u)); line-height: 1; color: var(--accent); }
+  .pair > div { background: var(--chip); border-radius: 1.4vh; padding: 1.4vh 1.6vw; display: flex; flex-direction: column; justify-content: center; }
+  .pair b { font-size: calc(3.7 * var(--u)); color: var(--accent); }
+  .pair span { font-size: calc(3 * var(--u)); line-height: 1.26; }
+
+  /* 5 roles */
+  .roles { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.4vw; }
+  .roles .repo h2 { margin-bottom: 0.4vh; }
+  .roles ul { list-style: none; }
+  .roles li { font-size: calc(3.4 * var(--u)); line-height: 1.3; margin-top: 2.1vh; }
+  .roles li b { color: var(--accent); } .roles .you li b { color: var(--you); }
+  .after { font-size: calc(3 * var(--u)); color: var(--muted); text-align: center; margin-top: 1.6vh; }
+
+  /* 6-9 steps */
+  ol.steps { list-style: none; counter-reset: s; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
+  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 6vh 1fr; font-size: calc(3.2 * var(--u)); line-height: 1.3; }
+  ol.steps li::before { content: counter(s); font-size: calc(4.2 * var(--u)); font-weight: 700; color: var(--accent); line-height: 1.05; }
+  .check { font-size: calc(2.9 * var(--u)); line-height: 1.3; background: var(--chip); border-radius: 1.2vh; padding: 1.1vh 1.4vw; margin-top: 1.2vh; }
+  .check b { color: var(--accent); }
+
+  /* 10 frames */
+  .frames { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(3, 1fr); row-gap: 1.6vh; }
+  .frame { display: grid; grid-template-columns: 21vw 1fr; column-gap: 1.6vw; align-items: center; border-bottom: 0.15vh solid var(--rule); }
+  .frame h2 { font-size: calc(3.3 * var(--u)); color: var(--accent); line-height: 1.2; }
+  .frame h2 small { display: block; font-size: calc(2.3 * var(--u)); color: var(--muted); font-weight: 400; }
+  .frame p { font-size: calc(3.3 * var(--u)); line-height: 1.34; }
+  .frame p + p { margin-top: 1vh; }
+  i.gap { font-style: normal; display: inline-block; width: 7vw; border-bottom: 0.3vh solid var(--ink); }
+
+  /* 11 questions */
+  ol.qs { list-style: none; counter-reset: q; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
+  ol.qs li { counter-increment: q; display: grid; grid-template-columns: 6vh 1fr; font-size: calc(3.9 * var(--u)); line-height: 1.28; font-weight: 600; }
+  ol.qs li::before { content: counter(q); font-size: calc(4.4 * var(--u)); font-weight: 700; color: var(--accent); line-height: 1.1; }
+  /* screen captures */
+  .shot { flex: 1; min-height: 0; display: grid; grid-template-columns: 58fr 42fr; column-gap: 2.4vw; align-items: center; }
+  .shot .imgs { min-height: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 2vh; }
+  .shot img { display: block; max-width: 100%; max-height: 100%; min-height: 0; object-fit: contain; object-position: left center;
+    border: 0.25vh solid var(--rule); border-radius: 1vh; box-shadow: 0 0.6vh 2vh rgba(22, 32, 46, 0.12); align-self: flex-start; }
+  .shot .imgs.two img { max-height: 48%; }
+  .shot .cap p { font-size: calc(3.3 * var(--u)); line-height: 1.3; margin-bottom: 2.6vh; }
+  .shot .cap p.small { font-size: calc(2.5 * var(--u)); color: var(--muted); margin-bottom: 0; }
+  .ringed { position: relative; width: 100%; flex: none; line-height: 0; }
+  .shot .imgs.two .ringed img { max-height: none; width: 100%; height: auto; }
+  .ringed i { position: absolute; border: 0.5vh solid var(--accent); border-radius: 1.2vh; }
+</style>
+</head>
+<body>
+
+<section>
+  <header><h1>Changing someone else's project</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="body">
+    <p class="big">You found a mistake in a classmate's app.</p>
+    <p class="big">You can't change their repository. Only the owner can.</p>
+    <p class="answer">So you make your own copy, change your copy, and ask the owner to take your change.</p>
+  </div>
+</section>
+
+<section>
+  <header><h1>Before class</h1><p>Do these at home</p></header>
+  <ol class="steps">
+    <li><div>Send Brett your <b>GitHub username</b>, if you haven't. Use a Blackboard message.</div></li>
+    <li><div>GitHub will email you an invitation to our class group, <b>GEAP-103</b>. Open the email and accept it. No email? Go to <b>github.com/GEAP-103</b>.</div></li>
+    <li><div><b>Update Copilot at home.</b> Open the GitHub Copilot app. If it asks you to update, say yes and wait. In class, don't click update. It can take a long time.</div></li>
+    <li><div>Do <b>Step 1: Put your app on main</b>. It's in these slides.</div></li>
+  </ol>
+  <p class="check"><b>Stuck?</b> Ask Copilot to explain. Then bring your question to class. &nbsp; <b>Bring on paper:</b> one sentence that says what a branch is.</p>
+</section>
+
+<section>
+  <header><h1>The picture</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="pic">
+    <div class="repo">
+      <h2>The owner's repository</h2>
+      <p class="tag">We call it the <b class="w">upstream</b> repository.</p>
+      <p class="act"><b>4 Review</b>The owner reads your change and writes a comment.</p>
+      <p class="act"><b>5 Merge</b>The owner adds your change to their repository.</p>
+    </div>
+    <div class="mid">
+      <p class="arrow go">1 Fork<span>&rarr;</span><small>You copy the repository.</small></p>
+      <p class="arrow back">3 Pull request<span>&larr;</span><small>You ask the owner to take your change.</small></p>
+    </div>
+    <div class="repo you">
+      <h2>Your fork</h2>
+      <p class="tag">Your own copy, on GitHub.</p>
+      <p class="act"><b>2 Commit</b>You change your copy and record the change as a version.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header><h1>The words</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <dl class="words">
+    <div><dt>fork</dt><dd>Your own copy of someone else's repository on GitHub. You can change it without changing theirs.</dd></div>
+    <div><dt>upstream</dt><dd>The repository your fork came from.</dd></div>
+    <div><dt>commit</dt><dd>Record your changes as a version.</dd></div>
+    <div><dt>pull request</dt><dd>A change you propose. The owner reviews it before it's combined with their work.</dd></div>
+    <div><dt>review</dt><dd>Read a proposed change, try it, and say what you think.</dd></div>
+    <div><dt>request changes</dt><dd>Ask the contributor to fix something before you merge.</dd></div>
+    <div><dt>merge</dt><dd>Combine the accepted change with the owner's work.</dd></div>
+    <div><dt>close</dt><dd>End a pull request without merging it.</dd></div>
+  </dl>
+</section>
+
+<section>
+  <header><h1>Don't mix these up</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="pairs">
+    <div class="pair three">
+      <div><b>fork <i class="pos">n.</i></b><span>A copy of a repository on GitHub. It's a whole new repository, and it's yours.</span></div>
+      <p class="vs" aria-hidden="true">&harr;</p>
+      <div><b>clone <i class="pos">n.</i></b><span>A copy of a repository on your computer.</span></div>
+      <p class="vs" aria-hidden="true">&harr;</p>
+      <div><b>branch <i class="pos">n.</i></b><span>A line of work inside one repository.</span></div>
+    </div>
+    <div class="pair">
+      <div><b>pull <i class="pos">v.</i></b><span>Get changes from GitHub onto your computer.</span></div>
+      <p class="vs" aria-hidden="true">&harr;</p>
+      <div><b>pull request <i class="pos">n.</i></b><span>A request to the owner to take your change. The owner "pulls" it in.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Who does what?</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="roles">
+    <div class="repo you">
+      <h2>The contributor</h2>
+      <p class="tag">You, in someone else's project.</p>
+      <ul>
+        <li><b>forks</b> the repository</li>
+        <li><b>commits</b> a change to the fork</li>
+        <li><b>opens</b> a pull request</li>
+        <li><b>replies</b> to the owner's comments</li>
+      </ul>
+    </div>
+    <div class="repo">
+      <h2>The owner</h2>
+      <p class="tag">You, in your own project.</p>
+      <ul>
+        <li><b>reviews</b> the pull request</li>
+        <li><b>comments</b> on it</li>
+        <li><b>approves</b> it or <b>requests changes</b></li>
+        <li><b>merges</b> it or <b>closes</b> it</li>
+      </ul>
+    </div>
+  </div>
+  <p class="after">You'll be both.</p>
+</section>
+
+<section>
+  <header><h1>Step 1: Put your app on main</h1><p>A pull request to yourself</p></header>
+  <p class="lead">Copilot often builds your app on a separate branch. Then your <b>main</b> branch on GitHub shows only a README, and a classmate who forks your repository gets no app.</p>
+  <ol class="steps">
+    <li><div>Open your repository on GitHub. Look at the <b>main</b> branch. Can you see your app's files?</div></li>
+    <li><div>If you can't, tell Copilot:
+      <span class="say">Open a pull request from my app's branch to main. Don't merge it.</span></div></li>
+    <li><div>Read the pull request on GitHub. If it's right, click <span class="btn">Merge pull request</span>.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> your app's files are on main. &nbsp; <b>No repository on GitHub yet?</b> Tell Copilot: "Put this project on GitHub in a new repository."</p>
+</section>
+
+<section>
+  <header><h1>Where is your app?</h1><p>Step 1 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="pull-requests-captures/branch-menu.png" alt="A repository page on GitHub with the branch menu open, showing two branches: main and first-version."></div>
+    <div class="cap"><p>Click the <b>branch menu</b>.</p><p>This repository has two branches: <b>main</b> and <b>first-version</b>.</p><p><b>main</b> is the default branch. Check that your app is there.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>A pull request to yourself</h1><p>Step 1 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/pr1-open.png" alt="A pull request marked Open. It asks to merge one commit into main from first-version."><img src="pull-requests-captures/pr1-merged.png" alt="The same pull request marked Merged."></div>
+    <div class="cap"><p>It asks to merge <b>first-version</b> into <b>main</b>.</p><p><b class="w">Open</b> means the pull request is waiting.</p><p><b class="w">Merged</b> means the change is now in main.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 2: Add your app to Brett's list</h1><p>A pull request to Brett</p></header>
+  <ol class="steps">
+    <li><div>Open Brett's repository. He'll give you the link in class. Open the <b>apps</b> folder.</div></li>
+    <li><div>Click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. You can't change Brett's repository, so GitHub makes a <b class="w">fork</b> for you.</div></li>
+    <li><div>Name the file <b>your-username.md</b>. In it, write the link to your app's repository and one sentence about your app.</div></li>
+    <li><div>Click <span class="btn">Commit changes</span>, then <span class="btn">Propose changes</span>, then <span class="btn">Create pull request</span>. Say what you added.</div></li>
+    <li><div>Wait for Brett's <b class="w">review</b>. If he requests changes, fix your file and reply to him.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> your pull request says <b>Merged</b>, and your file is in Brett's apps folder.</p>
+</section>
+
+<section>
+  <header><h1>Step 3: Change a classmate's app</h1><p>You're the contributor</p></header>
+  <ol class="steps">
+    <li><div>Choose an app from Brett's list. Open its repository and click <span class="btn">Fork</span>.</div></li>
+    <li><div>Try the app. Find <b>one</b> thing to change: a mistake, a word that isn't clear, or a button that doesn't work.</div></li>
+    <li><div>Tell Copilot:
+      <span class="say">Work in my fork of this repository. Change only this: ______. Then commit and push.</span></div></li>
+    <li><div>Check that the change works. Then open a pull request to your classmate's repository. Say what you changed and why.</div></li>
+    <li><div>Read the owner's comment and reply to it.</div></li>
+  </ol>
+</section>
+
+<section>
+  <header><h1>Fork the repository</h1><p>Step 3 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><div class="ringed"><img src="pull-requests-captures/fork-button.png" alt="The top of a repository page on GitHub, with the Fork button at the top right."></div><img src="pull-requests-captures/fork-page.png" alt="A fork's page. Under the repository name it says: forked from GEAP-103/word-practice-app."></div>
+    <div class="cap"><p>Click <span class="btn">Fork</span> at the top of the owner's repository.</p><p>Your fork has the same name. Under the name, it says <b class="w">forked from</b> and the owner's repository.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Open a pull request</h1><p>Step 3 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="pull-requests-captures/pr-form.png" alt="The Open a pull request form, with a base repository, a head repository, a title and a description."></div>
+    <div class="cap"><p><b>base repository</b>: the owner's. Your change goes there.</p><p><b>head repository</b>: your fork. Your change comes from there.</p><p>Write a title and a description. Then click <span class="btn">Create pull request</span>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 4: A classmate sends you a pull request</h1><p>You're the owner</p></header>
+  <ol class="steps">
+    <li><div>Open the pull request. Read what your classmate changed, and try it.</div></li>
+    <li><div>Write your comment on <b>paper</b> first. Then type it in the pull request.</div></li>
+    <li><div>Decide. Click <span class="btn">Approve</span> or <span class="btn">Request changes</span>, then <span class="btn">Submit review</span>.</div></li>
+    <li><div>When you're happy with the change, click <span class="btn">Merge pull request</span>. If you don't want it, say why and click <span class="btn">Close pull request</span>.</div></li>
+  </ol>
+  <p class="check"><b>It's your app.</b> You can say no. Give your reason.</p>
+</section>
+
+<section>
+  <header><h1>Read the change</h1><p>Step 4 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/pr2-open.png" alt="An open pull request from a fork. It asks to merge one commit into the owner's main branch."><img src="pull-requests-captures/diff.png" alt="The Files changed view. One line is red with the old spelling, and one line is green with the new spelling."></div>
+    <div class="cap"><p>Click <b>Files changed</b>.</p><p><b>Red</b> is the old line. <b>Green</b> is the new line.</p><p>Here, one line changed: "Chek" is now "Check".</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Review the change</h1><p>Step 4 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="pull-requests-captures/review-box.png" alt="The Finish your review box, with a comment and three choices: Comment, Approve, and Request changes."></div>
+    <div class="cap"><p>Write your comment.</p><p>Choose <b>Comment</b>, <b>Approve</b>, or <b>Request changes</b>. Then click <span class="btn">Submit review</span>.</p><p class="small">On your own pull request, you can only choose Comment.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Comment, reply, merge</h1><p>Step 4 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="pull-requests-captures/thread-merge.png" alt="A pull request conversation with a comment, a reply, and a green Merge pull request button."></div>
+    <div class="cap"><p>The owner comments. Here, the owner asks for one more change.</p><p>The contributor replies.</p><p>When the owner is happy with the change, the owner clicks <span class="btn">Merge pull request</span>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>What to write</h1><p>GEAP 103 · Forks and pull requests</p></header>
+  <div class="frames">
+    <div class="frame">
+      <h2>Pull request<small>the contributor</small></h2>
+      <div><p>I changed <i class="gap"></i>. Before, <i class="gap"></i>. Now, <i class="gap"></i>.</p>
+      <p>I changed it because <i class="gap"></i>.</p></div>
+    </div>
+    <div class="frame">
+      <h2>Review comment<small>the owner</small></h2>
+      <div><p>I tried your change. <i class="gap"></i> works. Could you also <i class="gap"></i>?</p>
+      <p>I'm not merging this yet because <i class="gap"></i>.</p></div>
+    </div>
+    <div class="frame">
+      <h2>Reply<small>the contributor</small></h2>
+      <div><p>I've changed <i class="gap"></i>. Is it right now?</p>
+      <p>I didn't change <i class="gap"></i> because <i class="gap"></i>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Can you say it without AI?</h1><p>Brett will ask you</p></header>
+  <ol class="qs">
+    <li><div>What's the difference between a fork and a clone?</div></li>
+    <li><div>Whose repository did you fork? What did you change, and why?</div></li>
+    <li><div>What did the owner say about your pull request? What did you reply?</div></li>
+    <li><div>Did you merge a classmate's pull request? Why, or why not?</div></li>
+  </ol>
+</section>
+
+<script>
+  const slides = [...document.querySelectorAll("section")];
+  slides.forEach((s, i) => {
+    const f = document.createElement("p");
+    f.className = "foot";
+    f.innerHTML = "<span>Arrow keys or click to move.</span><span>" + (i + 1) + " / " + slides.length + "</span>";
+    s.appendChild(f);
+  });
+  let at = 0;
+  function show(n) {
+    at = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, i) => s.classList.toggle("on", i === at));
+    history.replaceState(null, "", "#" + (at + 1));
+  }
+  document.addEventListener("keydown", e => {
+    if (["ArrowRight", " ", "PageDown"].includes(e.key)) { e.preventDefault(); show(at + 1); }
+    else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); show(at - 1); }
+    else if (e.key === "Home") show(0);
+    else if (e.key === "End") show(slides.length - 1);
+    else if (/^[0-9]$/.test(e.key)) show(e.key === "0" ? 9 : parseInt(e.key, 10) - 1);
+  });
+  document.addEventListener("click", e => show(at + (e.clientX < window.innerWidth / 3 ? -1 : 1)));
+  show((parseInt(location.hash.slice(1), 10) || 1) - 1);
+</script>
+</body>
+</html>
