@@ -109,7 +109,7 @@
 <section>
   <header><h1>Changing someone else's project</h1><p>GEAP 103 · Forks and pull requests</p></header>
   <div class="body">
-    <p class="big">You found a mistake in a classmate's app.</p>
+    <p class="big">You want to add something to a classmate's project.</p>
     <p class="big">You can't change their repository. Only the owner can.</p>
     <p class="answer">So you make your own copy, change your copy, and ask the owner to take your change.</p>
   </div>
@@ -208,7 +208,7 @@
 
 <section>
   <header><h1>Step 1: Put your app on main</h1><p>A pull request to yourself</p></header>
-  <p class="lead">Copilot often builds your app on a separate branch. Then your <b>main</b> branch on GitHub shows only a README, and a classmate who forks your repository gets no app.</p>
+  <p class="lead">Copilot often builds your app on a separate branch. Then your <b>main</b> branch on GitHub shows only a README. Your app isn't in the main version yet.</p>
   <ol class="steps">
     <li><div>Open your repository on GitHub. Look at the <b>main</b> branch. Can you see your app's files?</div></li>
     <li><div>If you can't, tell Copilot:
@@ -235,31 +235,54 @@
 </section>
 
 <section>
-  <header><h1>Step 2: Add your app to Brett's list</h1><p>A pull request to Brett</p></header>
+  <header><h1>Our class benchmark</h1><p>Everyday AI Benchmarks</p></header>
+  <p class="lead">A <b>benchmark</b> is a test that you give to different AIs in the same way, so you can compare them. Each of us makes one <b>event</b>: a contest for AIs.</p>
   <ol class="steps">
-    <li><div>Open Brett's repository. He'll give you the link in class. Open the <b>apps</b> folder.</div></li>
-    <li><div>Click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. You can't change Brett's repository, so GitHub makes a <b class="w">fork</b> for you.</div></li>
-    <li><div>Name the file <b>your-username.md</b>. In it, write the link to your app's repository and one sentence about your app.</div></li>
-    <li><div>Click <span class="btn">Commit changes</span>, then <span class="btn">Propose changes</span>, then <span class="btn">Create pull request</span>. Say what you added.</div></li>
-    <li><div>Wait for Brett's <b class="w">review</b>. If he requests changes, fix your file and reply to him.</div></li>
+    <li><div>The contestants are free chat AIs, like ChatGPT, Claude, Gemini, Grok or Muse. <b>Copilot never competes.</b> Copilot builds things for your event.</div></li>
+    <li><div>Write the rules and the scoring <b>before</b> you run your event.</div></li>
+    <li><div>For every result, write the date, the product, and the model name it shows.</div></li>
+    <li><div>If every AI gets the top score, your event is too easy. Make it harder.</div></li>
   </ol>
-  <p class="check"><b>Check:</b> your pull request says <b>Merged</b>, and your file is in Brett's apps folder.</p>
+  <p class="check"><b>Ideas:</b> a word game for two AIs. A game from your country. Which AI understands your accent? Which AI says "I don't know"?</p>
 </section>
 
 <section>
-  <header><h1>Step 3: Change a classmate's app</h1><p>You're the contributor</p></header>
+  <header><h1>Step 2: Make your event</h1><p>Your own repository in GEAP-103</p></header>
   <ol class="steps">
-    <li><div>Choose an app from Brett's list. Open its repository and click <span class="btn">Fork</span>.</div></li>
-    <li><div>Try the app. Find <b>one</b> thing to change: a mistake, a word that isn't clear, or a button that doesn't work.</div></li>
-    <li><div>Tell Copilot:
-      <span class="say">Work in my fork of this repository. Change only this: ______. Then commit and push.</span></div></li>
-    <li><div>Check that the change works. Then open a pull request to your classmate's repository. Say what you changed and why.</div></li>
+    <li><div>On <b>paper</b>, write your event's question, rules and scoring. Show a classmate. Can they follow your rules without asking you?</div></li>
+    <li><div>Open <b>github.com/GEAP-103/event-template</b>. Click <span class="btn">Use this template</span>, then <span class="btn">Create a new repository</span>. Owner: <b>GEAP-103</b>. Choose <b>Private</b>.</div></li>
+    <li><div>Fill in the README: the question, the contestants, the rules, the scoring. Copilot can help you write clearly, but the rules are yours.</div></li>
+    <li><div>Run your event once. Add your result to the <b>results</b> folder.</div></li>
+  </ol>
+  <p class="check"><b>Example:</b> github.com/GEAP-103/taboo-league</p>
+</section>
+
+<section>
+  <header><h1>Step 3: Add your event to the class benchmark</h1><p>A pull request to Brett</p></header>
+  <ol class="steps">
+    <li><div>Open <b>github.com/GEAP-103/everyday-ai-benchmarks</b>. Open the <b>events</b> folder.</div></li>
+    <li><div>Click <span class="btn">Add file</span>, then <span class="btn">Create new file</span>. You can't change Brett's repository, so GitHub makes a <b class="w">fork</b> for you.</div></li>
+    <li><div>Name the file after your event, for example <b>taboo-league.md</b>. Write your event's name, your username, the link to its repository, and its question.</div></li>
+    <li><div>Click <span class="btn">Commit changes</span>, then <span class="btn">Propose changes</span>, then <span class="btn">Create pull request</span>. Say what you added.</div></li>
+    <li><div>Wait for Brett's <b class="w">review</b>. If he requests changes, fix your file and reply to him.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> your pull request says <b>Merged</b>, and your event is in the events folder.</p>
+</section>
+
+<section>
+  <header><h1>Step 4: Run a classmate's event</h1><p>You're the contributor</p></header>
+  <ol class="steps">
+    <li><div>Choose an event from the class benchmark. Open its repository and click <span class="btn">Fork</span>.</div></li>
+    <li><div>Read the rules. Run the event with an AI that nobody has tested in it yet. Follow the rules <b>exactly</b>.</div></li>
+    <li><div>Add your result to your fork. You can tell Copilot:
+      <span class="say">Work in my fork of this repository. Add my result as a new file in the results folder. Then commit and push.</span></div></li>
+    <li><div>Open a pull request to your classmate's repository. Say which AI you tested and what happened.</div></li>
     <li><div>Read the owner's comment and reply to it.</div></li>
   </ol>
 </section>
 
 <section>
-  <header><h1>Fork the repository</h1><p>Step 3 on GitHub</p></header>
+  <header><h1>Fork the repository</h1><p>Step 4 on GitHub</p></header>
   <div class="shot">
     <div class="imgs two"><div class="ringed"><img src="pull-requests-captures/fork-button.png" alt="The top of a repository page on GitHub, with the Fork button at the top right."></div><img src="pull-requests-captures/fork-page.png" alt="A fork's page. Under the repository name it says: forked from GEAP-103/word-practice-app."></div>
     <div class="cap"><p>Click <span class="btn">Fork</span> at the top of the owner's repository.</p><p>Your fork has the same name. Under the name, it says <b class="w">forked from</b> and the owner's repository.</p></div>
@@ -267,7 +290,7 @@
 </section>
 
 <section>
-  <header><h1>Open a pull request</h1><p>Step 3 on GitHub</p></header>
+  <header><h1>Open a pull request</h1><p>Step 4 on GitHub</p></header>
   <div class="shot">
     <div class="imgs"><img src="pull-requests-captures/pr-form.png" alt="The Open a pull request form, with a base repository, a head repository, a title and a description."></div>
     <div class="cap"><p><b>base repository</b>: the owner's. Your change goes there.</p><p><b>head repository</b>: your fork. Your change comes from there.</p><p>Write a title and a description. Then click <span class="btn">Create pull request</span>.</p></div>
@@ -275,18 +298,18 @@
 </section>
 
 <section>
-  <header><h1>Step 4: A classmate sends you a pull request</h1><p>You're the owner</p></header>
+  <header><h1>Step 5: A classmate sends you a result</h1><p>You're the owner</p></header>
   <ol class="steps">
-    <li><div>Open the pull request. Read what your classmate changed, and try it.</div></li>
+    <li><div>Open the pull request. Read the result. Did your classmate follow your rules?</div></li>
     <li><div>Write your comment on <b>paper</b> first. Then type it in the pull request.</div></li>
     <li><div>Decide. Click <span class="btn">Approve</span> or <span class="btn">Request changes</span>, then <span class="btn">Submit review</span>.</div></li>
-    <li><div>When you're happy with the change, click <span class="btn">Merge pull request</span>. If you don't want it, say why and click <span class="btn">Close pull request</span>.</div></li>
+    <li><div>When the result follows your rules, click <span class="btn">Merge pull request</span>. If it doesn't, say why and ask for a new run.</div></li>
   </ol>
-  <p class="check"><b>It's your app.</b> You can say no. Give your reason.</p>
+  <p class="check"><b>It's your event.</b> You can say no. Give your reason.</p>
 </section>
 
 <section>
-  <header><h1>Read the change</h1><p>Step 4 on GitHub</p></header>
+  <header><h1>Read the change</h1><p>Step 5 on GitHub</p></header>
   <div class="shot">
     <div class="imgs two"><img src="pull-requests-captures/pr2-open.png" alt="An open pull request from a fork. It asks to merge one commit into the owner's main branch."><img src="pull-requests-captures/diff.png" alt="The Files changed view. One line is red with the old spelling, and one line is green with the new spelling."></div>
     <div class="cap"><p>Click <b>Files changed</b>.</p><p><b>Red</b> is the old line. <b>Green</b> is the new line.</p><p>Here, one line changed: "Chek" is now "Check".</p></div>
@@ -294,7 +317,7 @@
 </section>
 
 <section>
-  <header><h1>Review the change</h1><p>Step 4 on GitHub</p></header>
+  <header><h1>Review the change</h1><p>Step 5 on GitHub</p></header>
   <div class="shot">
     <div class="imgs"><img src="pull-requests-captures/review-box.png" alt="The Finish your review box, with a comment and three choices: Comment, Approve, and Request changes."></div>
     <div class="cap"><p>Write your comment.</p><p>Choose <b>Comment</b>, <b>Approve</b>, or <b>Request changes</b>. Then click <span class="btn">Submit review</span>.</p><p class="small">On your own pull request, you can only choose Comment.</p></div>
@@ -302,7 +325,7 @@
 </section>
 
 <section>
-  <header><h1>Comment, reply, merge</h1><p>Step 4 on GitHub</p></header>
+  <header><h1>Comment, reply, merge</h1><p>Step 5 on GitHub</p></header>
   <div class="shot">
     <div class="imgs"><img src="pull-requests-captures/thread-merge.png" alt="A pull request conversation with a comment, a reply, and a green Merge pull request button."></div>
     <div class="cap"><p>The owner comments. Here, the owner asks for one more change.</p><p>The contributor replies.</p><p>When the owner is happy with the change, the owner clicks <span class="btn">Merge pull request</span>.</p></div>
@@ -314,17 +337,17 @@
   <div class="frames">
     <div class="frame">
       <h2>Pull request<small>the contributor</small></h2>
-      <div><p>I changed <i class="gap"></i>. Before, <i class="gap"></i>. Now, <i class="gap"></i>.</p>
-      <p>I changed it because <i class="gap"></i>.</p></div>
+      <div><p>I tested <i class="gap"></i> in your event. The score was <i class="gap"></i>.</p>
+      <p>One thing went wrong: <i class="gap"></i>.</p></div>
     </div>
     <div class="frame">
       <h2>Review comment<small>the owner</small></h2>
-      <div><p>I tried your change. <i class="gap"></i> works. Could you also <i class="gap"></i>?</p>
-      <p>I'm not merging this yet because <i class="gap"></i>.</p></div>
+      <div><p>Your result follows the rules. I'm merging it.</p>
+      <p>In rule <i class="gap"></i>, you <i class="gap"></i>. Could you run it again?</p></div>
     </div>
     <div class="frame">
       <h2>Reply<small>the contributor</small></h2>
-      <div><p>I've changed <i class="gap"></i>. Is it right now?</p>
+      <div><p>I ran it again. Now <i class="gap"></i>.</p>
       <p>I didn't change <i class="gap"></i> because <i class="gap"></i>.</p></div>
     </div>
   </div>
@@ -334,7 +357,7 @@
   <header><h1>Can you say it without AI?</h1><p>Brett will ask you</p></header>
   <ol class="qs">
     <li><div>What's the difference between a fork and a clone?</div></li>
-    <li><div>Whose repository did you fork? What did you change, and why?</div></li>
+    <li><div>Whose repository did you fork? What did you add to it?</div></li>
     <li><div>What did the owner say about your pull request? What did you reply?</div></li>
     <li><div>Did you merge a classmate's pull request? Why, or why not?</div></li>
   </ol>
