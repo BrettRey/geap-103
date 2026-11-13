@@ -27,6 +27,14 @@ MARKS = {
     "diff.png": {"rings": [(8, 141, 912, 199)], "arrows": []},
     "review-box.png": {"rings": [(84, 417, 464, 563), (536, 582, 711, 628)], "arrows": [(845, 605, 718, 605)]},
     "thread-merge.png": {"rings": [(71, 577, 264, 625)], "arrows": [(4, 601, 65, 601)]},
+    # Send Brett a word (homework, part 2), captured 2026-11-13 in Brett's fork, name shown as demo-classmate
+    "add-file.png": {"rings": [(1158, 190, 1235, 262), (1176, 286, 1460, 344)], "arrows": []},
+    "new-file.png": {"rings": [(325, 6, 832, 80), (138, 212, 800, 418), (1252, 8, 1554, 78)], "arrows": []},
+    "commit-box.png": {"rings": [(26, 152, 548, 204), (650, 360, 934, 434)], "arrows": []},
+    "contribute.png": {"rings": [(60, 363, 357, 436), (92, 656, 1106, 728)], "arrows": []},
+    "pr-word-form.png": {"rings": [(138, 416, 1502, 486)], "arrows": []},  # base/head not ringed: students must not change them
+    "fork-brett-app.png": {"rings": [(1210, 156, 1382, 205), (112, 12, 508, 58)], "arrows": []},
+    "pr-word-create.png": {"rings": [(978, 100, 1388, 168)], "arrows": []},
 }
 
 

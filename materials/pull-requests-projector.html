@@ -19,6 +19,8 @@
   .body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; }
   .foot { display: flex; justify-content: space-between; font-size: calc(1.6 * var(--u)); color: #9aa3ad; margin-top: 0.8vh; }
   b.w { color: var(--accent); }
+  a { color: inherit; text-decoration-thickness: 0.15vh; text-underline-offset: 0.3vh; }
+  .say.pattern { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.86em; line-height: 1.45; }
   .btn { font-weight: 700; background: var(--chip); border: 0.2vh solid var(--rule); border-radius: 0.8vh;
     padding: 0 0.5vw; white-space: nowrap; }
   .say { display: block; margin-top: 0.8vh; background: var(--youbg); border-left: 0.6vh solid var(--you);
@@ -136,11 +138,11 @@
   <header><h1>Before class</h1><p>Do these at home</p></header>
   <ol class="steps">
     <li><div>Send Brett your <b>GitHub username</b>, if you haven't. Use a Blackboard message.</div></li>
-    <li><div>Brett will invite you to our class group on GitHub, <b>GEAP-103</b>. GitHub emails you. Open the email and accept. The email can take a day to come, and it works for 7 days.</div></li>
+    <li><div>Brett will invite you to our class group on GitHub, <b>GEAP-103</b>. GitHub emails you. Open the email and accept. The email can take a day to come, and it works for 7 days. <b>Expired?</b> Send Brett a message, and he'll invite you again.</div></li>
     <li><div><b>Update Copilot at home.</b> Open the GitHub Copilot app. If it asks you to update, say yes and wait. In class, don't click update. It can take a long time.</div></li>
-    <li><div>Do <b>Step 1</b>. It's on the next three slides. Then <b>stop</b>. The other slides are for a later class.</div></li>
+    <li><div>Do <b>Step 1</b> (slides 2 to 4). Then <b>add a word to Brett's app</b> (slides 5 to 8). Then <b>stop</b>. The other slides are for a later class.</div></li>
   </ol>
-  <p class="check"><b>Check:</b> you're in our class group when <b>github.com/GEAP-103</b> shows <b>event-template</b>. An empty page means you aren't in yet, or you aren't signed in. &nbsp; <b>Stuck?</b> Ask Copilot to explain, and bring your question to class.</p>
+  <p class="check"><b>Check:</b> you're in our class group when <b><a href="https://github.com/GEAP-103" target="_blank" rel="noopener">github.com/GEAP-103</a></b> shows <b>event-template</b>. An empty page means you aren't in yet, or you aren't signed in. &nbsp; <b>Stuck?</b> Ask Copilot to explain, and bring your question to class.</p>
 </section>
 
 <section>
@@ -149,7 +151,7 @@
   <ol class="steps dense">
     <li><div>Open the GitHub Copilot app. Click your <b>old chat</b>, where you made your app.</div></li>
     <li><div>Ask Copilot: "What's the GitHub address of this project?" No address? Tell Copilot: "Put this project on GitHub in a new <b>private</b> repository." Then ask again.</div></li>
-    <li><div>Sign in to github.com in your browser, and open the address. Look at the <b>main</b> branch. Can you see your app's files? <b>Yes: you're finished.</b></div></li>
+    <li><div>Sign in to github.com in your browser, and open the address. Look at the <b>main</b> branch (slide 3 shows how). Can you see your app's files? <b>Yes: Step 1 is finished. Go to slide 5.</b></div></li>
     <li><div>No: tell Copilot:
       <span class="say">Open a pull request from my app's branch to main. Don't merge it.</span></div></li>
     <li><div>On GitHub, click <b>Pull requests</b> and open yours. Click <span class="btn">Merge pull request</span>, then <span class="btn">Confirm merge</span>.</div></li>
@@ -174,9 +176,48 @@
 </section>
 
 <section>
+  <header><h1>Add a word to Brett's app</h1><p>Homework, part 2 · a pull request to Brett</p></header>
+  <p class="lead">You change Brett's app, and you ask him to include your change. Use a computer, not your phone. Do it all on github.com, in your browser. You don't need Copilot.</p>
+  <ol class="steps dense">
+    <li><div>First, you need to be in our class group (look at the check on slide 1). <b>Not in yet?</b> Skip this part. We'll do it in class.</div></li>
+    <li><div>Open <b><a href="https://github.com/GEAP-103/word-practice-app" target="_blank" rel="noopener">github.com/GEAP-103/word-practice-app</a></b>. It's Brett's app. Click <span class="btn">Fork</span>, then <span class="btn">Create fork</span>. Now you have your own copy, a <b class="w">fork</b>.</div></li>
+    <li><div>Choose one English word that a beginner needs (not <i>library</i>). In your fork, click <span class="btn">+</span> (or <span class="btn">Add file</span>), then <span class="btn">Create new file</span>. Name it <b>words/</b>, then your word, then <b>.md</b>, in small letters: for example, <b>words/library.md</b>.</div></li>
+    <li><div>Copy this pattern, with your word:
+      <span class="say pattern"># your word<br>Meaning: what it means<br>Example: a sentence with your word</span>
+      Click <span class="btn">Commit changes...</span>, then <span class="btn">Commit changes</span>.</div></li>
+    <li><div>Click <b>word-practice-app</b> at the top. Click <span class="btn">Contribute</span>, then <span class="btn">Open pull request</span>. Write a title and one sentence. Click <span class="btn">Create pull request</span>.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> Brett's app shows your pull request under <b>Pull requests</b>, and it says <b class="w">Open</b>. That's all for now. When Brett writes a comment, GitHub emails you. Open your pull request and answer in the box at the bottom. &nbsp; <b>An error, or a grey button?</b> Stop there, and show Brett in class.</p>
+</section>
+
+<section>
+  <header><h1>Fork Brett's app</h1><p>Add a word, on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/fork-brett-app.png" alt="The top of Brett's app on GitHub: GEAP-103 / word-practice-app, with the Fork button at the right."><img src="pull-requests-captures/add-file.png" alt="A fork of word-practice-app. Under its name it says: forked from GEAP-103/word-practice-app. The plus menu is open, showing Create new file and Upload files."></div>
+    <div class="cap"><p>On Brett's app, <b>GEAP-103 / word-practice-app</b>, click <span class="btn">Fork</span>, then <span class="btn">Create fork</span>.</p><p>Your fork says <b class="w">forked from</b> GEAP-103/word-practice-app. That's how you know you're in your fork.</p><p>Click <span class="btn">+</span>, then <span class="btn">Create new file</span>.</p><p class="small">On a wide screen, the + button says Add file.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Add your word</h1><p>Add a word, on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/new-file.png" alt="The new-file page. The name is words, then library.md. The file has the word library, its meaning, and an example sentence. A green Commit changes button is at the top right."><img src="pull-requests-captures/commit-box.png" alt="The Commit changes box. Commit directly to the main branch is chosen. A green Commit changes button is at the bottom."></div>
+    <div class="cap"><p>Type <b>words/</b>, then your word, then <b>.md</b>. GitHub makes the <b>words</b> folder.</p><p>Copy the pattern, with your own word. Click <span class="btn">Commit changes...</span></p><p>Keep <b>Commit directly to the main branch</b>. It's your fork, so that's OK. Click <span class="btn">Commit changes</span>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Open the pull request</h1><p>Add a word, on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="pull-requests-captures/contribute.png" alt="The fork's page after the commit. It says: This branch is 1 commit ahead of GEAP-103/word-practice-app main. The Contribute menu is open, with a green Open pull request button."><img src="pull-requests-captures/pr-word-form.png" alt="The Open a pull request page. Base repository: GEAP-103/word-practice-app. Head repository: the fork. The title is Add the word library, and the description says what was added."></div>
+    <div class="cap"><p>Click <b>word-practice-app</b> at the top. Your fork is <b>1 commit ahead</b>: it has one change that Brett's app doesn't have.</p><p>Click <span class="btn">Contribute</span>, then <span class="btn">Open pull request</span>.</p><p><b>Don't change</b> base repository or head repository. Write a title and one sentence. Click the green <span class="btn">Create pull request</span> button at the bottom.</p></div>
+  </div>
+</section>
+
+<section>
   <header><h1>Stop here</h1><p>The homework ends</p></header>
   <div class="body">
-    <p class="big">That's the homework.</p>
+    <p class="big">That's the homework: Step 1, and a word in Brett's app.</p>
     <p class="big">The next slides are for a later class. You don't need them yet.</p>
     <p class="answer">Some links in them won't open until you've joined our class group on GitHub.</p>
   </div>
@@ -428,7 +469,10 @@
     else if (e.key === "End") show(slides.length - 1);
     else if (/^[0-9]$/.test(e.key)) show(e.key === "0" ? 9 : parseInt(e.key, 10) - 1);
   });
-  document.addEventListener("click", e => show(at + (e.clientX < window.innerWidth / 3 ? -1 : 1)));
+  document.addEventListener("click", e => {
+    if (e.target.closest("a, img") || String(window.getSelection())) return;
+    show(at + (e.clientX < window.innerWidth / 3 ? -1 : 1));
+  });
   show((parseInt(location.hash.slice(1), 10) || 1) - 1);
 </script>
 </body>
