@@ -11,7 +11,7 @@ The meeting has two aims: start the class project and keep the conferences comin
 
 ## Tonight
 
-1. **Confirm GitHub access** so I can send the two waiting invitations and the approved "I've invited you" replies (the link is in chat). One reply also asks the student to change a student-number username, as a Wednesday student was asked to.
+1. **Done:** the two waiting Monday invitations went out on November 15, with the approved "I've invited you" replies. One reply also asks the student to change a student-number username.
 2. **Pull request #2 is ready to merge live.** It now has two real changes, the spelling and a bigger button, and both match the review and reply in its conversation.
 3. **The conference page is rebuilt and open** on your laptop with both trackers' records.
 4. **Not needed for Monday:** Step 4 (running a classmate's event) still tells students to have Copilot commit, which can expose their Humber address. Decide before anyone reaches it, probably November 23. My suggestion is to do it in the browser, like the word homework.
@@ -47,7 +47,7 @@ Leave class slide 13, "Now you", up during work time. Slides 14 and 15 are Steps
   - Outcome 1 (files and versions): "Show me your app on main. What was on the other branch?"
   - Outcome 2 (troubleshooting) and the T check: GitHub problems today are real help calls. Log one when the student can say what they wanted, what happened and what they tried.
   - Outcomes 3 to 5: "What does your contest test? Why can't the AI just know the answer? How will you score it?"
-  - Outcome 7 and the P check: one student now has a change you commented on and a reply to your comment. Whether that counts for P is still your decision. It wasn't a classmate's work.
+  - Outcome 7 and the P check: a word pull request with your comment and the student's reply counts for P (your decision, November 15). One Monday student has that already; tick P at his next conference.
 
 ### Last five minutes
 
