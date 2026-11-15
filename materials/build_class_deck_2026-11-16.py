@@ -83,6 +83,7 @@ new.append(f'''<section>
       <h2>In our class group</h2>
       <p class="tag">github.com/GEAP-103 shows event-template.</p>
       <ul>
+        <li>Once only: tick <b>Keep my email addresses private</b> at {L("github.com/settings/emails")}.</li>
         <li>Do <b>Step 2</b>: make your event (next slide).</li>
         <li>Finished? Do <b>Step 3</b>.</li>
       </ul>
