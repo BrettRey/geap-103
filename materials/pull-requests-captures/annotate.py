@@ -34,6 +34,7 @@ MARKS = {
     "contribute.png": {"rings": [(60, 363, 357, 436), (92, 656, 1106, 728)], "arrows": []},
     "pr-word-form.png": {"rings": [(138, 416, 1502, 486)], "arrows": []},  # base/head not ringed: students must not change them
     "fork-brett-app.png": {"rings": [(1210, 156, 1382, 205), (112, 12, 508, 58)], "arrows": []},
+    "confirm-merge.png": {"rings": [(12, 367, 147, 409)], "arrows": []},  # captured 2026-11-15 from PR #2, names shown as demo-classmate
     "pr-word-create.png": {"rings": [(978, 100, 1388, 168)], "arrows": []},
 }
 
