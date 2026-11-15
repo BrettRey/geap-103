@@ -106,7 +106,7 @@ The Decision Log entry is about 150–200 words. Students start it today and fin
 
 **No Copilot.** Some students may be without Copilot or GitHub. They do the same steps on paper: sketch the first screen, and ask a chat interface for the three ideas by pasting their phrases. Their Decision Log entry is about that choice, and they build the app at home or next class. Ask them to tell you which step is blocked.
 
-**Conferences.** Three Monday students had conferences on October 5, and seventeen haven't. At five minutes each, about 45 minutes fits nine students, and the rest of the time goes to helping.
+**Conferences.** At five minutes each, about 45 minutes fits nine students, and the rest of the time goes to helping.
 
 - **Who goes first:** ask "Who's ready to show Task 3 or Task 4?" Their October 10 messages asked for that, and the messages file tells you what each student was asked to show.
 - **Today's work counts too.** A student can show the three ideas, the one they chose, and why. That's evidence for guiding AI and evaluating AI text.

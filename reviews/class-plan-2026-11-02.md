@@ -12,7 +12,7 @@ You'll say it to the whole room once, briefly, when the room has filled.
 
 ## The numbers
 
-The Monday tracker has a conference logged for 4 of about 20 students. Each student needs at least two before the final conferences on December 7 and 14. Monday has five meetings before then, two of them with writing. That's about 36 conferences, or seven or eight a meeting. Wednesday has 2 of 20 logged and four meetings before December 2, so nine or ten a meeting.
+Each student needs at least two conferences before the final conferences on December 7 and 14, which is about 40 for a section of 20. Monday has five meetings before then, two of them with writing, so seven or eight a meeting. Wednesday has four meetings before December 2, so nine or ten a meeting.
 
 A realistic rate is seven or eight minutes per conference once you count finding the app, walking and logging. So on Monday expect six to eight if troubleshooting doesn't take over, which just meets the target. If you hold records outside the trackers, the numbers are smaller. They're also a minimum. The conference itself can't show outcome 1 or 7. Two of the three required checks can come from elsewhere in the meeting: a fix that goes wrong and is undone, and a logged help call (both below). Outcome 7's check (a change to a classmate's work, a comment received, and a reply) isn't covered here.
 
@@ -99,10 +99,10 @@ Some students will sit anyway, and some will leave after their conference. The p
 
 Students arrive on time, so the start is different. Post the Wednesday announcement on Tuesday, with the submission route for entries 3–5 filled in.
 
-- **In-class writing 2 first.** Hand out paper; some students won't have a pen. It's ten minutes, by hand, with no AI, and laptops closed. The framework fixes the prompt to the one in the Week 8 lesson plan: "Describe a problem you had with a computer tool this semester. What happened? What did you try? What was the outcome?" The best two of three tasks count, so one absence is absorbed. The Wednesday tracker has no writing-1 records. If writing 1 didn't run or wasn't logged, a student absent today has only writing 3 left.
+- **In-class writing 2 first.** Hand out paper; some students won't have a pen. It's ten minutes, by hand, with no AI, and laptops closed. The framework fixes the prompt to the one in the Week 8 lesson plan: "Describe a problem you had with a computer tool this semester. What happened? What did you try? What was the outcome?" The best two of three tasks count, so one absence is absorbed. A student who missed writing 1 and misses this one has only writing 3 left.
 - **Then the two minutes** (everyone's there), and the builds if you're using them.
 - **Decision Log entries 3–5 are due.** Expect "What entries?" from students who haven't written any. Working on them is a legitimate thing to do in class today; the post says so. Before you write feedback on them, settle one reading of the rubric with Tim and Sigrid. Does rejecting a correct AI output that doesn't fit the person or purpose count as a "failure/rejection episode"?
-- **Then conferences,** as on Monday. You need nine or ten. If attendance is as low as on October 21, fewer students who still need one will be there.
+- **Then conferences,** as on Monday. You need nine or ten.
 
 ## What's uncertain, and how you'll know it isn't working
 

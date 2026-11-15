@@ -1,20 +1,13 @@
 # Class plan: Monday, November 16, 2026 (and Wednesday, November 18)
-<!-- SUMMARY: Teacher plan for the meeting that starts the class project: conferences from 8:55, one short whole-class demo (merging pull request #2 live), then two tracks (students in the GitHub class group start their event; students not yet in it join, do Step 1 and design their event on paper); conference priorities aim at the thin outcomes 1, 2 and 7 · status: draft for Brett · updated: 2026-11-15 · class slides: materials/class-2026-11-16-projector.html -->
+<!-- SUMMARY: Teacher plan for the meeting that starts the class project: conferences from 8:55, one short whole-class demo (merging pull request #2 live), then two tracks (students in the GitHub class group start their event; students not yet in it join, do Step 1 and design their event on paper); conference questions aimed at outcomes 1, 2 and 7 · status: draft for Brett · updated: 2026-11-15 · class slides: materials/class-2026-11-16-projector.html -->
 
-The meeting has two aims: start the class project and keep the conferences coming. The Monday announcement promised the project ("each of you will invent a contest for AIs"). Most of the room won't be in the GitHub class group at 8:55, so the plan has a track for students who can't start on GitHub yet.
-
-## Where Monday stands (Sunday afternoon)
-
-- **GitHub class group:** 5 of 20 in, 1 invited, 2 usernames waiting for you to confirm access (below), 1 who sent a Humber email address instead of a username, 11 who haven't sent one.
-- **Homework:** one Monday student says he did all of it. He sent two words, both merged, and replied to your comment. No other Monday student has sent a word yet. You'll only see Step 1 on their screens.
-- **Conferences (Monday tracker):** 10 of 20 have one on record, and nobody meets the pass gate yet. Outcomes 1, 2 and 7 are thin: 4, 6 and 4 students have any evidence. Five meetings are left (November 16, 23, 30, December 7 and 14), and the November 2 plan put the final conferences on December 7 and 14.
+The meeting has two aims: start the class project and keep the conferences coming. The Monday announcement promised the project ("each of you will invent a contest for AIs"). Students who aren't in the GitHub class group yet can't start on GitHub, so the plan has a separate track for them. Five meetings are left: November 16, 23 and 30, and December 7 and 14, when the final conferences are.
 
 ## Tonight
 
-1. **Done:** the two waiting Monday invitations went out on November 15, with the approved "I've invited you" replies. One reply also asks the student to change a student-number username.
-2. **Pull request #2 is ready to merge live.** It now has two real changes, the spelling and a bigger button, and both match the review and reply in its conversation.
-3. **The conference page is rebuilt and open** on your laptop with both trackers' records.
-4. **Not needed for Monday:** Step 4 (running a classmate's event) still tells students to have Copilot commit, which can expose their Humber address. Decide before anyone reaches it, probably November 23. My suggestion is to do it in the browser, like the word homework.
+1. **Pull request #2 is ready to merge live.** It now has two real changes, the spelling and a bigger button, and both match the review and reply in its conversation.
+2. **The conference page is rebuilt and open** on your laptop with both trackers' records.
+3. **Not needed for Monday:** Step 4 (running a classmate's event) still tells students to have Copilot commit, which can expose their Humber address. Decide before anyone reaches it, probably November 23. My suggestion is to do it in the browser, like the word homework.
 
 ## In class
 
@@ -42,12 +35,12 @@ Leave class slide 13, "Now you", up during work time. Slides 14 and 15 are Steps
 
 ### Conferences
 
-- **Who first:** the 10 students with no conference on record. The conference page shows who they are.
-- **Questions that reach the thin outcomes:**
+- **Who first:** students with no conference on record yet. The conference page shows who they are.
+- **Questions that reach particular outcomes:**
   - Outcome 1 (files and versions): "Show me your app on main. What was on the other branch?"
   - Outcome 2 (troubleshooting) and the T check: GitHub problems today are real help calls. Log one when the student can say what they wanted, what happened and what they tried.
   - Outcomes 3 to 5: "What does your contest test? Why can't the AI just know the answer? How will you score it?"
-  - Outcome 7 and the P check: a word pull request with your comment and the student's reply counts for P (your decision, November 15). One Monday student has that already; tick P at his next conference.
+  - Outcome 7 and the P check: a word pull request with your comment and the student's reply counts for P (your decision, November 15).
 
 ### Last five minutes
 
@@ -62,4 +55,4 @@ Class slide 17. Homework for November 23: finish Step 2 (the event in its own re
 
 ## Wednesday, November 18
 
-Wednesday repeats Monday's meeting. The live demo there is a new pull request I'll build on Tuesday evening, adding the students' words to the app's practice list so that the app quizzes them. Merge it live, then practise with their words. In the Wednesday section, 4 students are in the class group and 11 invitations are waiting (they stop working on November 20). The other 3 students haven't sent a username yet.
+Wednesday repeats Monday's meeting. The live demo there is a new pull request I'll build on Tuesday evening, adding the students' words to the app's practice list so that the app quizzes them. Merge it live, then practise with their words. Wednesday's invitations stop working on November 20, so remind students to accept theirs.
