@@ -224,3 +224,7 @@
 
 - **Wednesday pokes before the November 18 class.** Brett: "Poke everyone for Wed and send out anything remaining for them", then "send the pokes". Each of the 18 Wednesday students got an individual Blackboard message with an email copy, sorted by what they still had to do: accept the invitation before it lapses on November 20, send a username, or do the homework (Step 1 and a word). The wording reused messages approved on November 13 and 15. Texts: `email_draft_wednesday_pokes_2026-11-16.md` (course folder, not in the repo).
 - **The "I've invited you" reply changes after each class.** A side agent noted that the automatic reply still said "before class on Monday" and gave the weekend homework. From November 16, the Monday version gives the homework due November 23 (Step 1, then Steps 2 and 3) and the Wednesday version says "before our next class". Wednesday replies pause after the November 18 class until Brett gives new wording. Brett: "use the revisions."
+
+## 2026-11-17
+
+- **Wednesday class slides and the words demo.** Wednesday repeats Monday's meeting. Demo pull request #2 is still open, so Wednesday merges it live, then merges #14, which adds the eight words students sent (from pull requests #3, #4, #5, #7, #8, #11, #12 and #13) to the app's practice list. The deck `materials/class-2026-11-18-projector.html` is Monday's with the date, a slide for #14, and homework due November 25. Drafting: Claude.

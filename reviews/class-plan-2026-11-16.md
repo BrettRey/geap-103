@@ -55,4 +55,4 @@ Class slide 17. Homework for November 23: finish Step 2 (the event in its own re
 
 ## Wednesday, November 18
 
-Wednesday repeats Monday's meeting. The live demo there is a new pull request I'll build on Tuesday evening, adding the students' words to the app's practice list so that the app quizzes them. Merge it live, then practise with their words. Wednesday's invitations stop working on November 20, so remind students to accept theirs.
+Wednesday repeats Monday's meeting, with its own slides: https://brettrey.github.io/geap-103/materials/class-2026-11-18-projector.html. Pull request #2 wasn't merged on Monday, so merge it live as planned (slides 3 to 9). Then merge pull request #14, which adds the eight words students sent to the app's practice list (slide 10). Pull the new version into `~/GEAP103/word-practice-app`, open the app, and practise their words. Homework is due November 25. Wednesday's invitations stop working on November 20, so remind students to accept theirs.
