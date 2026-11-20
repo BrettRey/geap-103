@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEAP 103: break it, get it back</title>
+<style>
+  :root { --u: min(1vh, 0.5625vw); --ink: #16202e; --muted: #4a5568; --accent: #800020; --rule: #e3dcdf;
+    --chip: #f4eff0; --bg: #ffffff; --you: #1d4e89; --youbg: #eef3f9; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--ink); overflow: hidden;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  section { display: none; height: 100vh; flex-direction: column; padding: 3vh 4vw 2.4vh; }
+  section.on { display: flex; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.35vh solid var(--accent); padding-bottom: 1.1vh; margin-bottom: 1.6vh; }
+  h1 { font-size: calc(4.6 * var(--u)); color: var(--accent); font-weight: 700; }
+  header p { font-size: calc(2.3 * var(--u)); color: var(--muted); }
+  .body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; }
+  .foot { display: flex; justify-content: space-between; font-size: calc(1.6 * var(--u)); color: #9aa3ad; margin-top: 0.8vh; }
+  b.w { color: var(--accent); }
+  a { color: inherit; text-decoration-thickness: 0.15vh; text-underline-offset: 0.3vh; }
+  .say.pattern { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.86em; line-height: 1.45; }
+  .btn { font-weight: 700; background: var(--chip); border: 0.2vh solid var(--rule); border-radius: 0.8vh;
+    padding: 0 0.5vw; white-space: nowrap; }
+  .say { display: block; margin-top: 0.8vh; background: var(--youbg); border-left: 0.6vh solid var(--you);
+    padding: 0.8vh 1vw; font-size: 0.94em; }
+  .lead { font-size: calc(2.9 * var(--u)); line-height: 1.3; color: var(--muted); margin-bottom: 2vh; }
+
+  /* 1 title */
+  .big { font-size: calc(5.4 * var(--u)); line-height: 1.25; font-weight: 600; }
+  .big + .big { margin-top: 3.5vh; }
+  .answer { font-size: calc(4.2 * var(--u)); line-height: 1.3; margin-top: 5vh; color: var(--accent); font-weight: 600; }
+
+  /* 2 picture */
+  .pic { display: grid; grid-template-columns: 1fr 24vw 1fr; align-items: stretch; column-gap: 1.2vw; flex: 1; min-height: 0; }
+  .repo { border: 0.4vh solid var(--accent); border-radius: 1.6vh; padding: 2.2vh 1.6vw; display: flex;
+    flex-direction: column; justify-content: center; }
+  .repo.you { border-color: var(--you); background: var(--youbg); }
+  .repo h2 { font-size: calc(3.7 * var(--u)); line-height: 1.15; }
+  .repo .tag { font-size: calc(2.6 * var(--u)); color: var(--muted); margin: 0.6vh 0 2.6vh; }
+  .act { font-size: calc(2.9 * var(--u)); line-height: 1.28; margin-top: 2vh; }
+  .act b { display: block; font-size: calc(3.3 * var(--u)); color: var(--accent); }
+  .repo.you .act b { color: var(--you); }
+  .mid { display: flex; flex-direction: column; justify-content: space-around; text-align: center; }
+  .arrow { font-size: calc(3.3 * var(--u)); font-weight: 700; line-height: 1.2; }
+  .arrow span { display: block; font-size: calc(9 * var(--u)); line-height: 0.8; font-weight: 400; }
+  .arrow.go { color: var(--you); } .arrow.back { color: var(--accent); }
+  .arrow small { display: block; font-size: calc(2.3 * var(--u)); font-weight: 400; color: var(--muted); }
+
+  /* 3 words */
+  dl.words { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column; column-gap: 3.5vw; row-gap: 0.6vh; }
+  dl.words div { border-bottom: 0.15vh solid var(--rule); display: flex; flex-direction: column; justify-content: center; }
+  dt { font-size: calc(3.3 * var(--u)); font-weight: 700; color: var(--accent); }
+  dd { font-size: calc(2.7 * var(--u)); line-height: 1.24; }
+
+  /* 4 pairs */
+  .pairs { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(2, 1fr); row-gap: 5vh; padding: 1.5vh 0; }
+  .pair.three { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  i.pos { font-style: italic; font-weight: 400; font-size: 0.72em; color: var(--muted); }
+  .pair { display: grid; grid-template-columns: 1fr auto 1fr; column-gap: 1vw; align-items: stretch; }
+  .pair .vs { align-self: center; font-size: calc(6.5 * var(--u)); line-height: 1; color: var(--accent); }
+  .pair > div { background: var(--chip); border-radius: 1.4vh; padding: 1.4vh 1.6vw; display: flex; flex-direction: column; justify-content: center; }
+  .pair b { font-size: calc(3.7 * var(--u)); color: var(--accent); }
+  .pair span { font-size: calc(3 * var(--u)); line-height: 1.26; }
+
+  /* 5 roles */
+  .roles { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.4vw; }
+  .roles .repo h2 { margin-bottom: 0.4vh; }
+  .roles ul { list-style: none; }
+  .roles li { font-size: calc(3.4 * var(--u)); line-height: 1.3; margin-top: 2.1vh; }
+  .roles li b { color: var(--accent); } .roles .you li b { color: var(--you); }
+  .after { font-size: calc(3 * var(--u)); color: var(--muted); text-align: center; margin-top: 1.6vh; }
+
+  /* 6-9 steps */
+  ol.steps { list-style: none; counter-reset: s; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
+  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 6vh 1fr; font-size: calc(3.2 * var(--u)); line-height: 1.3; }
+  ol.steps li::before { content: counter(s); font-size: calc(4.2 * var(--u)); font-weight: 700; color: var(--accent); line-height: 1.05; }
+  ol.steps.dense li { font-size: calc(2.85 * var(--u)); line-height: 1.27; }
+  ol.steps.dense + .check, .lead + ol.steps.dense { margin-top: 0; }
+  .check { font-size: calc(2.9 * var(--u)); line-height: 1.3; background: var(--chip); border-radius: 1.2vh; padding: 1.1vh 1.4vw; margin-top: 1.2vh; }
+  .check b { color: var(--accent); }
+
+  /* 10 frames */
+  .frames { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(3, 1fr); row-gap: 1.6vh; }
+  .frame { display: grid; grid-template-columns: 21vw 1fr; column-gap: 1.6vw; align-items: center; border-bottom: 0.15vh solid var(--rule); }
+  .frame h2 { font-size: calc(3.3 * var(--u)); color: var(--accent); line-height: 1.2; }
+  .frame h2 small { display: block; font-size: calc(2.3 * var(--u)); color: var(--muted); font-weight: 400; }
+  .frame p { font-size: calc(3.3 * var(--u)); line-height: 1.34; }
+  .frame p + p { margin-top: 1vh; }
+  i.gap { font-style: normal; display: inline-block; width: 7vw; border-bottom: 0.3vh solid var(--ink); }
+
+  /* 11 questions */
+  ol.qs { list-style: none; counter-reset: q; flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; }
+  ol.qs li { counter-increment: q; display: grid; grid-template-columns: 6vh 1fr; font-size: calc(3.9 * var(--u)); line-height: 1.28; font-weight: 600; }
+  ol.qs li::before { content: counter(q); font-size: calc(4.4 * var(--u)); font-weight: 700; color: var(--accent); line-height: 1.1; }
+  /* screen captures */
+  .shot { flex: 1; min-height: 0; display: grid; grid-template-columns: 58fr 42fr; column-gap: 2.4vw; align-items: center; }
+  .shot .imgs { min-height: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 2vh; }
+  .shot img { display: block; max-width: 100%; max-height: 100%; min-height: 0; object-fit: contain; object-position: left center;
+    border: 0.25vh solid var(--rule); border-radius: 1vh; box-shadow: 0 0.6vh 2vh rgba(22, 32, 46, 0.12); align-self: flex-start; }
+  .shot .imgs.two img { max-height: 48%; }
+  .shot .cap p { font-size: calc(3.3 * var(--u)); line-height: 1.3; margin-bottom: 2.6vh; }
+  .shot .cap p.small { font-size: calc(2.5 * var(--u)); color: var(--muted); margin-bottom: 0; }
+  .ringed { position: relative; width: 100%; flex: none; line-height: 0; }
+  .shot .imgs.two .ringed img { max-height: none; width: 100%; height: auto; }
+  .ringed i { position: absolute; border: 0.5vh solid var(--accent); border-radius: 1.2vh; }
+  /* phone layout: a tall, narrow screen. Slides scroll, and everything stacks in one column. */
+  @media (max-aspect-ratio: 1/1) {
+    :root { --u: 1.3vw; }
+    html, body { height: auto; overflow: auto; }
+    section { height: auto; min-height: 100vh; padding: 4vw 5vw 6vw; }
+    header { flex-direction: column; align-items: flex-start; gap: 1vw; margin-bottom: 4vw; }
+    .body, ol.steps, ol.qs { justify-content: flex-start; gap: 5vw; }
+    .lead, .check { margin-bottom: 4vw; }
+    ol.steps li, ol.qs li { grid-template-columns: 9vw 1fr; }
+    .pic, .roles, .shot, .pair, .pair.three, .frame { grid-template-columns: 1fr; row-gap: 4vw; }
+    .pairs, .frames { grid-template-rows: none; row-gap: 8vw; }
+    .pair > div, .repo { padding: 4vw; }
+    .pair .vs { justify-self: center; transform: rotate(90deg); }
+    dl.words { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; row-gap: 3vw; }
+    dl.words div { padding-bottom: 3vw; }
+    .mid { flex-direction: row; gap: 4vw; }
+    .arrow span { display: inline-block; transform: rotate(90deg); line-height: 1; }
+    .shot .imgs { height: auto; }
+    .shot img, .shot .imgs.two img { max-height: none; width: 100%; }
+    .shot .cap { margin-top: 4vw; }
+    .frame { padding-bottom: 4vw; }
+    i.gap { width: 18vw; }
+    .foot { margin-top: 6vw; }
+  }
+  /* this deck */
+  svg.ico { height: 1.15em; width: 1.15em; vertical-align: -0.2em; margin: 0 0.15em; }
+  .keys { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.86em; font-weight: 700; background: var(--chip);
+    border: 0.2vh solid var(--rule); border-radius: 0.6vh; padding: 0 0.35vw; white-space: nowrap; }
+  .cards { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2vh 1.6vw; }
+  .cards div { border: 0.4vh solid var(--accent); border-radius: 1.4vh; padding: 1.6vh 1.2vw; display: flex; flex-direction: column; justify-content: center; }
+  .cards b { font-size: calc(3.6 * var(--u)); color: var(--accent); line-height: 1.15; }
+  .cards span { font-size: calc(2.7 * var(--u)); line-height: 1.28; margin-top: 1vh; }
+  .timeline { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1.6vw; margin: 1vh 0 2.4vh; }
+  .timeline div { background: var(--chip); border-radius: 1.4vh; padding: 1.4vh 1.2vw; }
+  .timeline div.bad { background: #fbeaec; }
+  .timeline div.good { background: var(--youbg); }
+  .timeline b { display: block; font-size: calc(3.3 * var(--u)); }
+  .timeline span { font-size: calc(2.6 * var(--u)); color: var(--muted); }
+  @media (max-aspect-ratio: 1/1) { .cards, .timeline { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 3vw; } }
+</style>
+</head>
+<body>
+
+<section>
+  <header><h1>Break it. Get it back.</h1><p>GEAP 103 · version history</p></header>
+  <div class="body">
+    <p class="big">Today you break your app on purpose.</p>
+    <p class="big">Then you get it back.</p>
+    <p class="answer">This is one of the three things you need to show me: getting back an earlier version of a file.</p>
+  </div>
+</section>
+
+<section>
+  <header><h1>Before you start</h1><p>Two checks</p></header>
+  <ol class="steps">
+    <li><div><b>Is your newest work on GitHub?</b> Open the GitHub Copilot app, and open the chat where you made your app. Ask Copilot:
+      <span class="say">Is all my work saved on GitHub? If not, save it to GitHub now.</span></div></li>
+    <li><div><b>Open your app's repository</b> on github.com, in your browser. Click a file, for example <b>index.html</b>. Can you see your app's code? Good.</div></li>
+    <li><div><b>No app on GitHub?</b> Make a small practice repository. Click <b>+</b>, then <b>New repository</b>. Name it <b>practice</b>, choose <b>Private</b>, turn on <b>Add README</b>, and click <span class="btn">Create repository</span>. Open <b>README.md</b>, write two sentences about your app idea, and commit. Then use README.md for the steps. Don't use your fork of Brett's word app: a change there also changes your pull request to Brett.</div></li>
+  </ol>
+  <p class="check"><b>Why check first?</b> If your computer has work that isn't on GitHub, you can get an error later. &nbsp; <b>Not sure?</b> Ask Brett before you break anything.</p>
+</section>
+
+<section>
+  <header><h1>Step 1: Break it on purpose</h1><p>One small change</p></header>
+  <ol class="steps">
+    <li><div>On github.com, open one file in your app, for example <b>index.html</b>.</div></li>
+    <li><div>Click the pencil <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.5 1.5l3 3-8.8 8.8-3.7.7.7-3.7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> to edit it.</div></li>
+    <li><div>Make <b>one</b> small change. Choose one from the next slide.</div></li>
+    <li><div>Click <span class="btn">Commit changes...</span> Write a message: <b>Break it on purpose</b>. Then click <span class="btn">Commit changes</span>.</div></li>
+  </ol>
+  <p class="check"><b>Check:</b> at the top of the file, you see your message, <b>Break it on purpose</b>. GitHub saved your change as a new version.</p>
+</section>
+
+<section>
+  <header><h1>Step 1 on GitHub</h1><p>Edit your file</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="get-it-back-captures/file-main-pencil.png" alt="A file on GitHub. The pencil button, Edit this file, is ringed."></div>
+    <div class="cap"><p>Open your file, and click the <b>pencil</b>.</p><p>Make <b>one</b> small change.</p><p>Click <span class="btn">Commit changes...</span> and write <b>Break it on purpose</b>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>How will you break it?</h1><p>Choose one</p></header>
+  <div class="cards">
+    <div><b>Delete one line</b><span>Any line. What stops working?</span></div>
+    <div><b>Change the title</b><span>Change one word in your app's title.</span></div>
+    <div><b>Change a colour</b><span>In your style file (style.css), change one colour.</span></div>
+    <div><b>Delete a word</b><span>Delete one word from your word list.</span></div>
+    <div><b>Change a button</b><span>Change the words on one button.</span></div>
+    <div><b>Swap two lines</b><span>Move one line above the line before it.</span></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 2: What changed?</h1><p>The History</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="get-it-back-captures/file-main-history.png" alt="A file on GitHub. The History button, at the top right, is ringed."><img src="get-it-back-captures/history-break.png" alt="The History of a file. The newest version, Break it on purpose, is ringed."></div>
+    <div class="cap"><p>In your file, click <b>History</b> (top right).</p><p>Every version is here. The newest is at the top.</p><p>Click the newest one, <b>Break it on purpose</b>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Red and green</h1><p>Step 2 on GitHub</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="get-it-back-captures/commit-break.png" alt="The change on GitHub. One red line: the line with today's word was deleted."></div>
+    <div class="cap"><p><b>Red</b> is the old line. <b>Green</b> is the new line.</p><p>Here, the red line is <b>Today's word: neighbour</b>. I deleted it. The new line is empty.</p><p>What's red in your change?</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 3: Copy the earlier version</h1><p>Get it back, part 1</p></header>
+  <ol class="steps">
+    <li><div>Go back to the <b>History</b>. Find the version <b>before</b> your break. It's the second one.</div></li>
+    <li><div>On that line, click <b>View code at this point</b> <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h6.5l3.5 3.5v9.5H3z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M6.6 8.2l-1.6 1.6 1.6 1.6M9.4 8.2l1.6 1.6-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>. Not sure which icon? Hold your mouse over it, and read the label.</div></li>
+    <li><div>This is your file as it was. Check: is your line back?</div></li>
+    <li><div>Click <b>Copy raw file</b> <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="9" height="9.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M11 3V2.6c0-.6-.5-1.1-1.1-1.1H3.1C2.5 1.5 2 2 2 2.6v7.3c0 .6.5 1.1 1.1 1.1H3.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>, next to <span class="btn">Raw</span>. Now the whole earlier file is copied.</div></li>
+  </ol>
+  <p class="check"><b>The pencil is grey here.</b> That's right. You're looking at an old version. You can't edit it. You only copy it.</p>
+</section>
+
+<section>
+  <header><h1>Step 3 on GitHub</h1><p>Copy the earlier version</p></header>
+  <div class="shot">
+    <div class="imgs two"><img src="get-it-back-captures/history-view-code.png" alt="The History. On the version before the break, the View code at this point icon is ringed."><img src="get-it-back-captures/file-at-commit-copy.png" alt="The file as it was. The branch menu shows a number, and the Copy raw file icon is ringed."></div>
+    <div class="cap"><p>On the version <b>before</b> the break, click <b>View code at this point</b>.</p><p>The branch menu shows a <b>number</b> now, not main. This is the old version.</p><p>Click <b>Copy raw file</b>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 4: Paste it over the new version</h1><p>Get it back, part 2</p></header>
+  <ol class="steps dense">
+    <li><div>Click the <b>branch menu</b> (it shows a number now), and click <b>main</b>. Or click the small arrow just left of the number. Now you see the newest version again.</div></li>
+    <li><div>Click the pencil <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.5 1.5l3 3-8.8 8.8-3.7.7.7-3.7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> to edit. Click inside the code.</div></li>
+    <li><div>Select everything: <span class="keys">Ctrl A</span> on Windows, <span class="keys">Cmd A</span> on a Mac.</div></li>
+    <li><div>Paste: <span class="keys">Ctrl V</span> on Windows, <span class="keys">Cmd V</span> on a Mac. Is your line back?</div></li>
+    <li><div>Click <span class="btn">Commit changes...</span> Write: <b>Get back the earlier version</b>. Click <span class="btn">Commit changes</span>.</div></li>
+  </ol>
+</section>
+
+<section>
+  <header><h1>Step 4 on GitHub</h1><p>Back to main</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="get-it-back-captures/branch-menu.png" alt="The branch menu is open. It shows a number, and main is ringed in the list."></div>
+    <div class="cap"><p>Click the branch menu. Click <b>main</b>.</p><p>Then click the <b>pencil</b>, select everything, and paste.</p><p>Commit: <b>Get back the earlier version</b>.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Step 5: Check</h1><p>Did it work?</p></header>
+  <ol class="steps">
+    <li><div>Open the <b>History</b> again. It tells the story of your file:
+      <div class="timeline">
+        <div class="good"><b>before</b><span>your app works</span></div>
+        <div class="bad"><b>Break it on purpose</b><span>your app is broken</span></div>
+        <div class="good"><b>Get back the earlier version</b><span>your app works again</span></div>
+      </div></div></li>
+    <li><div><b>Extra:</b> open the GitHub Copilot app, and ask Copilot:
+      <span class="say">Get the latest version from GitHub, and open my app.</span>
+      Does your app work again? If nothing changes on your computer, that's OK. The History on GitHub is what you show me.</div></li>
+  </ol>
+</section>
+
+<section>
+  <header><h1>Step 5 on GitHub</h1><p>The story of the file</p></header>
+  <div class="shot">
+    <div class="imgs"><img src="get-it-back-captures/history-story.png" alt="The History with three versions ringed: Add today's word, Break it on purpose, and Get back the earlier version."></div>
+    <div class="cap"><p>Read it from the bottom up.</p><p><b>Add today's word</b>: the app works.</p><p><b>Break it on purpose</b>: the app is broken.</p><p><b>Get back the earlier version</b>: the app works again.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><h1>Nothing is lost</h1><p>Why version history is useful</p></header>
+  <div class="body">
+    <p class="big">You didn't delete the broken version.</p>
+    <p class="big">You made a <b class="w">new version</b> that's the same as the old one.</p>
+    <p class="answer">Every version is still in the History. You can always go back.</p>
+  </div>
+</section>
+
+<section>
+  <header><h1>The words</h1><p>Say them when you talk about your work</p></header>
+  <dl class="words">
+    <div><dt>version <i class="pos">n.</i></dt><dd>Your file at one moment. GitHub keeps every version.</dd></div>
+    <div><dt>commit <i class="pos">v.</i></dt><dd>Save your changes as a new version.</dd></div>
+    <div><dt>history <i class="pos">n.</i></dt><dd>The list of all the versions, newest first.</dd></div>
+    <div><dt>on purpose <i class="pos">adv.</i></dt><dd>Because you want to, not by accident.</dd></div>
+    <div><dt>break <i class="pos">v.</i></dt><dd>Make something stop working.</dd></div>
+    <div><dt>get back <i class="pos">v.</i></dt><dd>Have something again after you lost it.</dd></div>
+    <div><dt>restore <i class="pos">v.</i></dt><dd>Get back an earlier version. A more formal word.</dd></div>
+    <div><dt>copy <i class="pos">v.</i></dt><dd>Take the text, so you can paste it somewhere else.</dd></div>
+    <div><dt>paste <i class="pos">v.</i></dt><dd>Put the copied text in a new place.</dd></div>
+    <div><dt>earlier <i class="pos">adj.</i></dt><dd>From before. The opposite of later.</dd></div>
+  </dl>
+</section>
+
+<section>
+  <header><h1>Show me in a conference</h1><p>Getting back an earlier version</p></header>
+  <ol class="qs">
+    <li>Open your History. Show me the three versions.</li>
+    <li>What did you break? What stopped working?</li>
+    <li>How did you find what changed?</li>
+    <li>How did you get it back? How do you know it worked?</li>
+  </ol>
+</section>
+
+<section>
+  <header><h1>Something went wrong?</h1><p>What to do</p></header>
+  <ol class="steps dense">
+    <li><div><b>Grey pencil?</b> You're on an old version. Click the branch menu, and click <b>main</b>.</div></li>
+    <li><div><b>Paste didn't work?</b> Click inside the code first. Then select everything, and paste again.</div></li>
+    <li><div><b>You can't find the version before the break?</b> Read the messages in the History. Your break says <b>Break it on purpose</b>. The version under it is the one you want.</div></li>
+    <li><div><b>Your app on your computer didn't change?</b> Ask Copilot to get the latest version from GitHub.</div></li>
+    <li><div><b>Copilot shows an error?</b> Don't try to fix it. Stop, and show Brett. Read the error message to him. That's good practice too.</div></li>
+  </ol>
+</section>
+
+<script>
+  const slides = [...document.querySelectorAll("section")];
+  slides.forEach((s, i) => {
+    const f = document.createElement("p");
+    f.className = "foot";
+    f.innerHTML = "<span>Arrow keys, or tap the right side to go on and the left side to go back.</span><span>" + (i + 1) + " / " + slides.length + "</span>";
+    s.appendChild(f);
+  });
+  let at = 0;
+  function show(n) {
+    at = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, i) => s.classList.toggle("on", i === at));
+    window.scrollTo(0, 0);
+    history.replaceState(null, "", "#" + (at + 1));
+  }
+  document.addEventListener("keydown", e => {
+    if (["ArrowRight", " ", "PageDown"].includes(e.key)) { e.preventDefault(); show(at + 1); }
+    else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); show(at - 1); }
+    else if (e.key === "Home") show(0);
+    else if (e.key === "End") show(slides.length - 1);
+    else if (/^[0-9]$/.test(e.key)) show(e.key === "0" ? 9 : parseInt(e.key, 10) - 1);
+  });
+  document.addEventListener("click", e => {
+    if (e.target.closest("a, img") || String(window.getSelection())) return;
+    show(at + (e.clientX < window.innerWidth / 3 ? -1 : 1));
+  });
+  show((parseInt(location.hash.slice(1), 10) || 1) - 1);
+</script>
+</body>
+</html>
